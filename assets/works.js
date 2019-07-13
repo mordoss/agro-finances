@@ -1,0 +1,38 @@
+export default [
+  {
+    id: 'plowing',
+    name: 'Oranje',
+    done: false,
+    planing: false,
+    oilConsumption: 40,
+    paid: false,
+    paidPrice: 8000,
+  },
+  {
+    id: 'sowing',
+    name: 'Setva',
+    done: false,
+    planing: false,
+    oilConsumption: 40,
+    paid: false,
+    paidPrice: 8000,
+  },
+  {
+    id: 'fertilization',
+    name: 'Prihrana',
+    done: false,
+    planing: false,
+    oilConsumption: 40,
+    paid: false,
+    paidPrice: 8000,
+  },
+  {
+    id: 'spraying',
+    name: 'Zaštita',
+    done: false,
+    planing: false,
+    oilConsumption: 40,
+    paid: false,
+    paidPrice: 8000,
+  },
+];
