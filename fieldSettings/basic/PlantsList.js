@@ -1,37 +1,35 @@
-import React, { useState } from 'react';
-import { ScrollView, StyleSheet, TouchableOpacity, Dimensions, Image } from 'react-native';
+import React from 'react';
+import { ScrollView, StyleSheet } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { Block, Badge, Card, Text } from '../../components';
+import { Block, Text } from '../../components';
+import PlantCard from './PlantCard';
 
 import { theme } from '../../theme';
 import plants from '../../assets/plants';
 
-const { width } = Dimensions.get('window');
+import { changePlant } from '../../redux/actions/basicActions';
 
 const PlantsList = () => {
-  const [active, changeActive] = useState('');
+  const active = useSelector(state => state.plant);
+  const dispatch = useDispatch();
 
   const renderPlants = plant => {
-    const isActive = active === plant;
-
+    const isActive = active === plant.name;
     return (
-      <TouchableOpacity key={plant.id} onPress={() => changeActive(plant)}>
-        <Card shadow style={[styles.plant, isActive ? styles.active : null]}>
-          <Badge size={60} color={theme.colors.accent}>
-            <Image source={plant.image} />
-          </Badge>
-          <Text medium height={20} gray>
-            {plant.name}
-          </Text>
-        </Card>
-      </TouchableOpacity>
+      <PlantCard
+        plant={plant}
+        changeActive={e => dispatch(changePlant(e))}
+        isActive={isActive}
+        key={plant.id}
+      />
     );
   };
 
   return (
     <ScrollView>
       <Text gray style={{ marginHorizontal: theme.sizes.base * 3 }}>
-        Kultura za setvu:
+        Kultura za setvu: {active.name}
       </Text>
       <Block flex={false} row wrap space="around" style={styles.plants}>
         {plants.map(plant => renderPlants(plant))}
@@ -44,16 +42,6 @@ const styles = StyleSheet.create({
   plants: {
     paddingHorizontal: theme.sizes.base * 2,
     marginVertical: theme.sizes.base,
-  },
-  plant: {
-    // this should be dynamic based on screen width
-    minWidth: (width - theme.sizes.padding * 5 - theme.sizes.base) / 2,
-    maxWidth: (width - theme.sizes.padding * 5 - theme.sizes.base) / 2,
-    maxHeight: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
-    alignItems: 'center',
-  },
-  active: {
-    backgroundColor: theme.colors.secondary,
   },
 });
 

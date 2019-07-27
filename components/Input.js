@@ -6,7 +6,7 @@ import Block from './Block';
 import { theme } from '../theme';
 
 const Input = props => {
-  const { label, price, area, oilConsumption, bags } = props;
+  const { label, price, area, oilConsumption, bags, value, changeValue } = props;
 
   // eslint-disable-next-line no-nested-ternary
   const unit = price ? 'dinara' : area ? 'ara' : oilConsumption ? 'litara' : bags ? 'džakova' : '';
@@ -19,6 +19,8 @@ const Input = props => {
     <Block row style={styles.inputBlock}>
       {renderLabel()}
       <TextInput
+        value={value}
+        onChangeText={e => changeValue(e)}
         style={styles.input}
         autoComplete="off"
         autoCapitalize="none"

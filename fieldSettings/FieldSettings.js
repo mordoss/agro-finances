@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, ScrollView, KeyboardAvoidingView } from 'react-native';
 
 import { Block, Text } from '../components';
+
 import BasicContainer from './basic/BasicContainer';
 import Works from './works/Works';
+import Test from './statistics/Test';
 
 import { theme } from '../theme';
 
 const FieldSettings = () => {
-  const [active, changeActive] = useState('Radovi');
+  const [active, changeActive] = useState('Njiva');
   const tabs = ['Njiva', 'Radovi', 'Statistika'];
 
   const renderTab = tab => {
@@ -39,6 +41,7 @@ const FieldSettings = () => {
         </Block>
         {active === 'Njiva' && <BasicContainer />}
         {active === 'Radovi' && <Works />}
+        {active === 'Statistika' && <Test />}
       </ScrollView>
     </KeyboardAvoidingView>
   );
