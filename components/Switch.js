@@ -7,7 +7,7 @@ import Block from './Block';
 import { theme } from '../theme';
 
 const CustomSwitch = props => {
-  const { label } = props;
+  const { label, value } = props;
 
   const activeColor =
     // eslint-disable-next-line no-nested-ternary
@@ -23,7 +23,7 @@ const CustomSwitch = props => {
         {label}
       </Text>
       <Switch
-        value
+        value={value}
         trackColor={{
           false: theme.colors.gray,
           true: activeColor,

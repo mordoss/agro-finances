@@ -13,14 +13,14 @@ import { theme } from '../../theme';
 const { width } = Dimensions.get('window');
 
 const Work = props => {
-  const { work } = props;
+  const { work, name } = props;
 
   return (
     <Card shadow style={styles.workCard}>
-      <CommonWorkPart {...props}>
-        {work.id === 'sowing' && <Sowing />}
-        {work.id === 'fertilization' && <Fertilization />}
-        {work.id === 'spraying' && <Spraying />}
+      <CommonWorkPart work={work} name={name}>
+        {name === 'Setva' && <Sowing sowingData={work.special} />}
+        {name === 'Prvo Prskanje' && <Spraying sprayingData={work.special} />}
+        {name === 'Drugo Prskanje' && <Spraying sprayingData={work.special} />}
       </CommonWorkPart>
     </Card>
   );

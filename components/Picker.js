@@ -7,33 +7,27 @@ import Block from './Block';
 import { theme } from '../theme';
 
 const PickerCustom = props => {
-  const { items, label } = props;
-  const [selected, setSelected] = useState('');
-  const [active, setActive] = useState(false);
-
-  const handleSelect = item => {
-    setActive(!active);
-    setSelected(item);
-  };
+  const { items, label, active } = props;
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <Block row center style={{ marginTop: theme.sizes.base }}>
-      <TouchableHighlight onPress={() => setActive(!active)} style={styles.pick}>
+      <TouchableHighlight onPress={() => setIsActive(true)} style={styles.pick}>
         <Text gray>{label}</Text>
       </TouchableHighlight>
       <Text style={styles.selected} bold h1 gray>
-        {selected}
+        {active}
       </Text>
 
       <Modal
-        visible={active}
+        visible={isActive}
         animationType="slide"
         transparent
         onRequestClose={() => console.log('canceled!')}
       >
         <Block style={styles.modalInnerContainer}>
           {items.map(item => (
-            <TouchableHighlight key={item} onPress={() => handleSelect(item)} style={styles.item}>
+            <TouchableHighlight key={item} style={styles.item} onPress={() => setIsActive(false)}>
               <Text h3 black>
                 {item}
               </Text>

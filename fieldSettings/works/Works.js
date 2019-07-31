@@ -1,12 +1,13 @@
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
+import { useSelector } from 'react-redux';
 
 import { theme } from '../../theme';
-import works from '../../assets/works';
 
-import Work from './Work';
+import Corn from './plants/Corn';
 
 const Works = () => {
+  const plant = useSelector(state => state.plant);
   return (
     <ScrollView
       style={styles.scrollContainer}
@@ -14,9 +15,7 @@ const Works = () => {
       horizontal
       pagingEnabled
     >
-      {works.map(work => (
-        <Work work={work} key={work.id} />
-      ))}
+      {plant === 'Kukuruz' && <Corn />}
     </ScrollView>
   );
 };

@@ -1,6 +1,11 @@
 import basicState from '../store/basicState';
+import groundWorksState from '../store/workStates/groundWorksState';
+import sowingState from '../store/workStates/sowingState';
+import sprayingState from '../store/workStates/sprayingState';
 
-export default function testReducer(state = basicState, action) {
+const stateComplete = { ...basicState, ...groundWorksState, ...sowingState, ...sprayingState };
+
+export default function testReducer(state = stateComplete, action) {
   switch (action.type) {
     case 'AREA_CHANGED':
       return { ...state, area: action.value };

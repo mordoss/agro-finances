@@ -1,10 +1,14 @@
 export default {
-  sowingDone: false,
-  sowingPlaning: false,
-  sowingPlaningDate: null,
-  sowingConsumption: 40,
-  sowingPaid: false,
-  sowingPaidPrice: 10000,
-  seed: '',
-  seedConsumption: 1,
+  sowing: {
+    done: false,
+    planing: false,
+    planingDate: null,
+    consumption: 40,
+    paid: false,
+    paidPrice: 10000,
+    special: {
+      seed: 'NS',
+      seedConsumption: 25,
+    },
+  },
 };

@@ -6,22 +6,29 @@ import { Text, Switch, Block, Input, SubTotal } from '../../components';
 import { theme } from '../../theme';
 
 const CommonWorkPart = props => {
-  const { work, children } = props;
+  const { work, children, name } = props;
   return (
     <Block flex={false}>
       <Text center bold h1 gray style={styles.workName}>
-        {work.name}
+        {name}
       </Text>
+
       <Block>
-        <Switch label="Urađeno" />
-        <Switch label="Planiram" />
+        <Switch label="Urađeno" value={work.done} />
+        <Switch label="Planiram" value={work.planing} />
       </Block>
-      <Input oilConsumption label="Potrošnja nafte po hektaru" />
+
+      {!work.paid && (
+        <Input oilConsumption label="Potrošnja nafte po hektaru" value={`${work.consumption}`} />
+      )}
+
       {children}
+
       <Block style={styles.paidContainer}>
-        <Switch label="Plaćam uslužno" />
-        <Input price label="Cena uslužnog po hektaru" />
+        <Switch label="Plaćam uslužno" value={work.paid} />
+        {work.paid && <Input price label="Cena uslužnog po hektaru" value={`${work.paidPrice}`} />}
       </Block>
+
       <SubTotal />
     </Block>
   );
