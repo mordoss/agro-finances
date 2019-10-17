@@ -1,15 +1,15 @@
 import React from 'react';
-
 import PlantsList from './PlantsList';
 import Area from './Area';
 import Note from './Note';
 
-const BasicContainer = () => {
+const BasicContainer = props => {
+  const { field } = props;
   return (
     <>
-      <Area />
-      <PlantsList />
-      <Note />
+      <Area field={field} />
+      <PlantsList field={field} />
+      <Note field={field} />
     </>
   );
 };

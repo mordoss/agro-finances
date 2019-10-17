@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, ScrollView, KeyboardAvoidingView } from 'react-native';
-
+import { useSelector } from 'react-redux';
 import { Block, Text } from '../components';
-
-import BasicContainer from './basic/BasicContainer';
-import Works from './works/Works';
-import Test from './statistics/Test';
+import BasicContainer from '../fieldSettings/basic/BasicContainer';
+import WorksContainer from '../fieldSettings/works/WorksContainer';
+import Test from '../fieldSettings/statistics/Test'; // statistics to be done
 
 import { theme } from '../theme';
 
 const FieldSettings = () => {
+  const activeField = useSelector(state => `field${state.activeField}`);
   const [active, changeActive] = useState('Njiva');
   const tabs = ['Njiva', 'Radovi', 'Statistika'];
 
@@ -22,7 +22,7 @@ const FieldSettings = () => {
         onPress={() => changeActive(tab)}
         style={[styles.tab, isActive ? styles.active : null]}
       >
-        <Text size={16} medium gray={!isActive} secondary={isActive}>
+        <Text size={16} medium gray={!isActive} primary={isActive}>
           {tab}
         </Text>
       </TouchableOpacity>
@@ -39,9 +39,9 @@ const FieldSettings = () => {
         <Block row space="between" style={styles.tabs}>
           {tabs.map(tab => renderTab(tab))}
         </Block>
-        {active === 'Njiva' && <BasicContainer />}
-        {active === 'Radovi' && <Works />}
-        {active === 'Statistika' && <Test />}
+        {active === 'Njiva' && <BasicContainer field={activeField} />}
+        {active === 'Radovi' && <WorksContainer field={activeField} />}
+        {active === 'Statistika' && <Test field={activeField} />}
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     paddingBottom: theme.sizes.base,
   },
   active: {
-    borderColor: theme.colors.secondary,
+    borderColor: theme.colors.primary,
     borderBottomWidth: 3,
   },
 });

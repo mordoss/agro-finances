@@ -1,17 +1,20 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Image, Dimensions } from 'react-native';
+import { useDispatch } from 'react-redux';
 import { LinearGradient } from 'expo-linear-gradient';
-
 import { Badge, Card, Text } from '../../components';
-
 import { theme } from '../../theme';
+import { changePlant } from '../../redux/actions/basicStateActions';
 
 const { width } = Dimensions.get('window');
 
 const PlantCard = props => {
-  const { plant, changeActive, isActive } = props;
+  const { plant, isActive } = props;
+  const { field } = props;
+  const dispatch = useDispatch();
+
   return (
-    <TouchableOpacity onPress={() => changeActive(plant.name)}>
+    <TouchableOpacity onPress={() => dispatch(changePlant(field, plant.name))}>
       <Card shadow style={styles.plant}>
         {isActive && (
           <LinearGradient
@@ -24,7 +27,7 @@ const PlantCard = props => {
         <Badge size={60} color={theme.colors.accent}>
           <Image source={plant.image} />
         </Badge>
-        <Text medium height={20} gray>
+        <Text medium height={20} white={isActive} gray={!isActive}>
           {plant.name}
         </Text>
       </Card>

@@ -4,10 +4,11 @@ import { useSelector } from 'react-redux';
 
 import { theme } from '../../theme';
 
-import Corn from './plants/Corn';
+import AllWorks from './AllWorks';
 
-const Works = () => {
-  const plant = useSelector(state => state.plant);
+const WorksContainer = props => {
+  const { field } = props;
+  const plant = useSelector(state => state[field].plant);
   return (
     <ScrollView
       style={styles.scrollContainer}
@@ -15,7 +16,7 @@ const Works = () => {
       horizontal
       pagingEnabled
     >
-      {plant === 'Kukuruz' && <Corn />}
+      <AllWorks field={field} plant={plant} />
     </ScrollView>
   );
 };
@@ -27,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Works;
+export default WorksContainer;

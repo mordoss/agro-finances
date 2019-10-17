@@ -1,38 +1,27 @@
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-
+import { useSelector } from 'react-redux';
 import { Block, Text } from '../../components';
 import PlantCard from './PlantCard';
-
 import { theme } from '../../theme';
 import plants from '../../assets/plants';
 
-import { changePlant } from '../../redux/actions/basicActions';
+const PlantsList = props => {
+  const { field } = props;
+  const active = useSelector(state => state.field0.plant);
 
-const PlantsList = () => {
-  const active = useSelector(state => state.plant);
-  const dispatch = useDispatch();
-
-  const renderPlants = plant => {
+  const renderPlant = plant => {
     const isActive = active === plant.name;
-    return (
-      <PlantCard
-        plant={plant}
-        changeActive={e => dispatch(changePlant(e))}
-        isActive={isActive}
-        key={plant.id}
-      />
-    );
+    return <PlantCard plant={plant} isActive={isActive} key={plant.id} field={field} />;
   };
 
   return (
     <ScrollView>
       <Text gray style={{ marginHorizontal: theme.sizes.base * 3 }}>
-        Kultura za setvu: {active.name}
+        Kultura za setvu:
       </Text>
       <Block flex={false} row wrap space="around" style={styles.plants}>
-        {plants.map(plant => renderPlants(plant))}
+        {plants.map(plant => renderPlant(plant))}
       </Block>
     </ScrollView>
   );

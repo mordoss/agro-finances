@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import { Modal, TouchableHighlight, Dimensions, StyleSheet } from 'react-native';
-
+import { useDispatch } from 'react-redux';
 import Text from './Text';
 import Block from './Block';
-
 import { theme } from '../theme';
 
 const PickerCustom = props => {
-  const { items, label, active } = props;
+  const dispatch = useDispatch();
+  const { items, label, active, field, action, turn, propertyName, work } = props;
   const [isActive, setIsActive] = useState(false);
+
+  const handleSelect = item => {
+    dispatch(action(field, item, propertyName, turn, work));
+    setIsActive(false);
+  };
 
   return (
     <Block row center style={{ marginTop: theme.sizes.base }}>
@@ -19,15 +24,10 @@ const PickerCustom = props => {
         {active}
       </Text>
 
-      <Modal
-        visible={isActive}
-        animationType="slide"
-        transparent
-        onRequestClose={() => console.log('canceled!')}
-      >
+      <Modal visible={isActive} animationType="slide" transparent>
         <Block style={styles.modalInnerContainer}>
           {items.map(item => (
-            <TouchableHighlight key={item} style={styles.item} onPress={() => setIsActive(false)}>
+            <TouchableHighlight key={item} style={styles.item} onPress={() => handleSelect(item)}>
               <Text h3 black>
                 {item}
               </Text>

@@ -1,17 +1,20 @@
 import React from 'react';
 import { StyleSheet, TextInput, Dimensions } from 'react-native';
-import { useDispatch } from 'react-redux';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { changeNote } from '../../redux/actions/basicStateActions';
 import { Text, Block } from '../../components';
 import { theme } from '../../theme';
 
-const Input = () => {
+const Input = props => {
+  const { field } = props;
+  const note = useSelector(state => state[field].note);
   const dispatch = useDispatch();
   return (
     <Block style={styles.inputBlock}>
       <Text gray2>Napomena: </Text>
       <TextInput
-        onChangeText={e => dispatch({ type: 'test', payload: `hello from note, I'm ${e}` })}
+        value={note}
+        onChangeText={e => dispatch(changeNote(field, e))}
         style={styles.input}
         autoComplete="off"
         autoCapitalize="none"

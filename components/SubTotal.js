@@ -18,8 +18,8 @@ const SubTotal = () => {
 
 const styles = StyleSheet.create({
   subTotalContainer: {
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.gray,
+    // borderTopWidth: StyleSheet.hairlineWidth,
+    // borderColor: theme.colors.gray,
     marginTop: theme.sizes.base * 2,
     alignItems: 'flex-end',
   },

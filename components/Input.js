@@ -1,15 +1,15 @@
 import React from 'react';
 import { StyleSheet, TextInput } from 'react-native';
-
+import { useDispatch } from 'react-redux';
 import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
+import { setInputUnit } from '../helperFunctions';
 
 const Input = props => {
-  const { label, price, area, oilConsumption, bags, value, changeValue } = props;
-
-  // eslint-disable-next-line no-nested-ternary
-  const unit = price ? 'dinara' : area ? 'ara' : oilConsumption ? 'litara' : bags ? 'džakova' : '';
+  const dispatch = useDispatch();
+  const { label, price, area, oilConsumption, bags, value, field, action, propertyName } = props;
+  const unit = setInputUnit(price, area, oilConsumption, bags);
 
   const renderLabel = () => {
     return <Block flex={false}>{label ? <Text gray>{label}</Text> : null}</Block>;
@@ -20,7 +20,7 @@ const Input = props => {
       {renderLabel()}
       <TextInput
         value={value}
-        onChangeText={e => changeValue(e)}
+        onChangeText={e => dispatch(action(field, e, propertyName))}
         style={styles.input}
         autoComplete="off"
         autoCapitalize="none"

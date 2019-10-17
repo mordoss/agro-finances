@@ -1,17 +1,13 @@
-import basicState from '../store/basicState';
-import groundWorksState from '../store/workStates/groundWorksState';
-import sowingState from '../store/workStates/sowingState';
-import sprayingState from '../store/workStates/sprayingState';
+import { combineReducers } from 'redux';
+import activeFieldReducer from './activeFieldReducer';
+import createFieldReducer from './fieldReducer';
 
-const stateComplete = { ...basicState, ...groundWorksState, ...sowingState, ...sprayingState };
+const rootReducer = combineReducers({
+  activeField: activeFieldReducer,
+  field0: createFieldReducer('field0'),
+  field1: createFieldReducer(1),
+  field2: createFieldReducer(2),
+  field3: createFieldReducer(3),
+});
 
-export default function testReducer(state = stateComplete, action) {
-  switch (action.type) {
-    case 'AREA_CHANGED':
-      return { ...state, area: action.value };
-    case 'PLANT_CHANGED':
-      return { ...state, plant: action.value };
-    default:
-      return state;
-  }
-}
+export default rootReducer;

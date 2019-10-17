@@ -1,17 +1,18 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { createAppContainer, createStackNavigator } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import { LinearGradient } from 'expo-linear-gradient';
-
-import FieldSettings from '../fieldSettings/FieldSettings';
-
+import FieldSettings from '../screens/FieldSettings';
+import AllFields from '../screens/AllFields';
 import { theme } from '../theme';
 
 const screens = createStackNavigator(
   {
     FieldSettings,
+    AllFields,
   },
   {
+    initialRouteName: 'AllFields',
     defaultNavigationOptions: {
       headerBackground: (
         <LinearGradient

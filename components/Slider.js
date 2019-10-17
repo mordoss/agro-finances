@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import { StyleSheet } from 'react-native';
 import Slider from 'react-native-slider';
-
+import { useDispatch } from 'react-redux';
 import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
 
 const CustomSlider = props => {
-  const { label, fertilization, min, max, optimal } = props;
-  const [value, setValue] = useState(optimal);
+  const dispatch = useDispatch();
+  const { label, fertilization, min, max, value, action, turn, propertyName, field } = props;
   const unit = fertilization ? 'kg' : 'cm';
   return (
     <Block style={styles.slider}>
@@ -25,7 +24,7 @@ const CustomSlider = props => {
         maximumValue={max}
         step={1}
         value={value}
-        onValueChange={v => setValue(v)}
+        onValueChange={e => dispatch(action(field, e, turn, propertyName))}
         minimumTrackTintColor={theme.colors.secondary}
         maximumTrackTintColor={theme.colors.primary}
         thumbTintColor={theme.colors.tertiary}
