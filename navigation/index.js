@@ -22,6 +22,7 @@ const screens = createStackNavigator(
           end={{ x: 1, y: 0 }}
         />
       ),
+      headerTintColor: '#FFFFFF',
     },
   }
 );

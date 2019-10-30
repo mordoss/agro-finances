@@ -11,7 +11,7 @@ const Input = props => {
   const dispatch = useDispatch();
   return (
     <Block style={styles.inputBlock}>
-      <Text gray2>Napomena: </Text>
+      <Text gray>Napomena: </Text>
       <TextInput
         value={note}
         onChangeText={e => dispatch(changeNote(field, e))}

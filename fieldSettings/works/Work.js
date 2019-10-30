@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Dimensions } from 'react-native';
-import { Card } from '../../components';
+import { Block } from '../../components';
 import CommonWorkPart from './CommonWorkPart';
 import Sowing from './Sowing';
 import Spraying from './Spraying';
@@ -13,7 +13,7 @@ const Work = props => {
   const { work, name, field, propertyName } = props;
 
   return (
-    <Card shadow style={styles.workCard}>
+    <Block shadow style={styles.workCard}>
       <CommonWorkPart field={field} work={work} name={name} propertyName={propertyName}>
         {name === 'Setva' && <Sowing sowingData={work.special} field={field} />}
         {name === 'Prvo Prskanje' && (
@@ -29,7 +29,7 @@ const Work = props => {
           <Fertilization fertilizationData={work.special} field={field} turn="second" />
         )}
       </CommonWorkPart>
-    </Card>
+    </Block>
   );
 };
 const styles = StyleSheet.create({

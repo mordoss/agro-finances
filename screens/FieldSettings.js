@@ -5,7 +5,6 @@ import { Block, Text } from '../components';
 import BasicContainer from '../fieldSettings/basic/BasicContainer';
 import WorksContainer from '../fieldSettings/works/WorksContainer';
 import Test from '../fieldSettings/statistics/Test'; // statistics to be done
-
 import { theme } from '../theme';
 
 const FieldSettings = () => {

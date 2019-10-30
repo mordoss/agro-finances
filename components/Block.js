@@ -66,6 +66,8 @@ export const styles = StyleSheet.create({
   },
   card: {
     borderRadius: theme.sizes.radius,
+    padding: theme.sizes.base,
+    marginBottom: theme.sizes.base,
   },
   center: {
     alignItems: 'center',

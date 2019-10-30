@@ -8,7 +8,7 @@ import plants from '../../assets/plants';
 
 const PlantsList = props => {
   const { field } = props;
-  const active = useSelector(state => state.field0.plant);
+  const active = useSelector(state => state[field].plant);
 
   const renderPlant = plant => {
     const isActive = active === plant.name;

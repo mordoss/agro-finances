@@ -2,11 +2,9 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, Image, Dimensions } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Badge, Card, Text } from '../../components';
-import { theme } from '../../theme';
+import { Badge, Block, Text } from '../../components';
 import { changePlant } from '../../redux/actions/basicStateActions';
-
-const { width } = Dimensions.get('window');
+import { theme } from '../../theme';
 
 const PlantCard = props => {
   const { plant, isActive } = props;
@@ -15,7 +13,7 @@ const PlantCard = props => {
 
   return (
     <TouchableOpacity onPress={() => dispatch(changePlant(field, plant.name))}>
-      <Card shadow style={styles.plant}>
+      <Block shadow card style={styles.plantCard}>
         {isActive && (
           <LinearGradient
             colors={[theme.colors.primary, theme.colors.secondary]}
@@ -30,13 +28,15 @@ const PlantCard = props => {
         <Text medium height={20} white={isActive} gray={!isActive}>
           {plant.name}
         </Text>
-      </Card>
+      </Block>
     </TouchableOpacity>
   );
 };
 
+const { width } = Dimensions.get('window');
+
 const styles = StyleSheet.create({
-  plant: {
+  plantCard: {
     // this should be dynamic based on screen width
     minWidth: (width - theme.sizes.padding * 5 - theme.sizes.base) / 2,
     maxWidth: (width - theme.sizes.padding * 5 - theme.sizes.base) / 2,

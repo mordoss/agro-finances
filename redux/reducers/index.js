@@ -5,9 +5,9 @@ import createFieldReducer from './fieldReducer';
 const rootReducer = combineReducers({
   activeField: activeFieldReducer,
   field0: createFieldReducer('field0'),
-  field1: createFieldReducer(1),
-  field2: createFieldReducer(2),
-  field3: createFieldReducer(3),
+  field1: createFieldReducer('field1'),
+  field2: createFieldReducer('field2'),
+  field3: createFieldReducer('field3'),
 });
 
 export default rootReducer;
