@@ -6,14 +6,12 @@ import { Badge, Block, Text } from '../../components';
 import { changePlant } from '../../redux/actions/basicStateActions';
 import { theme } from '../../theme';
 
-const PlantCard = props => {
-  const { plant, isActive } = props;
-  const { field } = props;
+const PlantCard = ({ plant, isActive, field }) => {
   const dispatch = useDispatch();
 
   return (
     <TouchableOpacity onPress={() => dispatch(changePlant(field, plant.name))}>
-      <Block shadow card style={styles.plantCard}>
+      <Block shadow card style={styles.plantCard} color={theme.colors.gray2}>
         {isActive && (
           <LinearGradient
             colors={[theme.colors.primary, theme.colors.secondary]}

@@ -1,5 +1,5 @@
 export default {
   area: 0,
-  plant: 'Kukuruz',
+  plant: '',
   note: '',
 };

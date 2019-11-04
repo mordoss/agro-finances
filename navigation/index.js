@@ -2,17 +2,21 @@ import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { LinearGradient } from 'expo-linear-gradient';
-import FieldSettings from '../screens/FieldSettings';
-import AllFields from '../screens/AllFields';
+import AllFieldsScreen from '../screens/AllFieldsScreen';
+import FieldSettingsScreen from '../screens/FieldSettingsScreen';
+import CalendarScreen from '../screens/CalendarScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 import { theme } from '../theme';
 
 const screens = createStackNavigator(
   {
-    FieldSettings,
-    AllFields,
+    FieldSettingsScreen,
+    AllFieldsScreen,
+    CalendarScreen,
+    SettingsScreen,
   },
   {
-    initialRouteName: 'AllFields',
+    initialRouteName: 'AllFieldsScreen',
     defaultNavigationOptions: {
       headerBackground: (
         <LinearGradient

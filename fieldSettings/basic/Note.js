@@ -10,7 +10,7 @@ const Input = props => {
   const note = useSelector(state => state[field].note);
   const dispatch = useDispatch();
   return (
-    <Block style={styles.inputBlock}>
+    <Block style={styles.container}>
       <Text gray>Napomena: </Text>
       <TextInput
         value={note}
@@ -28,9 +28,8 @@ const Input = props => {
 export default Input;
 
 const styles = StyleSheet.create({
-  inputBlock: {
+  container: {
     alignItems: 'flex-start',
-    marginHorizontal: theme.sizes.base * 3,
   },
   input: {
     borderWidth: StyleSheet.hairlineWidth,

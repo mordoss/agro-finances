@@ -18,7 +18,6 @@ const Area = props => {
 
 const styles = StyleSheet.create({
   area: {
-    marginHorizontal: theme.sizes.base * 3,
     marginVertical: theme.sizes.base,
   },
 });

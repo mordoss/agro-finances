@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Work from './Work';
+import WorkCard from './WorkCard';
 
 const plantSpecificWorks = {
   Kukuruz: ['plowing', 'fertilization1'],
@@ -9,8 +9,7 @@ const plantSpecificWorks = {
   Suncokret: ['plowing', 'spraying2'],
 };
 
-const AllWorks = props => {
-  const { field, plant } = props;
+const Works = ({ field, plant }) => {
   const {
     plowing,
     disking,
@@ -48,7 +47,7 @@ const AllWorks = props => {
     },
   }));
 
-  const allWorks = {
+  const works = {
     plowing: { name: 'Oranje', propertyName: 'plowing', work: plowing },
     disking: { name: 'Drljanje', propertyName: 'disking', work: disking },
     horrowing: {
@@ -83,16 +82,16 @@ const AllWorks = props => {
   return (
     <>
       {plantSpecificWorks[plant].map(work => (
-        <Work
-          key={allWorks[work].propertyName}
+        <WorkCard
+          key={works[work].propertyName}
           field={field}
-          work={allWorks[work].work}
-          name={allWorks[work].name}
-          propertyName={allWorks[work].propertyName}
+          work={works[work].work}
+          name={works[work].name}
+          propertyName={works[work].propertyName}
         />
       ))}
     </>
   );
 };
 
-export default AllWorks;
+export default Works;

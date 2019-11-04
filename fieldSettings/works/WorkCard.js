@@ -7,13 +7,9 @@ import Spraying from './Spraying';
 import Fertilization from './Fertilization';
 import { theme } from '../../theme';
 
-const { width } = Dimensions.get('window');
-
-const Work = props => {
-  const { work, name, field, propertyName } = props;
-
+const Work = ({ work, name, field, propertyName }) => {
   return (
-    <Block shadow style={styles.workCard}>
+    <Block card shadow color={theme.colors.gray2} style={styles.workCard}>
       <CommonWorkPart field={field} work={work} name={name} propertyName={propertyName}>
         {name === 'Setva' && <Sowing sowingData={work.special} field={field} />}
         {name === 'Prvo Prskanje' && (
@@ -32,9 +28,11 @@ const Work = props => {
     </Block>
   );
 };
+
+const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   workCard: {
-    width: width - theme.sizes.base * 4,
+    width: width - theme.sizes.base * 6,
     borderColor: theme.colors.gray,
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 13,

@@ -6,7 +6,7 @@ import PlantCard from './PlantCard';
 import { theme } from '../../theme';
 import plants from '../../assets/plants';
 
-const PlantsList = props => {
+const Plants = props => {
   const { field } = props;
   const active = useSelector(state => state[field].plant);
 
@@ -20,7 +20,7 @@ const PlantsList = props => {
       <Text gray style={{ marginHorizontal: theme.sizes.base * 3 }}>
         Kultura za setvu:
       </Text>
-      <Block flex={false} row wrap space="around" style={styles.plants}>
+      <Block flex={false} row wrap space="between" style={styles.plantCardsContainer}>
         {plants.map(plant => renderPlant(plant))}
       </Block>
     </ScrollView>
@@ -28,10 +28,9 @@ const PlantsList = props => {
 };
 
 const styles = StyleSheet.create({
-  plants: {
-    paddingHorizontal: theme.sizes.base * 2,
+  plantCardsContainer: {
     marginVertical: theme.sizes.base,
   },
 });
 
-export default PlantsList;
+export default Plants;

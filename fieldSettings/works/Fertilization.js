@@ -1,14 +1,12 @@
 import React from 'react';
+import { Block, Picker, InputWithincrementer, Input, Text, Switch } from '../../components';
 import {
   changeSprayerOrFertilizer,
   changeMixed,
   changeFertilizerConsumption,
 } from '../../redux/actions/specialActions';
-import { Block, Picker, Slider, Input, Text, Switch } from '../../components';
 
-const Fertilization = props => {
-  const { fertilizationData, field, turn } = props;
-
+const Fertilization = ({ fertilizationData, field, turn }) => {
   return (
     <Block>
       <Picker
@@ -21,7 +19,7 @@ const Fertilization = props => {
         action={changeSprayerOrFertilizer}
         field={field}
       />
-      <Slider
+      <InputWithincrementer
         label="Masa po aru: "
         fertilization
         min={0.5}
@@ -54,7 +52,7 @@ const Fertilization = props => {
             action={changeSprayerOrFertilizer}
             field={field}
           />
-          <Slider
+          <InputWithincrementer
             label="Masa po aru: "
             fertilization
             min={0.5}

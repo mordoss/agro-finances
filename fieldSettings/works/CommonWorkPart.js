@@ -1,17 +1,10 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import {
-  changeDone,
-  changePlaning,
-  changePaid,
-  changeOilConsumption,
-  changePaidPrice,
-} from '../../redux/actions/cammonWorkActions';
+import * as actions from '../../redux/actions/cammonWorkActions';
 import { Text, Switch, Block, Input, SubTotal } from '../../components';
 import { theme } from '../../theme';
 
-const CommonWorkPart = props => {
-  const { field, name, work, propertyName, children } = props;
+const CommonWorkPart = ({ field, name, work, propertyName, children }) => {
   return (
     <Block flex={false}>
       <Text center bold h1 gray style={styles.workName}>
@@ -22,14 +15,14 @@ const CommonWorkPart = props => {
         <Switch
           label="Urađeno"
           value={work.done}
-          action={changeDone}
+          action={actions.changeDone}
           field={field}
           propertyName={propertyName}
         />
         <Switch
           label="Planiram"
           value={work.planing}
-          action={changePlaning}
+          action={actions.changePlaning}
           field={field}
           propertyName={propertyName}
         />
@@ -41,26 +34,25 @@ const CommonWorkPart = props => {
         <Switch
           label="Plaćam uslužno"
           value={work.paid}
-          action={changePaid}
+          action={actions.changePaid}
           field={field}
           propertyName={propertyName}
         />
-        {work.paid && (
+        {work.paid ? (
           <Input
             price
             label="Cena uslužnog po hektaru"
             value={String(work.paidPrice)}
-            action={changePaidPrice}
+            action={actions.changePaidPrice}
             field={field}
             propertyName={propertyName}
           />
-        )}
-        {!work.paid && (
+        ) : (
           <Input
             oilConsumption
             label="Potrošnja nafte po hektaru"
             value={String(work.consumption)}
-            action={changeOilConsumption}
+            action={actions.changeOilConsumption}
             field={field}
             propertyName={propertyName}
           />
@@ -71,6 +63,7 @@ const CommonWorkPart = props => {
     </Block>
   );
 };
+
 const styles = StyleSheet.create({
   workName: {
     marginBottom: theme.sizes.base,

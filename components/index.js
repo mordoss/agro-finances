@@ -4,7 +4,8 @@ import Text from './Text';
 import Input from './Input';
 import Switch from './Switch';
 import Picker from './Picker';
-import Slider from './Slider';
+import InputWithincrementer from './InputWithincrementer';
 import SubTotal from './SubTotal';
+import Tabs from './Tabs';
 
-export { Badge, Block, Text, Input, Switch, Picker, Slider, SubTotal };
+export { Badge, Block, Text, Input, Switch, Picker, InputWithincrementer, SubTotal, Tabs };
