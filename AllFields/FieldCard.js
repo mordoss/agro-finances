@@ -7,32 +7,28 @@ import { theme } from '../theme';
 const FieldCard = ({ field, handleChangeField }) => {
   const [plantName, fieldArea, fieldNumber] = field;
   return (
-    <Block card style={styles.fieldCard} color={theme.colors.white}>
-      <TouchableOpacity
-        style={{ alignItems: 'center' }}
-        onPress={() => handleChangeField(fieldNumber)}
-      >
+    <TouchableOpacity onPress={() => handleChangeField(fieldNumber)}>
+      <Block card style={styles.fieldCard} color={theme.colors.white}>
         <Badge size={60} color={plantName ? theme.colors.accent : theme.colors.gray}>
           <Image source={plantStringToImage(plantName)} />
         </Badge>
-        <Text height={20} center>
-          {plantName}
+        <Text height={20} center medium>
+          {plantName || 'Dodaj'}
         </Text>
-        <Text height={20} center>
-          {plantName ? `${fieldArea} ara` : 'Dodaj Njivu'}
+        <Text height={20} center medium>
+          {plantName ? `${fieldArea} ara` : 'Njivu'}
         </Text>
-      </TouchableOpacity>
-    </Block>
+      </Block>
+    </TouchableOpacity>
   );
 };
 
 const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   fieldCard: {
-    // this should be dynamic based on screen width
-    minWidth: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
-    maxWidth: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
-    maxHeight: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
+    width: (width - theme.sizes.base * 3) / 2,
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
 });
 

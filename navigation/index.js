@@ -16,8 +16,12 @@ const screens = createStackNavigator(
     SettingsScreen,
   },
   {
-    initialRouteName: 'FieldSettingsScreen',
+    initialRouteName: 'AllFieldsScreen',
     defaultNavigationOptions: {
+      headerStyle: {
+        elevation: 0,
+        shadowOpacity: 0,
+      },
       headerBackground: (
         <LinearGradient
           colors={[theme.colors.primary, theme.colors.secondary]}

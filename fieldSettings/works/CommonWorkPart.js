@@ -4,7 +4,7 @@ import * as actions from '../../redux/actions/cammonWorkActions';
 import { Text, Switch, Block, Input, SubTotal } from '../../components';
 import { theme } from '../../theme';
 
-const CommonWorkPart = ({ field, name, work, propertyName, children }) => {
+const CommonWorkPart = ({ field, name, work, workName, children }) => {
   return (
     <Block flex={false}>
       <Text center bold h1 gray style={styles.workName}>
@@ -17,14 +17,14 @@ const CommonWorkPart = ({ field, name, work, propertyName, children }) => {
           value={work.done}
           action={actions.changeDone}
           field={field}
-          propertyName={propertyName}
+          workName={workName}
         />
         <Switch
           label="Planiram"
           value={work.planing}
           action={actions.changePlaning}
           field={field}
-          propertyName={propertyName}
+          workName={workName}
         />
       </Block>
 
@@ -36,7 +36,7 @@ const CommonWorkPart = ({ field, name, work, propertyName, children }) => {
           value={work.paid}
           action={actions.changePaid}
           field={field}
-          propertyName={propertyName}
+          workName={workName}
         />
         {work.paid ? (
           <Input
@@ -45,7 +45,7 @@ const CommonWorkPart = ({ field, name, work, propertyName, children }) => {
             value={String(work.paidPrice)}
             action={actions.changePaidPrice}
             field={field}
-            propertyName={propertyName}
+            workName={workName}
           />
         ) : (
           <Input
@@ -54,7 +54,7 @@ const CommonWorkPart = ({ field, name, work, propertyName, children }) => {
             value={String(work.consumption)}
             action={actions.changeOilConsumption}
             field={field}
-            propertyName={propertyName}
+            workName={workName}
           />
         )}
       </Block>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     marginBottom: theme.sizes.base,
   },
   paidContainer: {
-    marginTop: theme.sizes.base,
+    marginVertical: theme.sizes.base,
   },
 });
 

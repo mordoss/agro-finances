@@ -8,7 +8,7 @@ const HeaderIcon = ({ position, imageSource, navigate }) => {
     <TouchableOpacity
       onPress={() => navigate(position === 'Right' ? 'SettingsScreen' : 'CalendarScreen')}
       style={{
-        [`margin${position}`]: theme.sizes.base * 3,
+        [`margin${position}`]: theme.sizes.base,
         flexDirection: 'row',
         alignItems: 'flex-end',
         justifyContent: 'space-between',

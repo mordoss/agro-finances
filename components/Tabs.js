@@ -5,17 +5,20 @@ import Block from './Block';
 import { theme } from '../theme';
 
 const Tabs = ({ tabs, changeActive, active }) => {
-  const renderTab = tab => (
-    <TouchableOpacity
-      key={tab}
-      onPress={() => changeActive(tab)}
-      style={[styles.tab, active === tab ? styles.active : null]}
-    >
-      <Text size={16} gray={!active === tab} primary={active === tab} medium={active === tab}>
-        {tab}
-      </Text>
-    </TouchableOpacity>
-  );
+  const renderTab = tab => {
+    const isActive = active === tab;
+    return (
+      <TouchableOpacity
+        key={tab}
+        onPress={() => changeActive(tab)}
+        style={[styles.tab, isActive ? styles.active : null]}
+      >
+        <Text size={16} gray={!isActive} primary={isActive} medium={isActive}>
+          {tab}
+        </Text>
+      </TouchableOpacity>
+    );
+  };
 
   return (
     <Block row space="between" style={styles.container}>
@@ -26,11 +29,14 @@ const Tabs = ({ tabs, changeActive, active }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: theme.sizes.base,
-    marginHorizontal: theme.sizes.base * 3,
-    borderColor: theme.colors.gray,
-    borderBottomWidth: 1,
     flex: 0,
+    marginBottom: theme.sizes.base,
+    paddingTop: theme.sizes.base,
+    paddingHorizontal: theme.sizes.base,
+    borderColor: theme.colors.gray,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    backgroundColor: theme.colors.white,
+    elevation: 5,
   },
   tab: {
     paddingBottom: theme.sizes.base,

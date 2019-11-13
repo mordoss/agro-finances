@@ -116,6 +116,15 @@ function createFieldReducer(fieldNumber) {
             seedConsumption: action.value,
           },
         };
+
+      case 'SEED_CONSUMPTION_CHANGED_INCREMENTING':
+        return {
+          ...state,
+          sowingState: {
+            ...state.sowingState,
+            seedConsumption: action.adjective === 'inc' ? action.value + 1 : action.value - 1,
+          },
+        };
       case 'FERTILIZER_CONSUMPTION_CHANGED':
         return {
           ...state,
@@ -124,6 +133,18 @@ function createFieldReducer(fieldNumber) {
             [action.turn]: {
               ...state.fertilizationState[action.turn],
               [action.propertyName]: action.value,
+            },
+          },
+        };
+      case 'FERTILIZER_CONSUMPTION_CHANGED_INCREMENTING':
+        return {
+          ...state,
+          fertilizationState: {
+            ...state.fertilizationState,
+            [action.turn]: {
+              ...state.fertilizationState[action.turn],
+              [action.propertyName]:
+                action.adjective === 'inc' ? action.value + 0.1 : action.value - 0.1,
             },
           },
         };

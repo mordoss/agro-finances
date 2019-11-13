@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { Block } from '../components';
 import FieldCard from './FieldCard';
@@ -19,18 +19,20 @@ const FieldsConnected = ({ navigation }) => {
   };
 
   return (
-    <Block flex={false} row wrap space="between" style={styles.fieldCardsContainer}>
-      {fields.map(field => (
-        <FieldCard field={field} handleChangeField={handleChangeField} key={field[2]} />
-      ))}
-    </Block>
+    <ScrollView style={styles.container}>
+      <Block row wrap space="between">
+        {fields.map(field => (
+          <FieldCard field={field} handleChangeField={handleChangeField} key={field[2]} />
+        ))}
+      </Block>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  fieldCardsContainer: {
+  container: {
     marginVertical: theme.sizes.base,
-    marginHorizontal: theme.sizes.base * 3,
+    marginHorizontal: theme.sizes.base,
   },
 });
 

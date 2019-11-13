@@ -5,13 +5,12 @@ import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
 
-const PickerCustom = props => {
+const PickerCustom = ({ items, label, active, field, action, turn, propertyName, workState }) => {
   const dispatch = useDispatch();
-  const { items, label, active, field, action, turn, propertyName, work } = props;
   const [isActive, setIsActive] = useState(false);
 
   const handleSelect = item => {
-    dispatch(action(field, item, propertyName, turn, work));
+    dispatch(action(field, item, propertyName, turn, workState));
     setIsActive(false);
   };
 
@@ -20,7 +19,7 @@ const PickerCustom = props => {
       <TouchableHighlight onPress={() => setIsActive(true)} style={styles.pick}>
         <Text gray>{label}</Text>
       </TouchableHighlight>
-      <Text style={styles.selected} bold h1 gray>
+      <Text style={styles.selected} medium h3 gray>
         {active}
       </Text>
 
@@ -61,7 +60,7 @@ const styles = StyleSheet.create({
   pick: {
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 13,
-    padding: theme.sizes.base / 2,
+    padding: theme.sizes.base / 4,
   },
   selected: {
     marginLeft: theme.sizes.base,

@@ -48,33 +48,33 @@ const Works = ({ field, plant }) => {
   }));
 
   const works = {
-    plowing: { name: 'Oranje', propertyName: 'plowing', work: plowing },
-    disking: { name: 'Drljanje', propertyName: 'disking', work: disking },
+    plowing: { name: 'Oranje', workName: 'plowing', work: plowing },
+    disking: { name: 'Drljanje', workName: 'disking', work: disking },
     horrowing: {
       name: 'Setvospremanje',
-      propertyName: 'horrowing',
+      workName: 'horrowing',
       work: horrowing,
     },
-    harvesting: { name: 'Berba', propertyName: 'harvesting', work: harvesting },
-    sowing: { name: 'Setva', propertyName: 'sowing', work: sowing },
+    harvesting: { name: 'Berba', workName: 'harvesting', work: harvesting },
+    sowing: { name: 'Setva', workName: 'sowing', work: sowing },
     spraying1: {
       name: 'Prva Zaštita',
-      propertyName: 'spraying1',
+      workName: 'spraying1',
       work: spraying1,
     },
     spraying2: {
       name: 'Druga Zaštita',
-      propertyName: 'spraying2',
+      workName: 'spraying2',
       work: spraying2,
     },
     fertilization1: {
       name: 'Prva Prihrana',
-      propertyName: 'fertilization1',
+      workName: 'fertilization1',
       work: fertilization1,
     },
     fertilization2: {
       name: 'Druga Prihrana',
-      propertyName: 'fertilization2',
+      workName: 'fertilization2',
       work: fertilization2,
     },
   };
@@ -83,11 +83,11 @@ const Works = ({ field, plant }) => {
     <>
       {plantSpecificWorks[plant].map(work => (
         <WorkCard
-          key={works[work].propertyName}
+          key={works[work].workName}
           field={field}
           work={works[work].work}
           name={works[work].name}
-          propertyName={works[work].propertyName}
+          workName={works[work].workName}
         />
       ))}
     </>

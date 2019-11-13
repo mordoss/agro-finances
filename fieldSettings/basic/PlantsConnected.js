@@ -20,7 +20,7 @@ const PlantsConnected = props => {
       <Text gray style={styles.text}>
         Kultura za setvu:
       </Text>
-      <Block flex={false} row wrap space="between">
+      <Block row wrap space="between">
         {plants.map(plant => renderPlant(plant))}
       </Block>
     </ScrollView>

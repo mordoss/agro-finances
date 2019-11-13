@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-export const setInputUnit = (price, area, oilConsumption, bags) => {
+export const setInputUnit = ({ price, area, oilConsumption, bags }) => {
   // eslint-disable-next-line no-nested-ternary
   return price ? 'dinara' : area ? 'ara' : oilConsumption ? 'litara' : bags ? 'džakova' : '';
 };

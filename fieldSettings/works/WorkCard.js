@@ -7,21 +7,21 @@ import Spraying from './Spraying';
 import Fertilization from './Fertilization';
 import { theme } from '../../theme';
 
-const Work = ({ work, name, field, propertyName }) => {
+const Work = ({ work, name, field, workName }) => {
   return (
     <Block card color={theme.colors.white} style={styles.workCard}>
-      <CommonWorkPart field={field} work={work} name={name} propertyName={propertyName}>
-        {name === 'Setva' && <Sowing sowingData={work.special} field={field} />}
-        {name === 'Prvo Prskanje' && (
+      <CommonWorkPart field={field} work={work} name={name} workName={workName}>
+        {workName === 'sowing' && <Sowing sowingData={work.special} field={field} />}
+        {workName === 'spraying1' && (
           <Spraying sprayingData={work.special} field={field} turn="first" />
         )}
-        {name === 'Drugo Prskanje' && (
+        {workName === 'spraying2' && (
           <Spraying sprayingData={work.special} field={field} turn="second" />
         )}
-        {name === 'Prva Prihrana' && (
+        {workName === 'fertilization1' && (
           <Fertilization fertilizationData={work.special} field={field} turn="first" />
         )}
-        {name === 'Druga Prihrana' && (
+        {workName === 'fertilization2' && (
           <Fertilization fertilizationData={work.special} field={field} turn="second" />
         )}
       </CommonWorkPart>
@@ -33,6 +33,7 @@ const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   workCard: {
     width: width - theme.sizes.base * 2,
+    marginHorizontal: theme.sizes.base,
   },
 });
 

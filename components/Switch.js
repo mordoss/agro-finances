@@ -5,16 +5,15 @@ import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
 
-const CustomSwitch = props => {
+const CustomSwitch = ({ label, value, action, workName, field, turn }) => {
   const dispatch = useDispatch();
-  const { label, value, action, propertyName, field, turn } = props;
 
   return (
     <Block row style={styles.checkBoxBlock}>
       <Text gray style={{ marginRight: theme.sizes.base }}>
         {label}
       </Text>
-      <Switch onChange={() => dispatch(action(field, propertyName, value, turn))} value={value} />
+      <Switch onChange={() => dispatch(action(field, workName, value, turn))} value={value} />
     </Block>
   );
 };

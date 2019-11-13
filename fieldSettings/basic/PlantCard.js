@@ -32,14 +32,11 @@ const PlantCard = ({ plant, isActive, field }) => {
 };
 
 const { width } = Dimensions.get('window');
-
 const styles = StyleSheet.create({
   plantCard: {
-    // this should be dynamic based on screen width
-    minWidth: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
-    maxWidth: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
-    maxHeight: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
+    width: (width - theme.sizes.base * 3) / 2,
     alignItems: 'center',
+    justifyContent: 'space-around',
   },
   gradient: {
     position: 'absolute',

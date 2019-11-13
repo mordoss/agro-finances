@@ -10,14 +10,14 @@ import { theme } from '../theme';
 const FieldSettingsScreen = () => {
   const activeField = useSelector(state => `field${state.activeField}`);
   const tabs = ['Njiva', 'Radovi', 'Statistika'];
-  const [active, changeActive] = useState('Radovi');
+  const [active, changeActive] = useState('Njiva');
 
   return (
     <Block color={theme.colors.gray2}>
       <KeyboardAvoidingView
         behavior="padding"
         style={{ flex: 1 }}
-        keyboardVerticalOffset={theme.sizes.base * 5}
+        keyboardVerticalOffset={theme.sizes.base * 6}
       >
         <ScrollView>
           <Tabs tabs={tabs} active={active} changeActive={changeActive} />

@@ -1,6 +1,10 @@
 import React from 'react';
-import { Block, Picker, InputWithIncrementer, Input, Text } from '../../components';
-import { changeSeed, changeSeedConsumption } from '../../redux/actions/specialActions';
+import { Block, Picker, InputWithIncrementer, Text } from '../../components';
+import {
+  changeSeed,
+  changeSeedConsumption,
+  changeSeedConsumptionIncrementing,
+} from '../../redux/actions/specialActions';
 
 const Sowing = ({ sowingData, field }) => {
   return (
@@ -19,8 +23,9 @@ const Sowing = ({ sowingData, field }) => {
         value={String(sowingData.seedConsumption)}
         field={field}
         action={changeSeedConsumption}
+        actionIncrementing={changeSeedConsumptionIncrementing}
       />
-      <Input bags label="Potrebno Vam je: " />
+      <Text gray>Potrebno Vam je: </Text>
       <Text gray>Ostaje Vam za:{sowingData.seed} ara.</Text>
     </Block>
   );

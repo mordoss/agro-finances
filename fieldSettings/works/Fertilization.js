@@ -18,7 +18,7 @@ const Fertilization = ({ fertilizationData, field, turn }) => {
         value={fertilizationData.mixed}
         field={field}
         turn={turn}
-        propertyName="fertilizationState"
+        workName="fertilizationState"
         action={changeMixed}
       />
       {fertilizationData.mixed && (

@@ -12,6 +12,7 @@ const InputWithIncrementer = ({
   max,
   value,
   action,
+  actionIncrementing,
   turn,
   propertyName,
   field,
@@ -23,15 +24,17 @@ const InputWithIncrementer = ({
     <Block row style={styles.container}>
       <Text gray>{label}</Text>
 
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => dispatch(actionIncrementing(field, value, 'dec', turn, propertyName))}
+      >
         <View style={[styles.incrementer, styles.left]}>
-          <Text gray>-</Text>
+          <Text gray> - </Text>
         </View>
       </TouchableOpacity>
 
       <TextInput
         value={value}
-        onChangeText={e => dispatch(action(field, e, propertyName))}
+        onChangeText={eventValue => dispatch(action(field, eventValue, turn, propertyName))}
         style={styles.input}
         autoComplete="off"
         autoCapitalize="none"
@@ -39,7 +42,9 @@ const InputWithIncrementer = ({
         keyboardType="numeric"
       />
 
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => dispatch(actionIncrementing(field, value, 'inc', turn, propertyName))}
+      >
         <View style={[styles.incrementer, styles.right]}>
           <Text gray>+</Text>
         </View>
@@ -63,13 +68,13 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: theme.colors.black,
     paddingHorizontal: theme.sizes.base,
-    height: theme.sizes.base * 2,
-    flexBasis: theme.sizes.base * 4,
+    height: theme.sizes.base * 1.5,
+    textAlign: 'center',
   },
   incrementer: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: theme.colors.black,
-    height: theme.sizes.base * 2,
+    height: theme.sizes.base * 1.5,
     width: theme.sizes.base * 2,
     justifyContent: 'center',
     alignItems: 'center',

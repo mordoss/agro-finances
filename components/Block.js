@@ -14,7 +14,6 @@ const Block = props => {
     top,
     bottom,
     card,
-    shadow,
     color,
     space,
     animated,
@@ -36,7 +35,6 @@ const Block = props => {
     top && styles.top,
     bottom && styles.bottom,
     card && styles.card,
-    shadow && styles.shadow,
     space && { justifyContent: `space-${space}` },
     wrap && { flexWrap: 'wrap' },
     color && styles[color], // predefined styles colors for backgroundColor
@@ -68,7 +66,8 @@ export const styles = StyleSheet.create({
     padding: theme.sizes.base,
     marginBottom: theme.sizes.base,
     borderColor: theme.colors.gray,
-    borderWidth: StyleSheet.hairlineWidth,
+    // borderWidth: StyleSheet.hairlineWidth,
+    elevation: 5,
   },
   center: {
     alignItems: 'center',
@@ -87,13 +86,6 @@ export const styles = StyleSheet.create({
   },
   bottom: {
     justifyContent: 'flex-end',
-  },
-  shadow: {
-    shadowColor: theme.colors.black,
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.1,
-    shadowRadius: 13,
-    elevation: 2,
   },
 
   accent: { backgroundColor: theme.colors.accent },

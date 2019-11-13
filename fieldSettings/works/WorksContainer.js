@@ -22,7 +22,6 @@ const WorksContainer = ({ field }) => {
 const styles = StyleSheet.create({
   container: {
     marginVertical: theme.sizes.base,
-    marginHorizontal: theme.sizes.base,
   },
 });
 

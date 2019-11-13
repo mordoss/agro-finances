@@ -1,44 +1,22 @@
 import React from 'react';
-import { changeSprayerOrFertilizer, changeMixed } from '../../redux/actions/specialActions';
-import { Block, Picker, Input, Text, Switch } from '../../components';
+import { Block, Switch } from '../../components';
+import SprayingSegment from './SprayingSegment';
+import { changeMixed } from '../../redux/actions/specialActions';
 
-const Spraying = props => {
-  const { sprayingData, field, turn } = props;
+const Spraying = ({ sprayingData, field, turn }) => {
   return (
     <Block>
-      <Picker
-        items={['Glifosav', 'Monsun', 'Nikosav']}
-        label="Izbor herbicida"
-        active={sprayingData.sprayer1}
-        propertyName="sprayer1"
-        work="sprayingState"
-        turn={turn}
-        action={changeSprayerOrFertilizer}
-        field={field}
-      />
+      <SprayingSegment sprayingData={sprayingData} turn={turn} place={1} field={field} />
       <Switch
         label="Mešam sa još jednim herbicidom"
         value={sprayingData.mixed}
         field={field}
         turn={turn}
-        propertyName="sprayingState"
+        workName="sprayingState"
         action={changeMixed}
       />
       {sprayingData.mixed && (
-        <>
-          <Picker
-            items={['Glifosav', 'Monsun', 'Nikosav']}
-            label="Izbor herbicida"
-            active={sprayingData.sprayer2}
-            propertyName="sprayer2"
-            work="sprayingState"
-            turn={turn}
-            action={changeSprayerOrFertilizer}
-            field={field}
-          />
-          <Input bags label="Potrebno Vam je: " />
-          <Text gray>Ostaje Vam za ___ ara.</Text>
-        </>
+        <SprayingSegment sprayingData={sprayingData} turn={turn} place={2} field={field} />
       )}
     </Block>
   );

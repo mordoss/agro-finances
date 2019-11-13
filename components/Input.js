@@ -6,26 +6,17 @@ import Block from './Block';
 import { theme } from '../theme';
 import { setInputUnit } from '../helperFunctions';
 
-const Input = ({
-  label,
-  price,
-  area,
-  oilConsumption,
-  bags,
-  value,
-  field,
-  action,
-  propertyName,
-}) => {
+const Input = ({ label, price, area, oilConsumption, bags, value, field, action, workName }) => {
   const dispatch = useDispatch();
-  const unit = setInputUnit(price, area, oilConsumption, bags);
+  const allUnits = { price, area, oilConsumption, bags };
+  const unit = setInputUnit(allUnits);
 
   return (
     <Block row style={styles.container}>
       <Text gray>{label}</Text>
       <TextInput
         value={value}
-        onChangeText={eventValue => dispatch(action(field, eventValue, propertyName))}
+        onChangeText={eventValue => dispatch(action(field, eventValue, workName))}
         style={styles.input}
         autoComplete="off"
         autoCapitalize="none"
@@ -51,9 +42,9 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: theme.colors.black,
     backgroundColor: theme.colors.white,
+    height: theme.sizes.base * 1.5,
     paddingHorizontal: theme.sizes.base,
-    height: theme.sizes.base * 2,
-    flexBasis: theme.sizes.base * 4,
     marginHorizontal: theme.sizes.base / 2,
+    textAlign: 'center',
   },
 });

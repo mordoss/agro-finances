@@ -35,11 +35,37 @@ export const changeSeedConsumption = (field, value) => {
   };
 };
 
+export const changeSeedConsumptionIncrementing = (field, value, adjective) => {
+  return {
+    type: 'SEED_CONSUMPTION_CHANGED_INCREMENTING',
+    field,
+    value: Number(value),
+    adjective,
+  };
+};
+
 export const changeFertilizerConsumption = (field, value, turn, propertyName) => {
   return {
     type: 'FERTILIZER_CONSUMPTION_CHANGED',
     field,
     value,
+    turn,
+    propertyName,
+  };
+};
+
+export const changeFertilizerConsumptionIncrementing = (
+  field,
+  value,
+  adjective,
+  turn,
+  propertyName
+) => {
+  return {
+    type: 'FERTILIZER_CONSUMPTION_CHANGED_INCREMENTING',
+    field,
+    value: Number(value),
+    adjective,
     turn,
     propertyName,
   };
