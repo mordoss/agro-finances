@@ -5,10 +5,10 @@ import { changeNote } from '../../redux/actions/basicStateActions';
 import { Text, Block } from '../../components';
 import { theme } from '../../theme';
 
-const Input = props => {
-  const { field } = props;
+const Input = ({ field }) => {
   const note = useSelector(state => state[field].note);
   const dispatch = useDispatch();
+
   return (
     <Block style={styles.container}>
       <Text gray>Napomena: </Text>
@@ -30,11 +30,13 @@ export default Input;
 const styles = StyleSheet.create({
   container: {
     alignItems: 'flex-start',
+    marginVertical: theme.sizes.base,
   },
   input: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: theme.colors.black,
     borderRadius: theme.sizes.radius,
+    backgroundColor: theme.colors.white,
     fontSize: theme.sizes.font,
     fontWeight: '500',
     color: theme.colors.black,

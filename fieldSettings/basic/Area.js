@@ -10,14 +10,14 @@ const Area = props => {
   const area = useSelector(state => state[field].area);
 
   return (
-    <Block style={styles.area} middle>
+    <Block style={styles.container} middle>
       <Input area label="Površina njive: " value={String(area)} action={changeArea} field={field} />
     </Block>
   );
 };
 
 const styles = StyleSheet.create({
-  area: {
+  container: {
     marginVertical: theme.sizes.base,
   },
 });

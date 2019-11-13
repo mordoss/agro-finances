@@ -11,32 +11,34 @@ const Tabs = ({ tabs, changeActive, active }) => {
       onPress={() => changeActive(tab)}
       style={[styles.tab, active === tab ? styles.active : null]}
     >
-      <Text size={16} gray={!active === tab} primary={active === tab}>
+      <Text size={16} gray={!active === tab} primary={active === tab} medium={active === tab}>
         {tab}
       </Text>
     </TouchableOpacity>
   );
 
   return (
-    <Block row space="between" style={styles.tabs}>
+    <Block row space="between" style={styles.container}>
       {tabs.map(tab => renderTab(tab))}
     </Block>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    marginVertical: theme.sizes.base,
+    marginHorizontal: theme.sizes.base * 3,
+    borderColor: theme.colors.gray,
+    borderBottomWidth: 1,
+    flex: 0,
+  },
   tab: {
     paddingBottom: theme.sizes.base,
   },
   active: {
     borderColor: theme.colors.primary,
     borderBottomWidth: 3,
-  },
-  tabs: {
-    borderBottomColor: theme.colors.gray2,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    marginTop: theme.sizes.base,
-    flex: 0,
+    fontWeight: 'bold',
   },
 });
 

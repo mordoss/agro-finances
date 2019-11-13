@@ -11,7 +11,7 @@ const PlantCard = ({ plant, isActive, field }) => {
 
   return (
     <TouchableOpacity onPress={() => dispatch(changePlant(field, plant.name))}>
-      <Block shadow card style={styles.plantCard} color={theme.colors.gray2}>
+      <Block card style={styles.plantCard} color={theme.colors.white}>
         {isActive && (
           <LinearGradient
             colors={[theme.colors.primary, theme.colors.secondary]}
@@ -36,8 +36,8 @@ const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   plantCard: {
     // this should be dynamic based on screen width
-    minWidth: (width - theme.sizes.padding * 5 - theme.sizes.base) / 2,
-    maxWidth: (width - theme.sizes.padding * 5 - theme.sizes.base) / 2,
+    minWidth: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
+    maxWidth: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
     maxHeight: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
     alignItems: 'center',
   },

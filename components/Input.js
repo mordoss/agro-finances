@@ -6,21 +6,26 @@ import Block from './Block';
 import { theme } from '../theme';
 import { setInputUnit } from '../helperFunctions';
 
-const Input = props => {
+const Input = ({
+  label,
+  price,
+  area,
+  oilConsumption,
+  bags,
+  value,
+  field,
+  action,
+  propertyName,
+}) => {
   const dispatch = useDispatch();
-  const { label, price, area, oilConsumption, bags, value, field, action, propertyName } = props;
   const unit = setInputUnit(price, area, oilConsumption, bags);
 
-  const renderLabel = () => {
-    return <Block flex={false}>{label ? <Text gray>{label}</Text> : null}</Block>;
-  };
-
   return (
-    <Block row style={styles.inputBlock}>
-      {renderLabel()}
+    <Block row style={styles.container}>
+      <Text gray>{label}</Text>
       <TextInput
         value={value}
-        onChangeText={e => dispatch(action(field, e, propertyName))}
+        onChangeText={eventValue => dispatch(action(field, eventValue, propertyName))}
         style={styles.input}
         autoComplete="off"
         autoCapitalize="none"
@@ -35,7 +40,7 @@ const Input = props => {
 export default Input;
 
 const styles = StyleSheet.create({
-  inputBlock: {
+  container: {
     alignItems: 'center',
   },
   input: {
@@ -45,6 +50,7 @@ const styles = StyleSheet.create({
     fontSize: theme.sizes.font,
     fontWeight: '500',
     color: theme.colors.black,
+    backgroundColor: theme.colors.white,
     paddingHorizontal: theme.sizes.base,
     height: theme.sizes.base * 2,
     flexBasis: theme.sizes.base * 4,

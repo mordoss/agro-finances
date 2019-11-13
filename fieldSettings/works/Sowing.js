@@ -1,9 +1,8 @@
 import React from 'react';
+import { Block, Picker, InputWithIncrementer, Input, Text } from '../../components';
 import { changeSeed, changeSeedConsumption } from '../../redux/actions/specialActions';
-import { Block, Picker, InputWithincrementer, Input, Text } from '../../components';
 
-const Sowing = props => {
-  const { sowingData, field } = props;
+const Sowing = ({ sowingData, field }) => {
   return (
     <Block>
       <Picker
@@ -13,11 +12,11 @@ const Sowing = props => {
         action={changeSeed}
         field={field}
       />
-      <InputWithincrementer
+      <InputWithIncrementer
         label="Gustina: "
         min={18}
         max={28}
-        value={sowingData.seedConsumption}
+        value={String(sowingData.seedConsumption)}
         field={field}
         action={changeSeedConsumption}
       />

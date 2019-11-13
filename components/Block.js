@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, View, Animated } from 'react-native';
-
 import { theme } from '../theme';
 
 const Block = props => {
@@ -68,6 +67,8 @@ export const styles = StyleSheet.create({
     borderRadius: theme.sizes.radius,
     padding: theme.sizes.base,
     marginBottom: theme.sizes.base,
+    borderColor: theme.colors.gray,
+    borderWidth: StyleSheet.hairlineWidth,
   },
   center: {
     alignItems: 'center',

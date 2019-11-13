@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { useSelector } from 'react-redux';
-import Works from './Works';
+import WorksConnected from './WorksConnected';
 import { theme } from '../../theme';
 
 const WorksContainer = ({ field }) => {
@@ -14,7 +14,7 @@ const WorksContainer = ({ field }) => {
       horizontal
       pagingEnabled
     >
-      <Works field={field} plant={plant} />
+      <WorksConnected field={field} plant={plant} />
     </ScrollView>
   );
 };
@@ -22,6 +22,7 @@ const WorksContainer = ({ field }) => {
 const styles = StyleSheet.create({
   container: {
     marginVertical: theme.sizes.base,
+    marginHorizontal: theme.sizes.base,
   },
 });
 

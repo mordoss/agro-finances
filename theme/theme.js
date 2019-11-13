@@ -5,14 +5,14 @@ const colors = {
   tertiary: '#FFE358',
   white: '#FFFFFF',
   gray: '#3F3F3F',
-  gray2: '#E7E7E7',
+  gray2: '#F0F0F0',
 };
 
 const sizes = {
   // global sizes
   base: 16,
   font: 14,
-  radius: 6,
+  radius: 13,
   padding: 25,
 
   // font sizes

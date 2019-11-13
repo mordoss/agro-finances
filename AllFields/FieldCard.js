@@ -7,7 +7,7 @@ import { theme } from '../theme';
 const FieldCard = ({ field, handleChangeField }) => {
   const [plantName, fieldArea, fieldNumber] = field;
   return (
-    <Block shadow card style={styles.fieldCard} color={theme.colors.gray2}>
+    <Block card style={styles.fieldCard} color={theme.colors.white}>
       <TouchableOpacity
         style={{ alignItems: 'center' }}
         onPress={() => handleChangeField(fieldNumber)}
@@ -30,8 +30,8 @@ const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   fieldCard: {
     // this should be dynamic based on screen width
-    minWidth: (width - theme.sizes.padding * 5 - theme.sizes.base) / 2,
-    maxWidth: (width - theme.sizes.padding * 5 - theme.sizes.base) / 2,
+    minWidth: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
+    maxWidth: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
     maxHeight: (width - theme.sizes.padding * 4 - theme.sizes.base) / 2,
   },
 });

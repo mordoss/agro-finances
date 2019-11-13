@@ -3,10 +3,10 @@ import { ScrollView, StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 import { Block, Text } from '../../components';
 import PlantCard from './PlantCard';
-import { theme } from '../../theme';
 import plants from '../../assets/plants';
+import { theme } from '../../theme';
 
-const Plants = props => {
+const PlantsConnected = props => {
   const { field } = props;
   const active = useSelector(state => state[field].plant);
 
@@ -16,11 +16,11 @@ const Plants = props => {
   };
 
   return (
-    <ScrollView>
-      <Text gray style={{ marginHorizontal: theme.sizes.base * 3 }}>
+    <ScrollView style={styles.container}>
+      <Text gray style={styles.text}>
         Kultura za setvu:
       </Text>
-      <Block flex={false} row wrap space="between" style={styles.plantCardsContainer}>
+      <Block flex={false} row wrap space="between">
         {plants.map(plant => renderPlant(plant))}
       </Block>
     </ScrollView>
@@ -28,9 +28,12 @@ const Plants = props => {
 };
 
 const styles = StyleSheet.create({
-  plantCardsContainer: {
-    marginVertical: theme.sizes.base,
+  container: {
+    marginTop: theme.sizes.base,
+  },
+  text: {
+    marginBottom: theme.sizes.base,
   },
 });
 
-export default Plants;
+export default PlantsConnected;
