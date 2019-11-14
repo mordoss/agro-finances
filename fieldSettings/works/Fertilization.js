@@ -1,11 +1,11 @@
 import React from 'react';
-import { Block, Switch } from '../../components';
+import { Switch } from '../../components';
 import FertilizationSegment from './FertilizationSegment';
 import { changeMixed } from '../../redux/actions/specialActions';
 
 const Fertilization = ({ fertilizationData, field, turn }) => {
   return (
-    <Block>
+    <>
       <FertilizationSegment
         fertilizationData={fertilizationData}
         field={field}
@@ -29,7 +29,7 @@ const Fertilization = ({ fertilizationData, field, turn }) => {
           place={2}
         />
       )}
-    </Block>
+    </>
   );
 };
 

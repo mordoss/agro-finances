@@ -57,23 +57,20 @@ const InputWithIncrementer = ({
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: theme.sizes.base,
     alignItems: 'center',
   },
   input: {
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.black,
-    fontSize: theme.sizes.font,
-    fontWeight: '500',
-    color: theme.colors.black,
+    borderColor: theme.colors.gray,
+    color: theme.colors.gray,
     paddingHorizontal: theme.sizes.base,
     height: theme.sizes.base * 1.5,
     textAlign: 'center',
   },
   incrementer: {
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.black,
+    borderColor: theme.colors.gray,
     height: theme.sizes.base * 1.5,
     width: theme.sizes.base * 2,
     justifyContent: 'center',

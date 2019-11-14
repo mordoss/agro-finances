@@ -20,6 +20,18 @@ function createFieldReducer(fieldNumber) {
           note: action.value,
         };
 
+      case 'RENTED_CHANGED':
+        return {
+          ...state,
+          rented: !action.value,
+        };
+
+      case 'RENTED_PRICE_CHANGED':
+        return {
+          ...state,
+          rentedPrice: action.value,
+        };
+
       case 'DONE_CHANGED':
         return {
           ...state,
@@ -144,7 +156,9 @@ function createFieldReducer(fieldNumber) {
             [action.turn]: {
               ...state.fertilizationState[action.turn],
               [action.propertyName]:
-                action.adjective === 'inc' ? action.value + 0.1 : action.value - 0.1,
+                action.adjective === 'inc'
+                  ? Math.round((action.value + 0.1) * 100) / 100
+                  : Math.round((action.value - 0.1) * 100) / 100,
             },
           },
         };

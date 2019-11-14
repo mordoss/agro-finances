@@ -21,3 +21,19 @@ export const changeNote = (field, value) => {
     field,
   };
 };
+
+export const changeRented = (field, SwitchWorkNamePlaceholder, value) => {
+  return {
+    type: 'RENTED_CHANGED',
+    value,
+    field,
+  };
+};
+
+export const changeRentedPrice = (field, value) => {
+  return {
+    type: 'RENTED_PRICE_CHANGED',
+    value,
+    field,
+  };
+};

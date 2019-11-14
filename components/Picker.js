@@ -15,8 +15,8 @@ const PickerCustom = ({ items, label, active, field, action, turn, propertyName,
   };
 
   return (
-    <Block row center style={{ marginTop: theme.sizes.base }}>
-      <TouchableHighlight onPress={() => setIsActive(true)} style={styles.pick}>
+    <Block row center>
+      <TouchableHighlight onPress={() => setIsActive(true)} style={styles.label}>
         <Text gray>{label}</Text>
       </TouchableHighlight>
       <Text style={styles.selected} medium h3 gray>
@@ -24,9 +24,13 @@ const PickerCustom = ({ items, label, active, field, action, turn, propertyName,
       </Text>
 
       <Modal visible={isActive} animationType="slide" transparent>
-        <Block style={styles.modalInnerContainer}>
+        <Block style={styles.modalContainer}>
           {items.map(item => (
-            <TouchableHighlight key={item} style={styles.item} onPress={() => handleSelect(item)}>
+            <TouchableHighlight
+              key={item}
+              style={styles.modalItem}
+              onPress={() => handleSelect(item)}
+            >
               <Text h3 black>
                 {item}
               </Text>
@@ -39,7 +43,7 @@ const PickerCustom = ({ items, label, active, field, action, turn, propertyName,
 };
 
 const styles = StyleSheet.create({
-  modalInnerContainer: {
+  modalContainer: {
     position: 'absolute',
     alignItems: 'stretch',
     borderRadius: 13,
@@ -50,14 +54,14 @@ const styles = StyleSheet.create({
     marginVertical: Dimensions.get('window').height / 4,
     padding: theme.sizes.base,
   },
-  item: {
+  modalItem: {
     marginVertical: theme.sizes.base,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: theme.colors.gray,
     borderRadius: 13,
     alignItems: 'center',
   },
-  pick: {
+  label: {
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 13,
     padding: theme.sizes.base / 4,

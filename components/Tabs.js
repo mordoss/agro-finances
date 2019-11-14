@@ -33,8 +33,7 @@ const styles = StyleSheet.create({
     marginBottom: theme.sizes.base,
     paddingTop: theme.sizes.base,
     paddingHorizontal: theme.sizes.base,
-    borderColor: theme.colors.gray,
-    borderBottomWidth: StyleSheet.hairlineWidth,
+
     backgroundColor: theme.colors.white,
     elevation: 5,
   },

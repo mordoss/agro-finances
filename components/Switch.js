@@ -9,7 +9,7 @@ const CustomSwitch = ({ label, value, action, workName, field, turn }) => {
   const dispatch = useDispatch();
 
   return (
-    <Block row style={styles.checkBoxBlock}>
+    <Block row style={styles.container}>
       <Text gray style={{ marginRight: theme.sizes.base }}>
         {label}
       </Text>
@@ -21,7 +21,7 @@ const CustomSwitch = ({ label, value, action, workName, field, turn }) => {
 export default CustomSwitch;
 
 const styles = StyleSheet.create({
-  checkBoxBlock: {
+  container: {
     alignItems: 'center',
   },
 });

@@ -7,7 +7,7 @@ import { theme } from '../../theme';
 const CommonWorkPart = ({ field, name, work, workName, children }) => {
   return (
     <Block flex={false}>
-      <Text center bold h1 gray style={styles.workName}>
+      <Text center semibold title gray style={styles.workName}>
         {name}
       </Text>
 

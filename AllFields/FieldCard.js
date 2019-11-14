@@ -12,10 +12,10 @@ const FieldCard = ({ field, handleChangeField }) => {
         <Badge size={60} color={plantName ? theme.colors.accent : theme.colors.gray}>
           <Image source={plantStringToImage(plantName)} />
         </Badge>
-        <Text height={20} center medium>
+        <Text title center gray>
           {plantName || 'Dodaj'}
         </Text>
-        <Text height={20} center medium>
+        <Text header center gray>
           {plantName ? `${fieldArea} ara` : 'Njivu'}
         </Text>
       </Block>
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   fieldCard: {
     width: (width - theme.sizes.base * 3) / 2,
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
   },
 });
 

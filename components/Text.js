@@ -100,10 +100,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   semibold: {
-    fontWeight: '500',
+    fontWeight: '600',
   },
   medium: {
-    fontWeight: '400',
+    fontWeight: '500',
   },
   light: {
     fontWeight: '200',

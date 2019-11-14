@@ -36,10 +36,8 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.black,
+    borderColor: theme.colors.gray,
     borderRadius: theme.sizes.radius,
-    fontSize: theme.sizes.font,
-    fontWeight: '500',
     color: theme.colors.black,
     backgroundColor: theme.colors.white,
     height: theme.sizes.base * 1.5,

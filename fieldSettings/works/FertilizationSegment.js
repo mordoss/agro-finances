@@ -1,14 +1,11 @@
 import React from 'react';
-import { Picker, InputWithIncrementer, Text } from '../../components';
-import {
-  changeSprayerOrFertilizer,
-  changeFertilizerConsumption,
-  changeFertilizerConsumptionIncrementing,
-} from '../../redux/actions/specialActions';
+import { Picker, InputWithIncrementer, Text, Block } from '../../components';
+import * as actions from '../../redux/actions/specialActions';
+import { theme } from '../../theme';
 
 const FertilizationSegment = ({ fertilizationData, field, turn, place }) => {
   return (
-    <>
+    <Block style={{ marginVertical: theme.sizes.base }}>
       <Picker
         items={['NPK', 'KAN', 'UREA']}
         label="Izbor đubriva"
@@ -16,7 +13,7 @@ const FertilizationSegment = ({ fertilizationData, field, turn, place }) => {
         propertyName={`fertilizer${place}`}
         workState="fertilizationState"
         turn={turn}
-        action={changeSprayerOrFertilizer}
+        action={actions.changeSprayerOrFertilizer}
         field={field}
       />
       <InputWithIncrementer
@@ -27,13 +24,13 @@ const FertilizationSegment = ({ fertilizationData, field, turn, place }) => {
         value={String(fertilizationData[`fertilizer${place}Consumption`])}
         propertyName={`fertilizer${place}Consumption`}
         turn={turn}
-        action={changeFertilizerConsumption}
-        actionIncrementing={changeFertilizerConsumptionIncrementing}
+        action={actions.changeFertilizerConsumption}
+        actionIncrementing={actions.changeFertilizerConsumptionIncrementing}
         field={field}
       />
-      <Text gray>Potrebno Vam je: </Text>
+      <Text gray>Potrebno Vam je:{fertilizationData[`fertilizer${place}Consumption`]} </Text>
       <Text gray>Ostaje Vam za ___ ara.</Text>
-    </>
+    </Block>
   );
 };
 

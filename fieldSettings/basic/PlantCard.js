@@ -23,7 +23,7 @@ const PlantCard = ({ plant, isActive, field }) => {
         <Badge size={60} color={theme.colors.accent}>
           <Image source={plant.image} />
         </Badge>
-        <Text medium height={20} white={isActive} gray={!isActive}>
+        <Text title white={isActive} gray={!isActive}>
           {plant.name}
         </Text>
       </Block>

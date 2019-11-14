@@ -1,9 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-
 import Block from './Block';
 import Text from './Text';
-
 import { theme } from '../theme';
 
 const SubTotal = () => {
@@ -18,9 +16,7 @@ const SubTotal = () => {
 
 const styles = StyleSheet.create({
   subTotalContainer: {
-    // borderTopWidth: StyleSheet.hairlineWidth,
-    // borderColor: theme.colors.gray,
-    marginTop: theme.sizes.base * 2,
+    marginTop: theme.sizes.base,
     alignItems: 'flex-end',
   },
 });

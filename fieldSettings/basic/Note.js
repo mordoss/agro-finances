@@ -29,7 +29,6 @@ export default Input;
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'flex-start',
     marginVertical: theme.sizes.base,
   },
   input: {
