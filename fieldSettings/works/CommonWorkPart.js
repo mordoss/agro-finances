@@ -1,10 +1,13 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import * as actions from '../../redux/actions/cammonWorkActions';
 import { Text, Switch, Block, Input, SubTotal } from '../../components';
+import * as actions from '../../redux/actions/cammonWorkActions';
 import { theme } from '../../theme';
 
 const CommonWorkPart = ({ field, name, work, workName, children }) => {
+  const { changeDone, changePlaning, changePaid, changePaidPrice, changeOilConsumption } = actions;
+  const { done, planing, paid, paidPrice, oilConsumption } = work;
+
   return (
     <Block flex={false}>
       <Text center semibold title gray style={styles.workName}>
@@ -14,15 +17,15 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
       <Block>
         <Switch
           label="Urađeno"
-          value={work.done}
-          action={actions.changeDone}
+          value={done}
+          action={changeDone}
           field={field}
           workName={workName}
         />
         <Switch
           label="Planiram"
-          value={work.planing}
-          action={actions.changePlaning}
+          value={planing}
+          action={changePlaning}
           field={field}
           workName={workName}
         />
@@ -33,8 +36,8 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
       <Block style={styles.paidContainer}>
         <Switch
           label="Plaćam uslužno"
-          value={work.paid}
-          action={actions.changePaid}
+          value={paid}
+          action={changePaid}
           field={field}
           workName={workName}
         />
@@ -42,8 +45,8 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
           <Input
             price
             label="Cena uslužnog po hektaru"
-            value={String(work.paidPrice)}
-            action={actions.changePaidPrice}
+            value={String(paidPrice)}
+            action={changePaidPrice}
             field={field}
             workName={workName}
           />
@@ -51,8 +54,8 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
           <Input
             oilConsumption
             label="Potrošnja nafte po hektaru"
-            value={String(work.consumption)}
-            action={actions.changeOilConsumption}
+            value={String(oilConsumption)}
+            action={changeOilConsumption}
             field={field}
             workName={workName}
           />

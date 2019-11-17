@@ -31,7 +31,7 @@ const PickerCustom = ({ items, label, active, field, action, turn, propertyName,
               style={styles.modalItem}
               onPress={() => handleSelect(item)}
             >
-              <Text h3 black>
+              <Text h3 gray>
                 {item}
               </Text>
             </TouchableHighlight>

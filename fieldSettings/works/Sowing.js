@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block, Picker, InputWithIncrementer, Text } from '../../components';
+import { Block, Picker, InputWithIncrementer, SubCount } from '../../components';
 import {
   changeSeed,
   changeSeedConsumption,
@@ -7,12 +7,14 @@ import {
 } from '../../redux/actions/specialActions';
 
 const Sowing = ({ sowingData, field }) => {
+  const { seed, seedConsumption } = sowingData;
+
   return (
     <Block>
       <Picker
         items={['AS', 'ZP', 'NS']}
         label="Izbor semena"
-        active={sowingData.seed}
+        active={seed}
         action={changeSeed}
         field={field}
       />
@@ -20,13 +22,12 @@ const Sowing = ({ sowingData, field }) => {
         label="Gustina: "
         min={18}
         max={28}
-        value={String(sowingData.seedConsumption)}
+        value={String(seedConsumption)}
         field={field}
         action={changeSeedConsumption}
         actionIncrementing={changeSeedConsumptionIncrementing}
       />
-      <Text gray>Potrebno Vam je: </Text>
-      <Text gray>Ostaje Vam za:{sowingData.seed} ara.</Text>
+      <SubCount label="Potrebno Vam je: " value={5} unit="vreća samena" />
     </Block>
   );
 };

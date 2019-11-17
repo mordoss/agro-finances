@@ -7,5 +7,17 @@ import Picker from './Picker';
 import InputWithIncrementer from './InputWithIncrementer';
 import SubTotal from './SubTotal';
 import Tabs from './Tabs';
+import SubCount from './SubCount';
 
-export { Badge, Block, Text, Input, Switch, Picker, InputWithIncrementer, SubTotal, Tabs };
+export {
+  Badge,
+  Block,
+  Text,
+  Input,
+  Switch,
+  SubCount,
+  Picker,
+  InputWithIncrementer,
+  SubTotal,
+  Tabs,
+};

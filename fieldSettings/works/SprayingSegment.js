@@ -1,10 +1,11 @@
 import React from 'react';
-import { Picker, Text } from '../../components';
+import { Picker, SubCount, Block } from '../../components';
 import { changeSprayerOrFertilizer } from '../../redux/actions/specialActions';
+import { theme } from '../../theme';
 
 const SprayingSegment = ({ sprayingData, turn, place, field }) => {
   return (
-    <>
+    <Block style={{ marginVertical: theme.sizes.base }}>
       <Picker
         items={['Glifosav', 'Monsun', 'Nikosav']}
         label="Izbor herbicida"
@@ -15,9 +16,8 @@ const SprayingSegment = ({ sprayingData, turn, place, field }) => {
         action={changeSprayerOrFertilizer}
         field={field}
       />
-      <Text gray>Potrebno Vam je: </Text>
-      <Text gray>Ostaje Vam za ___ ara.</Text>
-    </>
+      <SubCount label="Potrebno Vam je: " value={5} unit="flaša herbicida." />
+    </Block>
   );
 };
 

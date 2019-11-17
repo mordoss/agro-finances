@@ -1,5 +1,5 @@
 import React from 'react';
-import { Picker, InputWithIncrementer, Text, Block } from '../../components';
+import { Picker, InputWithIncrementer, Block, SubCount } from '../../components';
 import * as actions from '../../redux/actions/specialActions';
 import { theme } from '../../theme';
 
@@ -28,8 +28,7 @@ const FertilizationSegment = ({ fertilizationData, field, turn, place }) => {
         actionIncrementing={actions.changeFertilizerConsumptionIncrementing}
         field={field}
       />
-      <Text gray>Potrebno Vam je:{fertilizationData[`fertilizer${place}Consumption`]} </Text>
-      <Text gray>Ostaje Vam za ___ ara.</Text>
+      <SubCount label="Potrebno Vam je: " value={5} unit="džakova." />
     </Block>
   );
 };

@@ -74,7 +74,7 @@ function createFieldReducer(fieldNumber) {
             ...state.groundWorksState,
             [action.work]: {
               ...state.groundWorksState[action.work],
-              consumption: action.value,
+              oilConsumption: action.value,
             },
           },
         };

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import WorkCard from './WorkCard';
 
 const plantSpecificWorks = {
-  Kukuruz: ['plowing', 'fertilization1'],
+  Kukuruz: ['plowing', 'fertilization1', 'sowing', 'spraying2'],
   Soja: ['disking', 'fertilization2'],
   Pšenica: ['plowing', 'sowing'],
   Suncokret: ['plowing', 'spraying2'],
