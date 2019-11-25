@@ -1,6 +1,10 @@
 import React from 'react';
 import { Picker, InputWithIncrementer, Block, SubCount } from '../../components';
-import * as actions from '../../redux/actions/specialActions';
+import {
+  changeSprayerOrFertilizer,
+  changeFertilizerConsumption,
+  changeFertilizerConsumptionIncrementing,
+} from '../../redux/actions/specialActions';
 import { theme } from '../../theme';
 
 const FertilizationSegment = ({ fertilizationData, field, turn, place }) => {
@@ -13,7 +17,7 @@ const FertilizationSegment = ({ fertilizationData, field, turn, place }) => {
         propertyName={`fertilizer${place}`}
         workState="fertilizationState"
         turn={turn}
-        action={actions.changeSprayerOrFertilizer}
+        action={changeSprayerOrFertilizer}
         field={field}
       />
       <InputWithIncrementer
@@ -24,8 +28,8 @@ const FertilizationSegment = ({ fertilizationData, field, turn, place }) => {
         value={String(fertilizationData[`fertilizer${place}Consumption`])}
         propertyName={`fertilizer${place}Consumption`}
         turn={turn}
-        action={actions.changeFertilizerConsumption}
-        actionIncrementing={actions.changeFertilizerConsumptionIncrementing}
+        action={changeFertilizerConsumption}
+        actionIncrementing={changeFertilizerConsumptionIncrementing}
         field={field}
       />
       <SubCount label="Potrebno Vam je: " value={5} unit="džakova." />

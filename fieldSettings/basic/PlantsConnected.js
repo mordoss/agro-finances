@@ -17,9 +17,7 @@ const PlantsConnected = props => {
 
   return (
     <ScrollView style={styles.container}>
-      <Text gray style={styles.text}>
-        Kultura za setvu:
-      </Text>
+      <Text gray>Kultura za setvu:</Text>
       <Block row wrap space="between">
         {plants.map(plant => renderPlant(plant))}
       </Block>
@@ -30,9 +28,6 @@ const PlantsConnected = props => {
 const styles = StyleSheet.create({
   container: {
     marginTop: theme.sizes.base,
-  },
-  text: {
-    marginBottom: theme.sizes.base,
   },
 });
 

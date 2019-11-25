@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { Text, Switch, Block, Input, SubTotal } from '../../components';
-import * as actions from '../../redux/actions/cammonWorkActions';
+import { Text, Block, SubTotal } from '../../components';
+import PaidAndConsumptionSegment from './PaidAndConsumptionSegment';
+import DoneAndPlaningSegment from './DoneAndPlaningSegment';
+import DatePicker from './DatePicker';
 import { theme } from '../../theme';
 
 const CommonWorkPart = ({ field, name, work, workName, children }) => {
-  const { changeDone, changePlaning, changePaid, changePaidPrice, changeOilConsumption } = actions;
   const { done, planing, paid, paidPrice, oilConsumption } = work;
 
   return (
@@ -14,53 +15,20 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
         {name}
       </Text>
 
-      <Block>
-        <Switch
-          label="Urađeno"
-          value={done}
-          action={changeDone}
-          field={field}
-          workName={workName}
-        />
-        <Switch
-          label="Planiram"
-          value={planing}
-          action={changePlaning}
-          field={field}
-          workName={workName}
-        />
+      <Block row>
+        <DoneAndPlaningSegment done={done} planing={planing} field={field} workName={workName} />
+        {planing && <DatePicker />}
       </Block>
 
       {children}
 
-      <Block style={styles.paidContainer}>
-        <Switch
-          label="Plaćam uslužno"
-          value={paid}
-          action={changePaid}
-          field={field}
-          workName={workName}
-        />
-        {work.paid ? (
-          <Input
-            price
-            label="Cena uslužnog po hektaru"
-            value={String(paidPrice)}
-            action={changePaidPrice}
-            field={field}
-            workName={workName}
-          />
-        ) : (
-          <Input
-            oilConsumption
-            label="Potrošnja nafte po hektaru"
-            value={String(oilConsumption)}
-            action={changeOilConsumption}
-            field={field}
-            workName={workName}
-          />
-        )}
-      </Block>
+      <PaidAndConsumptionSegment
+        paid={paid}
+        field={field}
+        workName={workName}
+        paidPrice={paidPrice}
+        oilConsumption={oilConsumption}
+      />
 
       <SubTotal />
     </Block>
@@ -70,9 +38,6 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
 const styles = StyleSheet.create({
   workName: {
     marginBottom: theme.sizes.base,
-  },
-  paidContainer: {
-    marginVertical: theme.sizes.base,
   },
 });
 

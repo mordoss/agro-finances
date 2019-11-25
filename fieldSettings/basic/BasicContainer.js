@@ -8,7 +8,7 @@ import { theme } from '../../theme';
 
 const BasicContainer = ({ field }) => {
   return (
-    <Block style={{ marginHorizontal: theme.sizes.base }}>
+    <Block style={{ marginHorizontal: theme.sizes.base * 2 }}>
       <PlantsConnected field={field} />
       <Area field={field} />
       <Rented field={field} />

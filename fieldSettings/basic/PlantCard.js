@@ -34,9 +34,9 @@ const PlantCard = ({ plant, isActive, field }) => {
 const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   plantCard: {
-    width: (width - theme.sizes.base * 3) / 2,
+    width: (width - theme.sizes.base * 6) / 2,
     alignItems: 'center',
-    justifyContent: 'space-around',
+    marginTop: theme.sizes.base,
   },
   gradient: {
     position: 'absolute',

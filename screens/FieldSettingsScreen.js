@@ -10,7 +10,7 @@ import { theme } from '../theme';
 const FieldSettingsScreen = () => {
   const activeField = useSelector(state => `field${state.activeField}`);
   const tabs = ['Njiva', 'Radovi', 'Statistika'];
-  const [active, changeActive] = useState('Njiva');
+  const [active, changeActive] = useState('Radovi');
 
   return (
     <Block color={theme.colors.gray2}>

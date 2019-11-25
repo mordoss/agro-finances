@@ -14,7 +14,7 @@ const Fertilization = ({ fertilizationData, field, turn }) => {
       />
 
       <Switch
-        label="Mešam sa još jednim herbicidom"
+        label="Mešam sa još jednim hranivom"
         value={fertilizationData.mixed}
         field={field}
         turn={turn}

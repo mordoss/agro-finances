@@ -32,7 +32,7 @@ const FieldsConnected = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     marginVertical: theme.sizes.base,
-    marginHorizontal: theme.sizes.base,
+    marginHorizontal: theme.sizes.base * 2,
   },
 });
 

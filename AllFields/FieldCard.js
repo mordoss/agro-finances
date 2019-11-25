@@ -26,9 +26,9 @@ const FieldCard = ({ field, handleChangeField }) => {
 const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   fieldCard: {
-    width: (width - theme.sizes.base * 3) / 2,
+    width: (width - theme.sizes.base * 6) / 2,
     alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: theme.sizes.base,
   },
 });
 

@@ -9,7 +9,7 @@ import { theme } from '../../theme';
 
 const Work = ({ work, name, field, workName }) => {
   return (
-    <Block card color={theme.colors.white} style={styles.workCard}>
+    <Block card color={theme.colors.white} style={styles.container}>
       <CommonWorkPart field={field} work={work} name={name} workName={workName}>
         {workName === 'sowing' && <Sowing sowingData={work.special} field={field} />}
         {workName === 'spraying1' && (
@@ -31,9 +31,10 @@ const Work = ({ work, name, field, workName }) => {
 
 const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
-  workCard: {
-    width: width - theme.sizes.base * 2,
-    marginHorizontal: theme.sizes.base,
+  container: {
+    width: width - theme.sizes.base * 4,
+    marginHorizontal: theme.sizes.base * 2,
+    marginTop: theme.sizes.base,
   },
 });
 

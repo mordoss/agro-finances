@@ -30,10 +30,8 @@ const Tabs = ({ tabs, changeActive, active }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 0,
-    marginBottom: theme.sizes.base,
     paddingTop: theme.sizes.base,
-    paddingHorizontal: theme.sizes.base,
-
+    paddingHorizontal: theme.sizes.base * 2,
     backgroundColor: theme.colors.white,
     elevation: 5,
   },

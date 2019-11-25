@@ -7,23 +7,23 @@ import { theme } from '../theme';
 
 const PickerCustom = ({ items, label, active, field, action, turn, propertyName, workState }) => {
   const dispatch = useDispatch();
-  const [isActive, setIsActive] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleSelect = item => {
     dispatch(action(field, item, propertyName, turn, workState));
-    setIsActive(false);
+    setIsModalVisible(false);
   };
 
   return (
     <Block row center>
-      <TouchableHighlight onPress={() => setIsActive(true)} style={styles.label}>
+      <TouchableHighlight onPress={() => setIsModalVisible(true)} style={styles.label}>
         <Text gray>{label}</Text>
       </TouchableHighlight>
       <Text style={styles.selected} medium h3 gray>
         {active}
       </Text>
 
-      <Modal visible={isActive} animationType="slide" transparent>
+      <Modal visible={isModalVisible} animationType="slide" transparent>
         <Block style={styles.modalContainer}>
           {items.map(item => (
             <TouchableHighlight
