@@ -1,5 +1,5 @@
 import React from 'react';
-import { Picker, InputWithIncrementer, Block, SubCount } from '../../components';
+import { Picker, InputWithIncrementer, Block } from '../../components';
 import {
   changeSprayerOrFertilizer,
   changeFertilizerConsumption,
@@ -25,14 +25,13 @@ const FertilizationSegment = ({ fertilizationData, field, turn, place }) => {
         fertilization
         min={0.5}
         max={4}
-        value={String(fertilizationData[`fertilizer${place}Consumption`])}
-        propertyName={`fertilizer${place}Consumption`}
+        value={String(fertilizationData[`fertilizerConsumption${place}`])}
+        propertyName={`fertilizerConsumption${place}`}
         turn={turn}
         action={changeFertilizerConsumption}
         actionIncrementing={changeFertilizerConsumptionIncrementing}
         field={field}
       />
-      <SubCount label="Potrebno Vam je: " value={5} unit="džakova." />
     </Block>
   );
 };

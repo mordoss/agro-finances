@@ -1,5 +1,5 @@
 import React from 'react';
-import { Picker, SubCount, Block } from '../../components';
+import { Picker, Block } from '../../components';
 import { changeSprayerOrFertilizer } from '../../redux/actions/specialActions';
 import { theme } from '../../theme';
 
@@ -16,7 +16,6 @@ const SprayingSegment = ({ sprayingData, turn, place, field }) => {
         action={changeSprayerOrFertilizer}
         field={field}
       />
-      <SubCount label="Potrebno Vam je: " value={5} unit="flaša herbicida." />
     </Block>
   );
 };

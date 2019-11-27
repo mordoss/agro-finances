@@ -16,6 +16,24 @@ export const changePlaning = (field, work, value) => {
   };
 };
 
+export const changeDateDay = (field, work, value) => {
+  return {
+    type: 'DATE_DAY_CHANGED',
+    value,
+    work,
+    field,
+  };
+};
+
+export const changeDateMonth = (field, work, value) => {
+  return {
+    type: 'DATE_MONTH_CHANGED',
+    value,
+    work,
+    field,
+  };
+};
+
 export const changePaid = (field, work, value) => {
   return {
     type: 'PAID_CHANGED',

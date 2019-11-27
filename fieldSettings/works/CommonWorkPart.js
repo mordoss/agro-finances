@@ -1,9 +1,10 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { Text, Block, SubTotal } from '../../components';
+import { Text, Block } from '../../components';
 import PaidAndConsumptionSegment from './PaidAndConsumptionSegment';
 import DoneAndPlaningSegment from './DoneAndPlaningSegment';
 import DatePicker from './DatePicker';
+import SubTotal from './SubTotal';
 import { theme } from '../../theme';
 
 const CommonWorkPart = ({ field, name, work, workName, children }) => {
@@ -17,7 +18,7 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
 
       <Block row>
         <DoneAndPlaningSegment done={done} planing={planing} field={field} workName={workName} />
-        {planing && <DatePicker />}
+        {planing && <DatePicker field={field} workName={workName} date={work.date} />}
       </Block>
 
       {children}
@@ -30,7 +31,7 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
         oilConsumption={oilConsumption}
       />
 
-      <SubTotal />
+      <SubTotal field={field} work={work} workName={workName} />
     </Block>
   );
 };

@@ -44,6 +44,7 @@ function createFieldReducer(fieldNumber) {
             },
           },
         };
+
       case 'PLANING_CHANGED':
         return {
           ...state,
@@ -56,6 +57,7 @@ function createFieldReducer(fieldNumber) {
             },
           },
         };
+
       case 'PAID_CHANGED':
         return {
           ...state,
@@ -67,6 +69,31 @@ function createFieldReducer(fieldNumber) {
             },
           },
         };
+
+      case 'DATE_DAY_CHANGED':
+        return {
+          ...state,
+          groundWorksState: {
+            ...state.groundWorksState,
+            [action.work]: {
+              ...state.groundWorksState[action.work],
+              date: [state.groundWorksState[action.work].date[0], action.value],
+            },
+          },
+        };
+
+      case 'DATE_MONTH_CHANGED':
+        return {
+          ...state,
+          groundWorksState: {
+            ...state.groundWorksState,
+            [action.work]: {
+              ...state.groundWorksState[action.work],
+              date: [action.value, state.groundWorksState[action.work].date[1]],
+            },
+          },
+        };
+
       case 'OIL_CONSUMPTION_CHANGED':
         return {
           ...state,

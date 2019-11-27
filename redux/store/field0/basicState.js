@@ -1,6 +1,6 @@
 export default {
-  area: 0,
-  plant: 'Kukuruz',
+  area: 108,
+  plant: 'Soja',
   note: '',
   rented: false,
   rentedPrice: 15000,

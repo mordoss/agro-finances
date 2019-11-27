@@ -4,7 +4,7 @@ import { changeDone, changePlaning } from '../../redux/actions/cammonWorkActions
 
 const DoneAndPlaningSegment = ({ done, planing, field, workName }) => {
   return (
-    <Block>
+    <Block space="between">
       <Switch label="Urađeno" value={done} action={changeDone} field={field} workName={workName} />
       <Switch
         label="Planiram"

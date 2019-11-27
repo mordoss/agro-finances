@@ -16,7 +16,7 @@ const PickerCustom = ({ items, label, active, field, action, turn, propertyName,
 
   return (
     <Block row center>
-      <TouchableHighlight onPress={() => setIsModalVisible(true)} style={styles.label}>
+      <TouchableHighlight onPress={() => setIsModalVisible(true)} style={styles.button}>
         <Text gray>{label}</Text>
       </TouchableHighlight>
       <Text style={styles.selected} medium h3 gray>
@@ -42,6 +42,7 @@ const PickerCustom = ({ items, label, active, field, action, turn, propertyName,
   );
 };
 
+const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
   modalContainer: {
     position: 'absolute',
@@ -49,9 +50,9 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     borderWidth: StyleSheet.hairlineWidth,
     backgroundColor: theme.colors.white,
-    width: Dimensions.get('window').width * 0.5,
-    marginHorizontal: Dimensions.get('window').width / 4,
-    marginVertical: Dimensions.get('window').height / 4,
+    width: width * 0.5,
+    marginHorizontal: width / 4,
+    marginVertical: height / 4,
     padding: theme.sizes.base,
   },
   modalItem: {
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     alignItems: 'center',
   },
-  label: {
+  button: {
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 13,
     padding: theme.sizes.base / 4,

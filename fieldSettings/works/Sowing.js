@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block, Picker, InputWithIncrementer, SubCount } from '../../components';
+import { Block, Picker, InputWithIncrementer } from '../../components';
 import {
   changeSeed,
   changeSeedConsumption,
@@ -27,7 +27,6 @@ const Sowing = ({ sowingData, field }) => {
         action={changeSeedConsumption}
         actionIncrementing={changeSeedConsumptionIncrementing}
       />
-      <SubCount label="Potrebno Vam je: " value={5} unit="vreća samena" />
     </Block>
   );
 };
