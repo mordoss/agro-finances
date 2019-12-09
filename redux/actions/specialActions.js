@@ -1,4 +1,4 @@
-export const changeSeed = (field, item) => {
+export const changeSeed = ({ field, item }) => {
   return {
     type: 'SEED_CHANGED',
     field,
@@ -6,22 +6,22 @@ export const changeSeed = (field, item) => {
   };
 };
 
-export const changeSprayerOrFertilizer = (field, item, propertyName, turn, work) => {
+export const changeSprayerOrFertilizer = ({ field, propertyName, turn, workState }, item) => {
   return {
     type: 'SPRAYER_OR_FERTILIZER_CHANGED',
     field,
+    workState,
+    turn,
     item,
     propertyName,
-    turn,
-    work,
   };
 };
 
-export const changeMixed = (field, work, value, turn) => {
+export const changeMixed = ({ field, workState, turn, value }) => {
   return {
     type: 'MIXED_CHANGED',
     field,
-    work,
+    workState,
     value,
     turn,
   };
@@ -35,7 +35,7 @@ export const changeSeedConsumption = (field, value) => {
   };
 };
 
-export const changeSeedConsumptionIncrementing = (field, value, adjective) => {
+export const changeSeedConsumptionIncrementing = ({ field, value }, adjective) => {
   return {
     type: 'SEED_CONSUMPTION_CHANGED_INCREMENTING',
     field,
@@ -44,29 +44,37 @@ export const changeSeedConsumptionIncrementing = (field, value, adjective) => {
   };
 };
 
-export const changeFertilizerConsumption = (field, value, turn, propertyName) => {
+export const changeFertilizerConsumption = ({ field, workState, turn, propertyName }, value) => {
   return {
     type: 'FERTILIZER_CONSUMPTION_CHANGED',
     field,
+    workState,
+    turn,
+    propertyName,
     value,
+  };
+};
+
+export const changeFertilizerConsumptionIncrementing = (
+  { field, value, turn, workState, propertyName },
+  adjective
+) => {
+  return {
+    type: 'FERTILIZER_CONSUMPTION_CHANGED_INCREMENTING',
+    field,
+    workState,
+    value: Number(value),
+    adjective,
     turn,
     propertyName,
   };
 };
 
-export const changeFertilizerConsumptionIncrementing = (
-  field,
-  value,
-  adjective,
-  turn,
-  propertyName
-) => {
+export const changeWithFertilization = ({ field, value, turn }) => {
   return {
-    type: 'FERTILIZER_CONSUMPTION_CHANGED_INCREMENTING',
+    type: 'WITH_FERTILIZATION_CHANGED',
     field,
-    value: Number(value),
-    adjective,
+    value,
     turn,
-    propertyName,
   };
 };

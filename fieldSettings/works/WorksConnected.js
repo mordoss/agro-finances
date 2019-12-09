@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import WorkCard from './WorkCard';
 
 const plantSpecificWorks = {
-  Kukuruz: ['plowing', 'fertilization1', 'sowing', 'spraying1'],
+  Kukuruz: ['midRowCultivation1', 'fertilization2'],
   Soja: ['disking', 'fertilization2'],
   Pšenica: ['plowing', 'sowing'],
   Suncokret: ['plowing', 'spraying2'],
@@ -20,6 +20,8 @@ const Works = ({ field, plant }) => {
     fertilization2,
     spraying1,
     spraying2,
+    midRowCultivation1,
+    midRowCultivation2,
   } = useSelector(state => ({
     plowing: state[field].groundWorksState.plowing,
     disking: state[field].groundWorksState.disking,
@@ -44,6 +46,14 @@ const Works = ({ field, plant }) => {
     spraying2: {
       ...state[field].groundWorksState.spraying2,
       special: { ...state[field].sprayingState.second },
+    },
+    midRowCultivation1: {
+      ...state[field].groundWorksState.midRowCultivation1,
+      special: { ...state[field].midRowCultivationState.first },
+    },
+    midRowCultivation2: {
+      ...state[field].groundWorksState.midRowCultivation1,
+      special: { ...state[field].midRowCultivationState.second },
     },
   }));
 
@@ -76,6 +86,16 @@ const Works = ({ field, plant }) => {
       name: 'Druga Prihrana',
       workName: 'fertilization2',
       work: fertilization2,
+    },
+    midRowCultivation1: {
+      name: 'Prva Međuredna',
+      workName: 'midRowCultivation1',
+      work: midRowCultivation1,
+    },
+    midRowCultivation2: {
+      name: 'Druga Međuredna',
+      workName: 'midRowCultivation2',
+      work: midRowCultivation2,
     },
   };
 

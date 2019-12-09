@@ -4,28 +4,25 @@ import FertilizationSegment from './FertilizationSegment';
 import { changeMixed } from '../../redux/actions/specialActions';
 
 const Fertilization = ({ fertilizationData, field, turn }) => {
+  const { mixed } = fertilizationData;
+
   return (
     <>
       <FertilizationSegment
         fertilizationData={fertilizationData}
-        field={field}
-        turn={turn}
+        actionArgumentObject={{ field, turn }}
         place={1}
       />
 
       <Switch
         label="Mešam sa još jednim hranivom"
-        value={fertilizationData.mixed}
-        field={field}
-        turn={turn}
-        workName="fertilizationState"
         action={changeMixed}
+        actionArgumentObject={{ field, turn, value: mixed, workState: 'fertilizationState' }}
       />
-      {fertilizationData.mixed && (
+      {mixed && (
         <FertilizationSegment
           fertilizationData={fertilizationData}
-          field={field}
-          turn={turn}
+          actionArgumentObject={{ field, turn }}
           place={2}
         />
       )}

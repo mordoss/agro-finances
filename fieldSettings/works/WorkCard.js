@@ -5,6 +5,7 @@ import CommonWorkPart from './CommonWorkPart';
 import Sowing from './Sowing';
 import Spraying from './Spraying';
 import Fertilization from './Fertilization';
+import MidRowCultivation from './MidRowCultivation';
 import { theme } from '../../theme';
 
 const Work = ({ work, name, field, workName }) => {
@@ -23,6 +24,13 @@ const Work = ({ work, name, field, workName }) => {
         )}
         {workName === 'fertilization2' && (
           <Fertilization fertilizationData={work.special} field={field} turn="second" />
+        )}
+
+        {workName === 'midRowCultivation1' && (
+          <MidRowCultivation midRowCultivationData={work.special} field={field} turn="first" />
+        )}
+        {workName === 'midRowCultivation2' && (
+          <MidRowCultivation midRowCultivationData={work.special} field={field} turn="second" />
         )}
       </CommonWorkPart>
     </Block>

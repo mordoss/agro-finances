@@ -128,10 +128,10 @@ function createFieldReducer(fieldNumber) {
       case 'SPRAYER_OR_FERTILIZER_CHANGED':
         return {
           ...state,
-          [action.work]: {
-            ...state[action.work],
+          [action.workState]: {
+            ...state[action.workState],
             [action.turn]: {
-              ...state[action.work][action.turn],
+              ...state[action.workState][action.turn],
               [action.propertyName]: action.item,
             },
           },
@@ -139,10 +139,10 @@ function createFieldReducer(fieldNumber) {
       case 'MIXED_CHANGED':
         return {
           ...state,
-          [action.work]: {
-            ...state[action.work],
+          [action.workState]: {
+            ...state[action.workState],
             [action.turn]: {
-              ...state[action.work][action.turn],
+              ...state[action.workState][action.turn],
               mixed: !action.value,
             },
           },
@@ -167,10 +167,10 @@ function createFieldReducer(fieldNumber) {
       case 'FERTILIZER_CONSUMPTION_CHANGED':
         return {
           ...state,
-          fertilizationState: {
-            ...state.fertilizationState,
+          [action.workState]: {
+            ...state[action.workState],
             [action.turn]: {
-              ...state.fertilizationState[action.turn],
+              ...state[action.workState][action.turn],
               [action.propertyName]: action.value,
             },
           },
@@ -178,14 +178,25 @@ function createFieldReducer(fieldNumber) {
       case 'FERTILIZER_CONSUMPTION_CHANGED_INCREMENTING':
         return {
           ...state,
-          fertilizationState: {
-            ...state.fertilizationState,
+          [action.workState]: {
+            ...state[action.workState],
             [action.turn]: {
-              ...state.fertilizationState[action.turn],
+              ...state[action.workState][action.turn],
               [action.propertyName]:
                 action.adjective === 'inc'
                   ? Math.round((action.value + 0.1) * 100) / 100
                   : Math.round((action.value - 0.1) * 100) / 100,
+            },
+          },
+        };
+      case 'WITH_FERTILIZATION_CHANGED':
+        return {
+          ...state,
+          midRowCultivationState: {
+            ...state.midRowCultivationState,
+            [action.turn]: {
+              ...state.midRowCultivationState[action.turn],
+              withFertilization: !action.value,
             },
           },
         };

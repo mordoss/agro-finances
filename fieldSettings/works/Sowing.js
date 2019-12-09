@@ -14,18 +14,20 @@ const Sowing = ({ sowingData, field }) => {
       <Picker
         items={['AS', 'ZP', 'NS']}
         label="Izbor semena"
-        active={seed}
         action={changeSeed}
-        field={field}
+        active={seed}
+        actionArgumentObject={{
+          field,
+        }}
       />
       <InputWithIncrementer
         label="Gustina: "
-        min={18}
-        max={28}
-        value={String(seedConsumption)}
-        field={field}
         action={changeSeedConsumption}
         actionIncrementing={changeSeedConsumptionIncrementing}
+        actionArgumentObject={{
+          field,
+          value: String(seedConsumption),
+        }}
       />
     </Block>
   );

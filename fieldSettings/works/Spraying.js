@@ -4,19 +4,26 @@ import SprayingSegment from './SprayingSegment';
 import { changeMixed } from '../../redux/actions/specialActions';
 
 const Spraying = ({ sprayingData, field, turn }) => {
+  const { mixed } = sprayingData;
+
   return (
     <Block>
-      <SprayingSegment sprayingData={sprayingData} turn={turn} place={1} field={field} />
+      <SprayingSegment
+        sprayingData={sprayingData}
+        actionArgumentObject={{ field, turn }}
+        place={1}
+      />
       <Switch
         label="Mešam sa još jednim herbicidom"
-        value={sprayingData.mixed}
-        field={field}
-        turn={turn}
-        workName="sprayingState"
         action={changeMixed}
+        actionArgumentObject={{ field, turn, value: mixed, workState: 'sprayingState' }}
       />
       {sprayingData.mixed && (
-        <SprayingSegment sprayingData={sprayingData} turn={turn} place={2} field={field} />
+        <SprayingSegment
+          sprayingData={sprayingData}
+          actionArgumentObject={{ field, turn }}
+          place={2}
+        />
       )}
     </Block>
   );

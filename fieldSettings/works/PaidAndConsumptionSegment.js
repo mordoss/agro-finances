@@ -8,39 +8,27 @@ import {
 } from '../../redux/actions/cammonWorkActions';
 import { theme } from '../../theme';
 
-const CommonWorkPartPaidAndConsumptionSegment = ({
-  paid,
-  field,
-  workName,
-  paidPrice,
-  oilConsumption,
-}) => {
+const PaidAndConsumptionSegment = ({ actionArgumentObject, paid, paidPrice, oilConsumption }) => {
   return (
     <Block style={styles.container}>
       <Switch
         label="Plaćam uslužno"
-        value={paid}
         action={changePaid}
-        field={field}
-        workName={workName}
+        actionArgumentObject={{ ...actionArgumentObject, value: paid }}
       />
       {paid ? (
         <Input
-          price
           label="Cena uslužnog po hektaru"
-          value={String(paidPrice)}
+          unit="dinara"
           action={changePaidPrice}
-          field={field}
-          workName={workName}
+          actionArgumentObject={{ ...actionArgumentObject, value: String(paidPrice) }}
         />
       ) : (
         <Input
-          oilConsumption
           label="Potrošnja nafte po hektaru"
-          value={String(oilConsumption)}
+          unit="litara"
           action={changeOilConsumption}
-          field={field}
-          workName={workName}
+          actionArgumentObject={{ ...actionArgumentObject, value: String(oilConsumption) }}
         />
       )}
     </Block>
@@ -53,4 +41,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CommonWorkPartPaidAndConsumptionSegment;
+export default PaidAndConsumptionSegment;

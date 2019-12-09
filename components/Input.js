@@ -4,19 +4,16 @@ import { useDispatch } from 'react-redux';
 import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
-import { setInputUnit } from '../helperFunctions';
 
-const Input = ({ label, price, area, oilConsumption, bags, value, field, action, workName }) => {
+const Input = ({ label, unit, actionArgumentObject, action }) => {
   const dispatch = useDispatch();
-  const allUnits = { price, area, oilConsumption, bags };
-  const unit = setInputUnit(allUnits);
 
   return (
     <Block row style={styles.container}>
       <Text gray>{label}</Text>
       <TextInput
-        value={value}
-        onChangeText={eventValue => dispatch(action(field, eventValue, workName))}
+        value={actionArgumentObject.value}
+        onChangeText={eventValue => dispatch(action(actionArgumentObject, eventValue))}
         style={styles.input}
         autoComplete="off"
         autoCapitalize="none"

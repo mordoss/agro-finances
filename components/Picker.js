@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { Modal, TouchableHighlight, Dimensions, StyleSheet } from 'react-native';
+import { Modal, TouchableHighlight, Dimensions, StyleSheet, Button } from 'react-native';
 import { useDispatch } from 'react-redux';
 import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
 
-const PickerCustom = ({ items, label, active, field, action, turn, propertyName, workState }) => {
+const PickerCustom = ({ items, label, active, actionArgumentObject, action }) => {
   const dispatch = useDispatch();
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleSelect = item => {
-    dispatch(action(field, item, propertyName, turn, workState));
+    dispatch(action(actionArgumentObject, item));
     setIsModalVisible(false);
   };
 
@@ -36,6 +36,7 @@ const PickerCustom = ({ items, label, active, field, action, turn, propertyName,
               </Text>
             </TouchableHighlight>
           ))}
+          <Button onPress={() => setIsModalVisible(false)} title="Close" />
         </Block>
       </Modal>
     </Block>

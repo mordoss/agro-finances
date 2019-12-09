@@ -3,18 +3,19 @@ import { Picker, Block } from '../../components';
 import { changeSprayerOrFertilizer } from '../../redux/actions/specialActions';
 import { theme } from '../../theme';
 
-const SprayingSegment = ({ sprayingData, turn, place, field }) => {
+const SprayingSegment = ({ sprayingData, actionArgumentObject, place }) => {
   return (
     <Block style={{ marginVertical: theme.sizes.base }}>
       <Picker
         items={['Glifosav', 'Monsun', 'Nikosav']}
         label="Izbor herbicida"
         active={sprayingData[`sprayer${place}`]}
-        propertyName={`sprayer${place}`}
-        workState="sprayingState"
-        turn={turn}
         action={changeSprayerOrFertilizer}
-        field={field}
+        actionArgumentObject={{
+          ...actionArgumentObject,
+          workState: 'sprayingState',
+          propertyName: `sprayer${place}`,
+        }}
       />
     </Block>
   );

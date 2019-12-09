@@ -17,19 +17,22 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
       </Text>
 
       <Block row>
-        <DoneAndPlaningSegment done={done} planing={planing} field={field} workName={workName} />
+        <DoneAndPlaningSegment
+          done={done}
+          planing={planing}
+          actionArgumentObject={{ field, workName }}
+        />
         {planing && <DatePicker field={field} workName={workName} date={work.date} />}
       </Block>
 
-      {children}
-
       <PaidAndConsumptionSegment
         paid={paid}
-        field={field}
-        workName={workName}
+        actionArgumentObject={{ field, workName }}
         paidPrice={paidPrice}
         oilConsumption={oilConsumption}
       />
+
+      {children}
 
       <SubTotal field={field} work={work} workName={workName} />
     </Block>

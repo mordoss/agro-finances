@@ -43,7 +43,6 @@ const months = {
   novembar: 30,
   decembar: 31,
 };
-
 const monthsArray = Object.keys(months);
 
 export default DatePicker;

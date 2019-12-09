@@ -1,9 +1,4 @@
-/* eslint-disable global-require */
-export const setInputUnit = ({ price, area, oilConsumption, bags }) => {
-  // eslint-disable-next-line no-nested-ternary
-  return price ? 'dinara' : area ? 'ara' : oilConsumption ? 'litara' : bags ? 'džakova' : '';
-};
-
+// eslint-disable-next-line import/prefer-default-export
 export const plantStringToImage = string => {
   // Image component doesn't accept svg
   switch (string) {

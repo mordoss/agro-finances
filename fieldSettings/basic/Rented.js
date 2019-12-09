@@ -7,7 +7,7 @@ const Rented = ({ field }) => {
   const rented = useSelector(state => state[field].rented);
   const price = useSelector(state => state[field].rentedPrice);
   const area = useSelector(state => state[field].area);
-
+  const unit = 'dinara';
   return (
     <Block>
       <Switch label="Zakupljujem?" action={changeRented} value={rented} field={field} />
@@ -15,12 +15,11 @@ const Rented = ({ field }) => {
         <>
           <Input
             label="Cena zakupa po Ha:"
+            unit={unit}
             action={changeRentedPrice}
-            field={field}
-            value={String(price)}
-            price
+            actionArgumentObject={{ field, value: String(price) }}
           />
-          <SubCount value={(area * price) / 100} label="Novca za zakup" unit="dinara" />
+          <SubCount value={(area * price) / 100} label="Novca za zakup" unit={unit} />
         </>
       )}
     </Block>

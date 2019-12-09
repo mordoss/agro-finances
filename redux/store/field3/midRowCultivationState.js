@@ -1,11 +1,12 @@
 export default {
-  midRowCultivationDone: false,
-  midRowCultivationgPlaning: false,
-  midRowCultivationgPlaningDate: null,
-  midRowCultivationgConsumption: 40,
-  midRowCultivationgPaid: false,
-  midRowCultivationgPaidPrice: 10000,
-  withFertilization: false,
-  fertilizer: '',
-  fertilizerConsumption: 1,
+  first: {
+    withFertilizaton: true,
+    fertilizer: 'KAN',
+    fertilizerConsumption: 2,
+  },
+  second: {
+    withFertilizaton: false,
+    fertilizer: 'KAN',
+    fertilizerConsumption: 2,
+  },
 };

@@ -3,9 +3,8 @@ import { StyleSheet, Switch } from 'react-native';
 import { useDispatch } from 'react-redux';
 import Text from './Text';
 import Block from './Block';
-import { theme } from '../theme';
 
-const CustomSwitch = ({ label, value, action, workName, field, turn }) => {
+const CustomSwitch = ({ label, action, actionArgumentObject }) => {
   const dispatch = useDispatch();
 
   return (
@@ -13,7 +12,10 @@ const CustomSwitch = ({ label, value, action, workName, field, turn }) => {
       <Text gray style={styles.label}>
         {label}
       </Text>
-      <Switch onChange={() => dispatch(action(field, workName, value, turn))} value={value} />
+      <Switch
+        onChange={() => dispatch(action(actionArgumentObject))}
+        value={actionArgumentObject.value}
+      />
     </Block>
   );
 };
@@ -24,5 +26,4 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
   },
-  // label: { marginRight: theme.sizes.base / 2 },
 });

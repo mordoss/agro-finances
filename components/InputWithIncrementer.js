@@ -8,14 +8,9 @@ import { theme } from '../theme';
 const InputWithIncrementer = ({
   label,
   fertilization,
-  min,
-  max,
-  value,
   action,
   actionIncrementing,
-  turn,
-  propertyName,
-  field,
+  actionArgumentObject,
 }) => {
   const dispatch = useDispatch();
   const unit = fertilization ? 'kg' : 'cm';
@@ -24,17 +19,15 @@ const InputWithIncrementer = ({
     <Block row style={styles.container}>
       <Text gray>{label}</Text>
 
-      <TouchableOpacity
-        onPress={() => dispatch(actionIncrementing(field, value, 'dec', turn, propertyName))}
-      >
+      <TouchableOpacity onPress={() => dispatch(actionIncrementing(actionArgumentObject, 'dec'))}>
         <View style={[styles.incrementer, styles.left]}>
           <Text gray> - </Text>
         </View>
       </TouchableOpacity>
 
       <TextInput
-        value={value}
-        onChangeText={eventValue => dispatch(action(field, eventValue, turn, propertyName))}
+        value={actionArgumentObject.value}
+        onChangeText={eventValue => dispatch(action(actionArgumentObject, eventValue))}
         style={styles.input}
         autoComplete="off"
         autoCapitalize="none"
@@ -42,9 +35,7 @@ const InputWithIncrementer = ({
         keyboardType="numeric"
       />
 
-      <TouchableOpacity
-        onPress={() => dispatch(actionIncrementing(field, value, 'inc', turn, propertyName))}
-      >
+      <TouchableOpacity onPress={() => dispatch(actionIncrementing(actionArgumentObject, 'inc'))}>
         <View style={[styles.incrementer, styles.right]}>
           <Text gray>+</Text>
         </View>

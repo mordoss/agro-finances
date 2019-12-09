@@ -75,4 +75,21 @@ export default {
     paid: false,
     paidPrice: 10000,
   },
+
+  midRowCultivation1: {
+    done: false,
+    planing: true,
+    date: [null, null],
+    oilConsumption: 40,
+    paid: false,
+    paidPrice: 10000,
+  },
+  midRowCultivation2: {
+    done: false,
+    planing: true,
+    date: [null, null],
+    oilConsumption: 40,
+    paid: false,
+    paidPrice: 10000,
+  },
 };
