@@ -1,1 +1,1 @@
-![](moja-njiva.gif)
+![](moja-niva.gif)
