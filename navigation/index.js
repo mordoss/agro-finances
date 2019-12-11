@@ -16,7 +16,7 @@ const screens = createStackNavigator(
     SettingsScreen,
   },
   {
-    initialRouteName: 'FieldSettingsScreen',
+    initialRouteName: 'AllFieldsScreen',
     defaultNavigationOptions: {
       headerStyle: {
         elevation: 0,

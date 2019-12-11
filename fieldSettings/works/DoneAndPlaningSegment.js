@@ -12,7 +12,6 @@ const DoneAndPlaningSegment = ({ done, planing, actionArgumentObject }) => {
       />
       <Switch
         label="Planiram"
-        value={planing}
         action={changePlaning}
         actionArgumentObject={{ value: planing, ...actionArgumentObject }}
       />

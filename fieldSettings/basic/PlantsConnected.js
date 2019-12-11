@@ -6,8 +6,7 @@ import PlantCard from './PlantCard';
 import plants from '../../assets/plants';
 import { theme } from '../../theme';
 
-const PlantsConnected = props => {
-  const { field } = props;
+const PlantsConnected = ({ field }) => {
   const active = useSelector(state => state[field].plant);
 
   const renderPlant = plant => {

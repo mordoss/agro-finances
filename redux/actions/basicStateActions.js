@@ -1,4 +1,4 @@
-export const changeArea = (field, value) => {
+export const changeArea = ({ field }, value) => {
   return {
     type: 'AREA_CHANGED',
     value,
@@ -22,7 +22,7 @@ export const changeNote = (field, value) => {
   };
 };
 
-export const changeRented = (field, SwitchWorkNamePlaceholder, value) => {
+export const changeRented = ({ field, value }) => {
   return {
     type: 'RENTED_CHANGED',
     value,
@@ -30,7 +30,7 @@ export const changeRented = (field, SwitchWorkNamePlaceholder, value) => {
   };
 };
 
-export const changeRentedPrice = (field, value) => {
+export const changeRentedPrice = ({ field }, value) => {
   return {
     type: 'RENTED_PRICE_CHANGED',
     value,

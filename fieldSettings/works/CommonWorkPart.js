@@ -22,7 +22,6 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
           planing={planing}
           actionArgumentObject={{ field, workName }}
         />
-        {planing && <DatePicker field={field} workName={workName} date={work.date} />}
       </Block>
 
       <PaidAndConsumptionSegment

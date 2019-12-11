@@ -37,8 +37,8 @@ function createFieldReducer(fieldNumber) {
           ...state,
           groundWorksState: {
             ...state.groundWorksState,
-            [action.work]: {
-              ...state.groundWorksState[action.work],
+            [action.workName]: {
+              ...state.groundWorksState[action.workName],
               done: !action.value,
               planing: false,
             },
@@ -50,8 +50,8 @@ function createFieldReducer(fieldNumber) {
           ...state,
           groundWorksState: {
             ...state.groundWorksState,
-            [action.work]: {
-              ...state.groundWorksState[action.work],
+            [action.workName]: {
+              ...state.groundWorksState[action.workName],
               planing: !action.value,
               done: false,
             },
@@ -63,9 +63,21 @@ function createFieldReducer(fieldNumber) {
           ...state,
           groundWorksState: {
             ...state.groundWorksState,
-            [action.work]: {
-              ...state.groundWorksState[action.work],
+            [action.workName]: {
+              ...state.groundWorksState[action.workName],
               paid: !action.value,
+            },
+          },
+        };
+
+      case 'PAID_PRICE_CHANGED':
+        return {
+          ...state,
+          groundWorksState: {
+            ...state.groundWorksState,
+            [action.workName]: {
+              ...state.groundWorksState[action.workName],
+              paidPrice: action.value,
             },
           },
         };
@@ -75,9 +87,9 @@ function createFieldReducer(fieldNumber) {
           ...state,
           groundWorksState: {
             ...state.groundWorksState,
-            [action.work]: {
-              ...state.groundWorksState[action.work],
-              date: [state.groundWorksState[action.work].date[0], action.value],
+            [action.workName]: {
+              ...state.groundWorksState[action.workName],
+              date: [state.groundWorksState[action.workName].date[0], action.value],
             },
           },
         };
@@ -87,9 +99,9 @@ function createFieldReducer(fieldNumber) {
           ...state,
           groundWorksState: {
             ...state.groundWorksState,
-            [action.work]: {
-              ...state.groundWorksState[action.work],
-              date: [action.value, state.groundWorksState[action.work].date[1]],
+            [action.workName]: {
+              ...state.groundWorksState[action.workName],
+              date: [action.value, state.groundWorksState[action.workName].date[1]],
             },
           },
         };
@@ -99,23 +111,13 @@ function createFieldReducer(fieldNumber) {
           ...state,
           groundWorksState: {
             ...state.groundWorksState,
-            [action.work]: {
-              ...state.groundWorksState[action.work],
+            [action.workName]: {
+              ...state.groundWorksState[action.workName],
               oilConsumption: action.value,
             },
           },
         };
-      case 'PAID_PRICE_CHANGED':
-        return {
-          ...state,
-          groundWorksState: {
-            ...state.groundWorksState,
-            [action.work]: {
-              ...state.groundWorksState[action.work],
-              paidPrice: action.value,
-            },
-          },
-        };
+
       case 'SEED_CHANGED':
         return {
           ...state,

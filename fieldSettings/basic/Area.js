@@ -13,8 +13,9 @@ const Area = ({ field }) => {
       <Input
         unit="ara"
         label="Površina njive: "
+        value={String(area)}
         action={changeArea}
-        actionArgumentObject={{ field, value: String(area) }}
+        actionArgumentObject={{ field }}
       />
     </Block>
   );

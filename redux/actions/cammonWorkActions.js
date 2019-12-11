@@ -1,62 +1,62 @@
-export const changeDone = (field, work, value) => {
+export const changeDone = ({ field, workName, value }) => {
   return {
     type: 'DONE_CHANGED',
     value,
-    work,
+    workName,
     field,
   };
 };
 
-export const changePlaning = (field, work, value) => {
+export const changePlaning = ({ field, workName, value }) => {
   return {
     type: 'PLANING_CHANGED',
     value,
-    work,
+    workName,
     field,
   };
 };
 
-export const changeDateDay = (field, work, value) => {
+export const changeDateDay = (field, workName, value) => {
   return {
     type: 'DATE_DAY_CHANGED',
     value,
-    work,
+    workName,
     field,
   };
 };
 
-export const changeDateMonth = (field, work, value) => {
+export const changeDateMonth = (field, workName, value) => {
   return {
     type: 'DATE_MONTH_CHANGED',
     value,
-    work,
+    workName,
     field,
   };
 };
 
-export const changePaid = (field, work, value) => {
+export const changePaid = ({ field, workName, value }) => {
   return {
     type: 'PAID_CHANGED',
     value,
-    work,
+    workName,
     field,
   };
 };
 
-export const changeOilConsumption = (field, value, work) => {
-  return {
-    type: 'OIL_CONSUMPTION_CHANGED',
-    value,
-    work,
-    field,
-  };
-};
-
-export const changePaidPrice = (field, value, work) => {
+export const changePaidPrice = ({ field, workName }, value) => {
   return {
     type: 'PAID_PRICE_CHANGED',
     value,
-    work,
+    workName,
+    field,
+  };
+};
+
+export const changeOilConsumption = ({ field, workName }, value) => {
+  return {
+    type: 'OIL_CONSUMPTION_CHANGED',
+    value,
+    workName,
     field,
   };
 };

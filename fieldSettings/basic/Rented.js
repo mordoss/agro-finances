@@ -10,16 +10,21 @@ const Rented = ({ field }) => {
   const unit = 'dinara';
   return (
     <Block>
-      <Switch label="Zakupljujem?" action={changeRented} value={rented} field={field} />
+      <Switch
+        label="Zakupljujem?"
+        action={changeRented}
+        actionArgumentObject={{ field, value: rented }}
+      />
       {rented && (
         <>
           <Input
             label="Cena zakupa po Ha:"
             unit={unit}
+            value={String(price)}
             action={changeRentedPrice}
-            actionArgumentObject={{ field, value: String(price) }}
+            actionArgumentObject={{ field }}
           />
-          <SubCount value={(area * price) / 100} label="Novca za zakup" unit={unit} />
+          <SubCount value={(area * price) / 100} label="Novca za zakup " unit={unit} />
         </>
       )}
     </Block>

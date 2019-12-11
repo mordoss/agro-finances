@@ -20,15 +20,17 @@ const PaidAndConsumptionSegment = ({ actionArgumentObject, paid, paidPrice, oilC
         <Input
           label="Cena uslužnog po hektaru"
           unit="dinara"
+          value={String(paidPrice)}
           action={changePaidPrice}
-          actionArgumentObject={{ ...actionArgumentObject, value: String(paidPrice) }}
+          actionArgumentObject={actionArgumentObject}
         />
       ) : (
         <Input
           label="Potrošnja nafte po hektaru"
           unit="litara"
+          value={String(oilConsumption)}
           action={changeOilConsumption}
-          actionArgumentObject={{ ...actionArgumentObject, value: String(oilConsumption) }}
+          actionArgumentObject={actionArgumentObject}
         />
       )}
     </Block>

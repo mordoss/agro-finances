@@ -5,14 +5,14 @@ import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
 
-const Input = ({ label, unit, actionArgumentObject, action }) => {
+const Input = ({ label, unit, value, actionArgumentObject, action }) => {
   const dispatch = useDispatch();
 
   return (
     <Block row style={styles.container}>
       <Text gray>{label}</Text>
       <TextInput
-        value={actionArgumentObject.value}
+        value={value}
         onChangeText={eventValue => dispatch(action(actionArgumentObject, eventValue))}
         style={styles.input}
         autoComplete="off"
