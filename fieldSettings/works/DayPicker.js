@@ -5,7 +5,7 @@ import { Block, Text } from '../../components';
 import { changeDateDay } from '../../redux/actions/cammonWorkActions';
 import { theme } from '../../theme';
 
-const DayPicker = ({ field, workName, numberOfDays, day }) => {
+const DayPicker = ({ actionArgumentObject, numberOfDays, day }) => {
   const dispatch = useDispatch();
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -14,7 +14,7 @@ const DayPicker = ({ field, workName, numberOfDays, day }) => {
     .map((e, i) => i + 1);
 
   const handleSelect = item => {
-    dispatch(changeDateDay(field, workName, item));
+    dispatch(changeDateDay(actionArgumentObject, item));
     setIsModalVisible(false);
   };
 

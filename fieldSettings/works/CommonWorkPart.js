@@ -9,6 +9,7 @@ import { theme } from '../../theme';
 
 const CommonWorkPart = ({ field, name, work, workName, children }) => {
   const { done, planing, paid, paidPrice, oilConsumption } = work;
+  const actionArgumentObject = { field, workName };
 
   return (
     <Block flex={false}>
@@ -20,13 +21,14 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
         <DoneAndPlaningSegment
           done={done}
           planing={planing}
-          actionArgumentObject={{ field, workName }}
+          actionArgumentObject={actionArgumentObject}
         />
+        {planing && <DatePicker actionArgumentObject={actionArgumentObject} />}
       </Block>
 
       <PaidAndConsumptionSegment
         paid={paid}
-        actionArgumentObject={{ field, workName }}
+        actionArgumentObject={actionArgumentObject}
         paidPrice={paidPrice}
         oilConsumption={oilConsumption}
       />

@@ -2,7 +2,7 @@ export default {
   plowing: {
     done: false,
     planing: false,
-    planingDate: null,
+    date: [null, null],
     oilConsumption: 40,
     paid: false,
     paidPrice: 10000,
@@ -11,7 +11,7 @@ export default {
   disking: {
     done: false,
     planing: true,
-    planingDate: null,
+    date: [null, null],
     oilConsumption: 30,
     paid: true,
     paidPrice: 10000,
@@ -20,7 +20,7 @@ export default {
   horrowing: {
     done: false,
     planing: true,
-    planingDate: null,
+    date: [null, null],
     oilConsumption: 40,
     paid: false,
     paidPrice: 10000,
@@ -29,7 +29,7 @@ export default {
   harvesting: {
     done: false,
     planing: true,
-    planingDate: null,
+    date: [null, null],
     oilConsumption: 40,
     paid: false,
     paidPrice: 10000,
@@ -37,7 +37,7 @@ export default {
   sowing: {
     done: false,
     planing: true,
-    planingDate: null,
+    date: [null, null],
     oilConsumption: 40,
     paid: false,
     paidPrice: 10000,
@@ -45,7 +45,7 @@ export default {
   fertilization1: {
     done: false,
     planing: true,
-    planingDate: null,
+    date: [null, null],
     oilConsumption: 40,
     paid: false,
     paidPrice: 10000,
@@ -53,7 +53,7 @@ export default {
   fertilization2: {
     done: false,
     planing: true,
-    planingDate: null,
+    date: [null, null],
     oilConsumption: 40,
     paid: false,
     paidPrice: 10000,
@@ -61,7 +61,7 @@ export default {
   spraying1: {
     done: false,
     planing: true,
-    planingDate: null,
+    date: [null, null],
     oilConsumption: 40,
     paid: false,
     paidPrice: 10000,
@@ -69,7 +69,23 @@ export default {
   spraying2: {
     done: false,
     planing: true,
-    planingDate: null,
+    date: [null, null],
+    oilConsumption: 40,
+    paid: false,
+    paidPrice: 10000,
+  },
+  midRowCultivation1: {
+    done: false,
+    planing: true,
+    date: [null, null],
+    oilConsumption: 40,
+    paid: false,
+    paidPrice: 10000,
+  },
+  midRowCultivation2: {
+    done: false,
+    planing: true,
+    date: [null, null],
     oilConsumption: 40,
     paid: false,
     paidPrice: 10000,

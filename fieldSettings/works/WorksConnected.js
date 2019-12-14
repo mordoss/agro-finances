@@ -1,13 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import WorkCard from './WorkCard';
-
-const plantSpecificWorks = {
-  Kukuruz: ['midRowCultivation1', 'fertilization2'],
-  Soja: ['disking', 'fertilization2'],
-  Pšenica: ['plowing', 'sowing'],
-  Suncokret: ['plowing', 'spraying2'],
-};
+import { worksPerPlant } from '../../assets/plants';
 
 const Works = ({ field, plant }) => {
   const {
@@ -101,7 +95,7 @@ const Works = ({ field, plant }) => {
 
   return (
     <>
-      {plantSpecificWorks[plant].map(work => (
+      {worksPerPlant[plant].map(work => (
         <WorkCard
           key={works[work].workName}
           field={field}

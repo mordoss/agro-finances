@@ -4,16 +4,26 @@ import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
 
-const Tabs = ({ tabs, changeActive, active }) => {
+const Tabs = ({ tabs, changeActive, disabled, active }) => {
   const renderTab = tab => {
     const isActive = active === tab;
     return (
       <TouchableOpacity
         key={tab}
-        onPress={() => changeActive(tab)}
+        onPress={() => {
+          if (!disabled) {
+            changeActive(tab);
+          }
+        }}
         style={[styles.tab, isActive ? styles.active : null]}
       >
-        <Text size={16} gray={!isActive} primary={isActive} medium={isActive}>
+        <Text
+          size={16}
+          gray={!isActive}
+          primary={isActive}
+          gray2={disabled && !isActive}
+          medium={isActive}
+        >
           {tab}
         </Text>
       </TouchableOpacity>

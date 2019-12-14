@@ -1,9 +1,12 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
-import { Block, Text } from '../../components';
-import { calcSowing, calcSpraying, calcFertilization } from '../../calcFunctions';
-import { theme } from '../../theme';
+import SubTotalPresentational from './SubTotalPresentational';
+import {
+  calcSowing,
+  calcSpraying,
+  calcFertilization,
+  calcMidRowCultivation,
+} from '../../calcFunctions';
 
 const SubTotal = ({ work, field, workName }) => {
   const { area } = useSelector(state => state[field]);
@@ -14,62 +17,39 @@ const SubTotal = ({ work, field, workName }) => {
   const { first: firstFertilization, second: secondFertilization } = useSelector(
     state => state[field].fertilizationState
   );
+  const { first: firstMidRowCultivation, second: secondMidRowCultivation } = useSelector(
+    state => state[field].midRowCultivationState
+  );
+
   const { oilConsumption, paid, paidPrice } = work;
 
-  const prices = {
+  const specialPrices = {
     sowing: calcSowing(area, seedConsumption),
     fertilization1: calcFertilization(area, firstFertilization),
-    spraying1: calcSpraying(area, firstSpraying),
     fertilization2: calcFertilization(area, secondFertilization),
+    spraying1: calcSpraying(area, firstSpraying),
     spraying2: calcSpraying(area, secondSpraying),
+    midRowCultivation1: calcMidRowCultivation(area, firstMidRowCultivation),
+    midRowCultivation2: calcMidRowCultivation(area, secondMidRowCultivation),
   };
 
   const oilConsumptionPerWork = paid ? 0 : Math.round((area / 100) * oilConsumption);
   const oilConsumptionPricePerWork = oilConsumptionPerWork * 150;
   const paidPricePerWork = paid ? (area / 100) * paidPrice : 0;
-  const specialPricePerWork = prices[workName];
+  const specialPricePerWork = specialPrices[workName] || 0;
 
-  const total = paidPricePerWork + oilConsumptionPricePerWork + (specialPricePerWork || 0);
+  const total = paidPricePerWork + oilConsumptionPricePerWork + specialPricePerWork;
 
   return (
-    <Block style={styles.container}>
-      {paid ? (
-        <Text gray light style={styles.item}>
-          Za uslužno: {paidPricePerWork} dinara.
-        </Text>
-      ) : (
-        <>
-          <Text gray light style={styles.item}>
-            Litara nafte: {oilConsumptionPerWork}.
-          </Text>
-          <Text gray light style={styles.item}>
-            Za naftu: {oilConsumptionPricePerWork} dinara.
-          </Text>
-        </>
-      )}
-
-      {specialPricePerWork && (
-        <Text gray light style={styles.item}>
-          Za ostalo: {specialPricePerWork} dinara.
-        </Text>
-      )}
-
-      <Text gray title style={styles.total}>
-        Ukupno: {total} dinara.
-      </Text>
-    </Block>
+    <SubTotalPresentational
+      paid={paid}
+      paidPricePerWork={paidPricePerWork}
+      oilConsumptionPerWork={oilConsumptionPerWork}
+      oilConsumptionPricePerWork={oilConsumptionPricePerWork}
+      specialPricePerWork={specialPricePerWork}
+      total={total}
+    />
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: theme.sizes.base,
-    alignItems: 'flex-end',
-  },
-  item: {},
-  total: {
-    borderTopWidth: 2,
-  },
-});
 
 export default SubTotal;

@@ -5,14 +5,14 @@ import { Block } from '../../components';
 import { changeDateMonth } from '../../redux/actions/cammonWorkActions';
 import { theme } from '../../theme';
 
-const MonthPicker = ({ field, workName, allMonths, month }) => {
+const MonthPicker = ({ actionArgumentObject, allMonths, month }) => {
   const dispatch = useDispatch();
 
   return (
     <Block style={styles.container}>
       <Picker
         selectedValue={month}
-        onValueChange={itemValue => dispatch(changeDateMonth(field, workName, itemValue))}
+        onValueChange={itemValue => dispatch(changeDateMonth(actionArgumentObject, itemValue))}
         style={styles.picker}
       >
         {allMonths.map(m => (

@@ -15,17 +15,26 @@ export const calcSpraying = (area, data) => {
   return herbicidePrice1 + herbicidePrice2;
 };
 
+const calcFertilizationSegment = (area, fertilizerConsumption) => {
+  const price = 40;
+  const bagWeight = 25;
+  const fertilizerBags = Math.ceil((area * fertilizerConsumption) / bagWeight) || 0;
+  const fertilizerTotal = fertilizerBags * price * bagWeight || 0;
+
+  return fertilizerTotal;
+};
+
 export const calcFertilization = (area, data) => {
   const { mixed, fertilizerConsumption1, fertilizerConsumption2 } = data;
-  const price1 = 30;
-  const price2 = 40;
-  const bagWeight1 = 25;
-  const bagWeight2 = 25;
 
-  const fertilizerBags1 = Math.ceil((area * fertilizerConsumption1) / bagWeight1) || 0;
-  const fertilizerBags2 = Math.ceil((area * fertilizerConsumption2) / bagWeight2) || 0;
-  const fertilizerTotal1 = fertilizerBags1 * price1 * bagWeight1 || 0;
-  const fertilizerTotal2 = (mixed && fertilizerBags2 * price2 * bagWeight2) || 0;
+  const fertilizerTotal1 = calcFertilizationSegment(area, fertilizerConsumption1);
+  const fertilizerTotal2 = calcFertilizationSegment(area, fertilizerConsumption2);
 
-  return fertilizerTotal1 + fertilizerTotal2;
+  return fertilizerTotal1 + (mixed && fertilizerTotal2);
+};
+
+export const calcMidRowCultivation = (area, data) => {
+  const { withFertilization, fertilizerConsumption } = data;
+
+  return withFertilization ? calcFertilizationSegment(area, fertilizerConsumption) : 0;
 };

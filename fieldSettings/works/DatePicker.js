@@ -1,10 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Block, Text } from '../../components';
 import DayPicker from './DayPicker';
 import MonthPicker from './MonthPicker';
 
-const DatePicker = ({ field, workName, date }) => {
-  const [month, day] = date;
+const DatePicker = ({ actionArgumentObject }) => {
+  const { field, workName } = actionArgumentObject;
+  const [month, day] = useSelector(state => state[field].groundWorksState[workName].date);
   const curentMonthIndex = new Date().getMonth();
   const curentMonthName = monthsArray[curentMonthIndex];
 
@@ -15,14 +17,12 @@ const DatePicker = ({ field, workName, date }) => {
         <MonthPicker
           allMonths={monthsArray}
           month={month || monthsArray[curentMonthIndex]}
-          field={field}
-          workName={workName}
+          actionArgumentObject={actionArgumentObject}
         />
         <DayPicker
           numberOfDays={month ? months[month] : months[curentMonthName]}
           day={day}
-          field={field}
-          workName={workName}
+          actionArgumentObject={actionArgumentObject}
         />
       </Block>
     </Block>

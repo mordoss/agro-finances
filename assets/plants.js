@@ -21,3 +21,10 @@ export default [
     image: require('./icons/wheat.svg.png'),
   },
 ];
+
+export const worksPerPlant = {
+  Kukuruz: ['midRowCultivation1', 'disking', 'fertilization2'],
+  Soja: ['disking', 'fertilization2'],
+  Pšenica: ['plowing', 'sowing'],
+  Suncokret: ['plowing', 'spraying2'],
+};

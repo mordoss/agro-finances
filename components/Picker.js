@@ -17,11 +17,10 @@ const PickerCustom = ({ items, label, active, actionArgumentObject, action }) =>
   return (
     <Block row center>
       <TouchableHighlight onPress={() => setIsModalVisible(true)} style={styles.button}>
-        <Text gray>{label}</Text>
+        <Text gray center>
+          {active || label}
+        </Text>
       </TouchableHighlight>
-      <Text style={styles.selected} medium h3 gray>
-        {active}
-      </Text>
 
       <Modal visible={isModalVisible} animationType="slide" transparent>
         <Block style={styles.modalContainer}>
@@ -64,6 +63,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
+    width: theme.sizes.base * 6,
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 13,
     padding: theme.sizes.base / 4,
