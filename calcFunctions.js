@@ -38,3 +38,9 @@ export const calcMidRowCultivation = (area, data) => {
 
   return withFertilization ? calcFertilizationSegment(area, fertilizerConsumption) : 0;
 };
+
+export const calcSubPerPlant = (worksArray, property, area) => {
+  return worksArray
+    .filter(work => (property === 'paidPrice' ? work.paid : !work.paid))
+    .reduce((total, work) => total + (Number(work[property]) * area) / 100, 0);
+};

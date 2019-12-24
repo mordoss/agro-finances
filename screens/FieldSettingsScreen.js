@@ -14,7 +14,7 @@ const FieldSettingsScreen = () => {
   const [active, changeActive] = useState('Njiva');
 
   return (
-    <Block color={theme.colors.gray2}>
+    <Block color={theme.colors.backgorund}>
       <KeyboardAvoidingView
         behavior="padding"
         style={{ flex: 1 }}

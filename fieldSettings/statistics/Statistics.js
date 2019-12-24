@@ -1,32 +1,41 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Block, Text } from '../../components';
+import StatisticsPresentational from './StatisticsPresentational';
+import { calcSubPerPlant } from '../../calcFunctions';
+import { worksPerPlant } from '../../assets/plants';
 
 const Statistics = ({ field }) => {
   const area = useSelector(state => state[field].area);
-  const doneWorks = useSelector(state =>
-    Object.values(state[field].groundWorksState).filter(work => work.done)
+  const plant = useSelector(state => state[field].plant);
+  const allWorks = useSelector(state =>
+    Object.values(state[field].groundWorksState).filter(work =>
+      worksPerPlant[plant].includes(work.workName)
+    )
   );
-  const oilConsumptionDone =
-    (doneWorks
-      .filter(work => !work.paid)
-      .reduce((total, work) => total + Number(work.oilConsumption), 0) *
-      area) /
-    100;
+  const doneWorks = allWorks.filter(work => work.done);
+  const planingWorks = allWorks.filter(work => work.planing);
 
-  const paidDone =
-    (doneWorks
-      .filter(work => work.paid)
-      .reduce((total, work) => total + Number(work.paidPrice), 0) *
-      area) /
-    100;
+  const oilDoneConsumption = calcSubPerPlant(doneWorks, 'oilConsumption', area);
+  const oilDonePrice = oilDoneConsumption * 150;
+  const paidDonePrice = calcSubPerPlant(doneWorks, 'paidPrice', area);
+  const oilPlaningConsumption = calcSubPerPlant(planingWorks, 'oilConsumption', area);
+  const oilPlaningPrice = oilPlaningConsumption * 150;
+  const paidPlaningPrice = calcSubPerPlant(planingWorks, 'paidPrice', area);
+
+  const doneTotal = oilDonePrice + paidDonePrice;
+  const planingTotal = oilPlaningPrice + paidPlaningPrice;
 
   return (
-    <Block>
-      <Text>Litara nafte: {oilConsumptionDone}</Text>
-      <Text>Nafta: {oilConsumptionDone * 150} </Text>
-      <Text>Uslužno: {paidDone}</Text>
-    </Block>
+    <StatisticsPresentational
+      oilDoneConsumption={oilDoneConsumption}
+      oilDonePrice={oilDonePrice}
+      paidDonePrice={paidDonePrice}
+      doneTotal={doneTotal}
+      oilPlaningConsumption={oilPlaningConsumption}
+      oilPlaningPrice={oilPlaningPrice}
+      paidPlaningPrice={paidPlaningPrice}
+      planingTotal={planingTotal}
+    />
   );
 };
 

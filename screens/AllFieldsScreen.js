@@ -9,7 +9,7 @@ const AllFieldsScreen = ({ navigation }) => {
   const [active, changeActive] = useState('Sve Njive');
 
   return (
-    <Block color={theme.colors.gray2}>
+    <Block color={theme.colors.backgorund}>
       <Tabs tabs={tabs} active={active} changeActive={changeActive} />
       {active === 'Sve Njive' && <FieldsConnected navigation={navigation} />}
     </Block>

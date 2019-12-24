@@ -20,7 +20,7 @@ const Input = ({ label, unit, value, actionArgumentObject, action }) => {
         autoCorrect={false}
         keyboardType="numeric"
       />
-      <Text gray>{unit}</Text>
+      <Text gray2>{unit}</Text>
     </Block>
   );
 };
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: theme.colors.gray,
-    borderRadius: theme.sizes.radius,
+    borderRadius: theme.sizes.radius / 2,
     color: theme.colors.black,
     backgroundColor: theme.colors.white,
     height: theme.sizes.base * 1.5,

@@ -13,7 +13,7 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
 
   return (
     <Block flex={false}>
-      <Text center semibold title gray style={styles.workName}>
+      <Text center medium title gray style={styles.workName}>
         {name}
       </Text>
 

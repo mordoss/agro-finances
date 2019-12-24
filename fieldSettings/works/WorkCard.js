@@ -8,29 +8,28 @@ import Fertilization from './Fertilization';
 import MidRowCultivation from './MidRowCultivation';
 import { theme } from '../../theme';
 
-const Work = ({ work, name, field, workName }) => {
+const Work = ({ work, name, field }) => {
+  const { workName, special } = work;
   return (
     <Block card color={theme.colors.white} style={styles.container}>
       <CommonWorkPart field={field} work={work} name={name} workName={workName}>
-        {workName === 'sowing' && <Sowing sowingData={work.special} field={field} />}
-        {workName === 'spraying1' && (
-          <Spraying sprayingData={work.special} field={field} turn="first" />
-        )}
+        {workName === 'sowing' && <Sowing sowingData={special} field={field} />}
+        {workName === 'spraying1' && <Spraying sprayingData={special} field={field} turn="first" />}
         {workName === 'spraying2' && (
-          <Spraying sprayingData={work.special} field={field} turn="second" />
+          <Spraying sprayingData={special} field={field} turn="second" />
         )}
         {workName === 'fertilization1' && (
-          <Fertilization fertilizationData={work.special} field={field} turn="first" />
+          <Fertilization fertilizationData={special} field={field} turn="first" />
         )}
         {workName === 'fertilization2' && (
-          <Fertilization fertilizationData={work.special} field={field} turn="second" />
+          <Fertilization fertilizationData={special} field={field} turn="second" />
         )}
 
         {workName === 'midRowCultivation1' && (
-          <MidRowCultivation midRowCultivationData={work.special} field={field} turn="first" />
+          <MidRowCultivation midRowCultivationData={special} field={field} turn="first" />
         )}
         {workName === 'midRowCultivation2' && (
-          <MidRowCultivation midRowCultivationData={work.special} field={field} turn="second" />
+          <MidRowCultivation midRowCultivationData={special} field={field} turn="second" />
         )}
       </CommonWorkPart>
     </Block>
