@@ -1,33 +1,22 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Block, Text } from '../../components';
+import { Block } from '../../components';
+import DoneAndPlaningCard from './DoneAndPlaningCard';
 
-const StatisticsPresentational = ({
-  oilDoneConsumption,
-  oilDonePrice,
-  paidDonePrice,
-  doneTotal,
-  oilPlaningConsumption,
-  oilPlaningPrice,
-  paidPlaningPrice,
-  planingTotal,
-}) => {
+const StatisticsPresentational = ({ done, planing }) => {
   return (
     <Block row>
-      <Block>
-        <Text>Uradjeno</Text>
-        <Text>Litara nafte: {oilDoneConsumption}</Text>
-        <Text>Nafta: {oilDonePrice} </Text>
-        <Text>Uslužno: {paidDonePrice}</Text>
-        <Text>Ukupno: {doneTotal}</Text>
-      </Block>
-      <Block>
-        <Text>Planirano</Text>
-        <Text>Litara nafte: {oilPlaningConsumption}</Text>
-        <Text>Nafta: {oilPlaningPrice} </Text>
-        <Text>Uslužno: {paidPlaningPrice}</Text>
-        <Text>Ukupno: {planingTotal}</Text>
-      </Block>
+      <DoneAndPlaningCard
+        label="Urađeno"
+        oilConsumption={done.oilConsumptionDone}
+        paidPrice={done.paidPriceDone}
+        seedPrice={done.seedDone}
+      />
+      <DoneAndPlaningCard
+        label="Planiram"
+        oilConsumption={planing.oilConsumptionPlaning}
+        paidPrice={planing.paidPricePlaning}
+        seedPrice={planing.seedPlaning}
+      />
     </Block>
   );
 };

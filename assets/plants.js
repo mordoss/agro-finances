@@ -23,7 +23,7 @@ export default [
 ];
 
 export const worksPerPlant = {
-  Kukuruz: ['midRowCultivation1', 'disking', 'fertilization2'],
+  Kukuruz: ['midRowCultivation1', 'sowing', 'fertilization2'],
   Soja: ['disking', 'fertilization2'],
   Pšenica: ['plowing', 'sowing'],
   Suncokret: ['plowing', 'spraying2'],

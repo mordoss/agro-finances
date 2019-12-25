@@ -1,12 +1,22 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import StatisticsPresentational from './StatisticsPresentational';
-import { calcSubPerPlant } from '../../calcFunctions';
+import {
+  calcOilAndPaidPerPlant,
+  calcSowing,
+  calcSpraying,
+  calcFertilization,
+} from '../../calcFunctions';
 import { worksPerPlant } from '../../assets/plants';
 
 const Statistics = ({ field }) => {
   const area = useSelector(state => state[field].area);
   const plant = useSelector(state => state[field].plant);
+  const { seedConsumption } = useSelector(state => state[field].sowingState);
+  const { done: sowingDone, planing: sowingPlaning } = useSelector(
+    state => state[field].groundWorksState.sowing
+  );
+
   const allWorks = useSelector(state =>
     Object.values(state[field].groundWorksState).filter(work =>
       worksPerPlant[plant].includes(work.workName)
@@ -15,26 +25,18 @@ const Statistics = ({ field }) => {
   const doneWorks = allWorks.filter(work => work.done);
   const planingWorks = allWorks.filter(work => work.planing);
 
-  const oilDoneConsumption = calcSubPerPlant(doneWorks, 'oilConsumption', area);
-  const oilDonePrice = oilDoneConsumption * 150;
-  const paidDonePrice = calcSubPerPlant(doneWorks, 'paidPrice', area);
-  const oilPlaningConsumption = calcSubPerPlant(planingWorks, 'oilConsumption', area);
-  const oilPlaningPrice = oilPlaningConsumption * 150;
-  const paidPlaningPrice = calcSubPerPlant(planingWorks, 'paidPrice', area);
+  const oilConsumptionDone = calcOilAndPaidPerPlant(doneWorks, 'oilConsumption', area);
+  const paidPriceDone = calcOilAndPaidPerPlant(doneWorks, 'paidPrice', area);
+  const seedDone = sowingDone ? calcSowing(area, seedConsumption) : 0;
 
-  const doneTotal = oilDonePrice + paidDonePrice;
-  const planingTotal = oilPlaningPrice + paidPlaningPrice;
+  const oilConsumptionPlaning = calcOilAndPaidPerPlant(planingWorks, 'oilConsumption', area);
+  const paidPricePlaning = calcOilAndPaidPerPlant(planingWorks, 'paidPrice', area);
+  const seedPlaning = sowingPlaning ? calcSowing(area, seedConsumption) : 0;
 
   return (
     <StatisticsPresentational
-      oilDoneConsumption={oilDoneConsumption}
-      oilDonePrice={oilDonePrice}
-      paidDonePrice={paidDonePrice}
-      doneTotal={doneTotal}
-      oilPlaningConsumption={oilPlaningConsumption}
-      oilPlaningPrice={oilPlaningPrice}
-      paidPlaningPrice={paidPlaningPrice}
-      planingTotal={planingTotal}
+      done={{ oilConsumptionDone, paidPriceDone, seedDone }}
+      planing={{ oilConsumptionPlaning, paidPricePlaning, seedPlaning }}
     />
   );
 };
