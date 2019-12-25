@@ -46,7 +46,7 @@ const Works = ({ field, plant }) => {
       special: { ...state[field].midRowCultivationState.first },
     },
     midRowCultivation2: {
-      ...state[field].groundWorksState.midRowCultivation1,
+      ...state[field].groundWorksState.midRowCultivation2,
       special: { ...state[field].midRowCultivationState.second },
     },
   }));
