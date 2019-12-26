@@ -27,7 +27,7 @@ export const changeMixed = ({ field, workState, turn, value }) => {
   };
 };
 
-export const changeSeedConsumption = (field, value) => {
+export const changeSeedConsumption = ({ field }, value) => {
   return {
     type: 'SEED_CONSUMPTION_CHANGED',
     field,

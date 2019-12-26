@@ -7,8 +7,8 @@ import DatePicker from './DatePicker';
 import SubTotal from './SubTotal';
 import { theme } from '../../theme';
 
-const CommonWorkPart = ({ field, name, work, workName, children }) => {
-  const { done, planing, paid, paidPrice, oilConsumption } = work;
+const CommonWorkPart = ({ field, name, work, children }) => {
+  const { done, planing, paid, paidPrice, oilConsumption, workName } = work;
   const actionArgumentObject = { field, workName };
 
   return (
@@ -35,7 +35,7 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
 
       {children}
 
-      <SubTotal field={field} work={work} workName={workName} />
+      <SubTotal field={field} work={work} />
     </Block>
   );
 };

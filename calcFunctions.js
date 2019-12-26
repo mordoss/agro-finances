@@ -1,5 +1,6 @@
-export const calcSowing = (area, consumption) => {
-  return Math.ceil((area * 100) / 0.7 / (consumption / 100) / 25000);
+export const calcSowing = (area, sowingData) => {
+  const { seedConsumption } = sowingData;
+  return Math.ceil((area * 100) / 0.7 / (seedConsumption / 100) / 25000);
 };
 
 export const calcSpraying = (area, data) => {

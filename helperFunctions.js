@@ -1,6 +1,5 @@
-// eslint-disable-next-line import/prefer-default-export
+// Image component doesn't accept svg
 export const plantStringToImage = string => {
-  // Image component doesn't accept svg
   switch (string) {
     case 'Kukuruz':
       return require('./assets/icons/corn.svg.png');
@@ -12,5 +11,23 @@ export const plantStringToImage = string => {
       return require('./assets/icons/wheat.svg.png');
     default:
       return require('./assets/icons/add.png');
+  }
+};
+
+export const workNameToItem = string => {
+  switch (string) {
+    case 'sowing':
+      return 'Za Seme: ';
+    case 'fertilization1':
+    case 'fertilization2':
+    case 'midRowCultivation1':
+    case 'midRowCultivation2':
+      return 'prihranu';
+    case 'spraying1':
+    case 'spraying2':
+      return 'herbicid';
+
+    default:
+      return 'yet to be!!!';
   }
 };

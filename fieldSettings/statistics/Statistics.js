@@ -1,5 +1,5 @@
 import React from 'react';
-import usePlantCalc from './usePlantCalc';
+import usePlantCalc from '../../hooks/usePlantCalc';
 import StatisticsPresentational from './StatisticsPresentational';
 
 const Statistics = ({ field }) => {

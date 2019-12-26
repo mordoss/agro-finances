@@ -16,7 +16,7 @@ const DoneAndPlaningCard = ({ label, data }) => {
       <Text>Seme: {seed}</Text>
       <Text>Prihrana: {fertilizer}</Text>
       <Text>Zaštita: {sprayer}</Text>
-      <Text>Ukupno: Math.round({total})</Text>
+      <Text>Ukupno: {Math.round(total)}</Text>
     </Block>
   );
 };

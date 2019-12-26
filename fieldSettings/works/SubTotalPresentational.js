@@ -4,6 +4,7 @@ import { Block, Text } from '../../components';
 import { theme } from '../../theme';
 
 const SubTotalPresentational = ({
+  label,
   paid,
   paidPricePerWork,
   oilConsumptionPerWork,
@@ -30,7 +31,7 @@ const SubTotalPresentational = ({
 
       {specialPricePerWork !== 0 && (
         <Text gray light style={styles.item}>
-          Za ostalo: {specialPricePerWork} dinara.
+          Za {label}: {specialPricePerWork} dinara.
         </Text>
       )}
 

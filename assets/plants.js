@@ -24,6 +24,7 @@ export default [
 
 export const worksPerPlant = {
   Kukuruz: [
+    'disking',
     'spraying1',
     'spraying2',
     'midRowCultivation1',
