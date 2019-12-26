@@ -10,7 +10,8 @@ import {
 } from '../../calcFunctions';
 
 const SubTotal = ({ work, field }) => {
-  const { oilConsumption, paid, paidPrice, workName } = work;
+  const { done, planing, oilConsumption, paid, paidPrice, workName } = work;
+  const doneOrPlaning = done || planing;
   const {
     area,
     sowingData,
@@ -20,59 +21,34 @@ const SubTotal = ({ work, field }) => {
     midRowCultivation2Data,
     spraying1Data,
     spraying2Data,
-    sowingDone,
-    sowingPlaning,
-    fertilization1Done,
-    fertilization2Done,
-    fertilization1Planing,
-    fertilization2Planing,
-    midRowCultivation1Done,
-    midRowCultivation2Done,
-    midRowCultivation1Planing,
-    midRowCultivation2Planing,
-    spraying1Done,
-    spraying2Done,
-    spraying1Planing,
-    spraying2Planing,
   } = useWorkData(field);
 
   const specialPrices = {
-    sowing: [calcSowing(area, sowingData), sowingDone || sowingPlaning],
-    fertilization1: [
-      calcFertilization(area, fertilization1Data),
-      fertilization1Done || fertilization1Planing,
-    ],
-    fertilization2: [
-      calcFertilization(area, fertilization2Data),
-      fertilization2Done || fertilization2Planing,
-    ],
-    spraying1: [calcSpraying(area, spraying1Data), spraying1Done || spraying1Planing],
-    spraying2: [calcSpraying(area, spraying2Data), spraying2Done || spraying2Planing],
-    midRowCultivation1: [
-      calcMidRowCultivation(area, midRowCultivation1Data),
-      midRowCultivation1Done || midRowCultivation1Planing,
-    ],
-    midRowCultivation2: [
-      calcMidRowCultivation(area, midRowCultivation2Data),
-      midRowCultivation2Done || midRowCultivation2Planing,
-    ],
+    sowing: calcSowing(area, sowingData),
+    fertilization1: calcFertilization(area, fertilization1Data),
+    fertilization2: calcFertilization(area, fertilization2Data),
+    spraying1: calcSpraying(area, spraying1Data),
+    spraying2: calcSpraying(area, spraying2Data),
+    midRowCultivation1: calcMidRowCultivation(area, midRowCultivation1Data),
+    midRowCultivation2: calcMidRowCultivation(area, midRowCultivation2Data),
   };
 
-  const oilConsumptionPerWork = paid ? 0 : Math.round((area / 100) * oilConsumption);
-  const oilConsumptionPricePerWork = oilConsumptionPerWork * 150;
-  const paidPricePerWork = paid ? (area / 100) * paidPrice : 0;
-  const specialPricePerWork = specialPrices[workName][1] ? specialPrices[workName][0] : 0;
+  const oilConsumptionPerWork =
+    !doneOrPlaning || paid ? 0 : Math.round((area / 100) * oilConsumption);
+  const oilConsumptionPrice = oilConsumptionPerWork * 150;
+  const paidPricePerWork = doneOrPlaning && paid ? (area / 100) * paidPrice : 0;
+  const specialPrice = (doneOrPlaning && specialPrices[workName]) || 0;
 
-  const total = paidPricePerWork + oilConsumptionPricePerWork + specialPricePerWork;
+  const total = paidPricePerWork + oilConsumptionPrice + specialPrice;
 
   return (
     <SubTotalPresentational
       label={workNameToItem(workName)}
       paid={paid}
-      paidPricePerWork={paidPricePerWork}
-      oilConsumptionPerWork={oilConsumptionPerWork}
-      oilConsumptionPricePerWork={oilConsumptionPricePerWork}
-      specialPricePerWork={specialPricePerWork}
+      paidPrice={paidPricePerWork}
+      oilConsumption={oilConsumptionPerWork}
+      oilConsumptionPrice={oilConsumptionPrice}
+      specialPrice={specialPrice}
       total={total}
     />
   );

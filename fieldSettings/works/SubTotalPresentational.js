@@ -6,32 +6,32 @@ import { theme } from '../../theme';
 const SubTotalPresentational = ({
   label,
   paid,
-  paidPricePerWork,
-  oilConsumptionPerWork,
-  oilConsumptionPricePerWork,
-  specialPricePerWork,
+  paidPrice,
+  oilConsumption,
+  oilConsumptionPrice,
+  specialPrice,
   total,
 }) => {
   return (
     <Block style={styles.container}>
       {paid ? (
         <Text gray light style={styles.item}>
-          Za uslužno: {paidPricePerWork} dinara.
+          Za uslužno: {paidPrice} dinara.
         </Text>
       ) : (
         <>
           <Text gray light style={styles.item}>
-            Litara nafte: {oilConsumptionPerWork}.
+            Litara nafte: {oilConsumption}.
           </Text>
           <Text gray light style={styles.item}>
-            Za naftu: {oilConsumptionPricePerWork} dinara.
+            Za naftu: {oilConsumptionPrice} dinara.
           </Text>
         </>
       )}
 
-      {specialPricePerWork !== 0 && (
+      {label && (
         <Text gray light style={styles.item}>
-          Za {label}: {specialPricePerWork} dinara.
+          Za {label}: {specialPrice} dinara.
         </Text>
       )}
 

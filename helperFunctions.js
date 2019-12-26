@@ -28,6 +28,6 @@ export const workNameToItem = string => {
       return 'herbicid';
 
     default:
-      return 'yet to be!!!';
+      return null;
   }
 };
