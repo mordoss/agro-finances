@@ -4,7 +4,7 @@ const colors = {
   secondary: '#119DA4',
   tertiary: '#FFE358',
   white: '#FFFFFF',
-  gray: '#3F3F3F',
+  gray: '#666666',
   backgorund: '#E6F0EE',
 };
 

@@ -8,6 +8,7 @@ import {
   calcFertilization,
 } from '../../calcFunctions';
 
+// DON'T LOOK AT MEEE!!!
 const usePlantCalc = field => {
   const area = useSelector(state => state[field].area);
   const plant = useSelector(state => state[field].plant);
@@ -54,6 +55,7 @@ const usePlantCalc = field => {
   const planingWorks = allWorks.filter(work => work.planing);
 
   const oilConsumptionDone = calcOilAndPaidPerPlant(doneWorks, 'oilConsumption', area);
+  const oilPriceDone = oilConsumptionDone * 150;
   const paidDone = calcOilAndPaidPerPlant(doneWorks, 'paidPrice', area);
   const seedDone = sowingDone ? calcSowing(area, seedConsumption) : 0;
   const fertilizer1Done = fertilization1Done ? calcFertilization(area, fertilization1Data) : 0;
@@ -68,6 +70,7 @@ const usePlantCalc = field => {
   const sprayer2Done = spraying2Done ? calcSpraying(area, spraying2Data) : 0;
 
   const oilConsumptionPlaning = calcOilAndPaidPerPlant(planingWorks, 'oilConsumption', area);
+  const oilPricePlaning = oilConsumptionPlaning * 150;
   const paidPlaning = calcOilAndPaidPerPlant(planingWorks, 'paidPrice', area);
   const seedPlaning = sowingPlaning ? calcSowing(area, seedConsumption) : 0;
   const fertilizer1Planing = fertilization1Planing
@@ -93,17 +96,40 @@ const usePlantCalc = field => {
   const sprayerTotalDone = sprayer1Done + sprayer2Done;
   const sprayerTotalPlaning = sprayer1Planing + sprayer2Planing;
 
+  const doneTotal = oilPriceDone + paidDone + seedDone + fertilizerTotalDone + sprayerTotalDone;
+  const planingTotal =
+    oilPricePlaning + paidPlaning + seedPlaning + fertilizerTotalPlaning + sprayerTotalPlaning;
+
+  const oilConsumptionTotal = oilConsumptionDone + oilConsumptionPlaning;
+  const oilPriceTotal = oilPriceDone + oilPricePlaning;
+  const paidTotal = paidDone + paidPlaning;
+  const seedTotal = seedDone + seedPlaning;
+  const fertilizerTotal = fertilizerTotalDone + fertilizerTotalPlaning;
+  const sprayerTotal = sprayerTotalDone + sprayerTotalPlaning;
+  const total = doneTotal + planingTotal;
+
   return {
     oilConsumptionDone,
+    oilPriceDone,
     paidDone,
     seedDone,
     oilConsumptionPlaning,
+    oilPricePlaning,
     paidPlaning,
     seedPlaning,
     fertilizerTotalDone,
     fertilizerTotalPlaning,
     sprayerTotalDone,
     sprayerTotalPlaning,
+    oilConsumptionTotal,
+    oilPriceTotal,
+    paidTotal,
+    seedTotal,
+    fertilizerTotal,
+    sprayerTotal,
+    doneTotal,
+    planingTotal,
+    total,
   };
 };
 

@@ -42,6 +42,8 @@ const CommonWorkPart = ({ field, name, work, workName, children }) => {
 
 const styles = StyleSheet.create({
   workName: {
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: theme.colors.gray,
     marginBottom: theme.sizes.base,
   },
 });

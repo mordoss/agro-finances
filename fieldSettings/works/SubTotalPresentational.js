@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   total: {
-    borderTopWidth: 2,
+    borderTopColor: theme.colors.gray,
+    borderTopWidth: StyleSheet.hairlineWidth,
   },
 });
 
