@@ -30,6 +30,7 @@ export default Input;
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
+    marginBottom: theme.sizes.base / 2,
   },
   input: {
     borderWidth: StyleSheet.hairlineWidth,

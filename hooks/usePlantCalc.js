@@ -82,10 +82,8 @@ const usePlantCalc = field => {
     fertilizer1Done + fertilizer2Done + fertilizer1MidDone + fertilizer2MidDone;
   const fertilizerTotalPlaning =
     fertilizer1Planing + fertilizer2Planing + fertilizer1MidPlaning + fertilizer2MidPlaning;
-
   const sprayerTotalDone = sprayer1Done + sprayer2Done;
   const sprayerTotalPlaning = sprayer1Planing + sprayer2Planing;
-
   const doneTotal = oilPriceDone + paidDone + seedDone + fertilizerTotalDone + sprayerTotalDone;
   const planingTotal =
     oilPricePlaning + paidPlaning + seedPlaning + fertilizerTotalPlaning + sprayerTotalPlaning;

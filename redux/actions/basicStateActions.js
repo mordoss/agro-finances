@@ -6,6 +6,22 @@ export const changeArea = ({ field }, value) => {
   };
 };
 
+export const changeYield = ({ field }, value) => {
+  return {
+    type: 'YIELD_CHANGED',
+    value,
+    field,
+  };
+};
+
+export const changeProductPrice = ({ field }, value) => {
+  return {
+    type: 'PRODUCT_PRICE_CHANGED',
+    value,
+    field,
+  };
+};
+
 export const changePlant = (field, value) => {
   return {
     type: 'PLANT_CHANGED',

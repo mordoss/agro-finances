@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { ScrollView, KeyboardAvoidingView } from 'react-native';
 import { Tabs, Block } from '../components';
 import FieldsConnected from '../AllFields/FieldsConnected';
+import Statistics from '../AllFields/StatisticsConnected';
 import HeaderIcon from '../AllFields/HeaderIcon';
 import { theme } from '../theme';
 
@@ -10,8 +12,17 @@ const AllFieldsScreen = ({ navigation }) => {
 
   return (
     <Block color={theme.colors.backgorund}>
-      <Tabs tabs={tabs} active={active} changeActive={changeActive} />
-      {active === 'Sve Njive' && <FieldsConnected navigation={navigation} />}
+      <KeyboardAvoidingView
+        behavior="padding"
+        style={{ flex: 1 }}
+        keyboardVerticalOffset={theme.sizes.base * 6}
+      >
+        <ScrollView>
+          <Tabs tabs={tabs} active={active} changeActive={changeActive} />
+          {active === 'Sve Njive' && <FieldsConnected navigation={navigation} />}
+          {active === 'Ukupna Statistika' && <Statistics />}
+        </ScrollView>
+      </KeyboardAvoidingView>
     </Block>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Animated } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { theme } from '../theme';
 
 const Block = props => {
@@ -16,7 +16,6 @@ const Block = props => {
     card,
     color,
     space,
-    animated,
     wrap,
     style,
     children,
@@ -42,10 +41,6 @@ const Block = props => {
     style, // rewrite predefined styles
   ];
 
-  if (animated) {
-    return <Animated.View style={blockStyles}>{children}</Animated.View>;
-  }
-
   return <View style={blockStyles}>{children}</View>;
 };
 
@@ -65,8 +60,6 @@ export const styles = StyleSheet.create({
     borderRadius: theme.sizes.radius,
     padding: theme.sizes.base,
     marginBottom: theme.sizes.base,
-    borderColor: theme.colors.gray,
-    // borderWidth: StyleSheet.hairlineWidth,
     elevation: 5,
   },
   center: {

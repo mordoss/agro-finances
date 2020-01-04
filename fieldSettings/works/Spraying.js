@@ -7,7 +7,7 @@ const Spraying = ({ sprayingData, field, turn }) => {
   const { mixed } = sprayingData;
 
   return (
-    <Block>
+    <>
       <SprayingSegment
         sprayingData={sprayingData}
         actionArgumentObject={{ field, turn }}
@@ -17,15 +17,16 @@ const Spraying = ({ sprayingData, field, turn }) => {
         label="Mešam sa još jednim herbicidom"
         action={changeMixed}
         actionArgumentObject={{ field, turn, value: mixed, workState: 'sprayingState' }}
+        withAnimation
       />
-      {sprayingData.mixed && (
+      <Block style={{ height: mixed ? null : 0, overflow: 'hidden' }}>
         <SprayingSegment
           sprayingData={sprayingData}
           actionArgumentObject={{ field, turn }}
           place={2}
         />
-      )}
-    </Block>
+      </Block>
+    </>
   );
 };
 

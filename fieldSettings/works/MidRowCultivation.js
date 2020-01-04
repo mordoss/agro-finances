@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from '../../components';
+import { Switch, Block } from '../../components';
 import FertilizationSegment from './FertilizationSegment';
 import { changeWithFertilization } from '../../redux/actions/specialActions';
 
@@ -12,16 +12,16 @@ const MidRowCultivation = ({ midRowCultivationData, field, turn }) => {
         label="Sa prihranom"
         action={changeWithFertilization}
         actionArgumentObject={{ value: withFertilization, field, turn }}
+        withAnimation
       />
-
-      {withFertilization && (
+      <Block style={{ height: withFertilization ? null : 0, overflow: 'hidden' }}>
         <FertilizationSegment
           fertilizationData={midRowCultivationData}
           actionArgumentObject={{ field, turn }}
           place=""
           midRow
         />
-      )}
+      </Block>
     </>
   );
 };

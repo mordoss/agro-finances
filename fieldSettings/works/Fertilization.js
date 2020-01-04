@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from '../../components';
+import { Switch, Block } from '../../components';
 import FertilizationSegment from './FertilizationSegment';
 import { changeMixed } from '../../redux/actions/specialActions';
 
@@ -18,14 +18,15 @@ const Fertilization = ({ fertilizationData, field, turn }) => {
         label="Mešam sa još jednim hranivom"
         action={changeMixed}
         actionArgumentObject={{ field, turn, value: mixed, workState: 'fertilizationState' }}
+        withAnimation
       />
-      {mixed && (
+      <Block style={{ height: mixed ? null : 0, overflow: 'hidden' }}>
         <FertilizationSegment
           fertilizationData={fertilizationData}
           actionArgumentObject={{ field, turn }}
           place={2}
         />
-      )}
+      </Block>
     </>
   );
 };

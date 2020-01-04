@@ -1,6 +1,6 @@
 export default {
   first: {
-    withFertilization: true,
+    withFertilization: false,
     fertilizer: 'KAN',
     fertilizerConsumption: 2,
   },

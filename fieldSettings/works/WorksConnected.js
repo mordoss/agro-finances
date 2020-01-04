@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux';
 import WorkCard from './WorkCard';
 import { worksPerPlant } from '../../assets/plants';
 
-const Works = ({ field, plant }) => {
+const WorksConnected = ({ field }) => {
+  const plant = useSelector(state => state[field].plant);
+
   const {
     plowing,
     disking,
@@ -100,4 +102,4 @@ const Works = ({ field, plant }) => {
   );
 };
 
-export default Works;
+export default WorksConnected;

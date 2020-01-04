@@ -1,12 +1,9 @@
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
-import { useSelector } from 'react-redux';
 import WorksConnected from './WorksConnected';
 import { theme } from '../../theme';
 
 const WorksContainer = ({ field }) => {
-  const plant = useSelector(state => state[field].plant);
-
   return (
     <ScrollView
       style={styles.container}
@@ -14,7 +11,7 @@ const WorksContainer = ({ field }) => {
       horizontal
       pagingEnabled
     >
-      <WorksConnected field={field} plant={plant} />
+      <WorksConnected field={field} />
     </ScrollView>
   );
 };

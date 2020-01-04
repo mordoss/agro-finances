@@ -9,6 +9,16 @@ function createFieldReducer(fieldNumber) {
           ...state,
           area: action.value,
         };
+      case 'YIELD_CHANGED':
+        return {
+          ...state,
+          yieldPerHa: action.value,
+        };
+      case 'PRODUCT_PRICE_CHANGED':
+        return {
+          ...state,
+          productPrice: action.value,
+        };
       case 'PLANT_CHANGED':
         return {
           ...state,
@@ -31,7 +41,6 @@ function createFieldReducer(fieldNumber) {
           ...state,
           rentedPrice: action.value,
         };
-
       case 'DONE_CHANGED':
         return {
           ...state,

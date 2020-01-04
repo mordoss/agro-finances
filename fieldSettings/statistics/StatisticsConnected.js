@@ -2,7 +2,7 @@ import React from 'react';
 import usePlantCalc from '../../hooks/usePlantCalc';
 import StatisticsPresentational from './StatisticsPresentational';
 
-const Statistics = ({ field }) => {
+const StatisticsConnected = ({ field }) => {
   const {
     oilConsumptionDone,
     oilPriceDone,
@@ -60,4 +60,4 @@ const Statistics = ({ field }) => {
   );
 };
 
-export default Statistics;
+export default StatisticsConnected;

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { Tabs, Block } from '../components';
 import BasicContainer from '../fieldSettings/basic/BasicContainer';
 import WorksContainer from '../fieldSettings/works/WorksContainer';
-import Statistics from '../fieldSettings/statistics/Statistics';
+import Statistics from '../fieldSettings/statistics/StatisticsConnected';
 import { theme } from '../theme';
 
 const FieldSettingsScreen = () => {
