@@ -11,6 +11,8 @@ import {
 
 const usePlantCalc = field => {
   const plant = useSelector(state => state[field].plant);
+  const rentedPerHa = useSelector(state => (state[field].rented ? state[field].rentedPrice : 0));
+
   const {
     area,
     sowingData,
@@ -94,7 +96,8 @@ const usePlantCalc = field => {
   const seedTotal = seedDone + seedPlaning;
   const fertilizerTotal = fertilizerTotalDone + fertilizerTotalPlaning;
   const sprayerTotal = sprayerTotalDone + sprayerTotalPlaning;
-  const total = doneTotal + planingTotal;
+  const rented = Math.round((area / 100) * rentedPerHa);
+  const total = doneTotal + planingTotal + rented;
 
   return {
     oilConsumptionDone,
@@ -117,6 +120,7 @@ const usePlantCalc = field => {
     sprayerTotal,
     doneTotal,
     planingTotal,
+    rented,
     total,
   };
 };

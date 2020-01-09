@@ -11,7 +11,7 @@ const DatePicker = ({ actionArgumentObject }) => {
   const curentMonthName = monthsArray[curentMonthIndex];
 
   return (
-    <Block space="between">
+    <Block space="between" style={{ alignItems: 'center' }}>
       <Text>Datum:</Text>
       <Block row space="between" center>
         <MonthPicker

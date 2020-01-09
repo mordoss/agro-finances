@@ -17,13 +17,7 @@ const Tabs = ({ tabs, changeActive, disabled, active }) => {
         }}
         style={[styles.tab, isActive ? styles.active : null]}
       >
-        <Text
-          size={16}
-          gray={!isActive}
-          primary={isActive}
-          gray2={disabled && !isActive}
-          medium={isActive}
-        >
+        <Text size={16} gray={!isActive} primary={isActive} gray2={disabled && !isActive} bold>
           {tab}
         </Text>
       </TouchableOpacity>
@@ -44,9 +38,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.sizes.base * 2,
     backgroundColor: theme.colors.white,
     elevation: 5,
+    marginHorizontal: -theme.sizes.base,
   },
   tab: {
     paddingBottom: theme.sizes.base,
+    flex: 1,
+    alignItems: 'center',
   },
   active: {
     borderColor: theme.colors.primary,

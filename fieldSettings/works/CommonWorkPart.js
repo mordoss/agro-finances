@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: theme.colors.gray,
     marginBottom: theme.sizes.base,
+    paddingBottom: theme.sizes.base,
   },
 });
 

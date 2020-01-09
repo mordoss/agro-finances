@@ -49,6 +49,7 @@ const InputWithIncrementer = ({
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
+    marginVertical: theme.sizes.base,
   },
   input: {
     borderTopWidth: StyleSheet.hairlineWidth,

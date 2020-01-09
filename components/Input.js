@@ -20,7 +20,7 @@ const Input = ({ label, unit, value, actionArgumentObject, action }) => {
         autoCorrect={false}
         keyboardType="numeric"
       />
-      <Text gray2>{unit}</Text>
+      <Text gray>{unit}</Text>
     </Block>
   );
 };
@@ -30,7 +30,7 @@ export default Input;
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    marginBottom: theme.sizes.base / 2,
+    marginVertical: theme.sizes.base / 2,
   },
   input: {
     borderWidth: StyleSheet.hairlineWidth,

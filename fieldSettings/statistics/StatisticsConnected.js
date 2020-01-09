@@ -24,6 +24,7 @@ const StatisticsConnected = ({ field }) => {
     sprayerTotal,
     doneTotal,
     planingTotal,
+    rented,
     total,
   } = usePlantCalc(field);
 
@@ -54,6 +55,7 @@ const StatisticsConnected = ({ field }) => {
         seed: seedTotal,
         fertilizer: fertilizerTotal,
         sprayer: sprayerTotal,
+        rented,
         total,
       }}
     />

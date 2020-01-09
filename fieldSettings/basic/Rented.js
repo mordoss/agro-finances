@@ -14,9 +14,10 @@ const Rented = ({ field }) => {
         label="Zakupljujem?"
         action={changeRented}
         actionArgumentObject={{ field, value: rented }}
+        withAnimation
       />
       {rented && (
-        <>
+        <Block style={{ height: rented ? null : 0, overflow: 'hidden' }}>
           <Input
             label="Cena zakupa po Ha:"
             unit={unit}
@@ -25,7 +26,7 @@ const Rented = ({ field }) => {
             actionArgumentObject={{ field }}
           />
           <SubCount value={(area * price) / 100} label="Novca za zakup " unit={unit} />
-        </>
+        </Block>
       )}
     </Block>
   );

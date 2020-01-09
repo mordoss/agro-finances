@@ -1,20 +1,23 @@
 import React from 'react';
+import { Switch, StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
-import { StyleSheet } from 'react-native';
+import useAnimatedExpand from '../../hooks/useAnimatedExpand';
 import { changeYield, changeProductPrice } from '../../redux/actions/basicStateActions';
 import { Block, Text, Input } from '../../components';
+import Chart from './BarChart';
 import { theme } from '../../theme';
 
 const Profit = ({ invested }) => {
   const field = useSelector(state => `field${state.activeField}`);
   const { area, yieldPerHa, productPrice } = useSelector(state => state[field]);
+  const { expanded, changeLayout } = useAnimatedExpand();
 
   const income = (area / 100) * productPrice * yieldPerHa;
   const profit = income - invested;
 
   return (
     <Block card color={theme.colors.white} style={styles.container}>
-      <Text gray title medium center style={styles.title}>
+      <Text gray title bold center style={styles.title}>
         Zarada
       </Text>
       <Block style={styles.content}>
@@ -32,11 +35,20 @@ const Profit = ({ invested }) => {
           unit="dinara"
           label="Cena kilograma: "
         />
-        <Text>Potencijalni prihod: {income} din.</Text>
+        <Text gray bold style={{ marginTop: theme.sizes.base / 2 }}>
+          Potencijalni prihod: {income} din.
+        </Text>
       </Block>
-      <Text gray h3 right style={styles.total}>
-        Zarada: {profit} din.
-      </Text>
+      <Chart expanded={expanded} income={income || 0} invested={invested || 0} />
+      <Block row space="around" style={styles.total}>
+        <Block row style={styles.chartSwitch}>
+          <Switch value={expanded} onValueChange={changeLayout} />
+          <Text gray>Grafik </Text>
+        </Block>
+        <Text gray h3 right bold>
+          Zarada: {profit} din.
+        </Text>
+      </Block>
     </Block>
   );
 };
@@ -49,6 +61,7 @@ const styles = StyleSheet.create({
   title: {
     borderBottomColor: theme.colors.gray,
     borderBottomWidth: StyleSheet.hairlineWidth,
+    paddingBottom: theme.sizes.base,
   },
   content: {
     marginVertical: theme.sizes.base,
@@ -56,6 +69,10 @@ const styles = StyleSheet.create({
   total: {
     borderTopColor: theme.colors.gray,
     borderTopWidth: StyleSheet.hairlineWidth,
+    paddingTop: theme.sizes.base,
+  },
+  chartSwitch: {
+    alignItems: 'center',
   },
 });
 

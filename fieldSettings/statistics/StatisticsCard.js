@@ -1,42 +1,50 @@
-import React, { useState } from 'react';
-import { StyleSheet, Switch, LayoutAnimation, UIManager } from 'react-native';
+import React from 'react';
+import { Switch, StyleSheet } from 'react-native';
+import useAnimatedExpand from '../../hooks/useAnimatedExpand';
 import { Block, Text } from '../../components';
-import Chart from './Chart';
+import Chart from './PieChart';
 import { theme } from '../../theme';
 
 const StatisticsCard = ({ label, data }) => {
-  const [expanded, setExpanded] = useState(false);
-  const { oilConsumption, oilPrice, paid, seed, fertilizer, sprayer, total } = data;
-  const changeLayout = () => {
-    UIManager.setLayoutAnimationEnabledExperimental(true);
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
-    setExpanded(!expanded);
-  };
+  const { oilConsumption, oilPrice, paid, seed, fertilizer, sprayer, rented, total } = data;
+  const { expanded, changeLayout } = useAnimatedExpand();
 
   return (
     <Block card color={theme.colors.white} style={styles.container}>
-      <Text gray title medium center style={styles.title}>
+      <Text gray title bold center style={styles.title}>
         {label}
       </Text>
-      <Block row space="around" style={styles.columns}>
+      <Block row space="between" style={styles.columns}>
         <Block flex={false}>
-          <Text>Litara nafte: {Math.round(oilConsumption)}</Text>
-          <Text>Uslužno: {paid}</Text>
-          <Text>Prihrana: {fertilizer}</Text>
+          <Text gray>Litara nafte: {Math.round(oilConsumption)}</Text>
+          <Text gray>Uslužno: {paid}</Text>
+          <Text gray>Prihrana: {fertilizer}</Text>
+          {rented > 0 && <Text gray>Zakup: {rented}</Text>}
         </Block>
         <Block flex={false}>
-          <Text>Nafta: {Math.round(oilPrice)} </Text>
-          <Text>Seme: {seed}</Text>
-          <Text>Zaštita: {sprayer}</Text>
+          <Text gray>Nafta: {Math.round(oilPrice)} </Text>
+          <Text gray>Seme: {seed}</Text>
+          <Text gray>Zaštita: {sprayer}</Text>
         </Block>
       </Block>
+      <Chart
+        expanded={expanded}
+        seed={seed}
+        paid={paid}
+        sprayer={sprayer}
+        oil={oilPrice}
+        fertilizer={fertilizer}
+        rented={rented}
+      />
       <Block row space="around" style={styles.total}>
-        <Switch value={expanded} onValueChange={changeLayout} />
+        <Block row style={styles.chartSwitch}>
+          <Switch value={expanded} onValueChange={changeLayout} />
+          <Text gray>Grafik </Text>
+        </Block>
         <Text gray h3 right>
           Ukupno: {Math.round(total)}
         </Text>
       </Block>
-      <Chart expanded={expanded} />
     </Block>
   );
 };
@@ -45,10 +53,12 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: theme.sizes.base,
     marginTop: theme.sizes.base,
+    paddingHorizontal: theme.sizes.base * 2,
   },
   title: {
     borderBottomColor: theme.colors.gray,
     borderBottomWidth: StyleSheet.hairlineWidth,
+    paddingBottom: theme.sizes.base,
   },
   columns: {
     marginVertical: theme.sizes.base,
@@ -56,6 +66,10 @@ const styles = StyleSheet.create({
   total: {
     borderTopColor: theme.colors.gray,
     borderTopWidth: StyleSheet.hairlineWidth,
+    paddingTop: theme.sizes.base,
+  },
+  chartSwitch: {
+    alignItems: 'center',
   },
 });
 

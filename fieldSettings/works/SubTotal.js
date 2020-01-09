@@ -44,7 +44,6 @@ const SubTotal = ({ work, field }) => {
   return (
     <SubTotalPresentational
       label={workNameToItem(workName)}
-      paid={paid}
       paidPrice={paidPricePerWork}
       oilConsumption={oilConsumptionPerWork}
       oilConsumptionPrice={oilConsumptionPrice}
