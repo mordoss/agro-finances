@@ -1,4 +1,4 @@
-export const changeSeed = ({ field, item }) => {
+export const changeSeed = ({ field }, item) => {
   return {
     type: 'SEED_CHANGED',
     field,
@@ -27,11 +27,11 @@ export const changeMixed = ({ field, workState, turn, value }) => {
   };
 };
 
-export const changeSeedConsumption = ({ field }, value) => {
+export const changeSeedConsumption = ({ field }, item) => {
   return {
     type: 'SEED_CONSUMPTION_CHANGED',
     field,
-    value,
+    item,
   };
 };
 

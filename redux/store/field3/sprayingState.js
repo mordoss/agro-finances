@@ -1,13 +1,13 @@
 export default {
   first: {
-    sprayer1: 'talisman test',
+    sprayer1: '',
     mixed: false,
     sprayer2: '',
   },
 
   second: {
-    sprayer1: 'test 1',
+    sprayer1: '',
     mixed: true,
-    sprayer2: 'test 2',
+    sprayer2: '',
   },
 };

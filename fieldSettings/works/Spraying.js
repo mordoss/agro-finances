@@ -12,6 +12,7 @@ const Spraying = ({ sprayingData, field, turn }) => {
         sprayingData={sprayingData}
         actionArgumentObject={{ field, turn }}
         place={1}
+        field={field}
       />
       <Switch
         label="Mešam sa još jednim herbicidom"
@@ -24,6 +25,7 @@ const Spraying = ({ sprayingData, field, turn }) => {
           sprayingData={sprayingData}
           actionArgumentObject={{ field, turn }}
           place={2}
+          field={field}
         />
       </Block>
     </>

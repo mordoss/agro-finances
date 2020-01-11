@@ -17,7 +17,7 @@ export const plantStringToImage = string => {
 export const workNameToItem = string => {
   switch (string) {
     case 'sowing':
-      return 'seme: ';
+      return 'seme';
     case 'fertilization1':
     case 'fertilization2':
     case 'midRowCultivation1':

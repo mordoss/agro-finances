@@ -16,6 +16,7 @@ const MidRowCultivation = ({ midRowCultivationData, field, turn }) => {
       />
       <Block style={{ height: withFertilization ? null : 0, overflow: 'hidden' }}>
         <FertilizationSegment
+          field={field}
           fertilizationData={midRowCultivationData}
           actionArgumentObject={{ field, turn }}
           place=""

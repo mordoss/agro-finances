@@ -35,8 +35,7 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: theme.colors.gray,
-    borderRadius: theme.sizes.radius / 2,
-    color: theme.colors.black,
+    borderRadius: 5,
     backgroundColor: theme.colors.white,
     height: theme.sizes.base * 1.5,
     paddingHorizontal: theme.sizes.base,

@@ -1,6 +1,6 @@
 export default {
-  area: 108,
-  plant: 'Kukuruz',
+  area: 19,
+  plant: 'Soja',
   yieldPerHa: 2000,
   productPrice: 20,
   note: '',

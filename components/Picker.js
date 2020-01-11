@@ -35,7 +35,6 @@ const PickerCustom = ({ items, label, active, actionArgumentObject, action }) =>
               </Text>
             </TouchableHighlight>
           ))}
-          <Button onPress={() => setIsModalVisible(false)} title="Close" />
         </Block>
       </Modal>
     </Block>
@@ -47,26 +46,27 @@ const styles = StyleSheet.create({
   modalContainer: {
     position: 'absolute',
     alignItems: 'stretch',
-    borderRadius: 13,
-    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: theme.sizes.radius,
     backgroundColor: theme.colors.white,
     width: width * 0.5,
     marginHorizontal: width / 4,
     marginVertical: height / 4,
     padding: theme.sizes.base,
+    elevation: 5,
   },
   modalItem: {
     marginVertical: theme.sizes.base,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.gray,
-    borderRadius: 13,
+    borderRadius: 5,
     alignItems: 'center',
+    elevation: 3,
+    backgroundColor: theme.colors.backgorund,
   },
   button: {
     width: theme.sizes.base * 6,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 13,
-    padding: theme.sizes.base / 4,
+    borderRadius: 5,
+    paddingVertical: theme.sizes.base / 4,
+    elevation: 3,
+    backgroundColor: theme.colors.backgorund,
   },
   selected: {
     marginLeft: theme.sizes.base,

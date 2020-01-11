@@ -17,8 +17,6 @@ const InputWithIncrementer = ({
 
   return (
     <Block row style={styles.container}>
-      <Text gray>{label}</Text>
-
       <TouchableOpacity onPress={() => dispatch(actionIncrementing(actionArgumentObject, 'dec'))}>
         <View style={[styles.incrementer, styles.left]}>
           <Text gray> - </Text>
@@ -40,8 +38,9 @@ const InputWithIncrementer = ({
           <Text gray>+</Text>
         </View>
       </TouchableOpacity>
-
-      <Text gray>{unit}</Text>
+      <Text gray style={{ marginLeft: theme.sizes.base }}>
+        {label}({unit})
+      </Text>
     </Block>
   );
 };
@@ -49,34 +48,31 @@ const InputWithIncrementer = ({
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    marginVertical: theme.sizes.base,
+    marginTop: theme.sizes.base,
   },
   input: {
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: theme.colors.gray,
-    color: theme.colors.gray,
     paddingHorizontal: theme.sizes.base,
-    height: theme.sizes.base * 1.5,
+    height: theme.sizes.base * 1.7,
     textAlign: 'center',
   },
   incrementer: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.gray,
-    height: theme.sizes.base * 1.5,
+    height: theme.sizes.base * 1.7,
     width: theme.sizes.base * 2,
     justifyContent: 'center',
     alignItems: 'center',
+    elevation: 3,
+    backgroundColor: theme.colors.backgorund,
   },
   left: {
-    borderTopLeftRadius: theme.sizes.radius,
-    borderBottomLeftRadius: theme.sizes.radius,
-    marginLeft: theme.sizes.base / 2,
+    borderTopLeftRadius: 5,
+    borderBottomLeftRadius: 5,
   },
   right: {
-    borderTopRightRadius: theme.sizes.radius,
-    borderBottomRightRadius: theme.sizes.radius,
-    marginRight: theme.sizes.base / 2,
+    borderTopRightRadius: 5,
+    borderBottomRightRadius: 5,
   },
 });
 

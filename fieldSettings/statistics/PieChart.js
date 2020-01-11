@@ -30,7 +30,7 @@ const Chart = ({ expanded, seed, paid, sprayer, fertilizer, oil, rented }) => {
           'cyan',
           'tomato',
         ]}
-        padding={{ top: 20, bottom: 35 }}
+        padding={{ top: 30, bottom: 35 }}
         cornerRadius={theme.sizes.radius / 3}
         padAngle={3}
         height={Dimensions.get('window').width / 2}

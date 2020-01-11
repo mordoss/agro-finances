@@ -9,11 +9,13 @@ const DoneAndPlaningSegment = ({ done, planing, actionArgumentObject }) => {
         label="Urađeno"
         action={changeDone}
         actionArgumentObject={{ value: done, ...actionArgumentObject }}
+        withAnimation
       />
       <Switch
         label="Planiram"
         action={changePlaning}
         actionArgumentObject={{ value: planing, ...actionArgumentObject }}
+        withAnimation
       />
     </Block>
   );

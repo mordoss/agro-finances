@@ -1,4 +1,4 @@
 export default {
-  seed: 'NS',
+  seed: '',
   seedConsumption: 25,
 };

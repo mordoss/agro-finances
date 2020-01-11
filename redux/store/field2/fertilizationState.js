@@ -1,6 +1,6 @@
 export default {
   first: {
-    fertilizer1: 'KAN',
+    fertilizer1: '',
     fertilizerConsumption1: 2,
     mixed: false,
     fertilizer2: '',
@@ -10,7 +10,7 @@ export default {
     fertilizer1: '',
     fertilizerConsumption1: 2,
     mixed: true,
-    fertilizer2: 'test 2',
+    fertilizer2: '',
     fertilizerConsumption2: 3,
   },
 };

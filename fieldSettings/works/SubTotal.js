@@ -10,8 +10,7 @@ import {
 } from '../../calcFunctions';
 
 const SubTotal = ({ work, field }) => {
-  const { done, planing, oilConsumption, paid, paidPrice, workName } = work;
-  const doneOrPlaning = done || planing;
+  const { oilConsumption, paid, paidPrice, workName } = work;
   const {
     area,
     sowingData,
@@ -33,11 +32,10 @@ const SubTotal = ({ work, field }) => {
     midRowCultivation2: calcMidRowCultivation(area, midRowCultivation2Data),
   };
 
-  const oilConsumptionPerWork =
-    !doneOrPlaning || paid ? 0 : Math.round((area / 100) * oilConsumption);
+  const oilConsumptionPerWork = paid ? 0 : Math.round((area / 100) * oilConsumption);
   const oilConsumptionPrice = oilConsumptionPerWork * 150;
-  const paidPricePerWork = doneOrPlaning && paid ? (area / 100) * paidPrice : 0;
-  const specialPrice = (doneOrPlaning && specialPrices[workName]) || 0;
+  const paidPricePerWork = paid ? (area / 100) * paidPrice : 0;
+  const specialPrice = specialPrices[workName] || 0;
 
   const total = paidPricePerWork + oilConsumptionPrice + specialPrice;
 
@@ -48,6 +46,7 @@ const SubTotal = ({ work, field }) => {
       oilConsumption={oilConsumptionPerWork}
       oilConsumptionPrice={oilConsumptionPrice}
       specialPrice={specialPrice}
+      paid={paid}
       total={total}
     />
   );

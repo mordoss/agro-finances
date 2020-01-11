@@ -1,30 +1,27 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Block, Text } from '../../components';
+import { Block } from '../../components';
 import DayPicker from './DayPicker';
 import MonthPicker from './MonthPicker';
 
-const DatePicker = ({ actionArgumentObject }) => {
+const DatePicker = ({ actionArgumentObject, isActive }) => {
   const { field, workName } = actionArgumentObject;
   const [month, day] = useSelector(state => state[field].groundWorksState[workName].date);
   const curentMonthIndex = new Date().getMonth();
   const curentMonthName = monthsArray[curentMonthIndex];
 
   return (
-    <Block space="between" style={{ alignItems: 'center' }}>
-      <Text>Datum:</Text>
-      <Block row space="between" center>
-        <MonthPicker
-          allMonths={monthsArray}
-          month={month || monthsArray[curentMonthIndex]}
-          actionArgumentObject={actionArgumentObject}
-        />
-        <DayPicker
-          numberOfDays={month ? months[month] : months[curentMonthName]}
-          day={day}
-          actionArgumentObject={actionArgumentObject}
-        />
-      </Block>
+    <Block row space="between" center style={{ height: isActive ? null : 0, overflow: 'hidden' }}>
+      <DayPicker
+        numberOfDays={month ? months[month] : months[curentMonthName]}
+        day={day}
+        actionArgumentObject={actionArgumentObject}
+      />
+      <MonthPicker
+        allMonths={monthsArray}
+        month={month || monthsArray[curentMonthIndex]}
+        actionArgumentObject={actionArgumentObject}
+      />
     </Block>
   );
 };

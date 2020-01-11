@@ -17,7 +17,7 @@ const Tabs = ({ tabs, changeActive, disabled, active }) => {
         }}
         style={[styles.tab, isActive ? styles.active : null]}
       >
-        <Text size={16} gray={!isActive} primary={isActive} gray2={disabled && !isActive} bold>
+        <Text size={16} color={isActive ? theme.colors.primary : theme.colors.gray} bold>
           {tab}
         </Text>
       </TouchableOpacity>

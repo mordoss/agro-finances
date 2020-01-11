@@ -26,8 +26,8 @@ const MonthPicker = ({ actionArgumentObject, allMonths, month }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 3,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.gray,
+    elevation: 3,
+    backgroundColor: theme.colors.backgorund,
     borderRadius: theme.sizes.radius,
   },
   picker: {

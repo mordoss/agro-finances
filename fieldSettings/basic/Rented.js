@@ -16,18 +16,17 @@ const Rented = ({ field }) => {
         actionArgumentObject={{ field, value: rented }}
         withAnimation
       />
-      {rented && (
-        <Block style={{ height: rented ? null : 0, overflow: 'hidden' }}>
-          <Input
-            label="Cena zakupa po Ha:"
-            unit={unit}
-            value={String(price)}
-            action={changeRentedPrice}
-            actionArgumentObject={{ field }}
-          />
-          <SubCount value={(area * price) / 100} label="Novca za zakup " unit={unit} />
-        </Block>
-      )}
+
+      <Block style={{ height: rented ? null : 0, overflow: 'hidden' }}>
+        <Input
+          label="Cena zakupa po Ha:"
+          unit={unit}
+          value={String(price)}
+          action={changeRentedPrice}
+          actionArgumentObject={{ field }}
+        />
+        <SubCount value={(area * price) / 100} label="Novca za zakup " unit={unit} />
+      </Block>
     </Block>
   );
 };

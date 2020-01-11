@@ -13,10 +13,10 @@ const FieldCard = ({ field, handleChangeField }) => {
           <Image source={plantStringToImage(plantName)} />
         </Badge>
         <Text title center gray>
-          {plantName || 'Dodaj'}
+          {plantName || 'Dodaj Njivu'}
         </Text>
-        <Text header center gray>
-          {plantName ? `${fieldArea} ara` : 'Njivu'}
+        <Text title center gray>
+          {fieldArea} ara
         </Text>
       </Block>
     </TouchableOpacity>

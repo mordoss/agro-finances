@@ -23,19 +23,19 @@ const CommonWorkPart = ({ field, name, work, children }) => {
           planing={planing}
           actionArgumentObject={actionArgumentObject}
         />
-        {planing && <DatePicker actionArgumentObject={actionArgumentObject} />}
+        <DatePicker actionArgumentObject={actionArgumentObject} isActive={planing} />
       </Block>
 
-      <PaidAndConsumptionSegment
-        paid={paid}
-        actionArgumentObject={actionArgumentObject}
-        paidPrice={paidPrice}
-        oilConsumption={oilConsumption}
-      />
-
-      {children}
-
-      <SubTotal field={field} work={work} />
+      <Block style={{ height: done || planing ? null : 0, overflow: 'hidden' }}>
+        <PaidAndConsumptionSegment
+          paid={paid}
+          actionArgumentObject={actionArgumentObject}
+          paidPrice={paidPrice}
+          oilConsumption={oilConsumption}
+        />
+        {children}
+        <SubTotal field={field} work={work} />
+      </Block>
     </Block>
   );
 };
