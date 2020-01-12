@@ -11,9 +11,10 @@ const MonthPicker = ({ actionArgumentObject, allMonths, month }) => {
   return (
     <Block style={styles.container}>
       <Picker
+        mode="dropdown"
+        style={styles.picker}
         selectedValue={month}
         onValueChange={itemValue => dispatch(changeDateMonth(actionArgumentObject, itemValue))}
-        style={styles.picker}
       >
         {allMonths.map(m => (
           <Picker.Item label={m} value={m} key={m} />

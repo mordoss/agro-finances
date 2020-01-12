@@ -28,6 +28,37 @@ export const workNameToItem = string => {
       return 'herbicid';
 
     default:
-      return null;
+      return 'null';
+  }
+};
+
+export const workNameToNative = string => {
+  switch (string) {
+    case 'plowing':
+      return 'Oranje';
+    case 'horrowing':
+      return 'Setvospremanje';
+    case 'disking':
+      return 'Tanjiranje';
+    case 'harvesting':
+      return 'Berba';
+    case 'sowing':
+      return 'Setva';
+    case 'fertilization1':
+      return 'Prva Prihrana';
+    case 'fertilization2':
+      return 'Druga Prihrana';
+    case 'midRowCultivation1':
+      return 'Prva Međuredna';
+    case 'midRowCultivation2':
+      return 'Druga Međuredna';
+    case 'spraying1':
+      return 'Prva Zaštita';
+    case 'spraying2':
+      return 'Prva Zaštita';
+
+    // used for calendar component
+    default:
+      return 'Danas';
   }
 };
