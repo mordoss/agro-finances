@@ -15,7 +15,7 @@ const HeaderIcon = ({ position, imageSource, navigate }) => {
       }}
     >
       <Image source={imageSource} />
-      <Text style={{ marginLeft: theme.sizes.base }} white>
+      <Text bold style={{ marginLeft: theme.sizes.base }} white>
         {position === 'Left' ? 'Kalendar' : 'Podešavanje'}
       </Text>
     </TouchableOpacity>

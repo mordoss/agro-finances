@@ -10,6 +10,8 @@ export const plantStringToImage = string => {
       return require('./assets/icons/sunflower.svg.png');
     case 'Pšenica':
       return require('./assets/icons/wheat.svg.png');
+    case 'Today':
+      return require('./assets/icons/calendar.svg.png');
     default:
       return require('./assets/icons/add.png');
   }

@@ -16,8 +16,8 @@ const PlantCard = ({ plant, isActive, field }) => {
           <LinearGradient
             colors={[theme.colors.primary, theme.colors.secondary]}
             style={styles.gradient}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
+            start={{ x: 0, y: 1 }}
+            end={{ x: 0, y: 0 }}
           />
         )}
         <Badge size={60} color={theme.colors.accent}>
