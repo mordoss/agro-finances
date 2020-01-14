@@ -9,7 +9,7 @@ const Area = ({ field }) => {
   const area = useSelector(state => state[field].area);
 
   return (
-    <Block style={styles.container} middle>
+    <Block style={styles.container} card color="white">
       <Input
         unit="ara"
         label="Površina njive: "

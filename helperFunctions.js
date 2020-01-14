@@ -60,8 +60,7 @@ export const workNameToNative = string => {
     case 'spraying2':
       return 'Prva Zaštita';
 
-    // used for calendar component
     default:
-      return 'Danas';
+      return '';
   }
 };

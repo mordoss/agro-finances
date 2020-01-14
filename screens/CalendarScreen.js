@@ -22,7 +22,7 @@ const CalendarScreen = () => {
     ...works1,
     ...works2,
     ...works3,
-    [{ date: [months[todayMonth], todayDay], workName: 'Today' }, 'Today'],
+    [{ date: [months[todayMonth], todayDay], workName: null }, 'Today'],
   ].sort((a, b) => {
     const indexA = months.indexOf(a[0].date[0]);
     const indexB = months.indexOf(b[0].date[0]);
@@ -32,20 +32,13 @@ const CalendarScreen = () => {
   return (
     <ScrollView style={styles.container}>
       {allWorks.map((work, i) => {
-        const daysToPlan =
-          monthsDays.reduce(
-            (a, b, index) => (index < months.indexOf(work[0].date[0]) ? a + b : a),
-            work[0].date[1]
-          ) -
-          todayIndex -
-          1;
-        const isToday = work[0].workName === 'Today';
+        const isToday = work[1] === 'Today';
         return (
           <Block
             card
             row
             center
-            space="around"
+            space="between"
             style={
               isToday && {
                 backgroundColor: theme.colors.primary,
@@ -57,15 +50,13 @@ const CalendarScreen = () => {
             <Text color={isToday && theme.colors.white} bold={!!isToday}>
               {work[0].date[1]}. {work[0].date[0]}
             </Text>
-            <Text bold={!!isToday} color={isToday && theme.colors.white}>
-              {workNameToNative(work[0].workName)}
-            </Text>
-            <Text color={isToday && theme.colors.white}>
-              Za {daysToPlan < 0 ? 365 + daysToPlan : daysToPlan} dana
-            </Text>
+            {work[0].workName && <Text>{workNameToNative(work[0].workName)}</Text>}
             <Badge size={30}>
               <Image source={plantStringToImage(work[1])} />
             </Badge>
+            <Text light color={isToday ? theme.colors.white : theme.colors.gray}>
+              {daysToPlan(work, todayIndex)}
+            </Text>
           </Block>
         );
       })}
@@ -79,6 +70,21 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.backgorund,
   },
 });
+
+const daysToPlan = (work, todayIndex) => {
+  const daysAll =
+    monthsDays.reduce(
+      (a, b, index) => (index < months.indexOf(work[0].date[0]) ? a + b : a),
+      work[0].date[1]
+    ) -
+    todayIndex -
+    1;
+  if (daysAll === 0) {
+    return 'Danas';
+  }
+  const days = daysAll < 0 ? 365 + daysAll : daysAll;
+  return `Za ${Math.floor(days / 30)} meseca \n${days % 30} dana`;
+};
 
 const months = [
   'januar',

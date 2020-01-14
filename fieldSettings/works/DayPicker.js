@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TouchableHighlight, Modal, StyleSheet, Dimensions } from 'react-native';
+import { TouchableOpacity, Modal, StyleSheet, Dimensions } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { Block, Text } from '../../components';
 import { changeDateDay } from '../../redux/actions/cammonWorkActions';
@@ -20,9 +20,9 @@ const DayPicker = ({ actionArgumentObject, numberOfDays, day }) => {
 
   return (
     <Block style={styles.container}>
-      <TouchableHighlight onPress={() => setIsModalVisible(true)}>
-        <Text>{day || new Date().getDate()}</Text>
-      </TouchableHighlight>
+      <TouchableOpacity onPress={() => setIsModalVisible(true)}>
+        <Text>{day || 'dan'}</Text>
+      </TouchableOpacity>
 
       <Modal
         visible={isModalVisible}
@@ -32,9 +32,9 @@ const DayPicker = ({ actionArgumentObject, numberOfDays, day }) => {
       >
         <Block style={styles.modalContainer}>
           {allDays.map(d => (
-            <TouchableHighlight onPress={() => handleSelect(d)} key={d} style={styles.modalItem}>
+            <TouchableOpacity onPress={() => handleSelect(d)} key={d} style={styles.modalItem}>
               <Text>{d}</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
           ))}
         </Block>
       </Modal>
