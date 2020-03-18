@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 const SettingsScreen = () => {
   return (
     <View>
-      <Text>Podesevanja!!!</Text>
+      <Text>Info!!!</Text>
     </View>
   );
 };

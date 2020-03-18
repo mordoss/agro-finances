@@ -6,7 +6,7 @@ import { theme } from '../theme';
 const HeaderIcon = ({ position, imageSource, navigate }) => {
   return (
     <TouchableOpacity
-      onPress={() => navigate(position === 'Right' ? 'SettingsScreen' : 'CalendarScreen')}
+      onPress={() => navigate(position === 'Right' ? 'InfoScreen' : 'CalendarScreen')}
       style={{
         [`margin${position}`]: theme.sizes.base * 2,
         flexDirection: 'row',
@@ -16,7 +16,7 @@ const HeaderIcon = ({ position, imageSource, navigate }) => {
     >
       <Image source={imageSource} />
       <Text bold style={{ marginLeft: theme.sizes.base }} white>
-        {position === 'Left' ? 'Kalendar' : 'Podešavanje'}
+        {position === 'Left' ? 'Planer' : 'Info'}
       </Text>
     </TouchableOpacity>
   );

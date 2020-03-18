@@ -3,7 +3,7 @@ import { Switch, Block } from '../../components';
 import FertilizationSegment from './FertilizationSegment';
 import { changeWithFertilization } from '../../redux/actions/specialActions';
 
-const MidRowCultivation = ({ midRowCultivationData, field, turn }) => {
+const MidRowCultivation = ({ midRowCultivationData, field, turn, plant }) => {
   const { withFertilization } = midRowCultivationData;
 
   return (
@@ -21,6 +21,7 @@ const MidRowCultivation = ({ midRowCultivationData, field, turn }) => {
           actionArgumentObject={{ field, turn }}
           place=""
           midRow
+          plant={plant}
         />
       </Block>
     </>

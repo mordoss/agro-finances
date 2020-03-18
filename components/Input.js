@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, TextInput } from 'react-native';
 import { useDispatch } from 'react-redux';
 import Text from './Text';
@@ -7,6 +7,7 @@ import { theme } from '../theme';
 
 const Input = ({ label, unit, value, actionArgumentObject, action }) => {
   const dispatch = useDispatch();
+  const [onFocus, setOnFocus] = useState(false);
 
   return (
     <Block row style={styles.container}>
@@ -14,10 +15,15 @@ const Input = ({ label, unit, value, actionArgumentObject, action }) => {
       <TextInput
         value={value}
         onChangeText={eventValue => dispatch(action(actionArgumentObject, eventValue))}
-        style={styles.input}
-        autoComplete="off"
-        autoCapitalize="none"
-        autoCorrect={false}
+        onFocus={() => setOnFocus(true)}
+        onEndEditing={() => setOnFocus(false)}
+        style={[
+          styles.input,
+          {
+            borderColor: onFocus ? theme.colors.primary : theme.colors.gray,
+            borderWidth: onFocus ? 2 : StyleSheet.hairlineWidth,
+          },
+        ]}
         keyboardType="numeric"
       />
       <Text gray>{unit}</Text>
@@ -33,8 +39,6 @@ const styles = StyleSheet.create({
     marginVertical: theme.sizes.base / 2,
   },
   input: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.gray,
     borderRadius: 5,
     backgroundColor: theme.colors.white,
     height: theme.sizes.base * 1.5,

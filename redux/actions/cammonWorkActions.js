@@ -16,18 +16,9 @@ export const changePlaning = ({ field, workName, value }) => {
   };
 };
 
-export const changeDateDay = ({ field, workName }, value) => {
+export const changeDate = ({ field, workName }, value) => {
   return {
-    type: 'DATE_DAY_CHANGED',
-    value,
-    workName,
-    field,
-  };
-};
-
-export const changeDateMonth = ({ field, workName }, value) => {
-  return {
-    type: 'DATE_MONTH_CHANGED',
+    type: 'DATE_CHANGED',
     value,
     workName,
     field,

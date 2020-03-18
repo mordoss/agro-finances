@@ -37,7 +37,7 @@ export const calcFertilizationSegment = (area, fertilizer, fertilizerConsumption
   const price = prices[fertilizer];
   const bagWeight = 25;
   const bags = fertilizer ? Math.ceil((area * fertilizerConsumption) / bagWeight) : 0;
-  const extraArea = fertilizer ? (bags * bagWeight) / fertilizerConsumption - area : 0;
+  const extraArea = fertilizer ? Math.round((bags * bagWeight) / fertilizerConsumption - area) : 0;
   const fertilizerTotal = bags * price || 0;
 
   return { fertilizerTotal, bags, extraArea };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, TextInput, Dimensions } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeNote } from '../../redux/actions/basicStateActions';
@@ -7,15 +7,24 @@ import { theme } from '../../theme';
 
 const Input = ({ field }) => {
   const note = useSelector(state => state[field].note);
+  const [onFocus, setOnFocus] = useState(false);
   const dispatch = useDispatch();
 
   return (
-    <Block style={styles.container}>
+    <Block style={styles.container} card>
       <Text gray>Napomena: </Text>
       <TextInput
         value={note}
         onChangeText={e => dispatch(changeNote(field, e))}
-        style={styles.input}
+        onFocus={() => setOnFocus(true)}
+        onEndEditing={() => setOnFocus(false)}
+        style={[
+          styles.input,
+          {
+            borderColor: onFocus ? theme.colors.primary : theme.colors.gray,
+            borderWidth: onFocus ? 2 : StyleSheet.hairlineWidth,
+          },
+        ]}
         autoComplete="off"
         autoCapitalize="none"
         autoCorrect={false}
@@ -29,7 +38,7 @@ export default Input;
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: theme.sizes.base,
+    backgroundColor: theme.colors.white,
   },
   input: {
     borderWidth: StyleSheet.hairlineWidth,
@@ -39,8 +48,10 @@ const styles = StyleSheet.create({
     fontSize: theme.sizes.font,
     fontWeight: '500',
     color: theme.colors.black,
+    marginTop: theme.sizes.base / 2,
     paddingHorizontal: theme.sizes.base,
-    height: theme.sizes.base * 3,
+    paddingVertical: theme.sizes.base / 2,
+    height: theme.sizes.base * 4,
     width: Dimensions.get('window').width - theme.sizes.base * 6,
   },
 });

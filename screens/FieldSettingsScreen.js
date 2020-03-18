@@ -16,17 +16,17 @@ const FieldSettingsScreen = () => {
   return (
     <Block color={theme.colors.backgorund}>
       <KeyboardAvoidingView
-        behavior="padding"
         style={{ flex: 1 }}
+        behavior="padding"
         keyboardVerticalOffset={theme.sizes.base * 6}
       >
         <ScrollView>
-          <Tabs tabs={tabs} active={active} changeActive={changeActive} disabled={plant === ''} />
           {active === 'Njiva' && <BasicContainer field={activeField} />}
           {active === 'Radovi' && <WorksContainer field={activeField} />}
           {active === 'Statistika' && <Statistics field={activeField} />}
         </ScrollView>
       </KeyboardAvoidingView>
+      <Tabs tabs={tabs} active={active} changeActive={changeActive} disabled={plant === ''} />
     </Block>
   );
 };

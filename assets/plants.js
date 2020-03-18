@@ -3,28 +3,31 @@ export default [
   {
     id: 'soya',
     name: 'Soja',
-    image: require('./icons/soya.svg.png'),
+    image: require('./icons/tomaSoya.png'),
   },
   {
     id: 'corn',
     name: 'Kukuruz',
-    image: require('./icons/corn.svg.png'),
+    image: require('./icons/tomaCorn.png'),
   },
   {
     id: 'sunflower',
     name: 'Suncokret',
-    image: require('./icons/sunflower.svg.png'),
+    image: require('./icons/tomaSun.png'),
   },
   {
     id: 'wheat',
     name: 'Pšenica',
-    image: require('./icons/wheat.svg.png'),
+    image: require('./icons/tomaWheat.png'),
   },
 ];
 
 export const worksPerPlant = {
   Kukuruz: [
     'disking',
+    'plowing',
+    'horrowing',
+    'harvesting',
     'spraying1',
     'spraying2',
     'midRowCultivation1',

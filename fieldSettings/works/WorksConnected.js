@@ -94,6 +94,7 @@ const WorksConnected = ({ field }) => {
         <WorkCard
           key={works[work].work.workName}
           field={field}
+          plant={plant}
           work={works[work].work}
           name={works[work].name}
         />

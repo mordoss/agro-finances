@@ -91,26 +91,14 @@ function createFieldReducer(fieldNumber) {
           },
         };
 
-      case 'DATE_DAY_CHANGED':
+      case 'DATE_CHANGED':
         return {
           ...state,
           groundWorksState: {
             ...state.groundWorksState,
             [action.workName]: {
               ...state.groundWorksState[action.workName],
-              date: [state.groundWorksState[action.workName].date[0], action.value],
-            },
-          },
-        };
-
-      case 'DATE_MONTH_CHANGED':
-        return {
-          ...state,
-          groundWorksState: {
-            ...state.groundWorksState,
-            [action.workName]: {
-              ...state.groundWorksState[action.workName],
-              date: [action.value, state.groundWorksState[action.workName].date[1]],
+              date: action.value,
             },
           },
         };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, Dimensions } from 'react-native';
 import { useSelector } from 'react-redux';
 import { Block, Text } from '../../components';
 import PlantCard from './PlantCard';
@@ -16,7 +16,9 @@ const PlantsConnected = ({ field }) => {
 
   return (
     <ScrollView style={styles.container}>
-      <Text gray>Kultura za setvu:</Text>
+      <Block style={styles.labelContainer}>
+        <Text gray>Kultura za setvu:</Text>
+      </Block>
       <Block row wrap space="between">
         {plants.map(plant => renderPlant(plant))}
       </Block>
@@ -24,9 +26,18 @@ const PlantsConnected = ({ field }) => {
   );
 };
 
+const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     marginTop: theme.sizes.base,
+  },
+  labelContainer: {
+    backgroundColor: theme.colors.white,
+    width: (width - theme.sizes.base * 6) / 2,
+    borderRadius: theme.sizes.radius,
+    paddingVertical: theme.sizes.base / 2,
+    elevation: 5,
+    alignItems: 'center',
   },
 });
 

@@ -3,7 +3,7 @@ import { Switch, Block } from '../../components';
 import FertilizationSegment from './FertilizationSegment';
 import { changeMixed } from '../../redux/actions/specialActions';
 
-const Fertilization = ({ fertilizationData, field, turn }) => {
+const Fertilization = ({ fertilizationData, field, turn, plant }) => {
   const { mixed } = fertilizationData;
 
   return (
@@ -13,6 +13,7 @@ const Fertilization = ({ fertilizationData, field, turn }) => {
         fertilizationData={fertilizationData}
         actionArgumentObject={{ field, turn }}
         place={1}
+        plant={plant}
       />
 
       <Switch
@@ -27,6 +28,7 @@ const Fertilization = ({ fertilizationData, field, turn }) => {
           fertilizationData={fertilizationData}
           actionArgumentObject={{ field, turn }}
           place={2}
+          plant={plant}
         />
       </Block>
     </>

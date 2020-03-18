@@ -40,7 +40,7 @@ AllFieldsScreen.navigationOptions = screenProps => {
     headerRight: () => (
       <HeaderIcon
         // eslint-disable-next-line global-require
-        imageSource={require('../assets/icons/settings.svg.png')}
+        imageSource={require('../assets/icons/info.png')}
         position="Right"
         navigate={screenProps.navigation.navigate}
       />

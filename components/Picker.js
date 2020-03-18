@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, TouchableHighlight, Dimensions, StyleSheet, Button } from 'react-native';
+import { Modal, TouchableHighlight, Dimensions, StyleSheet } from 'react-native';
 import { useDispatch } from 'react-redux';
 import Text from './Text';
 import Block from './Block';
@@ -17,7 +17,7 @@ const PickerCustom = ({ items, label, active, actionArgumentObject, action }) =>
   return (
     <Block row center>
       <TouchableHighlight onPress={() => setIsModalVisible(true)} style={styles.button}>
-        <Text gray center>
+        <Text gray center style>
           {active || label}
         </Text>
       </TouchableHighlight>
@@ -35,6 +35,11 @@ const PickerCustom = ({ items, label, active, actionArgumentObject, action }) =>
               </Text>
             </TouchableHighlight>
           ))}
+          <TouchableHighlight onPress={() => setIsModalVisible(false)} style={styles.cancel}>
+            <Text gray center>
+              Otkaži
+            </Text>
+          </TouchableHighlight>
         </Block>
       </Modal>
     </Block>
@@ -64,9 +69,17 @@ const styles = StyleSheet.create({
   button: {
     width: theme.sizes.base * 6,
     borderRadius: 5,
-    paddingVertical: theme.sizes.base / 4,
+    padding: theme.sizes.base / 4,
     elevation: 3,
     backgroundColor: theme.colors.backgorund,
+  },
+  cancel: {
+    marginVertical: theme.sizes.base,
+    marginHorizontal: theme.sizes.base,
+    borderColor: theme.colors.gray,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: 5,
+    paddingVertical: theme.sizes.base / 4,
   },
   selected: {
     marginLeft: theme.sizes.base,

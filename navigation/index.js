@@ -5,18 +5,18 @@ import { LinearGradient } from 'expo-linear-gradient';
 import AllFieldsScreen from '../screens/AllFieldsScreen';
 import FieldSettingsScreen from '../screens/FieldSettingsScreen';
 import CalendarScreen from '../screens/CalendarScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import InfoScreen from '../screens/InfoScreen';
 import { theme } from '../theme';
 
 const screens = createStackNavigator(
   {
-    FieldSettingsScreen,
     AllFieldsScreen,
+    FieldSettingsScreen,
     CalendarScreen,
-    SettingsScreen,
+    InfoScreen,
   },
   {
-    initialRouteName: 'AllFieldsScreen',
+    initialRouteName: 'CalendarScreen',
     defaultNavigationOptions: {
       headerStyle: {
         elevation: 0,

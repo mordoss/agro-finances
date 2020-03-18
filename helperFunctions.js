@@ -31,7 +31,7 @@ export const workNameToItem = string => {
       return 'herbicid';
 
     default:
-      return 'null';
+      return null;
   }
 };
 
@@ -63,4 +63,44 @@ export const workNameToNative = string => {
     default:
       return '';
   }
+};
+
+export const numberToMonth = num => {
+  const months = [
+    'januar',
+    'februar',
+    'mart',
+    'april',
+    'maj',
+    'jun',
+    'jul',
+    'avgust',
+    'septembar',
+    'oktobar',
+    'novembar',
+    'decembar',
+  ];
+  return months[num];
+};
+
+export const dateToString = date => {
+  if (date) {
+    const dateObj = new Date(date);
+    const day = dateObj.getDate();
+    const month = numberToMonth(dateObj.getMonth());
+    return `${day}. ${month}`;
+  }
+  return 'Izaberite datum';
+};
+
+export const calcDays = (workDate, todayIndex, months) => {
+  const monthsDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  const days =
+    monthsDays.reduce(
+      (a, b, index) => (index < months.indexOf(workDate[0]) ? a + b : a),
+      workDate[1]
+    ) -
+    todayIndex -
+    1;
+  return days < 0 ? 365 + days : days;
 };

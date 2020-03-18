@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { Text, Block } from '../../components';
+import { Block } from '../../components';
 import PaidAndConsumptionSegment from './PaidAndConsumptionSegment';
 import DoneAndPlaningSegment from './DoneAndPlaningSegment';
-import DatePicker from './DatePicker';
+import Calendar from './Calendar';
 import SubTotal from './SubTotal';
+import Title from './Title';
 import { theme } from '../../theme';
 
 const CommonWorkPart = ({ field, name, work, children }) => {
@@ -13,39 +14,35 @@ const CommonWorkPart = ({ field, name, work, children }) => {
 
   return (
     <Block flex={false}>
-      <Text center medium title gray style={styles.workName}>
-        {name}
-      </Text>
+      <Title name={name} />
+      <Block style={styles.content}>
+        <Block row center>
+          <DoneAndPlaningSegment
+            done={done}
+            planing={planing}
+            actionArgumentObject={actionArgumentObject}
+          />
+          <Calendar isActive={planing} actionArgumentObject={actionArgumentObject} />
+        </Block>
 
-      <Block row>
-        <DoneAndPlaningSegment
-          done={done}
-          planing={planing}
-          actionArgumentObject={actionArgumentObject}
-        />
-        <DatePicker actionArgumentObject={actionArgumentObject} isActive={planing} />
-      </Block>
-
-      <Block style={{ height: done || planing ? null : 0, overflow: 'hidden' }}>
-        <PaidAndConsumptionSegment
-          paid={paid}
-          actionArgumentObject={actionArgumentObject}
-          paidPrice={paidPrice}
-          oilConsumption={oilConsumption}
-        />
-        {children}
-        <SubTotal field={field} work={work} />
+        <Block style={{ height: done || planing ? null : 0, overflow: 'hidden' }}>
+          <PaidAndConsumptionSegment
+            paid={paid}
+            actionArgumentObject={actionArgumentObject}
+            paidPrice={paidPrice}
+            oilConsumption={oilConsumption}
+          />
+          {children}
+          <SubTotal field={field} work={work} />
+        </Block>
       </Block>
     </Block>
   );
 };
 
 const styles = StyleSheet.create({
-  workName: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: theme.colors.gray,
-    marginBottom: theme.sizes.base,
-    paddingBottom: theme.sizes.base,
+  content: {
+    padding: theme.sizes.base,
   },
 });
 
