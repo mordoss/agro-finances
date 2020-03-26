@@ -36,7 +36,7 @@ const Profit = ({ invested }) => {
           label="Cena kilograma: "
         />
         <Text gray bold style={{ marginTop: theme.sizes.base / 2 }}>
-          Potencijalni prihod: {income} din.
+          Potencijalni prihod: {Math.round(income)} din.
         </Text>
       </Block>
       <Chart expanded={expanded} income={income || 0} invested={invested || 0} />
@@ -46,7 +46,7 @@ const Profit = ({ invested }) => {
           <Text gray>Grafik </Text>
         </Block>
         <Text gray h3 right bold>
-          Zarada: {profit} din.
+          Zarada: {Math.round(profit)} din.
         </Text>
       </Block>
     </Block>

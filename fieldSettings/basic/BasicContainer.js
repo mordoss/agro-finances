@@ -10,9 +10,11 @@ const BasicContainer = ({ field }) => {
   return (
     <Block style={{ marginHorizontal: theme.sizes.base * 2 }}>
       <PlantsConnected field={field} />
-      <Area field={field} />
-      <Rented field={field} />
-      <Note field={field} />
+      <Block card color="white">
+        <Rented field={field} />
+        <Area field={field} />
+        <Note field={field} />
+      </Block>
     </Block>
   );
 };

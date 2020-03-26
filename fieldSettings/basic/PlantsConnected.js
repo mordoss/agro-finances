@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   labelContainer: {
     backgroundColor: theme.colors.white,
-    width: (width - theme.sizes.base * 6) / 2,
+    width: width - theme.sizes.base * 4,
     borderRadius: theme.sizes.radius,
     paddingVertical: theme.sizes.base / 2,
     elevation: 5,

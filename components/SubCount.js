@@ -4,9 +4,11 @@ import Text from './Text';
 
 const SubCount = ({ value, label, unit }) => {
   return (
-    <Block row center>
+    <Block row>
       <Text gray>{label}</Text>
-      <Text bold>{value}</Text>
+      <Text bold gray>
+        {value}
+      </Text>
       <Text gray> {unit}</Text>
     </Block>
   );

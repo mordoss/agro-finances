@@ -1,47 +1,54 @@
-import React from 'react';
-import { TouchableOpacity, StyleSheet } from 'react-native';
+/* eslint-disable no-unused-expressions */
+import React, { useState } from 'react';
+import { TouchableOpacity, StyleSheet, Image } from 'react-native';
 import Text from './Text';
 import Block from './Block';
+import Popover from './Popover';
 import { theme } from '../theme';
 
 const Tabs = ({ tabs, changeActive, disabled, active }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const renderTab = tab => {
-    const isActive = active === tab;
+    const { label, image } = tab;
+    const isActive = active === label;
     return (
       <TouchableOpacity
-        key={tab}
+        key={label}
         onPress={() => {
-          if (!disabled) {
-            changeActive(tab);
-          }
+          disabled ? setIsOpen(true) : changeActive(label);
         }}
         style={[styles.tab, isActive ? styles.active : null]}
       >
+        <Image source={image} />
         <Text size={16} color={isActive ? theme.colors.primary : theme.colors.gray} bold>
-          {tab}
+          {label}
         </Text>
       </TouchableOpacity>
     );
   };
 
   return (
-    <Block row space="between" style={styles.container}>
-      {tabs.map(tab => renderTab(tab))}
-    </Block>
+    <>
+      <Popover isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Block row space="between" style={styles.container}>
+        {tabs.map(tab => renderTab(tab))}
+      </Block>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 0,
-    paddingTop: theme.sizes.base,
+    paddingTop: theme.sizes.base / 2,
     paddingHorizontal: theme.sizes.base * 2,
     backgroundColor: theme.colors.white,
     elevation: 5,
-    marginHorizontal: -theme.sizes.base,
+    marginHorizontal: -theme.sizes.base * 2,
   },
   tab: {
-    paddingBottom: theme.sizes.base,
+    paddingBottom: theme.sizes.base / 2,
     flex: 1,
     alignItems: 'center',
   },

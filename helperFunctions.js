@@ -90,7 +90,7 @@ export const dateToString = date => {
     const month = numberToMonth(dateObj.getMonth());
     return `${day}. ${month}`;
   }
-  return 'Izaberite datum';
+  return null;
 };
 
 export const calcDays = (workDate, todayIndex, months) => {

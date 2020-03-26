@@ -4,19 +4,21 @@ import { Text } from '../components';
 import { theme } from '../theme';
 
 const HeaderIcon = ({ position, imageSource, navigate }) => {
+  const location = position === 'Right' ? 'InfoScreen' : 'CalendarScreen';
+  const text = position === 'Left' ? 'Planer' : 'Info';
+
   return (
     <TouchableOpacity
-      onPress={() => navigate(position === 'Right' ? 'InfoScreen' : 'CalendarScreen')}
+      onPress={() => navigate(location)}
       style={{
         [`margin${position}`]: theme.sizes.base * 2,
         flexDirection: 'row',
-        alignItems: 'flex-end',
-        justifyContent: 'space-between',
+        alignItems: 'center',
       }}
     >
       <Image source={imageSource} />
-      <Text bold style={{ marginLeft: theme.sizes.base }} white>
-        {position === 'Left' ? 'Planer' : 'Info'}
+      <Text bold h2 style={{ marginLeft: theme.sizes.base }} white>
+        {text}
       </Text>
     </TouchableOpacity>
   );

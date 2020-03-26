@@ -9,7 +9,7 @@ const Rented = ({ field }) => {
   const area = useSelector(state => state[field].area);
   const unit = 'dinara';
   return (
-    <Block card color="white">
+    <>
       <Switch
         label="Zakupljujem?"
         action={changeRented}
@@ -27,7 +27,7 @@ const Rented = ({ field }) => {
         />
         <SubCount value={(area * price) / 100} label="Novca za zakup " unit={unit} />
       </Block>
-    </Block>
+    </>
   );
 };
 

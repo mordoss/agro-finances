@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, TextInput, Dimensions } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeNote } from '../../redux/actions/basicStateActions';
-import { Text, Block } from '../../components';
+import { Text } from '../../components';
 import { theme } from '../../theme';
 
 const Input = ({ field }) => {
@@ -11,7 +11,7 @@ const Input = ({ field }) => {
   const dispatch = useDispatch();
 
   return (
-    <Block style={styles.container} card>
+    <>
       <Text gray>Napomena: </Text>
       <TextInput
         value={note}
@@ -30,16 +30,13 @@ const Input = ({ field }) => {
         autoCorrect={false}
         multiline
       />
-    </Block>
+    </>
   );
 };
 
 export default Input;
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: theme.colors.white,
-  },
   input: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: theme.colors.black,

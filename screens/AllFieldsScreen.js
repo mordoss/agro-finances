@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import React, { useState } from 'react';
 import { ScrollView, KeyboardAvoidingView } from 'react-native';
 import { Tabs, Block } from '../components';
@@ -7,7 +8,10 @@ import HeaderIcon from '../AllFields/HeaderIcon';
 import { theme } from '../theme';
 
 const AllFieldsScreen = ({ navigation }) => {
-  const tabs = ['Sve Njive', 'Ukupna Statistika'];
+  const tabs = [
+    { label: 'Sve Njive', image: require('../assets/icons/farm.png') },
+    { label: 'Ukupna Statistika', image: require('../assets/icons/graphic.png') },
+  ];
   const [active, changeActive] = useState('Sve Njive');
 
   return (
@@ -18,11 +22,11 @@ const AllFieldsScreen = ({ navigation }) => {
         keyboardVerticalOffset={theme.sizes.base * 6}
       >
         <ScrollView>
-          <Tabs tabs={tabs} active={active} changeActive={changeActive} />
           {active === 'Sve Njive' && <FieldsConnected navigation={navigation} />}
           {active === 'Ukupna Statistika' && <Statistics />}
         </ScrollView>
       </KeyboardAvoidingView>
+      <Tabs tabs={tabs} active={active} changeActive={changeActive} />
     </Block>
   );
 };
@@ -31,7 +35,6 @@ AllFieldsScreen.navigationOptions = screenProps => {
   return {
     headerLeft: () => (
       <HeaderIcon
-        // eslint-disable-next-line global-require
         imageSource={require('../assets/icons/calendar.svg.png')}
         position="Left"
         navigate={screenProps.navigation.navigate}
@@ -39,7 +42,6 @@ AllFieldsScreen.navigationOptions = screenProps => {
     ),
     headerRight: () => (
       <HeaderIcon
-        // eslint-disable-next-line global-require
         imageSource={require('../assets/icons/info.png')}
         position="Right"
         navigate={screenProps.navigation.navigate}

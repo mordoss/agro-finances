@@ -12,6 +12,7 @@ const Calendar = ({ isActive, actionArgumentObject }) => {
   const { field, workName } = actionArgumentObject;
   const date = useSelector(state => state[field].groundWorksState[workName].date);
   const [show, setShow] = useState(false);
+  const today = new Date();
   const dispatch = useDispatch();
 
   const onChange = (event, selectedDate) => {
@@ -28,7 +29,7 @@ const Calendar = ({ isActive, actionArgumentObject }) => {
       {isActive && (
         <TouchableOpacity onPress={showDatepicker} style={styles.button}>
           <Text center gray>
-            {dateToString(date)}
+            {dateToString(date) ? dateToString(date) : 'Izaberite datum'}
           </Text>
         </TouchableOpacity>
       )}
@@ -37,10 +38,11 @@ const Calendar = ({ isActive, actionArgumentObject }) => {
         <DateTimePicker
           testID="dateTimePicker"
           timeZoneOffsetInMinutes={0}
-          value={date ? new Date(date) : new Date()}
+          value={date ? new Date(date) : today}
           mode="date"
           display="default"
           onChange={onChange}
+          minimumDate={today}
         />
       )}
     </Block>

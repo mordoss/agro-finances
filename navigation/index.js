@@ -16,7 +16,7 @@ const screens = createStackNavigator(
     InfoScreen,
   },
   {
-    initialRouteName: 'CalendarScreen',
+    initialRouteName: 'AllFieldsScreen',
     defaultNavigationOptions: {
       headerStyle: {
         elevation: 0,
