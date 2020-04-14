@@ -6253,6 +6253,11 @@ react-native-gesture-handler@~1.5.0:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
+react-native-image-marker@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/react-native-image-marker/-/react-native-image-marker-0.6.1.tgz#2611d7ae1f4fe99303d16f4b98cee418efd77bb3"
+  integrity sha512-Evwdi1axs9E/CtHjeT9Xj2/uLnRBK3C2X7MC9dog2vpD5RbERNld31sRVerRH/xVMrPOWEDGoL+wXapJgcV8yA==
+
 react-native-popover-view@^2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/react-native-popover-view/-/react-native-popover-view-2.0.7.tgz#f740403e18719df833eeaf47d1b942704270c6b6"
@@ -6283,6 +6288,11 @@ react-native-screens@2.0.0-alpha.12:
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.23.tgz#25d7ea4d11bda4fcde2d1da7ae50271c6aa636e0"
   dependencies:
     debounce "^1.2.0"
+
+react-native-share@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-share/-/react-native-share-3.2.0.tgz#030aa81e2c3ec1d5c7577d3435b6cb1ed304074f"
+  integrity sha512-dKdJV2WRjs5c1cQbhD8na2iJqBVGXWDjQbOpvY64JlTAC3f44L448NaJWxdkiDiToTdYgL1nMai1cmKGmNtD2w==
 
 react-native-slider@^0.11.0:
   version "0.11.0"
