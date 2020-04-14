@@ -1,5 +1,6 @@
 export const sowing = {
-  kukuruz: {},
+  Kukuruz: {},
+  Pšenica: {},
 };
 
 export const fertilization = {
@@ -7,6 +8,7 @@ export const fertilization = {
     first: { time: 'Pre setve', fertilizers: ['Urea', 'NPK (4:1:2)'] },
     second: { time: 'U fazi od 4. do 7. lista', fertilizers: ['Mikroelementi', 'NPK (20:20:20)'] },
   },
+  Pšenica: {},
 };
 
 export const midRowCultivation = {

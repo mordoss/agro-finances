@@ -5,3 +5,8 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
+yarn-error.log
+yarn.lock
+.watchmanconfig
+.vscode
+.VSCodeCounter
