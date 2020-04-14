@@ -1,43 +1,41 @@
 import React from 'react';
 import { Block, Switch } from '../../components';
 import SprayingSegment from './SprayingSegment';
-import { changeMixed } from '../../redux/actions/specialActions';
+import { changeSprayerActive } from '../../redux/actions/specialActions';
 import { spraying } from '../../assets/works';
 
 const Spraying = ({ sprayingData, field, turn, plant }) => {
-  const { mixed } = sprayingData;
-  const { iupacs } = spraying[plant][turn];
+  const { sprayer1Active, sprayer2Active, sprayer3Active } = sprayingData;
+  const { sprayers } = spraying[plant][turn];
+  const activeSprayersArray = [sprayer1Active, sprayer2Active, sprayer3Active];
 
   return (
     <>
-      <SprayingSegment
-        sprayingData={sprayingData}
-        actionArgumentObject={{ field, turn }}
-        place={1}
-        field={field}
-        plant={plant}
-        iupacs={iupacs[0]}
-      />
-      {iupacs.length > 1 && (
+      {sprayers.map((sprayer, index) => (
         <>
           <Switch
             label="Mešam sa još jednim herbicidom"
-            action={changeMixed}
-            actionArgumentObject={{ field, turn, value: mixed, workState: 'sprayingState' }}
+            action={changeSprayerActive}
+            actionArgumentObject={{
+              field,
+              turn,
+              value: activeSprayersArray[index],
+              place: index + 1,
+            }}
             withAnimation
           />
-          <Block style={{ height: mixed ? null : 0, overflow: 'hidden' }}>
+          <Block style={{ height: activeSprayersArray[index] ? null : 0, overflow: 'hidden' }}>
             <SprayingSegment
               sprayingData={sprayingData}
               actionArgumentObject={{ field, turn }}
-              place={2}
+              place={index + 1}
               field={field}
               plant={plant}
-              iupacs={iupacs[1]}
+              sprayer={sprayers[index]}
             />
           </Block>
         </>
-      )}
+      ))}
     </>
   );
 };

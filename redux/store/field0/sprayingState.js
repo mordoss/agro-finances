@@ -1,13 +1,19 @@
 export default {
   first: {
+    sprayer1Active: false,
     sprayer1: '',
-    mixed: false,
+    sprayer2Active: false,
     sprayer2: '',
+    sprayer3Active: false,
+    sprayer3: '',
   },
 
   second: {
+    sprayer1Active: false,
     sprayer1: '',
-    mixed: true,
+    sprayer2Active: false,
     sprayer2: '',
+    sprayer3Active: false,
+    sprayer3: '',
   },
 };

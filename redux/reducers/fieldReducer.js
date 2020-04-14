@@ -146,6 +146,19 @@ function createFieldReducer(fieldNumber) {
             },
           },
         };
+
+      case 'SPRAYER_ACTIVE_CHANGED':
+        return {
+          ...state,
+          sprayingState: {
+            ...state.sprayingState,
+            [action.turn]: {
+              ...state.sprayingState[action.turn],
+              [action.place]: !action.value,
+            },
+          },
+        };
+
       case 'SEED_CONSUMPTION_CHANGED':
         return {
           ...state,

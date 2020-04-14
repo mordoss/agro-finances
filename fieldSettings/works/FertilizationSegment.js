@@ -27,10 +27,13 @@ const FertilizationSegment = ({
     fertilizationData[`fertilizer${place}`],
     fertilizationData[`fertilizerConsumption${place}`]
   );
+
+  const fertilizerNames = fertilizers.map(fertilizer => fertilizer[0]);
+
   return (
     <Block style={{ marginVertical: theme.sizes.base }}>
       <Picker
-        items={fertilizers}
+        items={fertilizerNames}
         label="Izbor đubriva"
         active={fertilizationData[`fertilizer${place}`]}
         action={changeSprayerOrFertilizer}

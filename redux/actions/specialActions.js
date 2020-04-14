@@ -27,6 +27,16 @@ export const changeMixed = ({ field, workState, turn, value }) => {
   };
 };
 
+export const changeSprayerActive = ({ field, turn, place, value }) => {
+  return {
+    type: 'SPRAYER_ACTIVE_CHANGED',
+    field,
+    value,
+    place: `sprayer${place}Active`,
+    turn,
+  };
+};
+
 export const changeSeedConsumption = ({ field }, item) => {
   return {
     type: 'SEED_CONSUMPTION_CHANGED',

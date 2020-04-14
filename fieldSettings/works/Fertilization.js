@@ -17,7 +17,7 @@ const Fertilization = ({ fertilizationData, field, turn, plant }) => {
       />
 
       <Switch
-        label="Mešam sa još jednim đubrivo"
+        label="Mešam sa još jednim đubrivom"
         action={changeMixed}
         actionArgumentObject={{ field, turn, value: mixed, workState: 'fertilizationState' }}
         withAnimation

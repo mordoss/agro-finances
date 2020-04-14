@@ -6,19 +6,19 @@ import { changeSprayerOrFertilizer } from '../../redux/actions/specialActions';
 import { calcSprayerBottles } from '../../calcFunctions';
 import { theme } from '../../theme';
 
-const SprayingSegment = ({ field, sprayingData, actionArgumentObject, place, iupacs }) => {
+const SprayingSegment = ({ field, sprayingData, actionArgumentObject, place, sprayer }) => {
   const area = useSelector(state => state[field].area);
-  const sprayer = sprayingData[`sprayer${place}`];
+  const sprayerSelected = sprayingData[`sprayer${place}`];
   const { bottles, extraArea } = calcSprayerBottles(area, sprayer);
 
   return (
     <Block style={{ marginVertical: theme.sizes.base }}>
-      <Text>{iupacs.name}</Text>
-      <Text>{iupacs.purpose}</Text>
+      <Text>{sprayer.iupac}</Text>
+      <Text>{sprayer.purpose}</Text>
       <Picker
-        items={iupacs.sprayers}
+        items={sprayer.sprayers}
         label="Izbor herbicida"
-        active={sprayer}
+        active={sprayerSelected}
         action={changeSprayerOrFertilizer}
         actionArgumentObject={{
           ...actionArgumentObject,
