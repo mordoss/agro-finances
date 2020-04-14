@@ -27,6 +27,9 @@
     },
     "android": {
       "package": "com.yourcompany.yourappname"
-    }
-  }
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
+  },
+  "displayName": "moja-njiva",
+  "name": "mojanjiva"
 }
