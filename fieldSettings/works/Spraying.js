@@ -12,7 +12,7 @@ const Spraying = ({ sprayingData, field, turn, plant }) => {
   return (
     <>
       {sprayers.map((sprayer, index) => (
-        <>
+        <Block key={sprayer.iupac}>
           <Switch
             label="Mešam sa još jednim herbicidom"
             action={changeSprayerActive}
@@ -34,7 +34,7 @@ const Spraying = ({ sprayingData, field, turn, plant }) => {
               sprayer={sprayers[index]}
             />
           </Block>
-        </>
+        </Block>
       ))}
     </>
   );
