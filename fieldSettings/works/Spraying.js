@@ -12,9 +12,10 @@ const Spraying = ({ sprayingData, field, turn, plant }) => {
   return (
     <>
       {sprayers.map((sprayer, index) => (
-        <>
+        <Block key={sprayer.iupac}>
           <Switch
-            label="Mešam sa još jednim herbicidom"
+            withAnimation
+            label={sprayer.iupac}
             action={changeSprayerActive}
             actionArgumentObject={{
               field,
@@ -22,7 +23,6 @@ const Spraying = ({ sprayingData, field, turn, plant }) => {
               value: activeSprayersArray[index],
               place: index + 1,
             }}
-            withAnimation
           />
           <Block style={{ height: activeSprayersArray[index] ? null : 0, overflow: 'hidden' }}>
             <SprayingSegment
@@ -34,7 +34,7 @@ const Spraying = ({ sprayingData, field, turn, plant }) => {
               sprayer={sprayers[index]}
             />
           </Block>
-        </>
+        </Block>
       ))}
     </>
   );

@@ -16,21 +16,27 @@ export const calcSowing = (area, sowingData) => {
   return bags * price;
 };
 
-export const calcSprayerBottles = (area, sprayer) => {
-  const bottles = sprayer ? Math.ceil(area / consumptions[sprayer]) : 0;
-  const extraArea = sprayer ? bottles * consumptions[sprayer] - area : 0;
-  return { bottles, extraArea };
+export const calcSprayerBottles = (area, sprayer, sprayerActive) => {
+  if (sprayerActive) {
+    const bottles = sprayer ? Math.ceil(area / consumptions[sprayer]) : 0;
+    const extraArea = sprayer ? bottles * consumptions[sprayer] - area : 0;
+    return { bottles, extraArea };
+  }
+  return { bottles: 0, extraArea: 0 };
 };
 
 export const calcSpraying = (area, data) => {
-  const { mixed, sprayer1, sprayer2 } = data;
+  const { sprayer1, sprayer2, sprayer3, sprayer1Active, sprayer2Active, sprayer3Active } = data;
 
-  const { bottles: herbicideBottles1 } = calcSprayerBottles(area, sprayer1);
-  const { bottles: herbicideBottles2 } = calcSprayerBottles(area, sprayer2);
+  const { bottles: herbicideBottles1 } = calcSprayerBottles(area, sprayer1, sprayer1Active);
+  const { bottles: herbicideBottles2 } = calcSprayerBottles(area, sprayer2, sprayer2Active);
+  const { bottles: herbicideBottles3 } = calcSprayerBottles(area, sprayer3, sprayer3Active);
+
   const herbicidePrice1 = herbicideBottles1 * prices[sprayer1] || 0;
-  const herbicidePrice2 = (mixed && herbicideBottles2 * prices[sprayer2]) || 0;
+  const herbicidePrice2 = herbicideBottles2 * prices[sprayer2] || 0;
+  const herbicidePrice3 = herbicideBottles3 * prices[sprayer3] || 0;
 
-  return herbicidePrice1 + herbicidePrice2;
+  return herbicidePrice1 + herbicidePrice2 + herbicidePrice3;
 };
 
 export const calcFertilizationSegment = (area, fertilizer, fertilizerConsumption) => {

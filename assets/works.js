@@ -55,7 +55,7 @@ export const spraying = {
           purpose: '',
           sprayers: [''],
         },
-        { iupac: 'Fluksapiroksad 75 g/l + Piraklostrobin 150 g/l ', purpose: '', sprayers: [''] },
+        { iupac: 'Fluksapiroksad 75 g/l + Piraklostrobin 150 g/l', purpose: '', sprayers: [''] },
         { iupac: 'Аlfa–cipermetrin 100 g/l', purpose: '', sprayers: [''] },
       ],
     },

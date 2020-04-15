@@ -9,14 +9,12 @@ import { theme } from '../../theme';
 const SprayingSegment = ({ field, sprayingData, actionArgumentObject, place, sprayer }) => {
   const area = useSelector(state => state[field].area);
   const sprayerSelected = sprayingData[`sprayer${place}`];
-  const { bottles, extraArea } = calcSprayerBottles(area, sprayer);
+  const { bottles, extraArea } = calcSprayerBottles(area, sprayerSelected, true);
 
   return (
     <Block style={{ marginVertical: theme.sizes.base }}>
-      <Text>{sprayer.iupac}</Text>
-      <Text>{sprayer.purpose}</Text>
       <Picker
-        items={sprayer.sprayers}
+        items={[sprayer.iupac]}
         label="Izbor herbicida"
         active={sprayerSelected}
         action={changeSprayerOrFertilizer}
