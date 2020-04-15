@@ -44,3 +44,14 @@ $ cd android && gradlew clean
 ```
 
 If `$ adb` not defined add `C:\Users\username\AppData\Local\Android\Sdk\platform-tools` to `Path`.
+
+### Run on Nox
+
+```
+$ netstat -aon | findstr PID (NoxVMHandle.exe)
+$ adb connect 127.0.0.1:62001
+$ adb connect localhost:21503 #memu
+$ adb shell input keyevent 82 # debug dialog
+```
+
+[link](https://stackoverflow.com/questions/51214825/adb-cant-connect-to-nox)
