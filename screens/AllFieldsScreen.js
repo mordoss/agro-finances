@@ -37,13 +37,7 @@ AllFieldsScreen.navigationOptions = screenProps => {
       <HeaderIcon
         imageSource={require('../assets/icons/calendar.svg.png')}
         position="Left"
-        navigate={screenProps.navigation.navigate}
-      />
-    ),
-    headerRight: () => (
-      <HeaderIcon
-        imageSource={require('../assets/icons/info.png')}
-        position="Right"
+        label="Planer"
         navigate={screenProps.navigation.navigate}
       />
     ),

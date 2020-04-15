@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Badge, Block, Text } from '../../components';
 import { changePlant } from '../../redux/actions/basicStateActions';
+import { plantStringToImage } from '../../helperFunctions';
 import { theme } from '../../theme';
 
 const PlantCard = ({ plant, isActive, field }) => {
@@ -21,7 +22,7 @@ const PlantCard = ({ plant, isActive, field }) => {
           />
         )}
         <Badge size={60} color={theme.colors.accent}>
-          <Image source={plant.image} />
+          <Image source={plantStringToImage(plant.name)} />
         </Badge>
         <Text title white={isActive} gray={!isActive} bold={!!isActive}>
           {plant.name}

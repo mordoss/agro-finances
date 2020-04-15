@@ -6,6 +6,7 @@ import { Tabs, Block } from '../components';
 import BasicContainer from '../fieldSettings/basic/BasicContainer';
 import WorksContainer from '../fieldSettings/works/WorksContainer';
 import Statistics from '../fieldSettings/statistics/StatisticsConnected';
+import HeaderIcon from '../AllFields/HeaderIcon';
 import { theme } from '../theme';
 
 const FieldSettingsScreen = () => {
@@ -34,6 +35,19 @@ const FieldSettingsScreen = () => {
       <Tabs tabs={tabs} active={active} changeActive={changeActive} disabled={plant === ''} />
     </Block>
   );
+};
+
+FieldSettingsScreen.navigationOptions = screenProps => {
+  return {
+    headerRight: () => (
+      <HeaderIcon
+        imageSource={require('../assets/icons/price.png')}
+        position="Right"
+        label="Cene"
+        navigate={screenProps.navigation.navigate}
+      />
+    ),
+  };
 };
 
 export default FieldSettingsScreen;

@@ -1,7 +1,0 @@
-{
-    "workbench.editor.highlightModifiedTabs": true,
-    "breadcrumbs.symbolSortOrder": "type",
-    "search.exclude": {
-        "**/node_modules": false
-    }
-}

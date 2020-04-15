@@ -3,9 +3,8 @@ import { Image, TouchableOpacity } from 'react-native';
 import { Text } from '../components';
 import { theme } from '../theme';
 
-const HeaderIcon = ({ position, imageSource, navigate }) => {
+const HeaderIcon = ({ position, imageSource, navigate, label }) => {
   const location = position === 'Right' ? 'InfoScreen' : 'CalendarScreen';
-  const text = position === 'Left' ? 'Planer' : 'Info';
 
   return (
     <TouchableOpacity
@@ -17,8 +16,15 @@ const HeaderIcon = ({ position, imageSource, navigate }) => {
       }}
     >
       <Image source={imageSource} />
-      <Text bold h2 style={{ marginLeft: theme.sizes.base }} white>
-        {text}
+      <Text
+        bold
+        h2
+        style={{
+          marginLeft: theme.sizes.base,
+        }}
+        white={position === 'Left'}
+      >
+        {label}
       </Text>
     </TouchableOpacity>
   );
