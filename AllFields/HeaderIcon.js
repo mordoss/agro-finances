@@ -4,7 +4,7 @@ import { Text } from '../components';
 import { theme } from '../theme';
 
 const HeaderIcon = ({ position, imageSource, navigate, label }) => {
-  const location = position === 'Right' ? 'InfoScreen' : 'CalendarScreen';
+  const location = position === 'Right' ? 'PricesScreen' : 'CalendarScreen';
 
   return (
     <TouchableOpacity
