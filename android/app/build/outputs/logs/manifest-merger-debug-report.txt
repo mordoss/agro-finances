@@ -1,0 +1,542 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:1:1-48:12
+MERGED from [:unimodules-react-native-adapter] /home/mordoss/moja-njiva/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-community_datetimepicker] /home/mordoss/moja-njiva/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
+MERGED from [:react-native-gesture-handler] /home/mordoss/moja-njiva/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-image-marker] /home/mordoss/moja-njiva/node_modules/react-native-image-marker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
+MERGED from [:react-native-reanimated] /home/mordoss/moja-njiva/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-screens] /home/mordoss/moja-njiva/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
+MERGED from [:react-native-svg] /home/mordoss/moja-njiva/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.react:react-native:0.61.5] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7f91c984e84241c7bb6e2907888ac30e/jetified-react-native-0.61.5/AndroidManifest.xml:2:1-13:12
+MERGED from [:expo-permissions] /home/mordoss/moja-njiva/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/16de5a105d918594ea18965f8161a8bc/material-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/ef8a364a6a39421e69c96cf68eeb3e63/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [:expo-app-loader-provider] /home/mordoss/moja-njiva/node_modules/expo-app-loader-provider/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-constants] /home/mordoss/moja-njiva/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-error-recovery] /home/mordoss/moja-njiva/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-30:12
+MERGED from [:expo-font] /home/mordoss/moja-njiva/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-keep-awake] /home/mordoss/moja-njiva/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-linear-gradient] /home/mordoss/moja-njiva/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:expo-sqlite] /home/mordoss/moja-njiva/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-web-browser] /home/mordoss/moja-njiva/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-barcode-scanner-interface] /home/mordoss/moja-njiva/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-camera-interface] /home/mordoss/moja-njiva/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-constants-interface] /home/mordoss/moja-njiva/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-face-detector-interface] /home/mordoss/moja-njiva/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-file-system-interface] /home/mordoss/moja-njiva/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-font-interface] /home/mordoss/moja-njiva/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-permissions-interface] /home/mordoss/moja-njiva/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-task-manager-interface] /home/mordoss/moja-njiva/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-core] /home/mordoss/moja-njiva/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-image-loader-interface] /home/mordoss/moja-njiva/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-sensors-interface] /home/mordoss/moja-njiva/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [org.webkit:android-jsc:r245459] /home/mordoss/.gradle/caches/transforms-2/files-2.1/9a21d5ac7dab504f39cc7e284549a58b/jetified-android-jsc-r245459/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.browser:browser:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/bc445fac6463855dabab4033edb563c9/browser-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/fe71f7cb8e7d850fcc4345cc7aea078e/transition-1.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/2b33c5aab89333084529dd43dfd2ad30/jetified-play-services-location-16.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/5b10a0fa48f40f2a55d8a708e0d414c5/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/72977f4ff1e91d290f5ec38eb743c951/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7e27c7d396810af644fcc2d5ec8384aa/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/00f76515dcf9be3dc13db152e89539ca/recyclerview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/e40a377249758d23414d21222f000040/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/0d46da4f5ac771dd79c1a2c9880b8580/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b7a11ad342898cca7210644fe1b15dad/jetified-glide-4.9.0/AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/dc7f0b9bc87680f25b17fc7e64ff52be/jetified-gifdecoder-4.9.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.media:media:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/92a82d0e6836fc2764f8a4c5ae17cc0a/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/3dd2a90cf4903229672e8d620934c6ca/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/fee859eac2601f0c53561481b8362e20/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a627ba2b0fb7cab1458068884dcfd7e5/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/69b157e8ca7c4f8e65106af271a2dd62/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/30612fa1f33fcbb3e456c3a5f852366f/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7eb3e9033e20967dc4b6eab4b9d34b59/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/369c371dbc36cd3420e0891af4dc30b8/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b685d122498cf50e728d648d063a2ff6/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/97f01785cab2549e8be5ef5c8b1dbcb3/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/3584c755b13ff246a30ea06b73bd9d78/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/d1290085211f6ca31e4b44ad501b0e7c/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/2d0e89544ecc30a9184b81b65acf458e/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/db341947bb3b430f2ccfc05cfed8623a/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/ee8663f4341a41303331ea0b304242d0/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/34b4ab0d8b65ac74ddd00d45b26dd963/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a87a91cfc12796be4a5399f6708c1bed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/271d0ad8fab014e1b69399f7396f344c/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/4b326e320f7fb8e89e2bb3879ac950d2/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/ba74e7a1df14494ca70ea72adf4fc3bf/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/5d6ed104b1267309eec087762b08ed9e/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/0e4335c82d4d573388d62295e89eaaed/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/4dea87d08cf4eca2be6818de5406de80/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/9c87d4ce634b90f093cf672ae75a3e2d/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f2e8952936b7109d6ac9ab1e40e3d573/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/9c0d2720907bb8bd5d5976efee735314/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/d00c90699ae27cc1e1ce5e4b3e530617/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/13ac386f95e101744ae5f7d486caaa8c/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b1cf31d7c8a6007d28b3a719eed16d55/jetified-fresco-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/169233545379c71f3f6f5682ffb61e1a/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/abebfca34231aa5a9abc56741db17399/jetified-drawee-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/27aa1bb2dc2c3cbed588025f9ed7e2d5/jetified-nativeimagefilters-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a0517d66ffa7a3f39d72c93794debe4b/jetified-imagepipeline-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/053530f24e21d1da54f3325144b9e1b2/jetified-nativeimagetranscoder-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/94784ddd16b5e8af4ab72596499b4a4c/jetified-imagepipeline-base-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/bd9fb102a845331437c0811ca4129acf/jetified-soloader-0.6.0/AndroidManifest.xml:2:1-13:12
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:2:1-30:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a080eb89f411684b4376a51455335298/jetified-fbcore-2.0.0/AndroidManifest.xml:2:1-9:12
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:1:1-48:12
+	package
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:2:5-28
+		INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:1:1-48:12
+		INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:1:1-48:12
+		INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:5:22-75
+uses-permission#android.permission.MANAGE_DOCUMENTS
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:8:5-75
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:8:22-72
+uses-permission#android.permission.READ_INTERNAL_STORAGE
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:9:22-77
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:10:22-72
+uses-permission#android.permission.USE_FINGERPRINT
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:11:5-74
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:11:22-71
+uses-permission#android.permission.VIBRATE
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:12:22-63
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:13:22-77
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:16:5-81
+MERGED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:16:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:17:5-79
+MERGED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
+MERGED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:17:22-76
+uses-permission#android.permission.CAMERA
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:18:5-65
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:18:22-62
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:19:5-72
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:19:22-69
+uses-permission#android.permission.READ_CALENDAR
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:20:5-72
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:20:22-69
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:21:5-73
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:21:22-70
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:22:5-80
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-80
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:22:22-77
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:23:5-71
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:23:22-68
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:24:5-81
+MERGED from [:react-native-image-marker] /home/mordoss/moja-njiva/node_modules/react-native-image-marker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [:react-native-image-marker] /home/mordoss/moja-njiva/node_modules/react-native-image-marker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-81
+MERGED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-81
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:24:22-78
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:25:5-73
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:25:22-70
+application
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:28:5-46:19
+MERGED from [:react-native-community_datetimepicker] /home/mordoss/moja-njiva/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-20
+MERGED from [:react-native-community_datetimepicker] /home/mordoss/moja-njiva/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-20
+MERGED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [com.facebook.react:react-native:0.61.5] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7f91c984e84241c7bb6e2907888ac30e/jetified-react-native-0.61.5/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.5] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7f91c984e84241c7bb6e2907888ac30e/jetified-react-native-0.61.5/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/16de5a105d918594ea18965f8161a8bc/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/16de5a105d918594ea18965f8161a8bc/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-28:19
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-28:19
+MERGED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
+MERGED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/2b33c5aab89333084529dd43dfd2ad30/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/2b33c5aab89333084529dd43dfd2ad30/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/5b10a0fa48f40f2a55d8a708e0d414c5/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/5b10a0fa48f40f2a55d8a708e0d414c5/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/72977f4ff1e91d290f5ec38eb743c951/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/72977f4ff1e91d290f5ec38eb743c951/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b7a11ad342898cca7210644fe1b15dad/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b7a11ad342898cca7210644fe1b15dad/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/dc7f0b9bc87680f25b17fc7e64ff52be/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/dc7f0b9bc87680f25b17fc7e64ff52be/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/34b4ab0d8b65ac74ddd00d45b26dd963/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/34b4ab0d8b65ac74ddd00d45b26dd963/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/0e4335c82d4d573388d62295e89eaaed/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/0e4335c82d4d573388d62295e89eaaed/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/bd9fb102a845331437c0811ca4129acf/jetified-soloader-0.6.0/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/bd9fb102a845331437c0811ca4129acf/jetified-soloader-0.6.0/AndroidManifest.xml:11:5-20
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/34b4ab0d8b65ac74ddd00d45b26dd963/core-1.1.0/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:30:7-39
+	android:roundIcon
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:32:7-52
+	android:icon
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:31:7-41
+	android:allowBackup
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:33:7-34
+	android:theme
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:34:7-38
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:29:7-38
+activity#com.mojanjiva.MainActivity
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:35:7-44:18
+	android:label
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:37:9-41
+	android:windowSoftInputMode
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:39:9-51
+	android:configChanges
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:38:9-79
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:36:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:40:9-43:25
+action#android.intent.action.MAIN
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:41:13-65
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:41:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:42:13-73
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:42:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:45:7-84
+	android:name
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:45:17-81
+uses-sdk
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+MERGED from [:unimodules-react-native-adapter] /home/mordoss/moja-njiva/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-react-native-adapter] /home/mordoss/moja-njiva/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-community_datetimepicker] /home/mordoss/moja-njiva/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-community_datetimepicker] /home/mordoss/moja-njiva/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/mordoss/moja-njiva/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/mordoss/moja-njiva/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-image-marker] /home/mordoss/moja-njiva/node_modules/react-native-image-marker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-image-marker] /home/mordoss/moja-njiva/node_modules/react-native-image-marker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /home/mordoss/moja-njiva/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /home/mordoss/moja-njiva/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] /home/mordoss/moja-njiva/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] /home/mordoss/moja-njiva/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /home/mordoss/moja-njiva/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /home/mordoss/moja-njiva/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.react:react-native:0.61.5] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7f91c984e84241c7bb6e2907888ac30e/jetified-react-native-0.61.5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7f91c984e84241c7bb6e2907888ac30e/jetified-react-native-0.61.5/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-permissions] /home/mordoss/moja-njiva/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-permissions] /home/mordoss/moja-njiva/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/16de5a105d918594ea18965f8161a8bc/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/16de5a105d918594ea18965f8161a8bc/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/ef8a364a6a39421e69c96cf68eeb3e63/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/ef8a364a6a39421e69c96cf68eeb3e63/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [:expo-app-loader-provider] /home/mordoss/moja-njiva/node_modules/expo-app-loader-provider/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-app-loader-provider] /home/mordoss/moja-njiva/node_modules/expo-app-loader-provider/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-constants] /home/mordoss/moja-njiva/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-constants] /home/mordoss/moja-njiva/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-error-recovery] /home/mordoss/moja-njiva/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-error-recovery] /home/mordoss/moja-njiva/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:expo-font] /home/mordoss/moja-njiva/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-font] /home/mordoss/moja-njiva/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-keep-awake] /home/mordoss/moja-njiva/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-keep-awake] /home/mordoss/moja-njiva/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-linear-gradient] /home/mordoss/moja-njiva/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-linear-gradient] /home/mordoss/moja-njiva/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-sqlite] /home/mordoss/moja-njiva/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-sqlite] /home/mordoss/moja-njiva/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-web-browser] /home/mordoss/moja-njiva/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-web-browser] /home/mordoss/moja-njiva/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-barcode-scanner-interface] /home/mordoss/moja-njiva/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-barcode-scanner-interface] /home/mordoss/moja-njiva/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-camera-interface] /home/mordoss/moja-njiva/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-camera-interface] /home/mordoss/moja-njiva/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-constants-interface] /home/mordoss/moja-njiva/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-constants-interface] /home/mordoss/moja-njiva/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-face-detector-interface] /home/mordoss/moja-njiva/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-face-detector-interface] /home/mordoss/moja-njiva/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-file-system-interface] /home/mordoss/moja-njiva/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-file-system-interface] /home/mordoss/moja-njiva/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-font-interface] /home/mordoss/moja-njiva/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-font-interface] /home/mordoss/moja-njiva/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-permissions-interface] /home/mordoss/moja-njiva/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-permissions-interface] /home/mordoss/moja-njiva/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-task-manager-interface] /home/mordoss/moja-njiva/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-task-manager-interface] /home/mordoss/moja-njiva/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-core] /home/mordoss/moja-njiva/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-core] /home/mordoss/moja-njiva/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-image-loader-interface] /home/mordoss/moja-njiva/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-image-loader-interface] /home/mordoss/moja-njiva/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-sensors-interface] /home/mordoss/moja-njiva/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-sensors-interface] /home/mordoss/moja-njiva/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/mordoss/.gradle/caches/transforms-2/files-2.1/9a21d5ac7dab504f39cc7e284549a58b/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/mordoss/.gradle/caches/transforms-2/files-2.1/9a21d5ac7dab504f39cc7e284549a58b/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.browser:browser:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/bc445fac6463855dabab4033edb563c9/browser-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/bc445fac6463855dabab4033edb563c9/browser-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/fe71f7cb8e7d850fcc4345cc7aea078e/transition-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/fe71f7cb8e7d850fcc4345cc7aea078e/transition-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/2b33c5aab89333084529dd43dfd2ad30/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/2b33c5aab89333084529dd43dfd2ad30/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/5b10a0fa48f40f2a55d8a708e0d414c5/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/5b10a0fa48f40f2a55d8a708e0d414c5/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/72977f4ff1e91d290f5ec38eb743c951/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/72977f4ff1e91d290f5ec38eb743c951/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7e27c7d396810af644fcc2d5ec8384aa/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7e27c7d396810af644fcc2d5ec8384aa/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/00f76515dcf9be3dc13db152e89539ca/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/00f76515dcf9be3dc13db152e89539ca/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/e40a377249758d23414d21222f000040/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/e40a377249758d23414d21222f000040/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/0d46da4f5ac771dd79c1a2c9880b8580/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/0d46da4f5ac771dd79c1a2c9880b8580/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b7a11ad342898cca7210644fe1b15dad/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b7a11ad342898cca7210644fe1b15dad/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/dc7f0b9bc87680f25b17fc7e64ff52be/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/dc7f0b9bc87680f25b17fc7e64ff52be/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.media:media:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/92a82d0e6836fc2764f8a4c5ae17cc0a/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/92a82d0e6836fc2764f8a4c5ae17cc0a/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/3dd2a90cf4903229672e8d620934c6ca/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/3dd2a90cf4903229672e8d620934c6ca/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/fee859eac2601f0c53561481b8362e20/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/fee859eac2601f0c53561481b8362e20/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a627ba2b0fb7cab1458068884dcfd7e5/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a627ba2b0fb7cab1458068884dcfd7e5/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/69b157e8ca7c4f8e65106af271a2dd62/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/69b157e8ca7c4f8e65106af271a2dd62/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/30612fa1f33fcbb3e456c3a5f852366f/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/30612fa1f33fcbb3e456c3a5f852366f/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7eb3e9033e20967dc4b6eab4b9d34b59/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/7eb3e9033e20967dc4b6eab4b9d34b59/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/369c371dbc36cd3420e0891af4dc30b8/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/369c371dbc36cd3420e0891af4dc30b8/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b685d122498cf50e728d648d063a2ff6/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b685d122498cf50e728d648d063a2ff6/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/97f01785cab2549e8be5ef5c8b1dbcb3/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/97f01785cab2549e8be5ef5c8b1dbcb3/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/3584c755b13ff246a30ea06b73bd9d78/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/3584c755b13ff246a30ea06b73bd9d78/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/d1290085211f6ca31e4b44ad501b0e7c/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/d1290085211f6ca31e4b44ad501b0e7c/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/2d0e89544ecc30a9184b81b65acf458e/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/2d0e89544ecc30a9184b81b65acf458e/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/db341947bb3b430f2ccfc05cfed8623a/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/db341947bb3b430f2ccfc05cfed8623a/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/ee8663f4341a41303331ea0b304242d0/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/ee8663f4341a41303331ea0b304242d0/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/34b4ab0d8b65ac74ddd00d45b26dd963/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/34b4ab0d8b65ac74ddd00d45b26dd963/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a87a91cfc12796be4a5399f6708c1bed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a87a91cfc12796be4a5399f6708c1bed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/271d0ad8fab014e1b69399f7396f344c/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/271d0ad8fab014e1b69399f7396f344c/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/4b326e320f7fb8e89e2bb3879ac950d2/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/4b326e320f7fb8e89e2bb3879ac950d2/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/ba74e7a1df14494ca70ea72adf4fc3bf/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/ba74e7a1df14494ca70ea72adf4fc3bf/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/5d6ed104b1267309eec087762b08ed9e/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/5d6ed104b1267309eec087762b08ed9e/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/0e4335c82d4d573388d62295e89eaaed/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/0e4335c82d4d573388d62295e89eaaed/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/4dea87d08cf4eca2be6818de5406de80/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/4dea87d08cf4eca2be6818de5406de80/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/9c87d4ce634b90f093cf672ae75a3e2d/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/9c87d4ce634b90f093cf672ae75a3e2d/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f2e8952936b7109d6ac9ab1e40e3d573/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f2e8952936b7109d6ac9ab1e40e3d573/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/9c0d2720907bb8bd5d5976efee735314/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/9c0d2720907bb8bd5d5976efee735314/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/d00c90699ae27cc1e1ce5e4b3e530617/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/d00c90699ae27cc1e1ce5e4b3e530617/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/13ac386f95e101744ae5f7d486caaa8c/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/13ac386f95e101744ae5f7d486caaa8c/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b1cf31d7c8a6007d28b3a719eed16d55/jetified-fresco-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/b1cf31d7c8a6007d28b3a719eed16d55/jetified-fresco-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/169233545379c71f3f6f5682ffb61e1a/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/169233545379c71f3f6f5682ffb61e1a/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/abebfca34231aa5a9abc56741db17399/jetified-drawee-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/abebfca34231aa5a9abc56741db17399/jetified-drawee-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/27aa1bb2dc2c3cbed588025f9ed7e2d5/jetified-nativeimagefilters-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/27aa1bb2dc2c3cbed588025f9ed7e2d5/jetified-nativeimagefilters-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a0517d66ffa7a3f39d72c93794debe4b/jetified-imagepipeline-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a0517d66ffa7a3f39d72c93794debe4b/jetified-imagepipeline-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/053530f24e21d1da54f3325144b9e1b2/jetified-nativeimagetranscoder-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/053530f24e21d1da54f3325144b9e1b2/jetified-nativeimagetranscoder-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/94784ddd16b5e8af4ab72596499b4a4c/jetified-imagepipeline-base-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/94784ddd16b5e8af4ab72596499b4a4c/jetified-imagepipeline-base-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/bd9fb102a845331437c0811ca4129acf/jetified-soloader-0.6.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/bd9fb102a845331437c0811ca4129acf/jetified-soloader-0.6.0/AndroidManifest.xml:7:5-9:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a080eb89f411684b4376a51455335298/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a080eb89f411684b4376a51455335298/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+provider#cl.json.RNShareFileProvider
+ADDED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-72
+	android:exported
+		ADDED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-55
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:64
+	android:resource
+		ADDED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-61
+	android:name
+		ADDED from [:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+uses-permission#android.permission.STORAGE
+ADDED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-66
+	android:name
+		ADDED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:22-63
+provider#expo.modules.filesystem.FileSystemFileProvider
+ADDED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-27:20
+	android:grantUriPermissions
+		ADDED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-47
+	android:authorities
+		ADDED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-74
+	android:exported
+		ADDED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-37
+	tools:replace
+		ADDED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-48
+	android:name
+		ADDED from [:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
+	android:name
+		ADDED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-74
+service#expo.modules.location.services.LocationTaskService
+ADDED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from [:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:13:22-76
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:26:13-120

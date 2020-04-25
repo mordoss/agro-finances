@@ -1,0 +1,206 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.mojanjiva"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="27" />
+9-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:4:5-67
+11-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+12-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:5:5-77
+12-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:5:22-75
+13
+14    <!-- OPTIONAL PERMISSIONS, REMOVE WHATEVER YOU DO NOT NEED -->
+15    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+15-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:8:5-75
+15-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:8:22-72
+16    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+16-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:9:5-80
+16-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:9:22-77
+17    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+17-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:10:5-75
+17-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:10:22-72
+18    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+18-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:11:5-74
+18-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:11:22-71
+19    <uses-permission android:name="android.permission.VIBRATE" />
+19-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:12:5-66
+19-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:12:22-63
+20    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+20-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:13:5-80
+20-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:13:22-77
+21
+22    <!-- These require runtime permissions on M -->
+23    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+23-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:16:5-81
+23-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:16:22-78
+24    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+24-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:17:5-79
+24-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:17:22-76
+25    <uses-permission android:name="android.permission.CAMERA" />
+25-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:18:5-65
+25-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:18:22-62
+26    <uses-permission android:name="android.permission.READ_CONTACTS" />
+26-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:19:5-72
+26-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:19:22-69
+27    <uses-permission android:name="android.permission.READ_CALENDAR" />
+27-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:20:5-72
+27-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:20:22-69
+28    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+28-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:21:5-73
+28-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:21:22-70
+29    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+29-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:22:5-80
+29-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:22:22-77
+30    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+30-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:23:5-71
+30-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:23:22-68
+31    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+31-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:24:5-81
+31-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:24:22-78
+32    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+32-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:25:5-73
+32-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:25:22-70
+33    <uses-permission android:name="android.permission.STORAGE" />
+33-->[:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-66
+33-->[:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:22-63
+34    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+34-->[:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
+34-->[:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-74
+35    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+35-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
+35-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:13:22-76
+36    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+36-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
+36-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+37    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" /> <!-- END OPTIONAL PERMISSIONS -->
+37-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
+37-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+38    <application
+38-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:28:5-46:19
+39        android:name="com.mojanjiva.MainApplication"
+39-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:29:7-38
+40        android:allowBackup="false"
+40-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:33:7-34
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.1.0] /home/mordoss/.gradle/caches/transforms-2/files-2.1/34b4ab0d8b65ac74ddd00d45b26dd963/core-1.1.0/AndroidManifest.xml:24:18-86
+42        android:debuggable="true"
+43        android:icon="@mipmap/ic_launcher"
+43-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:31:7-41
+44        android:label="@string/app_name"
+44-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:30:7-39
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:32:7-52
+46        android:theme="@style/AppTheme" >
+46-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:34:7-38
+47        <activity
+47-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:35:7-44:18
+48            android:name="com.mojanjiva.MainActivity"
+48-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:36:9-37
+49            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+49-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:38:9-79
+50            android:label="@string/app_name"
+50-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:37:9-41
+51            android:windowSoftInputMode="adjustResize" >
+51-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:39:9-51
+52            <intent-filter>
+52-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:40:9-43:25
+53                <action android:name="android.intent.action.MAIN" />
+53-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:41:13-65
+53-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:41:21-62
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+55-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:42:13-73
+55-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:42:23-70
+56            </intent-filter>
+57        </activity>
+58        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+58-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:45:7-84
+58-->/home/mordoss/moja-njiva/android/app/src/main/AndroidManifest.xml:45:17-81
+59
+60        <provider
+60-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+61            android:name="cl.json.RNShareFileProvider"
+61-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-55
+62            android:authorities="com.mojanjiva.rnshare.fileprovider"
+62-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-72
+63            android:exported="false"
+63-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+64            android:grantUriPermissions="true" >
+64-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+65            <meta-data
+65-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:64
+66                android:name="android.support.FILE_PROVIDER_PATHS"
+66-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+67                android:resource="@xml/share_download_paths" />
+67-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-61
+68        </provider>
+69        <provider
+69-->[:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-27:20
+70            android:name="expo.modules.filesystem.FileSystemFileProvider"
+70-->[:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
+71            android:authorities="com.mojanjiva.FileSystemFileProvider"
+71-->[:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-74
+72            android:exported="false"
+72-->[:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-37
+73            android:grantUriPermissions="true" >
+73-->[:expo-file-system] /home/mordoss/moja-njiva/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-47
+74            <meta-data
+74-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:64
+75                android:name="android.support.FILE_PROVIDER_PATHS"
+75-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+76                android:resource="@xml/file_system_provider_paths" />
+76-->[:react-native-share] /home/mordoss/moja-njiva/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-61
+77        </provider>
+78
+79        <service
+79-->[:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
+80            android:name="expo.modules.location.services.LocationTaskService"
+80-->[:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
+81            android:exported="false" />
+81-->[:expo-location] /home/mordoss/moja-njiva/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+82
+83        <activity
+83-->[com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+84            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+84-->[com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+85            android:exported="false"
+85-->[com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+86            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+86-->[com.google.android.gms:play-services-base:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/f142ca03d14414b8c9e2133e01025338/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+87
+88        <meta-data
+88-->[com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+89            android:name="com.google.android.gms.version"
+89-->[com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+90            android:value="@integer/google_play_services_version" />
+90-->[com.google.android.gms:play-services-basement:16.0.1] /home/mordoss/.gradle/caches/transforms-2/files-2.1/947c9af9da015698020951e65c0a2589/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+91
+92        <service
+92-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+93            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+93-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+94            android:exported="false" />
+94-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+95        <service
+95-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+96            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+96-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+97            android:exported="false" />
+97-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+98        <service
+98-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+99            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+99-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+100            android:exported="false" />
+100-->[io.nlopez.smartlocation:library:3.2.11] /home/mordoss/.gradle/caches/transforms-2/files-2.1/a90e080ea6c5899a62b752cf35658807/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+101    </application>
+102
+103</manifest>
