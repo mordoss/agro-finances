@@ -9,14 +9,15 @@ import Statistics from '../fieldSettings/statistics/StatisticsConnected';
 import HeaderIcon from '../AllFields/HeaderIcon';
 import { theme } from '../theme';
 
+const tabs = [
+  { label: 'Njiva', image: require('../assets/icons/farm.png') },
+  { label: 'Radovi', image: require('../assets/icons/tractor.png') },
+  { label: 'Statistika', image: require('../assets/icons/graphic.png') },
+];
+
 const FieldSettingsScreen = () => {
   const activeField = useSelector(state => `field${state.activeField}`);
   const plant = useSelector(state => state[activeField].plant);
-  const tabs = [
-    { label: 'Njiva', image: require('../assets/icons/farm.png') },
-    { label: 'Radovi', image: require('../assets/icons/tractor.png') },
-    { label: 'Statistika', image: require('../assets/icons/graphic.png') },
-  ];
   const [active, changeActive] = useState('Njiva');
 
   return (
