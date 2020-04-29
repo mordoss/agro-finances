@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Block, Picker, Text } from '../../components';
+import { Block, Picker } from '../../components';
 import ExtraCount from './ExtraCount';
 import { changeSprayerOrFertilizer } from '../../redux/actions/specialActions';
 import { calcSprayerBottles } from '../../calcFunctions';

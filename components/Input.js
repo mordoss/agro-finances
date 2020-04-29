@@ -5,12 +5,12 @@ import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
 
-const Input = ({ label, unit, value, actionArgumentObject, action, customStyle }) => {
+const Input = ({ label, unit, value, actionArgumentObject, action, customStyle, style }) => {
   const dispatch = useDispatch();
   const [onFocus, setOnFocus] = useState(false);
 
   return (
-    <Block row style={[styles.container, customStyle]}>
+    <Block row style={[styles.container, customStyle, style]}>
       <Text gray>{label}</Text>
       <TextInput
         value={value}
