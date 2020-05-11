@@ -20,13 +20,13 @@ export default [
 
 export const worksPerPlant = {
   Kukuruz: [
+    'midRowCultivation1',
+    'spraying1',
     'disking',
     'plowing',
     'horrowing',
     'harvesting',
-    'spraying1',
     'spraying2',
-    'midRowCultivation1',
     'midRowCultivation2',
     'fertilization1',
     'fertilization2',

@@ -18,7 +18,7 @@ const Sowing = ({ sowingData, field }) => {
   return (
     <Block>
       <Picker
-        items={['AS', 'ZP', 'NS']}
+        items={['Seme jeftinije', 'Seme srednje', 'Seme skuplje']}
         label="Izbor semena"
         action={changeSeed}
         active={seed}

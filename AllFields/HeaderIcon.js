@@ -3,9 +3,7 @@ import { Image, TouchableOpacity } from 'react-native';
 import { Text } from '../components';
 import { theme } from '../theme';
 
-const HeaderIcon = ({ position, imageSource, navigate, label }) => {
-  const location = position === 'Right' ? 'PricesScreen' : 'CalendarScreen';
-
+const HeaderIcon = ({ position, imageSource, navigate, label, location }) => {
   return (
     <TouchableOpacity
       onPress={() => navigate(location)}

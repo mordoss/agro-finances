@@ -53,3 +53,12 @@ export const changeRentedPrice = ({ field }, value) => {
     field,
   };
 };
+
+export const changePrice = ({ property, product }, value) => {
+  return {
+    type: 'PRICE_CHANGED',
+    value,
+    property,
+    product,
+  };
+};

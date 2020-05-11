@@ -14,7 +14,7 @@ const SprayingSegment = ({ field, sprayingData, actionArgumentObject, place, spr
   return (
     <Block style={{ marginVertical: theme.sizes.base }}>
       <Picker
-        items={[sprayer.iupac]}
+        items={sprayer.sprayers}
         label="Izbor herbicida"
         active={sprayerSelected}
         action={changeSprayerOrFertilizer}
@@ -24,7 +24,7 @@ const SprayingSegment = ({ field, sprayingData, actionArgumentObject, place, spr
           propertyName: `sprayer${place}`,
         }}
       />
-      {sprayer !== '' && <ExtraCount count={bottles} extraArea={extraArea} packaging="flaša" />}
+      <ExtraCount count={bottles} extraArea={extraArea} packaging="flaša" />
     </Block>
   );
 };

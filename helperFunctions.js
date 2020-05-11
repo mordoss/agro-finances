@@ -1,4 +1,5 @@
 /* eslint-disable global-require */
+
 // Image component doesn't accept svg
 export const plantStringToImage = string => {
   switch (string) {

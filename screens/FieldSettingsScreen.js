@@ -18,7 +18,7 @@ const tabs = [
 const FieldSettingsScreen = () => {
   const activeField = useSelector(state => `field${state.activeField}`);
   const plant = useSelector(state => state[activeField].plant);
-  const [active, changeActive] = useState('Njiva');
+  const [active, changeActive] = useState('Radovi');
 
   return (
     <Block color={theme.colors.backgorund}>
@@ -46,6 +46,7 @@ FieldSettingsScreen.navigationOptions = screenProps => {
         position="Right"
         label="Cene"
         navigate={screenProps.navigation.navigate}
+        location="PricesScreen"
       />
     ),
   };

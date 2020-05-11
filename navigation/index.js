@@ -6,6 +6,7 @@ import AllFieldsScreen from '../screens/AllFieldsScreen';
 import FieldSettingsScreen from '../screens/FieldSettingsScreen';
 import CalendarScreen from '../screens/CalendarScreen';
 import PricesScreen from '../screens/PricesScreen';
+import InfoScreen from '../screens/InfoScreen';
 import { theme } from '../theme';
 
 const screens = createStackNavigator(
@@ -14,9 +15,10 @@ const screens = createStackNavigator(
     FieldSettingsScreen,
     CalendarScreen,
     PricesScreen,
+    InfoScreen,
   },
   {
-    initialRouteName: 'AllFieldsScreen',
+    initialRouteName: 'FieldSettingsScreen',
     defaultNavigationOptions: {
       headerStyle: {
         elevation: 0,

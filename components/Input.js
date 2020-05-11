@@ -11,7 +11,7 @@ const Input = ({ label, unit, value, actionArgumentObject, action, customStyle, 
 
   return (
     <Block row style={[styles.container, customStyle, style]}>
-      <Text gray>{label}</Text>
+      <Text gray>{label}: </Text>
       <TextInput
         value={value}
         onChangeText={eventValue => dispatch(action(actionArgumentObject, eventValue))}

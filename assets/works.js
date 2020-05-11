@@ -5,23 +5,56 @@ export const sowing = {
 
 export const fertilization = {
   Kukuruz: {
-    first: { time: 'Pre setve', fertilizers: [['Urea', 2], ['NPK (4:1:2)', 1]] },
+    first: {
+      time: 'Pre setve',
+      fertilizers: [
+        ['Urea', 2],
+        ['NPK (4:1:2)', 1],
+      ],
+    },
     second: {
       time: 'U fazi od 4. do 7. lista',
-      fertilizers: [['NPK (20:20:20)', 2.5], ['Mikroelementi (Zn))', 1]],
+      fertilizers: [
+        ['NPK (20:20:20)', 2.5],
+        ['Mikroelementi (Zn)', 1],
+      ],
     },
   },
   Pšenica: {
-    first: { time: 'U jesen', fertilizers: [['NPK (15:15:15)', 3.5], ['NPK (16:16:16)', 3.5]] },
-    second: { time: '', fertilizers: [['Urea 46% N', 1.5]] },
-    third: { time: '', fertilizers: [['AN', 2], ['KAN', 2]] },
+    first: {
+      time: 'U jesen',
+      fertilizers: [
+        ['NPK (15:15:15)', 3.5],
+        ['NPK (16:16:16)', 3.5],
+      ],
+    },
+    second: { time: '', fertilizers: [['Urea', 1.5]] },
+    third: {
+      time: '',
+      fertilizers: [
+        ['AN', 2],
+        ['KAN', 2],
+      ],
+    },
   },
 };
 
 export const midRowCultivation = {
   Kukuruz: {
-    first: { time: 'Pre setve', fertilizers: ['Urea', 'KAN', 'AN'] },
-    second: { time: 'U fazi od 4. do 7. lista', fertilizers: ['Urea', 'KAN', 'AN'] },
+    first: {
+      time: 'Pre setve',
+      fertilizers: [
+        ['Urea', 2],
+        ['NPK (4:1:2)', 1],
+      ],
+    },
+    second: {
+      time: 'U fazi od 4. do 7. lista',
+      fertilizers: [
+        ['Urea', 2],
+        ['NPK (4:1:2)', 1],
+      ],
+    },
   },
 };
 
@@ -30,22 +63,34 @@ export const spraying = {
     first: {
       time: 'Posle setve, a pre nicanja',
       sprayers: [
-        { iupac: 'S-metolahlor', purpose: 'na crno uskolisne', sprayers: [''] },
-        { iupac: 'Terbutilazin', purpose: 'na crno sirokoisne', sprayers: [''] },
+        {
+          iupac: 'S-metolahlor',
+          purpose: 'na crno uskolisne',
+          sprayers: ['S-metolahlor 1', 'S-metolahlor 2', 'S-metolahlor 3'],
+        },
+        {
+          iupac: 'Terbutilazin',
+          purpose: 'na crno sirokoisne',
+          sprayers: ['Terbutilazin 1', 'Terbutilazin 2', 'Terbutilazin 3'],
+        },
       ],
     },
     second: {
       time: 'U fazi od 2. do 5. lista',
       sprayers: [
-        { iupac: '2,4 D', purpose: 'uskolisni', sprayers: [''] },
-        { iupac: 'nikosulfuron', purpose: 'sirokolinsni', sprayers: [''] },
+        { iupac: '2,4D', purpose: 'uskolisni', sprayers: ['2,4D 1', '2,4D 2'] },
+        {
+          iupac: 'nikosulfuron',
+          purpose: 'sirokolinsni',
+          sprayers: ['nikosulfuron 1', 'nikosulfuron 2', 'nikosulfuron 3'],
+        },
       ],
     },
   },
   Pšenica: {
     first: {
       time: 'U fazi bokorenja',
-      sprayers: [{ iupac: '2,4 D', purpose: '', sprayers: [''] }],
+      sprayers: [{ iupac: '2,4 D', purpose: '', sprayers: ['2,4D 1', '2,4D 2'] }],
     },
     second: {
       time: 'Od drugog kolenca do pojave lista zastavičara',

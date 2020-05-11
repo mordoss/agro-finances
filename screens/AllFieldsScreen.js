@@ -39,6 +39,15 @@ AllFieldsScreen.navigationOptions = screenProps => {
         position="Left"
         label="Planer"
         navigate={screenProps.navigation.navigate}
+        location="CalendarScreen"
+      />
+    ),
+    headerRight: () => (
+      <HeaderIcon
+        position="Right"
+        label="Info"
+        navigate={screenProps.navigation.navigate}
+        location="InfoScreen"
       />
     ),
   };

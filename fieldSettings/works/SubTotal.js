@@ -1,6 +1,7 @@
 import React from 'react';
-import SubTotalPresentational from './SubTotalPresentational';
+import { useSelector } from 'react-redux';
 import useWorkData from '../../hooks/useWorkData';
+import SubTotalPresentational from './SubTotalPresentational';
 import { workNameToItem } from '../../helperFunctions';
 import {
   calcSowing,
@@ -10,6 +11,8 @@ import {
 } from '../../calcFunctions';
 
 const SubTotal = ({ work, field }) => {
+  const prices = useSelector(state => state.prices);
+
   const { oilConsumption, paid, paidPrice, workName } = work;
   const {
     area,
@@ -23,13 +26,13 @@ const SubTotal = ({ work, field }) => {
   } = useWorkData(field);
 
   const specialPrices = {
-    sowing: calcSowing(area, sowingData),
-    fertilization1: calcFertilization(area, fertilization1Data),
-    fertilization2: calcFertilization(area, fertilization2Data),
-    spraying1: calcSpraying(area, spraying1Data),
-    spraying2: calcSpraying(area, spraying2Data),
-    midRowCultivation1: calcMidRowCultivation(area, midRowCultivation1Data),
-    midRowCultivation2: calcMidRowCultivation(area, midRowCultivation2Data),
+    sowing: calcSowing(area, sowingData, prices.fertilizer.seed),
+    fertilization1: calcFertilization(area, fertilization1Data, prices.fertilizer),
+    fertilization2: calcFertilization(area, fertilization2Data, prices.fertilizer),
+    spraying1: calcSpraying(area, spraying1Data, prices.sprayer),
+    spraying2: calcSpraying(area, spraying2Data, prices.sprayer),
+    midRowCultivation1: calcMidRowCultivation(area, midRowCultivation1Data, prices.fertilizer),
+    midRowCultivation2: calcMidRowCultivation(area, midRowCultivation2Data, prices.fertilizer),
   };
 
   const oilConsumptionPerWork = paid ? 0 : Math.round((area / 100) * oilConsumption);

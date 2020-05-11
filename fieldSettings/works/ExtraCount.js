@@ -5,7 +5,7 @@ const ExtraCount = ({ count, extraArea, packaging }) => {
   return (
     <Block style={{ marginTop: 16 }}>
       <Text gray>
-        Potrebno Vam je: {count} {packaging}
+        Broj {packaging}: {count}
       </Text>
       <Text gray>Ostaje Vam za: {extraArea} ara</Text>
     </Block>

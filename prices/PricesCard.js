@@ -6,7 +6,7 @@ import { Block, Text } from '../components';
 import PricesTable from './PricesTable';
 import { theme } from '../theme';
 
-const PricesCard = ({ label, expanded, setExpanded, field }) => {
+const PricesCard = ({ label, expanded, setExpanded, field, property }) => {
   const handleExpand = () => {
     UIManager.setLayoutAnimationEnabledExperimental(true);
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
@@ -23,7 +23,7 @@ const PricesCard = ({ label, expanded, setExpanded, field }) => {
           <Ionicons name="md-arrow-dropdown" size={theme.sizes.base * 2} />
         )}
       </TouchableOpacity>
-      <PricesTable expanded={expanded} label={label} field={field} />
+      <PricesTable expanded={expanded} field={field} property={property} />
     </Block>
   );
 };
