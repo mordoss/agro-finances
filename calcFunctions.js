@@ -1,5 +1,3 @@
-import { consumptions } from './assets/productsInfo';
-
 export const calcSowingBags = (area, seedConsumption) => {
   const bags = Math.ceil(area / 0.007 / (seedConsumption / 100) / 25000);
   const overmeasure = bags * 25000 - area / 0.007 / (seedConsumption / 100);
@@ -10,30 +8,53 @@ export const calcSowingBags = (area, seedConsumption) => {
 
 export const calcSowing = (area, sowingData, price) => {
   const { seed, seedConsumption } = sowingData;
-  const { bags } = calcSowingBags(area, seedConsumption);
+  if (seed !== '') {
+    const { bags } = calcSowingBags(area, seedConsumption);
+    const bagPrice = price[seed][0];
 
-  return bags * price[seed];
+    return bags * bagPrice;
+  }
+  return 0;
 };
 
-export const calcSprayerBottles = (area, sprayer, sprayerActive) => {
-  if (sprayerActive) {
-    const bottles = sprayer ? Math.ceil(area / consumptions[sprayer]) : 0;
-    const extraArea = sprayer ? bottles * consumptions[sprayer] - area : 0;
+export const calcSprayerBottles = (area, sprayer, sprayerActive, consumption) => {
+  if (sprayer) {
+    const bottles = sprayer ? Math.ceil(area / consumption) : 0;
+    const extraArea = sprayer ? bottles * consumption - area : 0;
     return { bottles, extraArea };
   }
   return { bottles: 0, extraArea: 0 };
 };
 
-export const calcSpraying = (area, data, price) => {
+export const calcSpraying = (area, data, products) => {
   const { sprayer1, sprayer2, sprayer3, sprayer1Active, sprayer2Active, sprayer3Active } = data;
 
-  const { bottles: herbicideBottles1 } = calcSprayerBottles(area, sprayer1, sprayer1Active);
-  const { bottles: herbicideBottles2 } = calcSprayerBottles(area, sprayer2, sprayer2Active);
-  const { bottles: herbicideBottles3 } = calcSprayerBottles(area, sprayer3, sprayer3Active);
+  const [bottlePrice1, , bottleConsumption1] = sprayer1 !== '' ? products[sprayer1] : [0, 0];
+  const [bottlePrice2, , bottleConsumption2] = sprayer2 !== '' ? products[sprayer2] : [0, 0];
+  const [bottlePrice3, , bottleConsumption3] = sprayer3 !== '' ? products[sprayer3] : [0, 0];
 
-  const herbicidePrice1 = herbicideBottles1 * price[sprayer1] || 0;
-  const herbicidePrice2 = herbicideBottles2 * price[sprayer2] || 0;
-  const herbicidePrice3 = herbicideBottles3 * price[sprayer3] || 0;
+  const { bottles: herbicideBottles1 } = calcSprayerBottles(
+    area,
+    sprayer1,
+    sprayer1Active,
+    bottleConsumption1
+  );
+  const { bottles: herbicideBottles2 } = calcSprayerBottles(
+    area,
+    sprayer2,
+    sprayer2Active,
+    bottleConsumption2
+  );
+  const { bottles: herbicideBottles3 } = calcSprayerBottles(
+    area,
+    sprayer3,
+    sprayer3Active,
+    bottleConsumption3
+  );
+
+  const herbicidePrice1 = herbicideBottles1 * bottlePrice1;
+  const herbicidePrice2 = herbicideBottles2 * bottlePrice2;
+  const herbicidePrice3 = herbicideBottles3 * bottlePrice3;
 
   return herbicidePrice1 + herbicidePrice2 + herbicidePrice3;
 };

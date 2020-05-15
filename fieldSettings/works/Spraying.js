@@ -31,7 +31,7 @@ const Spraying = ({ sprayingData, field, turn, plant }) => {
               place={index + 1}
               field={field}
               plant={plant}
-              sprayer={sprayers[index]}
+              iupac={sprayer.iupac}
             />
           </Block>
         </Block>

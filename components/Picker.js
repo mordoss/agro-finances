@@ -67,9 +67,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.backgorund,
   },
   button: {
-    width: theme.sizes.base * 6,
     borderRadius: 5,
-    padding: theme.sizes.base / 4,
+    padding: theme.sizes.base / 2,
     elevation: 3,
     backgroundColor: theme.colors.backgorund,
   },
