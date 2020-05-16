@@ -14,10 +14,11 @@ const Sowing = ({ sowingData, field }) => {
   const { area, plant } = useSelector(state => state[field]);
   const seeds = useSelector(state =>
     Object.entries(state.products.seed)
-      .filter(el => el[1][0] === plant)
+      // .filter(el => el[1][1] === plant)
       .map(el => el[0])
   );
   const { bags, extraArea } = calcSowingBags(area, seedConsumption);
+  console.log(seeds);
 
   return (
     <Block>

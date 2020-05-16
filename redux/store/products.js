@@ -36,8 +36,11 @@ export default {
     'Аlfa–cipermetrin 100 g/l': [752, ['Pšenica'], 60, 'Аlfa–cipermetrin 100 g/l'],
   },
   seed: {
-    'Seme jeftinije': [3500, ['Kukuruz']],
-    'Seme srednje': [3800, ['Kukuruz']],
-    'Seme skuplje': [4000, ['Kukuruz']],
+    'Seme jeftinije (kukuruz)': [3500, 'Kukuruz'],
+    'Seme srednje (kukuruz)': [3800, 'Kukuruz'],
+    'Seme skuplje (kukuruz)': [4000, 'Kukuruz'],
+    'Seme jeftinije (pšenica)': [1500, 'Pšenica'],
+    'Seme srednje (pšenica)': [1800, 'Pšenica'],
+    'Seme skuplje (pšenica)': [2000, 'Pšenica'],
   },
 };
