@@ -11,7 +11,7 @@ import {
 } from '../../calcFunctions';
 
 const SubTotal = ({ work, field }) => {
-  const prices = useSelector(state => state.prices);
+  const products = useSelector(state => state.products);
 
   const { oilConsumption, paid, paidPrice, workName } = work;
   const {
@@ -25,20 +25,20 @@ const SubTotal = ({ work, field }) => {
     spraying2Data,
   } = useWorkData(field);
 
-  const specialPrices = {
-    sowing: calcSowing(area, sowingData, prices.fertilizer.seed),
-    fertilization1: calcFertilization(area, fertilization1Data, prices.fertilizer),
-    fertilization2: calcFertilization(area, fertilization2Data, prices.fertilizer),
-    spraying1: calcSpraying(area, spraying1Data, prices.sprayer),
-    spraying2: calcSpraying(area, spraying2Data, prices.sprayer),
-    midRowCultivation1: calcMidRowCultivation(area, midRowCultivation1Data, prices.fertilizer),
-    midRowCultivation2: calcMidRowCultivation(area, midRowCultivation2Data, prices.fertilizer),
+  const specialproducts = {
+    sowing: calcSowing(area, sowingData, products.seed),
+    fertilization1: calcFertilization(area, fertilization1Data, products.fertilizer),
+    fertilization2: calcFertilization(area, fertilization2Data, products.fertilizer),
+    spraying1: calcSpraying(area, spraying1Data, products.sprayer),
+    spraying2: calcSpraying(area, spraying2Data, products.sprayer),
+    midRowCultivation1: calcMidRowCultivation(area, midRowCultivation1Data, products.fertilizer),
+    midRowCultivation2: calcMidRowCultivation(area, midRowCultivation2Data, products.fertilizer),
   };
 
   const oilConsumptionPerWork = paid ? 0 : Math.round((area / 100) * oilConsumption);
   const oilConsumptionPrice = oilConsumptionPerWork * 150;
   const paidPricePerWork = paid ? (area / 100) * paidPrice : 0;
-  const specialPrice = specialPrices[workName] || 0;
+  const specialPrice = specialproducts[workName] || 0;
 
   const total = paidPricePerWork + oilConsumptionPrice + specialPrice;
 

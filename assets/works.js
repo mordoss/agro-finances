@@ -1,8 +1,3 @@
-export const sowing = {
-  Kukuruz: {},
-  Pšenica: {},
-};
-
 export const fertilization = {
   Kukuruz: {
     first: {
@@ -66,23 +61,20 @@ export const spraying = {
         {
           iupac: 'S-metolahlor',
           purpose: 'na crno uskolisne',
-          sprayers: ['S-metolahlor 1', 'S-metolahlor 2', 'S-metolahlor 3'],
         },
         {
           iupac: 'Terbutilazin',
           purpose: 'na crno sirokoisne',
-          sprayers: ['Terbutilazin 1', 'Terbutilazin 2', 'Terbutilazin 3'],
         },
       ],
     },
     second: {
       time: 'U fazi od 2. do 5. lista',
       sprayers: [
-        { iupac: '2,4D', purpose: 'uskolisni', sprayers: ['2,4D 1', '2,4D 2'] },
+        { iupac: '2,4D', purpose: 'uskolisni' },
         {
-          iupac: 'nikosulfuron',
+          iupac: 'Nikosulfuron',
           purpose: 'sirokolinsni',
-          sprayers: ['nikosulfuron 1', 'nikosulfuron 2', 'nikosulfuron 3'],
         },
       ],
     },
@@ -90,7 +82,7 @@ export const spraying = {
   Pšenica: {
     first: {
       time: 'U fazi bokorenja',
-      sprayers: [{ iupac: '2,4 D', purpose: '', sprayers: ['2,4D 1', '2,4D 2'] }],
+      sprayers: [{ iupac: '2,4D', purpose: '' }],
     },
     second: {
       time: 'Od drugog kolenca do pojave lista zastavičara',
@@ -98,10 +90,9 @@ export const spraying = {
         {
           iupac: 'Aminopiralid-kalijum 355 g/kg + Florasulam 150 g/kg',
           purpose: '',
-          sprayers: [''],
         },
-        { iupac: 'Fluksapiroksad 75 g/l + Piraklostrobin 150 g/l', purpose: '', sprayers: [''] },
-        { iupac: 'Аlfa–cipermetrin 100 g/l', purpose: '', sprayers: [''] },
+        { iupac: 'Fluksapiroksad 75 g/l + Piraklostrobin 150 g/l', purpose: '' },
+        { iupac: 'Аlfa–cipermetrin 100 g/l', purpose: '' },
       ],
     },
   },

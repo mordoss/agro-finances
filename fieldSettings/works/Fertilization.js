@@ -1,7 +1,10 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
+
 import { Switch, Block } from '../../components';
 import FertilizationSegment from './FertilizationSegment';
 import { changeMixed } from '../../redux/actions/specialActions';
+import { theme } from '../../theme';
 
 const Fertilization = ({ fertilizationData, field, turn, plant }) => {
   const { mixed } = fertilizationData;
@@ -15,13 +18,14 @@ const Fertilization = ({ fertilizationData, field, turn, plant }) => {
         place={1}
         plant={plant}
       />
-
-      <Switch
-        label="Mešam sa još jednim đubrivom"
-        action={changeMixed}
-        actionArgumentObject={{ field, turn, value: mixed, workState: 'fertilizationState' }}
-        withAnimation
-      />
+      <Block style={styles.switch}>
+        <Switch
+          label="Mešam sa još jednim đubrivom"
+          action={changeMixed}
+          actionArgumentObject={{ field, turn, value: mixed, workState: 'fertilizationState' }}
+          withAnimation
+        />
+      </Block>
       <Block style={{ height: mixed ? null : 0, overflow: 'hidden' }}>
         <FertilizationSegment
           field={field}
@@ -34,5 +38,14 @@ const Fertilization = ({ fertilizationData, field, turn, plant }) => {
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  switch: {
+    marginVertical: theme.sizes.base,
+    borderTopColor: theme.colors.gray,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    paddingTop: theme.sizes.base,
+  },
+});
 
 export default Fertilization;

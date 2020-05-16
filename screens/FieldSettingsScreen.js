@@ -18,7 +18,7 @@ const tabs = [
 const FieldSettingsScreen = () => {
   const activeField = useSelector(state => `field${state.activeField}`);
   const plant = useSelector(state => state[activeField].plant);
-  const [active, changeActive] = useState('Radovi');
+  const [active, changeActive] = useState('Njiva');
 
   return (
     <Block color={theme.colors.backgorund}>
