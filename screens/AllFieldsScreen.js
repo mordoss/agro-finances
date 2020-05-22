@@ -4,7 +4,6 @@ import { ScrollView, KeyboardAvoidingView } from 'react-native';
 import { Tabs, Block } from '../components';
 import FieldsConnected from '../AllFields/FieldsConnected';
 import Statistics from '../AllFields/StatisticsConnected';
-import HeaderIcon from '../AllFields/HeaderIcon';
 import { theme } from '../theme';
 
 const AllFieldsScreen = ({ navigation }) => {
@@ -16,11 +15,7 @@ const AllFieldsScreen = ({ navigation }) => {
 
   return (
     <Block color={theme.colors.backgorund}>
-      <KeyboardAvoidingView
-        behavior="padding"
-        style={{ flex: 1 }}
-        keyboardVerticalOffset={theme.sizes.base * 6}
-      >
+      <KeyboardAvoidingView style={{ flex: 1 }}>
         <ScrollView>
           {active === 'Sve Njive' && <FieldsConnected navigation={navigation} />}
           {active === 'Ukupna Statistika' && <Statistics />}
@@ -29,28 +24,6 @@ const AllFieldsScreen = ({ navigation }) => {
       <Tabs tabs={tabs} active={active} changeActive={changeActive} />
     </Block>
   );
-};
-
-AllFieldsScreen.navigationOptions = screenProps => {
-  return {
-    headerLeft: () => (
-      <HeaderIcon
-        imageSource={require('../assets/icons/calendar.svg.png')}
-        position="Left"
-        label="Planer"
-        navigate={screenProps.navigation.navigate}
-        location="CalendarScreen"
-      />
-    ),
-    headerRight: () => (
-      <HeaderIcon
-        position="Right"
-        label="Info"
-        navigate={screenProps.navigation.navigate}
-        location="InfoScreen"
-      />
-    ),
-  };
 };
 
 export default AllFieldsScreen;

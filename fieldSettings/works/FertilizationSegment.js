@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 import { Block, Picker, InputWithIncrementer } from '../../components';
 import ExtraCount from './ExtraCount';
@@ -10,7 +9,6 @@ import {
 } from '../../redux/actions/specialActions';
 import { calcFertilizationSegment } from '../../calcFunctions';
 import { fertilization, midRowCultivation } from '../../assets/works';
-import { theme } from '../../theme';
 
 const FertilizationSegment = ({
   fertilizationData,
@@ -32,7 +30,7 @@ const FertilizationSegment = ({
   const fertilizerNames = fertilizers.map(fertilizer => fertilizer[0]);
 
   return (
-    <Block style={styles.container}>
+    <Block>
       <Picker
         items={fertilizerNames}
         label="Izbor đubriva"
@@ -45,8 +43,7 @@ const FertilizationSegment = ({
         }}
       />
       <InputWithIncrementer
-        label="Masa po aru "
-        fertilization
+        label="Kg po aru"
         action={changeFertilizerConsumption}
         actionIncrementing={changeFertilizerConsumptionIncrementing}
         actionArgumentObject={{
@@ -60,14 +57,5 @@ const FertilizationSegment = ({
     </Block>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    marginBottom: theme.sizes.base,
-    borderTopColor: theme.colors.gray,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    paddingTop: theme.sizes.base,
-  },
-});
 
 export default FertilizationSegment;

@@ -5,23 +5,31 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Badge, Block, Text } from '../../components';
 import { changePlant } from '../../redux/actions/basicStateActions';
 import { plantStringToImage } from '../../helperFunctions';
+import resetStore from '../../resetStore';
 import { theme } from '../../theme';
+
+const { colors, sizes } = theme;
 
 const PlantCard = ({ plant, isActive, field }) => {
   const dispatch = useDispatch();
 
+  const handleChangePlant = () => {
+    dispatch(changePlant(field, plant.name));
+    resetStore(field, plant.name, dispatch);
+  };
+
   return (
-    <TouchableOpacity onPress={() => dispatch(changePlant(field, plant.name))}>
-      <Block card style={styles.plantCard} color={theme.colors.white}>
+    <TouchableOpacity onPress={handleChangePlant}>
+      <Block card style={styles.container} color={colors.white}>
         {isActive && (
           <LinearGradient
-            colors={[theme.colors.primary, theme.colors.secondary]}
+            colors={[colors.primary, colors.secondary]}
             style={styles.gradient}
             start={{ x: 0, y: 1 }}
-            end={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
           />
         )}
-        <Badge size={60} color={theme.colors.accent}>
+        <Badge size={60} color={colors.accent}>
           <Image source={plantStringToImage(plant.name)} />
         </Badge>
         <Text title white={isActive} gray={!isActive} bold={!!isActive}>
@@ -34,10 +42,10 @@ const PlantCard = ({ plant, isActive, field }) => {
 
 const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
-  plantCard: {
-    width: (width - theme.sizes.base * 6) / 2,
+  container: {
+    width: (width - sizes.base * 6) / 2,
     alignItems: 'center',
-    marginTop: theme.sizes.base,
+    marginTop: sizes.base,
   },
   gradient: {
     position: 'absolute',
@@ -45,7 +53,7 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     bottom: 0,
-    borderRadius: theme.sizes.radius,
+    borderRadius: sizes.radius,
   },
 });
 

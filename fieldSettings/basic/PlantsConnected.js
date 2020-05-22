@@ -6,6 +6,8 @@ import PlantCard from './PlantCard';
 import plants from '../../assets/plants';
 import { theme } from '../../theme';
 
+const { colors, sizes } = theme;
+
 const PlantsConnected = ({ field }) => {
   const active = useSelector(state => state[field].plant);
 
@@ -29,13 +31,13 @@ const PlantsConnected = ({ field }) => {
 const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
-    marginTop: theme.sizes.base,
+    marginTop: sizes.base,
   },
   labelContainer: {
-    backgroundColor: theme.colors.white,
-    width: width - theme.sizes.base * 4,
-    borderRadius: theme.sizes.radius,
-    paddingVertical: theme.sizes.base / 2,
+    backgroundColor: colors.white,
+    width: width - sizes.base * 4,
+    borderRadius: sizes.radius,
+    paddingVertical: sizes.base / 2,
     elevation: 5,
     alignItems: 'center',
   },

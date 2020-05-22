@@ -5,6 +5,8 @@ import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
 
+const { colors, sizes } = theme;
+
 const PickerCustom = ({ items, label, active, actionArgumentObject, action }) => {
   const dispatch = useDispatch();
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -30,7 +32,7 @@ const PickerCustom = ({ items, label, active, actionArgumentObject, action }) =>
               style={styles.modalItem}
               onPress={() => handleSelect(item)}
             >
-              <Text h3 gray>
+              <Text h3 gray center>
                 {item}
               </Text>
             </TouchableHighlight>
@@ -51,37 +53,37 @@ const styles = StyleSheet.create({
   modalContainer: {
     position: 'absolute',
     alignItems: 'stretch',
-    borderRadius: theme.sizes.radius,
-    backgroundColor: theme.colors.white,
+    borderRadius: sizes.radius,
+    backgroundColor: colors.white,
     width: width * 0.5,
     marginHorizontal: width / 4,
     marginVertical: height / 4,
-    padding: theme.sizes.base,
+    padding: sizes.base,
     elevation: 5,
   },
   modalItem: {
-    marginVertical: theme.sizes.base,
+    marginVertical: sizes.base,
     borderRadius: 5,
     alignItems: 'center',
     elevation: 3,
-    backgroundColor: theme.colors.backgorund,
+    backgroundColor: colors.backgorund,
   },
   button: {
     borderRadius: 5,
-    padding: theme.sizes.base / 2,
+    padding: sizes.base / 2,
     elevation: 3,
-    backgroundColor: theme.colors.backgorund,
+    backgroundColor: colors.backgorund,
   },
   cancel: {
-    marginVertical: theme.sizes.base,
-    marginHorizontal: theme.sizes.base,
-    borderColor: theme.colors.gray,
+    marginVertical: sizes.base,
+    marginHorizontal: sizes.base,
+    borderColor: colors.gray,
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 5,
-    paddingVertical: theme.sizes.base / 4,
+    paddingVertical: sizes.base / 4,
   },
   selected: {
-    marginLeft: theme.sizes.base,
+    marginLeft: sizes.base,
   },
 });
 

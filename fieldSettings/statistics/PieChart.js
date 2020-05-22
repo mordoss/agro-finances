@@ -3,6 +3,8 @@ import { Dimensions, View } from 'react-native';
 import { VictoryPie } from 'victory-native';
 import { theme } from '../../theme';
 
+const { colors, sizes } = theme;
+
 const Chart = ({ expanded, seed, paid, sprayer, fertilizer, oil, rented }) => {
   const data = [
     { x: 'Nafta', y: oil },
@@ -23,15 +25,15 @@ const Chart = ({ expanded, seed, paid, sprayer, fertilizer, oil, rented }) => {
       <VictoryPie
         data={data}
         colorScale={[
-          theme.colors.primary,
-          theme.colors.secondary,
-          theme.colors.tertiary,
+          colors.primary,
+          colors.secondary,
+          colors.tertiary,
           '#6c5ce7',
           'cyan',
           'tomato',
         ]}
         padding={{ top: 30, bottom: 35 }}
-        cornerRadius={theme.sizes.radius / 3}
+        cornerRadius={sizes.radius / 3}
         padAngle={3}
         height={Dimensions.get('window').width / 2}
       />

@@ -7,6 +7,8 @@ import { Block, Text, Input } from '../../components';
 import Chart from './BarChart';
 import { theme } from '../../theme';
 
+const { colors, sizes } = theme;
+
 const Profit = ({ invested }) => {
   const field = useSelector(state => `field${state.activeField}`);
   const { area, yieldPerHa, productPrice } = useSelector(state => state[field]);
@@ -16,7 +18,7 @@ const Profit = ({ invested }) => {
   const profit = income - invested;
 
   return (
-    <Block card color={theme.colors.white} style={styles.container}>
+    <Block card color={colors.white} style={styles.container}>
       <Text gray title bold center style={styles.title}>
         Zarada
       </Text>
@@ -35,7 +37,7 @@ const Profit = ({ invested }) => {
           unit="dinara"
           label="Cena kilograma: "
         />
-        <Text gray bold style={{ marginTop: theme.sizes.base / 2 }}>
+        <Text gray bold style={{ marginTop: sizes.base / 2 }}>
           Potencijalni prihod: {Math.round(income)} din.
         </Text>
       </Block>
@@ -55,21 +57,21 @@ const Profit = ({ invested }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: theme.sizes.base,
-    marginTop: theme.sizes.base,
+    marginHorizontal: sizes.base,
+    marginTop: sizes.base,
   },
   title: {
-    borderBottomColor: theme.colors.gray,
+    borderBottomColor: colors.gray,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingBottom: theme.sizes.base,
+    paddingBottom: sizes.base,
   },
   content: {
-    marginVertical: theme.sizes.base,
+    marginVertical: sizes.base,
   },
   total: {
-    borderTopColor: theme.colors.gray,
+    borderTopColor: colors.gray,
     borderTopWidth: StyleSheet.hairlineWidth,
-    paddingTop: theme.sizes.base,
+    paddingTop: sizes.base,
   },
   chartSwitch: {
     alignItems: 'center',

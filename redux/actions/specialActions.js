@@ -37,11 +37,11 @@ export const changeSprayerActive = ({ field, turn, place, value }) => {
   };
 };
 
-export const changeSeedConsumption = ({ field }, item) => {
+export const changeSeedConsumption = ({ field }, value) => {
   return {
     type: 'SEED_CONSUMPTION_CHANGED',
     field,
-    item,
+    value,
   };
 };
 

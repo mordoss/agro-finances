@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { theme } from '../theme';
 
+const { colors, sizes } = theme;
+
 const Block = props => {
   const {
     flex,
@@ -57,9 +59,9 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   card: {
-    borderRadius: theme.sizes.radius,
-    padding: theme.sizes.base,
-    marginBottom: theme.sizes.base,
+    borderRadius: sizes.radius,
+    padding: sizes.base,
+    marginBottom: sizes.base,
     elevation: 5,
   },
   center: {
@@ -81,12 +83,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
 
-  accent: { backgroundColor: theme.colors.accent },
-  primary: { backgroundColor: theme.colors.primary },
-  secondary: { backgroundColor: theme.colors.secondary },
-  tertiary: { backgroundColor: theme.colors.tertiary },
-  black: { backgroundColor: theme.colors.black },
-  white: { backgroundColor: theme.colors.white },
-  gray: { backgroundColor: theme.colors.gray },
-  gray2: { backgroundColor: theme.colors.gray2 },
+  accent: { backgroundColor: colors.accent },
+  primary: { backgroundColor: colors.primary },
+  secondary: { backgroundColor: colors.secondary },
+  tertiary: { backgroundColor: colors.tertiary },
+  black: { backgroundColor: colors.black },
+  white: { backgroundColor: colors.white },
+  gray: { backgroundColor: colors.gray },
+  gray2: { backgroundColor: colors.gray2 },
 });

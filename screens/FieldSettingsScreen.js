@@ -6,7 +6,6 @@ import { Tabs, Block } from '../components';
 import BasicContainer from '../fieldSettings/basic/BasicContainer';
 import WorksContainer from '../fieldSettings/works/WorksContainer';
 import Statistics from '../fieldSettings/statistics/StatisticsConnected';
-import HeaderIcon from '../AllFields/HeaderIcon';
 import { theme } from '../theme';
 
 const tabs = [
@@ -22,11 +21,7 @@ const FieldSettingsScreen = () => {
 
   return (
     <Block color={theme.colors.backgorund}>
-      <KeyboardAvoidingView
-        style={{ flex: 1 }}
-        behavior="padding"
-        keyboardVerticalOffset={theme.sizes.base * 6}
-      >
+      <KeyboardAvoidingView style={{ flex: 1 }}>
         <ScrollView>
           {active === 'Njiva' && <BasicContainer field={activeField} />}
           {active === 'Radovi' && <WorksContainer field={activeField} />}
@@ -38,7 +33,7 @@ const FieldSettingsScreen = () => {
   );
 };
 
-FieldSettingsScreen.navigationOptions = screenProps => {
+/* FieldSettingsScreen.navigationOptions = screenProps => {
   return {
     headerRight: () => (
       <HeaderIcon
@@ -50,6 +45,6 @@ FieldSettingsScreen.navigationOptions = screenProps => {
       />
     ),
   };
-};
+}; */
 
 export default FieldSettingsScreen;

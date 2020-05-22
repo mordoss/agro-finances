@@ -1,14 +1,16 @@
 import React from 'react';
 import { Image, TouchableOpacity } from 'react-native';
-import { Text } from '../components';
+import Text from './Text';
 import { theme } from '../theme';
+
+const { sizes } = theme;
 
 const HeaderIcon = ({ position, imageSource, navigate, label, location }) => {
   return (
     <TouchableOpacity
       onPress={() => navigate(location)}
       style={{
-        [`margin${position}`]: theme.sizes.base * 2,
+        [`margin${position}`]: sizes.base * 2,
         flexDirection: 'row',
         alignItems: 'center',
       }}
@@ -17,10 +19,10 @@ const HeaderIcon = ({ position, imageSource, navigate, label, location }) => {
       <Text
         bold
         h2
+        white
         style={{
-          marginLeft: theme.sizes.base,
+          marginLeft: sizes.base,
         }}
-        white={position === 'Left'}
       >
         {label}
       </Text>

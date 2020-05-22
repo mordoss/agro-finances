@@ -8,5 +8,18 @@ import InputWithIncrementer from './InputWithIncrementer';
 import Tabs from './Tabs';
 import SubCount from './SubCount';
 import Avatar from './Avatar';
+import HeaderIcon from './HeaderIcon';
 
-export { Badge, Block, Text, Avatar, Input, Switch, SubCount, Picker, InputWithIncrementer, Tabs };
+export {
+  Badge,
+  Block,
+  Text,
+  Avatar,
+  Input,
+  Switch,
+  HeaderIcon,
+  SubCount,
+  Picker,
+  InputWithIncrementer,
+  Tabs,
+};

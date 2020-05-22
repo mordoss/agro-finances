@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     borderTopColor: theme.colors.gray,
     borderTopWidth: StyleSheet.hairlineWidth,
     paddingTop: theme.sizes.base,
+    paddingBottom: theme.sizes.base,
   },
 });
 

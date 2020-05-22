@@ -5,6 +5,8 @@ import { changeNote } from '../../redux/actions/basicStateActions';
 import { Text } from '../../components';
 import { theme } from '../../theme';
 
+const { colors, sizes } = theme;
+
 const Input = ({ field }) => {
   const note = useSelector(state => state[field].note);
   const [onFocus, setOnFocus] = useState(false);
@@ -21,7 +23,7 @@ const Input = ({ field }) => {
         style={[
           styles.input,
           {
-            borderColor: onFocus ? theme.colors.primary : theme.colors.gray,
+            borderColor: onFocus ? colors.primary : colors.gray,
             borderWidth: onFocus ? 2 : StyleSheet.hairlineWidth,
           },
         ]}
@@ -39,16 +41,16 @@ export default Input;
 const styles = StyleSheet.create({
   input: {
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.black,
-    borderRadius: theme.sizes.radius,
-    backgroundColor: theme.colors.white,
-    fontSize: theme.sizes.font,
+    borderColor: colors.black,
+    borderRadius: sizes.radius,
+    backgroundColor: colors.white,
+    fontSize: sizes.font,
     fontWeight: '500',
-    color: theme.colors.black,
-    marginTop: theme.sizes.base / 2,
-    paddingHorizontal: theme.sizes.base,
-    paddingVertical: theme.sizes.base / 2,
-    height: theme.sizes.base * 4,
-    width: Dimensions.get('window').width - theme.sizes.base * 6,
+    color: colors.black,
+    marginTop: sizes.base / 2,
+    paddingHorizontal: sizes.base,
+    paddingVertical: sizes.base / 2,
+    height: sizes.base * 4,
+    width: Dimensions.get('window').width - sizes.base * 6,
   },
 });

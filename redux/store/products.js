@@ -1,4 +1,5 @@
 export default {
+  // [price per kg, plant]
   fertilizer: {
     Urea: [35, ['Kukuruz']],
     AN: [38, ['Kukuruz']],
@@ -10,6 +11,7 @@ export default {
     'Mikroelementi (Zn)': [50, ['Kukuruz']],
   },
   sprayer: {
+    // [bottle price, array of plants, area of bottle, iuapac]
     'S-metolahlor 1': [1000, ['Kukuruz'], 40, 'S-metolahlor'],
     'S-metolahlor 2': [1100, ['Kukuruz'], 50, 'S-metolahlor'],
     'S-metolahlor 3': [1200, ['Kukuruz'], 25, 'S-metolahlor'],
@@ -36,6 +38,7 @@ export default {
     'Аlfa–cipermetrin 100 g/l': [752, ['Pšenica'], 60, 'Аlfa–cipermetrin 100 g/l'],
   },
   seed: {
+    // [bag price, plant]
     'Seme jeftinije (kukuruz)': [3500, 'Kukuruz'],
     'Seme srednje (kukuruz)': [3800, 'Kukuruz'],
     'Seme skuplje (kukuruz)': [4000, 'Kukuruz'],

@@ -105,3 +105,27 @@ export const calcDays = (workDate, todayIndex, months) => {
     1;
   return days < 0 ? 365 + days : days;
 };
+
+export const plantToIncrementerLabel = plant => {
+  switch (plant) {
+    case 'Kukuruz':
+      return 'Razmak u redu (cm)';
+    case 'Pšenica':
+      return 'Kg po aru';
+
+    default:
+      return '';
+  }
+};
+
+export const plantToAverageSeedConsumption = plant => {
+  switch (plant) {
+    case 'Kukuruz':
+      return 18;
+    case 'Pšenica':
+      return 3.5;
+
+    default:
+      return 0;
+  }
+};

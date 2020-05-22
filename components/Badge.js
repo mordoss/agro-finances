@@ -3,6 +3,8 @@ import { StyleSheet } from 'react-native';
 import Block from './Block';
 import { theme } from '../theme';
 
+const { sizes } = theme;
+
 const Badge = props => {
   const { children, style, size, color } = props;
 
@@ -27,8 +29,8 @@ export default Badge;
 
 const styles = StyleSheet.create({
   badge: {
-    height: theme.sizes.base,
-    width: theme.sizes.base,
-    borderRadius: theme.sizes.border,
+    height: sizes.base,
+    width: sizes.base,
+    borderRadius: sizes.border,
   },
 });

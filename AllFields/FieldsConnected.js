@@ -5,6 +5,8 @@ import { Block } from '../components';
 import FieldCard from './FieldCard';
 import { theme } from '../theme';
 
+const { sizes } = theme;
+
 const FieldsConnected = ({ navigation }) => {
   const fields = useSelector(state => [
     [state.field0.plant, state.field0.area, 0],
@@ -31,8 +33,8 @@ const FieldsConnected = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: theme.sizes.base,
-    marginHorizontal: theme.sizes.base * 2,
+    marginVertical: sizes.base,
+    marginHorizontal: sizes.base * 2,
   },
 });
 

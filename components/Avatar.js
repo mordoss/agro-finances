@@ -4,6 +4,8 @@ import Block from './Block';
 import Text from './Text';
 import { theme } from '../theme';
 
+const { colors, sizes } = theme;
+
 const Avatar = ({ name, position, email, img }) => {
   return (
     <Block row card center flex={false} style={styles.container}>
@@ -25,16 +27,16 @@ const Avatar = ({ name, position, email, img }) => {
 
 const styles = StyleSheet.create({
   container: {
-    margin: theme.sizes.base / 2,
-    backgroundColor: theme.colors.white,
-    borderRadius: theme.sizes.radius,
-    padding: theme.sizes.base,
+    margin: sizes.base / 2,
+    backgroundColor: colors.white,
+    borderRadius: sizes.radius,
+    padding: sizes.base,
   },
   textContainer: {
-    marginLeft: theme.sizes.base,
+    marginLeft: sizes.base,
   },
   button: {
-    margin: theme.sizes.base,
+    margin: sizes.base,
   },
 });
 

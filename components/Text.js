@@ -1,8 +1,9 @@
 // just copy this code from the driving repo :)
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
-
 import { theme } from '../theme';
+
+const { colors, sizes, fonts } = theme;
 
 const Typography = props => {
   const {
@@ -89,8 +90,8 @@ export default Typography;
 const styles = StyleSheet.create({
   // default style
   text: {
-    fontSize: theme.sizes.font,
-    color: theme.colors.black,
+    fontSize: sizes.font,
+    color: colors.black,
   },
   // variations
   regular: {
@@ -112,20 +113,20 @@ const styles = StyleSheet.create({
   center: { textAlign: 'center' },
   right: { textAlign: 'right' },
   // colors
-  accent: { color: theme.colors.accent },
-  primary: { color: theme.colors.primary },
-  secondary: { color: theme.colors.secondary },
-  tertiary: { color: theme.colors.tertiary },
-  black: { color: theme.colors.black },
-  white: { color: theme.colors.white },
-  gray: { color: theme.colors.gray },
-  gray2: { color: theme.colors.gray2 },
+  accent: { color: colors.accent },
+  primary: { color: colors.primary },
+  secondary: { color: colors.secondary },
+  tertiary: { color: colors.tertiary },
+  black: { color: colors.black },
+  white: { color: colors.white },
+  gray: { color: colors.gray },
+  gray2: { color: colors.gray2 },
   // fonts
-  h1: theme.fonts.h1,
-  h2: theme.fonts.h2,
-  h3: theme.fonts.h3,
-  title: theme.fonts.title,
-  body: theme.fonts.body,
-  caption: theme.fonts.caption,
-  small: theme.fonts.small,
+  h1: fonts.h1,
+  h2: fonts.h2,
+  h3: fonts.h3,
+  title: fonts.title,
+  body: fonts.body,
+  caption: fonts.caption,
+  small: fonts.small,
 });

@@ -1,15 +1,25 @@
-export const calcSowingBags = (area, seedConsumption) => {
-  const bags = Math.ceil(area / 0.007 / (seedConsumption / 100) / 25000);
-  const overmeasure = bags * 25000 - area / 0.007 / (seedConsumption / 100);
-  const extraArea = Math.floor(overmeasure * (seedConsumption / 100) * 0.007);
+export const calcSowingBags = (area, consumption, plant) => {
+  if (plant === 'Kukuruz') {
+    const bags = Math.ceil(area / 0.007 / (consumption / 100) / 25000);
+    const overmeasure = bags * 25000 - area / 0.007 / (consumption / 100);
+    const extraArea = Math.floor(overmeasure * (consumption / 100) * 0.007);
+    return { bags, extraArea };
+  }
 
-  return { bags, extraArea };
+  if (plant === 'Pšenica') {
+    const bags = Math.ceil((area * consumption) / 50);
+    const overmeasure = bags * 50 - consumption * area;
+    const extraArea = Math.floor(overmeasure / consumption);
+    return { bags, extraArea };
+  }
+
+  return { bags: 0, extraArea: 0 };
 };
 
-export const calcSowing = (area, sowingData, price) => {
+export const calcSowing = (area, sowingData, price, plant) => {
   const { seed, seedConsumption } = sowingData;
   if (seed !== '') {
-    const { bags } = calcSowingBags(area, seedConsumption);
+    const { bags } = calcSowingBags(area, seedConsumption, plant);
     const bagPrice = price[seed][0];
 
     return bags * bagPrice;
@@ -59,11 +69,11 @@ export const calcSpraying = (area, data, products) => {
   return herbicidePrice1 + herbicidePrice2 + herbicidePrice3;
 };
 
-export const calcFertilizationSegment = (area, fertilizer, fertilizerConsumption) => {
+export const calcFertilizationSegment = (area, fertilizer, consumption) => {
   const bagWeight = 25;
   if (fertilizer !== '') {
-    const bags = Math.ceil((area * fertilizerConsumption) / bagWeight);
-    const extraArea = Math.round((bags * bagWeight) / fertilizerConsumption - area);
+    const bags = Math.ceil((area * consumption) / bagWeight);
+    const extraArea = Math.round((bags * bagWeight) / consumption - area);
     return { bags, extraArea };
   }
   return { bags: 0, extraArea: 0 };

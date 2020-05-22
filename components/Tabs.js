@@ -6,6 +6,8 @@ import Block from './Block';
 import Popover from './Popover';
 import { theme } from '../theme';
 
+const { colors, sizes } = theme;
+
 const Tabs = ({ tabs, changeActive, disabled, active }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,7 +23,7 @@ const Tabs = ({ tabs, changeActive, disabled, active }) => {
         style={[styles.tab, isActive ? styles.active : null]}
       >
         <Image source={image} />
-        <Text size={16} color={isActive ? theme.colors.primary : theme.colors.gray} bold>
+        <Text size={16} color={isActive ? colors.primary : colors.gray} bold>
           {label}
         </Text>
       </TouchableOpacity>
@@ -41,19 +43,19 @@ const Tabs = ({ tabs, changeActive, disabled, active }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 0,
-    paddingTop: theme.sizes.base / 2,
-    paddingHorizontal: theme.sizes.base * 2,
-    backgroundColor: theme.colors.white,
+    paddingTop: sizes.base / 2,
+    paddingHorizontal: sizes.base * 2,
+    backgroundColor: colors.white,
     elevation: 5,
-    marginHorizontal: -theme.sizes.base * 2,
+    marginHorizontal: -sizes.base * 2,
   },
   tab: {
-    paddingBottom: theme.sizes.base / 2,
+    paddingBottom: sizes.base / 2,
     flex: 1,
     alignItems: 'center',
   },
   active: {
-    borderColor: theme.colors.primary,
+    borderColor: colors.primary,
     borderBottomWidth: 3,
     fontWeight: 'bold',
   },

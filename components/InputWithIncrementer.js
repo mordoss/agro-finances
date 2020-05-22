@@ -5,15 +5,10 @@ import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
 
-const InputWithIncrementer = ({
-  label,
-  fertilization,
-  action,
-  actionIncrementing,
-  actionArgumentObject,
-}) => {
+const { colors, sizes } = theme;
+
+const InputWithIncrementer = ({ label, action, actionIncrementing, actionArgumentObject }) => {
   const dispatch = useDispatch();
-  const unit = fertilization ? 'kg' : 'cm';
 
   return (
     <Block row style={styles.container}>
@@ -38,8 +33,8 @@ const InputWithIncrementer = ({
           <Text gray>+</Text>
         </View>
       </TouchableOpacity>
-      <Text gray style={{ marginLeft: theme.sizes.base }}>
-        {label}({unit})
+      <Text gray style={{ marginLeft: sizes.base }}>
+        {label}
       </Text>
     </Block>
   );
@@ -48,23 +43,23 @@ const InputWithIncrementer = ({
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    marginTop: theme.sizes.base,
+    marginTop: sizes.base,
   },
   input: {
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.gray,
-    paddingHorizontal: theme.sizes.base,
-    height: theme.sizes.base * 1.7,
+    borderColor: colors.gray,
+    paddingHorizontal: sizes.base,
+    height: sizes.base * 1.7,
     textAlign: 'center',
   },
   incrementer: {
-    height: theme.sizes.base * 1.7,
-    width: theme.sizes.base * 2,
+    height: sizes.base * 1.7,
+    width: sizes.base * 2,
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 3,
-    backgroundColor: theme.colors.backgorund,
+    backgroundColor: colors.backgorund,
   },
   left: {
     borderTopLeftRadius: 5,

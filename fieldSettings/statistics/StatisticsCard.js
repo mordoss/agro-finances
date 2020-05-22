@@ -5,12 +5,14 @@ import { Block, Text } from '../../components';
 import Chart from './PieChart';
 import { theme } from '../../theme';
 
+const { colors, sizes } = theme;
+
 const StatisticsCard = ({ label, data }) => {
   const { oilConsumption, oilPrice, paid, seed, fertilizer, sprayer, rented, total } = data;
   const { expanded, changeLayout } = useAnimatedExpand();
 
   return (
-    <Block card color={theme.colors.white} style={styles.container}>
+    <Block card color={colors.white} style={styles.container}>
       <Text gray title bold center style={styles.title}>
         {label}
       </Text>
@@ -51,22 +53,22 @@ const StatisticsCard = ({ label, data }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: theme.sizes.base,
-    marginTop: theme.sizes.base,
-    paddingHorizontal: theme.sizes.base * 2,
+    marginHorizontal: sizes.base,
+    marginTop: sizes.base,
+    paddingHorizontal: sizes.base * 2,
   },
   title: {
-    borderBottomColor: theme.colors.gray,
+    borderBottomColor: colors.gray,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingBottom: theme.sizes.base,
+    paddingBottom: sizes.base,
   },
   columns: {
-    marginVertical: theme.sizes.base,
+    marginVertical: sizes.base,
   },
   total: {
-    borderTopColor: theme.colors.gray,
+    borderTopColor: colors.gray,
     borderTopWidth: StyleSheet.hairlineWidth,
-    paddingTop: theme.sizes.base,
+    paddingTop: sizes.base,
   },
   chartSwitch: {
     alignItems: 'center',

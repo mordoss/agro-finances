@@ -11,7 +11,8 @@ import {
 } from '../../calcFunctions';
 
 const SubTotal = ({ work, field }) => {
-  const products = useSelector(state => state.products);
+  const { products } = useSelector(state => state);
+  const { plant } = useSelector(state => state[field]);
 
   const { oilConsumption, paid, paidPrice, workName } = work;
   const {
@@ -26,7 +27,7 @@ const SubTotal = ({ work, field }) => {
   } = useWorkData(field);
 
   const specialproducts = {
-    sowing: calcSowing(area, sowingData, products.seed),
+    sowing: calcSowing(area, sowingData, products.seed, plant),
     fertilization1: calcFertilization(area, fertilization1Data, products.fertilizer),
     fertilization2: calcFertilization(area, fertilization2Data, products.fertilizer),
     spraying1: calcSpraying(area, spraying1Data, products.sprayer),

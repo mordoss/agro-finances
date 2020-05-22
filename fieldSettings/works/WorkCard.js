@@ -14,7 +14,7 @@ const Work = ({ work, name, field, plant }) => {
   return (
     <Block color={theme.colors.white} style={styles.container}>
       <CommonWorkPart field={field} work={work} name={name} workName={workName}>
-        {workName === 'sowing' && <Sowing sowingData={special} field={field} />}
+        {workName === 'sowing' && <Sowing sowingData={special} field={field} plant={plant} />}
         {workName === 'spraying1' && (
           <Spraying sprayingData={special} field={field} turn="first" plant={plant} />
         )}
