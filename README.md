@@ -1,9 +1,9 @@
 # Moja Njiva
 
 ## Screenshots
-![alt text](https://i.imgur.com/pVdHJvO.png)
-![alt text](https://i.imgur.com/zbwCeXA.png)
-![alt text](https://i.imgur.com/lPJ1T5m.png)
+![alt text](https://i.imgur.com/Fll65yC.png)
+![alt text](https://i.imgur.com/S4yzj1D.png)
+![alt text](https://i.imgur.com/rxFepQz.png)
 
 
 
