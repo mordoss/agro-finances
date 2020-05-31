@@ -1,5 +1,8 @@
 # Moja Njiva
 
+## 
+Web demo: https://moja-njiva.netlify.app/ 
+
 ## Installation
 
 In `\node_modules\metro-config\src\defaults\blacklist.js`
