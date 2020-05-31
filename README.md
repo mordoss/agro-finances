@@ -1,7 +1,7 @@
 # Moja Njiva
 
 ## 
-Web demo: https://moja-njiva.netlify.app/ 
+Web demo (with minimal functionality): https://moja-njiva.netlify.app/ 
 
 ## Installation
 
