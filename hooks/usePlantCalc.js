@@ -21,16 +21,21 @@ const usePlantCalc = field => {
       sowingData,
       fertilization1Data,
       fertilization2Data,
+      fertilization3Data,
       midRowCultivation1Data,
       midRowCultivation2Data,
       spraying1Data,
       spraying2Data,
+      spraying3Data,
+      spraying4Data,
       sowingDone,
       sowingPlaning,
       fertilization1Done,
       fertilization2Done,
+      fertilization3Done,
       fertilization1Planing,
       fertilization2Planing,
+      fertilization3Planing,
       midRowCultivation1Done,
       midRowCultivation2Done,
       midRowCultivation1Planing,
@@ -39,6 +44,10 @@ const usePlantCalc = field => {
       spraying2Done,
       spraying1Planing,
       spraying2Planing,
+      spraying3Done,
+      spraying4Done,
+      spraying3Planing,
+      spraying4Planing,
     } = useWorkData(field);
 
     const allWorks = useSelector(state =>
@@ -59,6 +68,9 @@ const usePlantCalc = field => {
     const fertilizer2Done = fertilization2Done
       ? calcFertilization(area, fertilization2Data, products.fertilizer)
       : 0;
+    const fertilizer3Done = fertilization3Done
+      ? calcFertilization(area, fertilization3Data, products.fertilizer)
+      : 0;
     const fertilizer1MidDone = midRowCultivation1Done
       ? calcMidRowCultivation(area, midRowCultivation1Data, products.fertilizer)
       : 0;
@@ -67,6 +79,8 @@ const usePlantCalc = field => {
       : 0;
     const sprayer1Done = spraying1Done ? calcSpraying(area, spraying1Data, products.sprayer) : 0;
     const sprayer2Done = spraying2Done ? calcSpraying(area, spraying2Data, products.sprayer) : 0;
+    const sprayer3Done = spraying3Done ? calcSpraying(area, spraying3Data, products.sprayer) : 0;
+    const sprayer4Done = spraying4Done ? calcSpraying(area, spraying4Data, products.sprayer) : 0;
 
     const oilConsumptionPlaning = calcOilAndPaidPerPlant(planingWorks, 'oilConsumption', area);
     const oilPricePlaning = oilConsumptionPlaning * 150;
@@ -77,6 +91,9 @@ const usePlantCalc = field => {
       : 0;
     const fertilizer2Planing = fertilization2Planing
       ? calcFertilization(area, fertilization2Data, products.fertilizer)
+      : 0;
+    const fertilizer3Planing = fertilization3Planing
+      ? calcFertilization(area, fertilization3Data, products.fertilizer)
       : 0;
     const fertilizer1MidPlaning = midRowCultivation1Planing
       ? calcMidRowCultivation(area, midRowCultivation1Data, products.fertilizer)
@@ -90,13 +107,24 @@ const usePlantCalc = field => {
     const sprayer2Planing = spraying2Planing
       ? calcSpraying(area, spraying2Data, products.sprayer)
       : 0;
+    const sprayer3Planing = spraying3Planing
+      ? calcSpraying(area, spraying3Data, products.sprayer)
+      : 0;
+    const sprayer4Planing = spraying4Planing
+      ? calcSpraying(area, spraying4Data, products.sprayer)
+      : 0;
 
     const fertilizerTotalDone =
-      fertilizer1Done + fertilizer2Done + fertilizer1MidDone + fertilizer2MidDone;
+      fertilizer1Done + fertilizer2Done + fertilizer3Done + fertilizer1MidDone + fertilizer2MidDone;
     const fertilizerTotalPlaning =
-      fertilizer1Planing + fertilizer2Planing + fertilizer1MidPlaning + fertilizer2MidPlaning;
-    const sprayerTotalDone = sprayer1Done + sprayer2Done;
-    const sprayerTotalPlaning = sprayer1Planing + sprayer2Planing;
+      fertilizer1Planing +
+      fertilizer2Planing +
+      fertilizer3Planing +
+      fertilizer1MidPlaning +
+      fertilizer2MidPlaning;
+    const sprayerTotalDone = sprayer1Done + sprayer2Done + sprayer3Done + sprayer4Done;
+    const sprayerTotalPlaning =
+      sprayer1Planing + sprayer2Planing + sprayer3Planing + sprayer4Planing;
     const doneTotal = oilPriceDone + paidDone + seedDone + fertilizerTotalDone + sprayerTotalDone;
     const planingTotal =
       oilPricePlaning + paidPlaning + seedPlaning + fertilizerTotalPlaning + sprayerTotalPlaning;

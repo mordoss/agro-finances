@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Block, Picker } from '../../components';
+import { Block, Button, Picker } from '../../components';
 import ExtraCount from './ExtraCount';
 import { changeSprayerOrFertilizer } from '../../redux/actions/specialActions';
 import { calcSprayerBottles } from '../../calcFunctions';
@@ -32,6 +32,8 @@ const SprayingSegment = ({ field, sprayingData, actionArgumentObject, place, iup
           propertyName: `sprayer${place}`,
         }}
       />
+      {sprayerSelected !== '' && <Button product={sprayerSelected} group="sprayer" />}
+
       <ExtraCount count={bottles} extraArea={extraArea} packaging="flaša" />
     </Block>
   );

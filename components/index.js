@@ -1,5 +1,6 @@
 import Badge from './Badge';
 import Block from './Block';
+import Button from './Button';
 import Text from './Text';
 import Input from './Input';
 import Switch from './Switch';
@@ -12,6 +13,7 @@ import HeaderIcon from './HeaderIcon';
 
 export {
   Badge,
+  Button,
   Block,
   Text,
   Avatar,

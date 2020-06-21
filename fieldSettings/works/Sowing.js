@@ -1,8 +1,6 @@
 import React from 'react';
-import { Button } from 'react-native';
 import { useSelector } from 'react-redux';
-import { useNavigation } from '@react-navigation/native';
-import { Block, Picker, InputWithIncrementer } from '../../components';
+import { Block, Button, Picker, InputWithIncrementer } from '../../components';
 import ExtraCount from './ExtraCount';
 import {
   changeSeed,
@@ -13,7 +11,6 @@ import { plantToIncrementerLabel } from '../../helperFunctions';
 import { calcSowingBags } from '../../calcFunctions';
 
 const Sowing = ({ sowingData, field, plant }) => {
-  const navigation = useNavigation();
   const { seed, seedConsumption } = sowingData;
   const { area } = useSelector(state => state[field]);
   const seeds = useSelector(state =>
@@ -34,17 +31,6 @@ const Sowing = ({ sowingData, field, plant }) => {
           field,
         }}
       />
-      {seed !== '' && (
-        <Button
-          title="O proizvodu"
-          onPress={() =>
-            navigation.navigate('ProductInfoScreen', {
-              group: 'seed',
-              product: seed,
-            })
-          }
-        />
-      )}
       <InputWithIncrementer
         label={plantToIncrementerLabel(plant)}
         action={changeSeedConsumption}
@@ -54,6 +40,8 @@ const Sowing = ({ sowingData, field, plant }) => {
           value: String(seedConsumption),
         }}
       />
+      {seed !== '' && <Button product={seed} group="seed" />}
+
       <ExtraCount count={bags} extraArea={extraArea} packaging="vreća" />
     </Block>
   );

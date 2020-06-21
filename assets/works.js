@@ -32,6 +32,39 @@ export const fertilization = {
       ],
     },
   },
+  Soja: {
+    first: {
+      time: 'U jesen',
+      fertilizers: [
+        ['NPK (16:16:16)', 3],
+        ['NPK (15:15:15)', 3],
+        ['NPK (8:15:15)', 3],
+        ['NPK (6:24:12)', 3.2],
+        ['NPK (16:27:7)', 3],
+      ],
+    },
+    second: { time: '', fertilizers: [['NS (20:24)', 5.5]] },
+    third: {
+      time: '',
+      fertilizers: [['NP (10:35)', 0.5]],
+    },
+  },
+  Suncokret: {
+    first: {
+      time: 'U jesen',
+      fertilizers: [
+        ['NPK (16:16:16)', 3],
+        ['NPK (15:15:15)', 3],
+        ['NPK (8:15:15)', 3],
+        ['NPK (6:24:12)', 3.2],
+      ],
+    },
+    second: { time: '', fertilizers: [['Urea', 1.7]] },
+    third: {
+      time: '',
+      fertilizers: [['NP (10:35)', 0.5]],
+    },
+  },
 };
 
 export const midRowCultivation = {
@@ -93,6 +126,70 @@ export const spraying = {
         },
         { iupac: 'Fluksapiroksad 75 g/l + Piraklostrobin 150 g/l', purpose: '' },
         { iupac: 'Аlfa–cipermetrin 100 g/l', purpose: '' },
+      ],
+    },
+  },
+  Soja: {
+    first: {
+      time: 'Pre setve uz inkorporaciju',
+      sprayers: [{ iupac: 'Klomazon', purpose: '' }],
+    },
+    second: {
+      time: 'Posle setve a pre nicanja ',
+      sprayers: [
+        {
+          iupac: 'S-metolahlor',
+          purpose: '',
+        },
+        {
+          iupac: 'Metribuzin',
+          purpose: '',
+        },
+      ],
+    },
+    third: {
+      time: 'U fazi 1-3 troliske',
+      sprayers: [
+        { iupac: 'Klomazon', purpose: '' },
+        { iupac: 'Bentazon', purpose: '' },
+        { iupac: 'Tifensulfuron-metil', purpose: '' },
+      ],
+    },
+    fourth: {
+      time: 'Od formiranja prve troliske do cvetanja',
+      sprayers: [
+        { iupac: 'Kletodim', purpose: '' },
+        { iupac: 'Kvizalopof-P-etil', purpose: '' },
+      ],
+    },
+  },
+  Suncokret: {
+    first: {
+      time: 'Pre setve uz inkorporaciju',
+      sprayers: [{ iupac: 'Bifentrin', purpose: '' }],
+    },
+    second: {
+      time: 'Posle setve a pre nicanja ',
+      sprayers: [
+        {
+          iupac: 'S-metolahlor',
+          purpose: '',
+        },
+        {
+          iupac: 'Terbutilazin',
+          purpose: '',
+        },
+      ],
+    },
+    third: {
+      time: 'U fazi 1-3 troliske',
+      sprayers: [{ iupac: 'Кletodim', purpose: '' }],
+    },
+    fourth: {
+      time: '',
+      sprayers: [
+        { iupac: 'Boskalid', purpose: '' },
+        { iupac: 'Tiofanat-metil', purpose: '' },
       ],
     },
   },

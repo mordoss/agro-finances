@@ -4,17 +4,22 @@ const useWorkData = field => {
   const area = useSelector(state => state[field].area);
   const sowingData = useSelector(state => state[field].sowingState);
 
-  const { first: fertilization1Data, second: fertilization2Data } = useSelector(
-    state => state[field].fertilizationState
-  );
+  const {
+    first: fertilization1Data,
+    second: fertilization2Data,
+    third: fertilization3Data,
+  } = useSelector(state => state[field].fertilizationState);
 
   const { first: midRowCultivation1Data, second: midRowCultivation2Data } = useSelector(
     state => state[field].midRowCultivationState
   );
 
-  const { first: spraying1Data, second: spraying2Data } = useSelector(
-    state => state[field].sprayingState
-  );
+  const {
+    first: spraying1Data,
+    second: spraying2Data,
+    third: spraying3Data,
+    fourth: spraying4Data,
+  } = useSelector(state => state[field].sprayingState);
 
   const { done: sowingDone, planing: sowingPlaning } = useSelector(
     state => state[field].groundWorksState.sowing
@@ -24,6 +29,9 @@ const useWorkData = field => {
   );
   const { done: fertilization2Done, planing: fertilization2Planing } = useSelector(
     state => state[field].groundWorksState.fertilization2
+  );
+  const { done: fertilization3Done, planing: fertilization3Planing } = useSelector(
+    state => state[field].groundWorksState.fertilization3
   );
 
   const { done: midRowCultivation1Done, planing: midRowCultivation1Planing } = useSelector(
@@ -44,16 +52,21 @@ const useWorkData = field => {
     sowingData,
     fertilization1Data,
     fertilization2Data,
+    fertilization3Data,
     midRowCultivation1Data,
     midRowCultivation2Data,
     spraying1Data,
     spraying2Data,
+    spraying3Data,
+    spraying4Data,
     sowingDone,
     sowingPlaning,
     fertilization1Done,
     fertilization2Done,
+    fertilization3Done,
     fertilization1Planing,
     fertilization2Planing,
+    fertilization3Planing,
     midRowCultivation1Done,
     midRowCultivation2Done,
     midRowCultivation1Planing,

@@ -1,6 +1,7 @@
 export const calcSowingBags = (area, consumption, plant) => {
-  if (plant === 'Kukuruz') {
-    const bags = Math.ceil(area / 0.007 / (consumption / 100) / 25000);
+  if (plant === 'Kukuruz' || plant === 'Suncokret') {
+    const seedsInBag = plant === 'Kukuruz' ? 25000 : 75000;
+    const bags = Math.ceil(area / 0.007 / (consumption / 100) / seedsInBag);
     const overmeasure = bags * 25000 - area / 0.007 / (consumption / 100);
     const extraArea = Math.floor(overmeasure * (consumption / 100) * 0.007);
     return { bags, extraArea };
@@ -85,8 +86,8 @@ export const calcFertilization = (area, data, price) => {
   const { bags: bags2 } = calcFertilizationSegment(area, fertilizer2, fertilizerConsumption2);
 
   return (
-    (fertilizer1 ? bags1 * price[fertilizer1] : 0) +
-    (fertilizer2 && mixed ? bags2 * price[fertilizer2] : 0)
+    (fertilizer1 ? bags1 * price[fertilizer1][0] * 50 : 0) +
+    (fertilizer2 && mixed ? bags2 * price[fertilizer2][0] * 50 : 0)
   );
 };
 
@@ -94,7 +95,7 @@ export const calcMidRowCultivation = (area, data, price) => {
   const { withFertilization, fertilizerConsumption, fertilizer } = data;
 
   const { bags } = calcFertilizationSegment(area, fertilizer, fertilizerConsumption);
-  return withFertilization ? bags * price[fertilizer] : 0;
+  return withFertilization && fertilizer ? bags * price[fertilizer][0] * 50 : 0;
 };
 
 export const calcOilAndPaidPerPlant = (worksArray, property, area) => {

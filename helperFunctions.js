@@ -17,6 +17,18 @@ export const plantStringToImage = string => {
       return require('./assets/icons/add.png');
   }
 };
+export const productGroupStringToImage = string => {
+  switch (string) {
+    case 'seed':
+      return require('./assets/products/seed.jpg');
+    case 'fertilizer':
+      return require('./assets/products/fertilizer.jpg');
+    case 'sprayer':
+      return require('./assets/products/sprayer.jpg');
+    default:
+      return require('./assets/icons/add.png');
+  }
+};
 
 export const workNameToItem = string => {
   switch (string) {
@@ -24,11 +36,14 @@ export const workNameToItem = string => {
       return 'seme';
     case 'fertilization1':
     case 'fertilization2':
+    case 'fertilization3':
     case 'midRowCultivation1':
     case 'midRowCultivation2':
       return 'prihranu';
     case 'spraying1':
     case 'spraying2':
+    case 'spraying3':
+    case 'spraying4':
       return 'herbicid';
 
     default:
@@ -109,6 +124,7 @@ export const calcDays = (workDate, todayIndex, months) => {
 export const plantToIncrementerLabel = plant => {
   switch (plant) {
     case 'Kukuruz':
+    case 'Suncokret':
       return 'Razmak u redu (cm)';
     case 'Pšenica':
       return 'Kg po aru';
@@ -124,6 +140,8 @@ export const plantToAverageSeedConsumption = plant => {
       return 18;
     case 'Pšenica':
       return 3.5;
+    case 'Suncokret':
+      return 20;
 
     default:
       return 0;

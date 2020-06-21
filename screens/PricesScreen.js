@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 import PricesCard from '../prices/PricesCard';
 import { theme } from '../theme';
 
+const { sizes, colors } = theme;
+
 const PricesScreen = () => {
   const field = useSelector(state => `field${state.activeField}`);
 
@@ -40,9 +42,9 @@ const PricesScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: theme.sizes.base * 2,
-    paddingBottom: theme.sizes.base * 2,
-    backgroundColor: theme.colors.backgorund,
+    paddingTop: sizes.base * 2,
+    paddingBottom: sizes.base * 2,
+    backgroundColor: colors.backgorund,
   },
 });
 

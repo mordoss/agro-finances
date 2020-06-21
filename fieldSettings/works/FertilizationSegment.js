@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Block, Picker, InputWithIncrementer } from '../../components';
+import { Block, Button, Picker, InputWithIncrementer } from '../../components';
 import ExtraCount from './ExtraCount';
 import {
   changeSprayerOrFertilizer,
@@ -20,10 +20,11 @@ const FertilizationSegment = ({
 }) => {
   const area = useSelector(state => state[field].area);
   const { turn } = actionArgumentObject;
+  const fertilizerSelected = fertilizationData[`fertilizer${place}`];
   const { fertilizers } = place ? fertilization[plant][turn] : midRowCultivation[plant][turn];
   const { bags, extraArea } = calcFertilizationSegment(
     area,
-    fertilizationData[`fertilizer${place}`],
+    fertilizerSelected,
     fertilizationData[`fertilizerConsumption${place}`]
   );
 
@@ -34,7 +35,7 @@ const FertilizationSegment = ({
       <Picker
         items={fertilizerNames}
         label="Izbor đubriva"
-        active={fertilizationData[`fertilizer${place}`]}
+        active={fertilizerSelected}
         action={changeSprayerOrFertilizer}
         actionArgumentObject={{
           ...actionArgumentObject,
@@ -42,6 +43,7 @@ const FertilizationSegment = ({
           propertyName: `fertilizer${place}`,
         }}
       />
+      {fertilizerSelected !== '' && <Button product={fertilizerSelected} group="fertilizer" />}
       <InputWithIncrementer
         label="Kg po aru"
         action={changeFertilizerConsumption}

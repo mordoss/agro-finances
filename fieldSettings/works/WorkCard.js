@@ -21,13 +21,21 @@ const Work = ({ work, name, field, plant }) => {
         {workName === 'spraying2' && (
           <Spraying sprayingData={special} field={field} turn="second" plant={plant} />
         )}
+        {workName === 'spraying3' && (
+          <Spraying sprayingData={special} field={field} turn="third" plant={plant} />
+        )}
+        {workName === 'spraying4' && (
+          <Spraying sprayingData={special} field={field} turn="fourth" plant={plant} />
+        )}
         {workName === 'fertilization1' && (
           <Fertilization fertilizationData={special} field={field} turn="first" plant={plant} />
         )}
         {workName === 'fertilization2' && (
           <Fertilization fertilizationData={special} field={field} turn="second" plant={plant} />
         )}
-
+        {workName === 'fertilization3' && (
+          <Fertilization fertilizationData={special} field={field} turn="third" plant={plant} />
+        )}
         {workName === 'midRowCultivation1' && (
           <MidRowCultivation
             midRowCultivationData={special}

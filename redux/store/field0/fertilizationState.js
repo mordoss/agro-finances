@@ -13,4 +13,11 @@ export default {
     fertilizer2: '',
     fertilizerConsumption2: 3,
   },
+  third: {
+    fertilizer1: '',
+    fertilizerConsumption1: 2,
+    mixed: true,
+    fertilizer2: '',
+    fertilizerConsumption2: 3,
+  },
 };

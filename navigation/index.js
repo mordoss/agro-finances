@@ -46,6 +46,7 @@ function App() {
             ),
             headerRight: () => (
               <HeaderIcon
+                imageSource={require('../assets/icons/info.png')}
                 position="Right"
                 label="Info"
                 navigate={navigation.navigate}
@@ -72,8 +73,20 @@ function App() {
         />
         <Stack.Screen name="CalendarScreen" component={CalendarScreen} />
         <Stack.Screen name="InfoScreen" component={InfoScreen} />
-        <Stack.Screen name="PricesScreen" component={PricesScreen} />
-        <Stack.Screen name="ProductInfoScreen" component={ProductInfoScreen} />
+        <Stack.Screen
+          name="PricesScreen"
+          component={PricesScreen}
+          options={() => ({
+            headerTitle: () => null,
+          })}
+        />
+        <Stack.Screen
+          name="ProductInfoScreen"
+          component={ProductInfoScreen}
+          options={() => ({
+            headerTitle: () => null,
+          })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

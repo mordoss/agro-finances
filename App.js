@@ -5,7 +5,7 @@ import { store, persistor } from './redux/store';
 import Navigation from './navigation';
 
 const App = () => {
-  // persistor.purge();
+  persistor.purge();
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>

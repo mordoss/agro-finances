@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-
 import { Switch, Block } from '../../components';
 import FertilizationSegment from './FertilizationSegment';
 import { changeMixed } from '../../redux/actions/specialActions';

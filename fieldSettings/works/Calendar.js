@@ -28,7 +28,7 @@ const Calendar = ({ isActive, actionArgumentObject }) => {
     <Block>
       {isActive && (
         <TouchableOpacity onPress={showDatepicker} style={styles.button}>
-          <Text center gray>
+          <Text center white>
             {dateToString(date) ? dateToString(date) : 'Izaberite datum'}
           </Text>
         </TouchableOpacity>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: theme.sizes.base / 4,
     elevation: 3,
-    backgroundColor: theme.colors.backgorund,
+    backgroundColor: theme.colors.blue,
   },
 });
 

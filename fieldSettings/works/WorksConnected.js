@@ -14,8 +14,11 @@ const WorksConnected = ({ field }) => {
     sowing,
     fertilization1,
     fertilization2,
+    fertilization3,
     spraying1,
     spraying2,
+    spraying3,
+    spraying4,
     midRowCultivation1,
     midRowCultivation2,
   } = useSelector(state => ({
@@ -35,6 +38,10 @@ const WorksConnected = ({ field }) => {
       ...state[field].groundWorksState.fertilization2,
       special: { ...state[field].fertilizationState.second },
     },
+    fertilization3: {
+      ...state[field].groundWorksState.fertilization3,
+      special: { ...state[field].fertilizationState.third },
+    },
     spraying1: {
       ...state[field].groundWorksState.spraying1,
       special: { ...state[field].sprayingState.first },
@@ -42,6 +49,14 @@ const WorksConnected = ({ field }) => {
     spraying2: {
       ...state[field].groundWorksState.spraying2,
       special: { ...state[field].sprayingState.second },
+    },
+    spraying3: {
+      ...state[field].groundWorksState.spraying3,
+      special: { ...state[field].sprayingState.third },
+    },
+    spraying4: {
+      ...state[field].groundWorksState.spraying4,
+      special: { ...state[field].sprayingState.fourth },
     },
     midRowCultivation1: {
       ...state[field].groundWorksState.midRowCultivation1,
@@ -70,6 +85,14 @@ const WorksConnected = ({ field }) => {
       name: 'Druga Zaštita',
       work: spraying2,
     },
+    spraying3: {
+      name: 'Treća Zaštita',
+      work: spraying3,
+    },
+    spraying4: {
+      name: 'Četvrta Zaštita',
+      work: spraying4,
+    },
     fertilization1: {
       name: 'Prva Prihrana',
       work: fertilization1,
@@ -77,6 +100,10 @@ const WorksConnected = ({ field }) => {
     fertilization2: {
       name: 'Druga Prihrana',
       work: fertilization2,
+    },
+    fertilization3: {
+      name: 'Treća Prihrana',
+      work: fertilization3,
     },
     midRowCultivation1: {
       name: 'Prva Međuredna',
