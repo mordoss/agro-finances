@@ -1,5 +1,14 @@
 # Moja Njiva
 
+## Screenshots
+![alt text](https://i.imgur.com/Fll65yC.png)
+![alt text](https://i.imgur.com/S4yzj1D.png)
+![alt text](https://i.imgur.com/rxFepQz.png)
+
+
+
+Web demo (with minimal functionality): https://moja-njiva.netlify.app/ 
+
 ## Installation
 
 In `\node_modules\metro-config\src\defaults\blacklist.js`
