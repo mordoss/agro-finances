@@ -142,6 +142,40 @@ export const plantToAverageSeedConsumption = plant => {
       return 3.5;
     case 'Suncokret':
       return 20;
+    case 'Soja':
+      return 4;
+
+    default:
+      return 0;
+  }
+};
+
+export const plantToAverageYieldPerHa = plant => {
+  switch (plant) {
+    case 'Kukuruz':
+      return 7000;
+    case 'Pšenica':
+      return 6000;
+    case 'Suncokret':
+      return 5000;
+    case 'Soja':
+      return 5000;
+
+    default:
+      return 0;
+  }
+};
+
+export const plantToAverageProductPrice = plant => {
+  switch (plant) {
+    case 'Kukuruz':
+      return 18;
+    case 'Pšenica':
+      return 16;
+    case 'Suncokret':
+      return 20;
+    case 'Soja':
+      return 40;
 
     default:
       return 0;

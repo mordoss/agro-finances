@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Block, Button, Picker, InputWithIncrementer } from '../../components';
 import ExtraCount from './ExtraCount';
-import BagSizeSelection from './BagSizeSelection';
 import {
   changeSeed,
   changeSeedConsumption,
@@ -32,7 +31,6 @@ const Sowing = ({ sowingData, field, plant }) => {
           field,
         }}
       />
-      <BagSizeSelection />
       <InputWithIncrementer
         label={plantToIncrementerLabel(plant)}
         action={changeSeedConsumption}

@@ -1,8 +1,8 @@
 export default {
   area: 0,
   plant: '',
-  yieldPerHa: 2000,
-  productPrice: 20,
+  yieldPerHa: 0,
+  productPrice: 0,
   note: '',
   rented: false,
   rentedPrice: 15000,
