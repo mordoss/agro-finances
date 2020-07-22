@@ -2,7 +2,7 @@ export const calcSowingBags = (area, consumption, plant) => {
   if (plant === 'Kukuruz' || plant === 'Suncokret') {
     const seedsInBag = plant === 'Kukuruz' ? 25000 : 75000;
     const bags = Math.ceil(area / 0.007 / (consumption / 100) / seedsInBag);
-    const overmeasure = bags * 25000 - area / 0.007 / (consumption / 100);
+    const overmeasure = bags * seedsInBag - area / 0.007 / (consumption / 100);
     const extraArea = Math.floor(overmeasure * (consumption / 100) * 0.007);
     return { bags, extraArea };
   }
@@ -17,7 +17,7 @@ export const calcSowingBags = (area, consumption, plant) => {
   if (plant === 'Soja') {
     const seedsInBag = 150000;
     const bags = Math.ceil(area / 0.004 / (consumption / 100) / seedsInBag);
-    const overmeasure = bags * 25000 - area / 0.007 / (consumption / 100);
+    const overmeasure = bags * seedsInBag - area / 0.007 / (consumption / 100);
     const extraArea = Math.floor(overmeasure * (consumption / 100) * 0.007);
     return { bags, extraArea };
   }

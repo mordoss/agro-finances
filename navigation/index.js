@@ -71,8 +71,20 @@ function App() {
             ),
           })}
         />
-        <Stack.Screen name="CalendarScreen" component={CalendarScreen} />
-        <Stack.Screen name="InfoScreen" component={InfoScreen} />
+        <Stack.Screen
+          name="CalendarScreen"
+          component={CalendarScreen}
+          options={() => ({
+            headerTitle: () => null,
+          })}
+        />
+        <Stack.Screen
+          name="InfoScreen"
+          component={InfoScreen}
+          options={() => ({
+            headerTitle: () => null,
+          })}
+        />
         <Stack.Screen
           name="PricesScreen"
           component={PricesScreen}

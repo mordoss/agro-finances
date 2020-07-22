@@ -20,7 +20,7 @@ const Button = ({ product, group }) => {
   return (
     <Block row center>
       <TouchableHighlight onPress={() => handlePress(product)} style={styles.button}>
-        <Text white center style>
+        <Text white center>
           Više u proizvodu
         </Text>
       </TouchableHighlight>

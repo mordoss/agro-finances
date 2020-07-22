@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { ScrollView, KeyboardAvoidingView } from 'react-native';
 import { Tabs, Block } from '../components';
-import FieldsConnected from '../AllFields/FieldsConnected';
-import Statistics from '../AllFields/StatisticsConnected';
+import FieldsConnected from '../allFields/FieldsConnected';
+import Statistics from '../allFields/StatisticsConnected';
 import { theme } from '../theme';
 
 const AllFieldsScreen = ({ navigation }) => {
