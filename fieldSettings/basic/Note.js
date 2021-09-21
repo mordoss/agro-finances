@@ -8,7 +8,7 @@ import { theme } from '../../theme';
 const { colors, sizes } = theme;
 
 const Input = ({ field }) => {
-  const note = useSelector(state => state[field].note);
+  const note = useSelector(state => state.fields[field].note);
   const [onFocus, setOnFocus] = useState(false);
   const dispatch = useDispatch();
 
@@ -24,8 +24,8 @@ const Input = ({ field }) => {
           styles.input,
           {
             borderColor: onFocus ? colors.primary : colors.gray,
-            borderWidth: onFocus ? 2 : StyleSheet.hairlineWidth,
-          },
+            borderWidth: onFocus ? 2 : StyleSheet.hairlineWidth
+          }
         ]}
         autoComplete="off"
         autoCapitalize="none"
@@ -51,6 +51,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: sizes.base,
     paddingVertical: sizes.base / 2,
     height: sizes.base * 4,
-    width: Dimensions.get('window').width - sizes.base * 6,
-  },
+    width: Dimensions.get('window').width - sizes.base * 6
+  }
 });

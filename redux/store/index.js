@@ -6,14 +6,14 @@ import wholeState from './wholeState';
 
 const persistConfig = {
   key: 'root',
-  storage: AsyncStorage,
+  storage: AsyncStorage
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 const store = createStore(
   persistedReducer,
-  wholeState
-  // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  wholeState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 const persistor = persistStore(store);
 

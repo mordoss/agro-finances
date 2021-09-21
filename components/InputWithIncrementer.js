@@ -7,12 +7,21 @@ import { theme } from '../theme';
 
 const { colors, sizes } = theme;
 
-const InputWithIncrementer = ({ label, action, actionIncrementing, actionArgumentObject }) => {
+const InputWithIncrementer = ({
+  label,
+  action,
+  actionIncrementing,
+  actionArgumentObject
+}) => {
   const dispatch = useDispatch();
 
   return (
     <Block row style={styles.container}>
-      <TouchableOpacity onPress={() => dispatch(actionIncrementing(actionArgumentObject, 'dec'))}>
+      <TouchableOpacity
+        onPress={() =>
+          dispatch(actionIncrementing(actionArgumentObject, 'dec'))
+        }
+      >
         <View style={[styles.incrementer, styles.left]}>
           <Text gray> - </Text>
         </View>
@@ -20,7 +29,9 @@ const InputWithIncrementer = ({ label, action, actionIncrementing, actionArgumen
 
       <TextInput
         value={actionArgumentObject.value}
-        onChangeText={eventValue => dispatch(action(actionArgumentObject, eventValue))}
+        onChangeText={eventValue =>
+          dispatch(action(actionArgumentObject, eventValue))
+        }
         style={styles.input}
         autoComplete="off"
         autoCapitalize="none"
@@ -28,7 +39,11 @@ const InputWithIncrementer = ({ label, action, actionIncrementing, actionArgumen
         keyboardType="numeric"
       />
 
-      <TouchableOpacity onPress={() => dispatch(actionIncrementing(actionArgumentObject, 'inc'))}>
+      <TouchableOpacity
+        onPress={() =>
+          dispatch(actionIncrementing(actionArgumentObject, 'inc'))
+        }
+      >
         <View style={[styles.incrementer, styles.right]}>
           <Text gray>+</Text>
         </View>
@@ -43,7 +58,7 @@ const InputWithIncrementer = ({ label, action, actionIncrementing, actionArgumen
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    marginTop: sizes.base,
+    marginTop: sizes.base
   },
   input: {
     borderTopWidth: StyleSheet.hairlineWidth,
@@ -51,7 +66,7 @@ const styles = StyleSheet.create({
     borderColor: colors.gray,
     paddingHorizontal: sizes.base,
     height: sizes.base * 1.7,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   incrementer: {
     height: sizes.base * 1.7,
@@ -59,16 +74,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 3,
-    backgroundColor: colors.backgorund,
+    backgroundColor: colors.backgorund
   },
   left: {
     borderTopLeftRadius: 5,
-    borderBottomLeftRadius: 5,
+    borderBottomLeftRadius: 5
   },
   right: {
     borderTopRightRadius: 5,
-    borderBottomRightRadius: 5,
-  },
+    borderBottomRightRadius: 5
+  }
 });
 
 export default InputWithIncrementer;

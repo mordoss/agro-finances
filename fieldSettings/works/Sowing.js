@@ -5,14 +5,14 @@ import ExtraCount from './ExtraCount';
 import {
   changeSeed,
   changeSeedConsumption,
-  changeSeedConsumptionIncrementing,
+  changeSeedConsumptionIncrementing
 } from '../../redux/actions/specialActions';
 import { plantToIncrementerLabel } from '../../helperFunctions';
 import { calcSowingBags } from '../../calcFunctions';
 
 const Sowing = ({ sowingData, field, plant }) => {
   const { seed, seedConsumption } = sowingData;
-  const { area } = useSelector(state => state[field]);
+  const { area } = useSelector(state => state.fields[field]);
   const seeds = useSelector(state =>
     Object.entries(state.products.seed)
       .filter(el => el[1][1] === plant)
@@ -28,7 +28,7 @@ const Sowing = ({ sowingData, field, plant }) => {
         action={changeSeed}
         active={seed}
         actionArgumentObject={{
-          field,
+          field
         }}
       />
       <InputWithIncrementer
@@ -37,10 +37,12 @@ const Sowing = ({ sowingData, field, plant }) => {
         actionIncrementing={changeSeedConsumptionIncrementing}
         actionArgumentObject={{
           field,
-          value: String(seedConsumption),
+          value: String(seedConsumption)
         }}
       />
-      {seed !== '' && <Button product={seed} group="seed" />}
+      {seed !== '' && (
+        <Button product={seed} group="seed" label="Više u proizvodu" />
+      )}
 
       <ExtraCount count={bags} extraArea={extraArea} packaging="vreća" />
     </Block>

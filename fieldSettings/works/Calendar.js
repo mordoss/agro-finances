@@ -10,7 +10,9 @@ import { theme } from '../../theme';
 
 const Calendar = ({ isActive, actionArgumentObject }) => {
   const { field, workName } = actionArgumentObject;
-  const date = useSelector(state => state[field].groundWorksState[workName].date);
+  const date = useSelector(
+    state => state.fields[field].groundWorksState[workName].date
+  );
   const [show, setShow] = useState(false);
   const today = new Date();
   const dispatch = useDispatch();
@@ -55,8 +57,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: theme.sizes.base / 4,
     elevation: 3,
-    backgroundColor: theme.colors.blue,
-  },
+    backgroundColor: theme.colors.blue
+  }
 });
 
 export default Calendar;

@@ -7,7 +7,15 @@ import { theme } from '../theme';
 
 const { colors, sizes } = theme;
 
-const Input = ({ label, unit, value, actionArgumentObject, action, customStyle, style }) => {
+const Input = ({
+  label,
+  unit,
+  value,
+  actionArgumentObject,
+  action,
+  customStyle,
+  style
+}) => {
   const dispatch = useDispatch();
   const [onFocus, setOnFocus] = useState(false);
 
@@ -16,15 +24,17 @@ const Input = ({ label, unit, value, actionArgumentObject, action, customStyle, 
       <Text gray>{label}: </Text>
       <TextInput
         value={value}
-        onChangeText={eventValue => dispatch(action(actionArgumentObject, eventValue))}
+        onChangeText={eventValue =>
+          dispatch(action(actionArgumentObject, eventValue))
+        }
         onFocus={() => setOnFocus(true)}
         onEndEditing={() => setOnFocus(false)}
         style={[
           styles.input,
           {
             borderColor: onFocus ? colors.primary : colors.gray,
-            borderWidth: onFocus ? 2 : StyleSheet.hairlineWidth,
-          },
+            borderWidth: onFocus ? 2 : StyleSheet.hairlineWidth
+          }
         ]}
         keyboardType="numeric"
       />
@@ -38,7 +48,7 @@ export default Input;
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    marginVertical: sizes.base / 2,
+    marginVertical: sizes.base / 2
   },
   input: {
     borderRadius: 5,
@@ -46,6 +56,6 @@ const styles = StyleSheet.create({
     height: sizes.base * 1.5,
     paddingHorizontal: sizes.base,
     marginHorizontal: sizes.base / 2,
-    textAlign: 'center',
-  },
+    textAlign: 'center'
+  }
 });

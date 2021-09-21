@@ -2,7 +2,10 @@ import React from 'react';
 import { Switch, StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 import useAnimatedExpand from '../../hooks/useAnimatedExpand';
-import { changeYield, changeProductPrice } from '../../redux/actions/basicStateActions';
+import {
+  changeYield,
+  changeProductPrice
+} from '../../redux/actions/basicStateActions';
 import { Block, Text, Input } from '../../components';
 import Chart from './BarChart';
 import { theme } from '../../theme';
@@ -11,7 +14,9 @@ const { colors, sizes } = theme;
 
 const Profit = ({ invested }) => {
   const field = useSelector(state => `field${state.activeField}`);
-  const { area, yieldPerHa, productPrice } = useSelector(state => state[field]);
+  const { area, yieldPerHa, productPrice } = useSelector(
+    state => state.fields[field]
+  );
   const { expanded, changeLayout } = useAnimatedExpand();
 
   const income = (area / 100) * productPrice * yieldPerHa;
@@ -41,7 +46,11 @@ const Profit = ({ invested }) => {
           Potencijalni prihod: {Math.round(income)} din.
         </Text>
       </Block>
-      <Chart expanded={expanded} income={income || 0} invested={invested || 0} />
+      <Chart
+        expanded={expanded}
+        income={income || 0}
+        invested={invested || 0}
+      />
       <Block row space="around" style={styles.total}>
         <Block row style={styles.chartSwitch}>
           <Switch value={expanded} onValueChange={changeLayout} />
@@ -58,24 +67,24 @@ const Profit = ({ invested }) => {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: sizes.base,
-    marginTop: sizes.base,
+    marginTop: sizes.base
   },
   title: {
     borderBottomColor: colors.gray,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingBottom: sizes.base,
+    paddingBottom: sizes.base
   },
   content: {
-    marginVertical: sizes.base,
+    marginVertical: sizes.base
   },
   total: {
     borderTopColor: colors.gray,
     borderTopWidth: StyleSheet.hairlineWidth,
-    paddingTop: sizes.base,
+    paddingTop: sizes.base
   },
   chartSwitch: {
-    alignItems: 'center',
-  },
+    alignItems: 'center'
+  }
 });
 
 export default Profit;

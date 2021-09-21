@@ -25,7 +25,7 @@ const StatisticsConnected = () => {
     sprayerTotal: _0sprayerTotal,
     doneTotal: _0doneTotal,
     planingTotal: _0planingTotal,
-    total: _0total,
+    total: _0total
   } = usePlantCalc('field0');
 
   const {
@@ -49,7 +49,7 @@ const StatisticsConnected = () => {
     sprayerTotal: _1sprayerTotal,
     doneTotal: _1doneTotal,
     planingTotal: _1planingTotal,
-    total: _1total,
+    total: _1total
   } = usePlantCalc('field1');
 
   const {
@@ -73,7 +73,7 @@ const StatisticsConnected = () => {
     sprayerTotal: _2sprayerTotal,
     doneTotal: _2doneTotal,
     planingTotal: _2planingTotal,
-    total: _2total,
+    total: _2total
   } = usePlantCalc('field2');
 
   const {
@@ -97,12 +97,16 @@ const StatisticsConnected = () => {
     sprayerTotal: _3sprayerTotal,
     doneTotal: _3doneTotal,
     planingTotal: _3planingTotal,
-    total: _3total,
+    total: _3total
   } = usePlantCalc('field3');
 
   const oilConsumptionDone =
-    _0oilConsumptionDone + _1oilConsumptionDone + _2oilConsumptionDone + _3oilConsumptionDone;
-  const oilPriceDone = _0oilPriceDone + _1oilPriceDone + _2oilPriceDone + _3oilPriceDone;
+    _0oilConsumptionDone +
+    _1oilConsumptionDone +
+    _2oilConsumptionDone +
+    _3oilConsumptionDone;
+  const oilPriceDone =
+    _0oilPriceDone + _1oilPriceDone + _2oilPriceDone + _3oilPriceDone;
   const paidDone = _0paidDone + _1paidDone + _2paidDone + _3paidDone;
   const seedDone = _0seedDone + _1seedDone + _2seedDone + _3seedDone;
   const oilConsumptionPlaning =
@@ -111,30 +115,53 @@ const StatisticsConnected = () => {
     _2oilConsumptionPlaning +
     _3oilConsumptionPlaning;
   const oilPricePlaning =
-    _0oilPricePlaning + _1oilPricePlaning + _2oilPricePlaning + _3oilPricePlaning;
-  const paidPlaning = _0paidPlaning + _1paidPlaning + _2paidPlaning + _3paidPlaning;
-  const seedPlaning = _0seedPlaning + _1seedPlaning + _2seedPlaning + _3seedPlaning;
+    _0oilPricePlaning +
+    _1oilPricePlaning +
+    _2oilPricePlaning +
+    _3oilPricePlaning;
+  const paidPlaning =
+    _0paidPlaning + _1paidPlaning + _2paidPlaning + _3paidPlaning;
+  const seedPlaning =
+    _0seedPlaning + _1seedPlaning + _2seedPlaning + _3seedPlaning;
   const fertilizerTotalDone =
-    _0fertilizerTotalDone + _1fertilizerTotalDone + _2fertilizerTotalDone + _3fertilizerTotalDone;
+    _0fertilizerTotalDone +
+    _1fertilizerTotalDone +
+    _2fertilizerTotalDone +
+    _3fertilizerTotalDone;
   const fertilizerTotalPlaning =
     _0fertilizerTotalPlaning +
     _1fertilizerTotalPlaning +
     _2fertilizerTotalPlaning +
     _3fertilizerTotalPlaning;
   const sprayerTotalDone =
-    _0sprayerTotalDone + _1sprayerTotalDone + _2sprayerTotalDone + _3sprayerTotalDone;
+    _0sprayerTotalDone +
+    _1sprayerTotalDone +
+    _2sprayerTotalDone +
+    _3sprayerTotalDone;
   const sprayerTotalPlaning =
-    _0sprayerTotalPlaning + _1sprayerTotalPlaning + _2sprayerTotalPlaning + _3sprayerTotalPlaning;
+    _0sprayerTotalPlaning +
+    _1sprayerTotalPlaning +
+    _2sprayerTotalPlaning +
+    _3sprayerTotalPlaning;
   const oilConsumptionTotal =
-    _0oilConsumptionTotal + _1oilConsumptionTotal + _2oilConsumptionTotal + _3oilConsumptionTotal;
-  const oilPriceTotal = _0oilPriceTotal + _1oilPriceTotal + _2oilPriceTotal + _3oilPriceTotal;
+    _0oilConsumptionTotal +
+    _1oilConsumptionTotal +
+    _2oilConsumptionTotal +
+    _3oilConsumptionTotal;
+  const oilPriceTotal =
+    _0oilPriceTotal + _1oilPriceTotal + _2oilPriceTotal + _3oilPriceTotal;
   const paidTotal = _0paidTotal + _1paidTotal + _2paidTotal + _3paidTotal;
   const seedTotal = _0seedTotal + _1seedTotal + _2seedTotal + _3seedTotal;
   const fertilizerTotal =
-    _0fertilizerTotal + _1fertilizerTotal + _2fertilizerTotal + _3fertilizerTotal;
-  const sprayerTotal = _0sprayerTotal + _1sprayerTotal + _2sprayerTotal + _3sprayerTotal;
+    _0fertilizerTotal +
+    _1fertilizerTotal +
+    _2fertilizerTotal +
+    _3fertilizerTotal;
+  const sprayerTotal =
+    _0sprayerTotal + _1sprayerTotal + _2sprayerTotal + _3sprayerTotal;
   const doneTotal = _0doneTotal + _1doneTotal + _2doneTotal + _3doneTotal;
-  const planingTotal = _0planingTotal + _1planingTotal + _2planingTotal + _3planingTotal;
+  const planingTotal =
+    _0planingTotal + _1planingTotal + _2planingTotal + _3planingTotal;
   const total = _0total + _1total + _2total + _3total;
 
   return (
@@ -146,7 +173,7 @@ const StatisticsConnected = () => {
         seed: seedDone,
         fertilizer: fertilizerTotalDone,
         sprayer: sprayerTotalDone,
-        total: doneTotal,
+        total: doneTotal
       }}
       planing={{
         oilConsumption: oilConsumptionPlaning,
@@ -155,7 +182,7 @@ const StatisticsConnected = () => {
         seed: seedPlaning,
         fertilizer: fertilizerTotalPlaning,
         sprayer: sprayerTotalPlaning,
-        total: planingTotal,
+        total: planingTotal
       }}
       total={{
         oilConsumption: oilConsumptionTotal,
@@ -164,7 +191,7 @@ const StatisticsConnected = () => {
         seed: seedTotal,
         fertilizer: fertilizerTotal,
         sprayer: sprayerTotal,
-        total,
+        total
       }}
     />
   );

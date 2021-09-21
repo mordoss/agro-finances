@@ -5,5 +5,5 @@ export default {
   productPrice: 0,
   note: '',
   rented: false,
-  rentedPrice: 15000,
+  rentedPrice: 15000
 };

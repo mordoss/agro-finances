@@ -94,7 +94,7 @@ export const numberToMonth = num => {
     'septembar',
     'oktobar',
     'novembar',
-    'decembar',
+    'decembar'
   ];
   return months[num];
 };
@@ -180,4 +180,17 @@ export const plantToAverageProductPrice = plant => {
     default:
       return 0;
   }
+};
+
+export const changeGroundWorksState1 = (state, action, property) => {
+  const newState = [...state];
+  const { field } = action;
+  newState[field].groundWorksState = {
+    ...newState[field].groundWorksState,
+    [action.workName]: {
+      ...newState[field].groundWorksState[action.workName],
+      [property]: action.value
+    }
+  };
+  return newState;
 };

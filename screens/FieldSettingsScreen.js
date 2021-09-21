@@ -11,12 +11,12 @@ import { theme } from '../theme';
 const tabs = [
   { label: 'Njiva', image: require('../assets/icons/farm.png') },
   { label: 'Radovi', image: require('../assets/icons/tractor.png') },
-  { label: 'Statistika', image: require('../assets/icons/graphic.png') },
+  { label: 'Statistika', image: require('../assets/icons/graphic.png') }
 ];
 
 const FieldSettingsScreen = () => {
-  const activeField = useSelector(state => `field${state.activeField}`);
-  const plant = useSelector(state => state[activeField].plant);
+  const activeField = useSelector(state => state.activeField);
+  const plant = useSelector(state => state.fields[activeField].plant);
   const [active, changeActive] = useState('Njiva');
 
   return (
@@ -28,7 +28,12 @@ const FieldSettingsScreen = () => {
           {active === 'Statistika' && <Statistics field={activeField} />}
         </ScrollView>
       </KeyboardAvoidingView>
-      <Tabs tabs={tabs} active={active} changeActive={changeActive} disabled={plant === ''} />
+      <Tabs
+        tabs={tabs}
+        active={active}
+        changeActive={changeActive}
+        disabled={plant === ''}
+      />
     </Block>
   );
 };

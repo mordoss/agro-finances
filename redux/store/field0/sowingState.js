@@ -1,4 +1,4 @@
 export default {
   seed: '',
-  seedConsumption: null,
+  seedConsumption: 0
 };

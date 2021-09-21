@@ -1,6 +1,6 @@
-import React from 'react';
-import usePlantCalc from '../../hooks/usePlantCalc';
-import StatisticsPresentational from './StatisticsPresentational';
+import React from 'react'
+import usePlantCalc from '../../hooks/usePlantCalc'
+import StatisticsPresentational from './StatisticsPresentational'
 
 const StatisticsConnected = ({ field }) => {
   const {
@@ -25,8 +25,8 @@ const StatisticsConnected = ({ field }) => {
     doneTotal,
     planingTotal,
     rented,
-    total,
-  } = usePlantCalc(field);
+    total
+  } = usePlantCalc(field)
 
   return (
     <StatisticsPresentational
@@ -37,7 +37,7 @@ const StatisticsConnected = ({ field }) => {
         seed: seedDone,
         fertilizer: fertilizerTotalDone,
         sprayer: sprayerTotalDone,
-        total: doneTotal,
+        total: doneTotal
       }}
       planing={{
         oilConsumption: oilConsumptionPlaning,
@@ -46,7 +46,7 @@ const StatisticsConnected = ({ field }) => {
         seed: seedPlaning,
         fertilizer: fertilizerTotalPlaning,
         sprayer: sprayerTotalPlaning,
-        total: planingTotal,
+        total: planingTotal
       }}
       total={{
         oilConsumption: oilConsumptionTotal,
@@ -56,10 +56,10 @@ const StatisticsConnected = ({ field }) => {
         fertilizer: fertilizerTotal,
         sprayer: sprayerTotal,
         rented,
-        total,
+        total
       }}
     />
-  );
-};
+  )
+}
 
-export default StatisticsConnected;
+export default StatisticsConnected

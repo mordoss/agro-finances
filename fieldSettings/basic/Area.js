@@ -5,7 +5,7 @@ import { changeArea } from '../../redux/actions/basicStateActions';
 import { theme } from '../../theme';
 
 const Area = ({ field }) => {
-  const area = useSelector(state => state[field].area);
+  const area = useSelector(state => state.fields[field].area);
   return (
     <Input
       unit="ara"

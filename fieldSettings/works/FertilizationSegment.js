@@ -5,7 +5,7 @@ import ExtraCount from './ExtraCount';
 import {
   changeSprayerOrFertilizer,
   changeFertilizerConsumption,
-  changeFertilizerConsumptionIncrementing,
+  changeFertilizerConsumptionIncrementing
 } from '../../redux/actions/specialActions';
 import { calcFertilizationSegment } from '../../calcFunctions';
 import { fertilization, midRowCultivation } from '../../assets/works';
@@ -16,12 +16,14 @@ const FertilizationSegment = ({
   place,
   midRow,
   field,
-  plant,
+  plant
 }) => {
-  const area = useSelector(state => state[field].area);
+  const area = useSelector(state => state.fields[field].area);
   const { turn } = actionArgumentObject;
   const fertilizerSelected = fertilizationData[`fertilizer${place}`];
-  const { fertilizers } = place ? fertilization[plant][turn] : midRowCultivation[plant][turn];
+  const { fertilizers } = place
+    ? fertilization[plant][turn]
+    : midRowCultivation[plant][turn];
   const { bags, extraArea } = calcFertilizationSegment(
     area,
     fertilizerSelected,
@@ -39,18 +41,24 @@ const FertilizationSegment = ({
         action={changeSprayerOrFertilizer}
         actionArgumentObject={{
           ...actionArgumentObject,
-          workState: midRow ? 'midRowCultivationState' : 'fertilizationState',
+          workState: midRow ? "midRowCultivationState" : "fertilizationState",
           propertyName: `fertilizer${place}`,
         }}
       />
-      {fertilizerSelected !== '' && <Button product={fertilizerSelected} group="fertilizer" />}
+      {fertilizerSelected !== "" && (
+        <Button
+          product={fertilizerSelected}
+          group="fertilizer"
+          label="Više u proizvodu"
+        />
+      )}
       <InputWithIncrementer
         label="Kg po aru"
         action={changeFertilizerConsumption}
         actionIncrementing={changeFertilizerConsumptionIncrementing}
         actionArgumentObject={{
           ...actionArgumentObject,
-          workState: midRow ? 'midRowCultivationState' : 'fertilizationState',
+          workState: midRow ? "midRowCultivationState" : "fertilizationState",
           propertyName: `fertilizerConsumption${place}`,
           value: String(fertilizationData[`fertilizerConsumption${place}`]),
         }}

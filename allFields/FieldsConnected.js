@@ -1,31 +1,39 @@
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { Block } from '../components';
+import { Block, Text } from '../components';
 import FieldCard from './FieldCard';
 import { theme } from '../theme';
 
 const { sizes } = theme;
 
+//  [state.fields[0].plant, state.fields[0].area, 0],
+
 const FieldsConnected = ({ navigation }) => {
-  const fields = useSelector(state => [
-    [state.field0.plant, state.field0.area, 0],
-    [state.field1.plant, state.field1.area, 1],
-    [state.field2.plant, state.field2.area, 2],
-    [state.field3.plant, state.field3.area, 3],
-  ]);
+  const fields = useSelector(state => state.fields);
+
   const dispatch = useDispatch();
+
   const handleChangeField = key => {
     dispatch({ type: 'FIELD_CHANGED', field: key });
     navigation.navigate('FieldSettingsScreen');
+  };
+  const handleAddField = () => {
+    dispatch({ type: 'ADD_FIELD' });
   };
 
   return (
     <ScrollView style={styles.container}>
       <Block row wrap space="between">
-        {fields.map(field => (
-          <FieldCard field={field} handleChangeField={handleChangeField} key={field[2]} />
+        {fields.map((field, i) => (
+          <FieldCard
+            field={[field.plant, field.area, i]}
+            handleChangeField={handleChangeField}
+            // eslint-disable-next-line react/no-array-index-key
+            key={i}
+          />
         ))}
+        <Text onPress={handleAddField}>Text</Text>
       </Block>
     </ScrollView>
   );
@@ -34,8 +42,8 @@ const FieldsConnected = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     marginVertical: sizes.base,
-    marginHorizontal: sizes.base * 2,
-  },
+    marginHorizontal: sizes.base * 2
+  }
 });
 
 export default FieldsConnected;

@@ -9,11 +9,18 @@ import { theme } from '../../theme';
 const { colors, sizes } = theme;
 
 const PlantsConnected = ({ field }) => {
-  const active = useSelector(state => state[field].plant);
+  const active = useSelector(state => state.fields[field].plant);
 
   const renderPlant = plant => {
     const isActive = active === plant.name;
-    return <PlantCard plant={plant} isActive={isActive} key={plant.id} field={field} />;
+    return (
+      <PlantCard
+        plant={plant}
+        isActive={isActive}
+        key={plant.id}
+        field={field}
+      />
+    );
   };
 
   return (
@@ -31,7 +38,7 @@ const PlantsConnected = ({ field }) => {
 const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
-    marginTop: sizes.base,
+    marginTop: sizes.base
   },
   labelContainer: {
     backgroundColor: colors.white,
@@ -39,8 +46,8 @@ const styles = StyleSheet.create({
     borderRadius: sizes.radius,
     paddingVertical: sizes.base / 2,
     elevation: 5,
-    alignItems: 'center',
-  },
+    alignItems: 'center'
+  }
 });
 
 export default PlantsConnected;

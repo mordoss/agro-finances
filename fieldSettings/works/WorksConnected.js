@@ -4,7 +4,7 @@ import WorkCard from './WorkCard';
 import { worksPerPlant } from '../../assets/plants';
 
 const WorksConnected = ({ field }) => {
-  const plant = useSelector(state => state[field].plant);
+  const { plant } = useSelector(state => state.fields[field]);
 
   const {
     plowing,
@@ -20,52 +20,52 @@ const WorksConnected = ({ field }) => {
     spraying3,
     spraying4,
     midRowCultivation1,
-    midRowCultivation2,
+    midRowCultivation2
   } = useSelector(state => ({
-    plowing: state[field].groundWorksState.plowing,
-    disking: state[field].groundWorksState.disking,
-    horrowing: state[field].groundWorksState.horrowing,
-    harvesting: state[field].groundWorksState.harvesting,
+    plowing: state.fields[field].groundWorksState.plowing,
+    disking: state.fields[field].groundWorksState.disking,
+    horrowing: state.fields[field].groundWorksState.horrowing,
+    harvesting: state.fields[field].groundWorksState.harvesting,
     sowing: {
-      ...state[field].groundWorksState.sowing,
-      special: { ...state[field].sowingState },
+      ...state.fields[field].groundWorksState.sowing,
+      special: { ...state.fields[field].sowingState }
     },
     fertilization1: {
-      ...state[field].groundWorksState.fertilization1,
-      special: { ...state[field].fertilizationState.first },
+      ...state.fields[field].groundWorksState.fertilization1,
+      special: { ...state.fields[field].fertilizationState.first }
     },
     fertilization2: {
-      ...state[field].groundWorksState.fertilization2,
-      special: { ...state[field].fertilizationState.second },
+      ...state.fields[field].groundWorksState.fertilization2,
+      special: { ...state.fields[field].fertilizationState.second }
     },
     fertilization3: {
-      ...state[field].groundWorksState.fertilization3,
-      special: { ...state[field].fertilizationState.third },
+      ...state.fields[field].groundWorksState.fertilization3,
+      special: { ...state.fields[field].fertilizationState.third }
     },
     spraying1: {
-      ...state[field].groundWorksState.spraying1,
-      special: { ...state[field].sprayingState.first },
+      ...state.fields[field].groundWorksState.spraying1,
+      special: { ...state.fields[field].sprayingState.first }
     },
     spraying2: {
-      ...state[field].groundWorksState.spraying2,
-      special: { ...state[field].sprayingState.second },
+      ...state.fields[field].groundWorksState.spraying2,
+      special: { ...state.fields[field].sprayingState.second }
     },
     spraying3: {
-      ...state[field].groundWorksState.spraying3,
-      special: { ...state[field].sprayingState.third },
+      ...state.fields[field].groundWorksState.spraying3,
+      special: { ...state.fields[field].sprayingState.third }
     },
     spraying4: {
-      ...state[field].groundWorksState.spraying4,
-      special: { ...state[field].sprayingState.fourth },
+      ...state.fields[field].groundWorksState.spraying4,
+      special: { ...state.fields[field].sprayingState.fourth }
     },
     midRowCultivation1: {
-      ...state[field].groundWorksState.midRowCultivation1,
-      special: { ...state[field].midRowCultivationState.first },
+      ...state.fields[field].groundWorksState.midRowCultivation1,
+      special: { ...state.fields[field].midRowCultivationState.first }
     },
     midRowCultivation2: {
-      ...state[field].groundWorksState.midRowCultivation2,
-      special: { ...state[field].midRowCultivationState.second },
-    },
+      ...state.fields[field].groundWorksState.midRowCultivation2,
+      special: { ...state.fields[field].midRowCultivationState.second }
+    }
   }));
 
   const works = {
@@ -73,46 +73,46 @@ const WorksConnected = ({ field }) => {
     disking: { name: 'Tanjiranje', work: disking },
     horrowing: {
       name: 'Setvospremanje',
-      work: horrowing,
+      work: horrowing
     },
     harvesting: { name: 'Berba', work: harvesting },
     sowing: { name: 'Setva', work: sowing },
     spraying1: {
       name: 'Prva Zaštita',
-      work: spraying1,
+      work: spraying1
     },
     spraying2: {
       name: 'Druga Zaštita',
-      work: spraying2,
+      work: spraying2
     },
     spraying3: {
       name: 'Treća Zaštita',
-      work: spraying3,
+      work: spraying3
     },
     spraying4: {
       name: 'Četvrta Zaštita',
-      work: spraying4,
+      work: spraying4
     },
     fertilization1: {
       name: 'Prva Prihrana',
-      work: fertilization1,
+      work: fertilization1
     },
     fertilization2: {
       name: 'Druga Prihrana',
-      work: fertilization2,
+      work: fertilization2
     },
     fertilization3: {
       name: 'Treća Prihrana',
-      work: fertilization3,
+      work: fertilization3
     },
     midRowCultivation1: {
       name: 'Prva Međuredna',
-      work: midRowCultivation1,
+      work: midRowCultivation1
     },
     midRowCultivation2: {
       name: 'Druga Međuredna',
-      work: midRowCultivation2,
-    },
+      work: midRowCultivation2
+    }
   };
 
   return (

@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   container: {
     width: (width - sizes.base * 6) / 2,
     alignItems: 'center',
-    marginTop: sizes.base,
+    marginTop: sizes.base
   },
   gradient: {
     position: 'absolute',
@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     bottom: 0,
-    borderRadius: sizes.radius,
-  },
+    borderRadius: sizes.radius
+  }
 });
 
 export default PlantCard;

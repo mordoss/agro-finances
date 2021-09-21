@@ -13,7 +13,7 @@ export default {
     'NPK (6:24:12)': [50, ['Soja', 'Suncokret']],
     'NPK (16:27:7)': [50, ['Soja']],
     'NS (20:24)': [50, ['Soja']],
-    'NP (10:35)': [50, ['Soja', 'Suncokret']],
+    'NP (10:35)': [50, ['Soja', 'Suncokret']]
   },
   sprayer: {
     // [bottle price, array of plants, area of bottle, iuapac]
@@ -33,15 +33,20 @@ export default {
       752,
       ['Pšenica'],
       60,
-      'Aminopiralid-kalijum 355 g/kg + Florasulam 150 g/kg',
+      'Aminopiralid-kalijum 355 g/kg + Florasulam 150 g/kg'
     ],
     'Fluksapiroksad 75 g/l + Piraklostrobin 150 g/l': [
       752,
       ['Pšenica'],
       60,
-      'Fluksapiroksad 75 g/l + Piraklostrobin 150 g/l',
+      'Fluksapiroksad 75 g/l + Piraklostrobin 150 g/l'
     ],
-    'Аlfa–cipermetrin 100 g/l': [752, ['Pšenica'], 60, 'Аlfa–cipermetrin 100 g/l'],
+    'Аlfa–cipermetrin 100 g/l': [
+      752,
+      ['Pšenica'],
+      60,
+      'Аlfa–cipermetrin 100 g/l'
+    ],
 
     'Rampa EC': [752, ['Soja'], 60, 'Klomazon'],
     Galbenon: [752, ['Soja'], 60, 'Bentazon'],
@@ -56,7 +61,7 @@ export default {
     Terbis: [752, ['Suncokret'], 60, 'Terbutilazin'],
     Kletox: [752, ['Suncokret'], 60, 'Кletodim'],
     Bosco: [752, ['Suncokret'], 60, 'Boskalid'],
-    Funomil: [752, ['Suncokret'], 60, 'Tiofanat-metil'],
+    Funomil: [752, ['Suncokret'], 60, 'Tiofanat-metil']
   },
   seed: {
     // [bag price, plant]
@@ -71,6 +76,6 @@ export default {
     'Seme skuplje (soja)': [2000, 'Soja'],
     'Seme jeftinije (suncokret)': [8000, 'Suncokret'],
     'Seme srednje (suncokret)': [10000, 'Suncokret'],
-    'Seme skuplje (suncokret)': [12000, 'Suncokret'],
-  },
-};
+    'Seme skuplje (suncokret)': [12000, 'Suncokret']
+  }
+}

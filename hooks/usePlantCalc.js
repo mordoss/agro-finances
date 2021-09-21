@@ -6,15 +6,17 @@ import {
   calcSowing,
   calcSpraying,
   calcMidRowCultivation,
-  calcFertilization,
+  calcFertilization
 } from '../calcFunctions';
 
 const usePlantCalc = field => {
-  const plant = useSelector(state => state[field].plant);
+  const plant = useSelector(state => state.fields[field].plant);
   const { products } = useSelector(state => state);
 
   if (plant !== '') {
-    const rentedPerHa = useSelector(state => (state[field].rented ? state[field].rentedPrice : 0));
+    const rentedPerHa = useSelector(state =>
+      state.fields[field].rented ? state.fields[field].rentedPrice : 0
+    );
 
     const {
       area,
@@ -47,21 +49,27 @@ const usePlantCalc = field => {
       spraying3Done,
       spraying4Done,
       spraying3Planing,
-      spraying4Planing,
+      spraying4Planing
     } = useWorkData(field);
 
     const allWorks = useSelector(state =>
-      Object.values(state[field].groundWorksState).filter(work =>
+      Object.values(state.fields[field].groundWorksState).filter(work =>
         worksPerPlant[plant].includes(work.workName)
       )
     );
     const doneWorks = allWorks.filter(work => work.done);
     const planingWorks = allWorks.filter(work => work.planing);
 
-    const oilConsumptionDone = calcOilAndPaidPerPlant(doneWorks, 'oilConsumption', area);
+    const oilConsumptionDone = calcOilAndPaidPerPlant(
+      doneWorks,
+      'oilConsumption',
+      area
+    );
     const oilPriceDone = oilConsumptionDone * 150;
     const paidDone = calcOilAndPaidPerPlant(doneWorks, 'paidPrice', area);
-    const seedDone = sowingDone ? calcSowing(area, sowingData, products.seed) : 0;
+    const seedDone = sowingDone
+      ? calcSowing(area, sowingData, products.seed)
+      : 0;
     const fertilizer1Done = fertilization1Done
       ? calcFertilization(area, fertilization1Data, products.fertilizer)
       : 0;
@@ -77,15 +85,29 @@ const usePlantCalc = field => {
     const fertilizer2MidDone = midRowCultivation2Done
       ? calcMidRowCultivation(area, midRowCultivation2Data, products.fertilizer)
       : 0;
-    const sprayer1Done = spraying1Done ? calcSpraying(area, spraying1Data, products.sprayer) : 0;
-    const sprayer2Done = spraying2Done ? calcSpraying(area, spraying2Data, products.sprayer) : 0;
-    const sprayer3Done = spraying3Done ? calcSpraying(area, spraying3Data, products.sprayer) : 0;
-    const sprayer4Done = spraying4Done ? calcSpraying(area, spraying4Data, products.sprayer) : 0;
+    const sprayer1Done = spraying1Done
+      ? calcSpraying(area, spraying1Data, products.sprayer)
+      : 0;
+    const sprayer2Done = spraying2Done
+      ? calcSpraying(area, spraying2Data, products.sprayer)
+      : 0;
+    const sprayer3Done = spraying3Done
+      ? calcSpraying(area, spraying3Data, products.sprayer)
+      : 0;
+    const sprayer4Done = spraying4Done
+      ? calcSpraying(area, spraying4Data, products.sprayer)
+      : 0;
 
-    const oilConsumptionPlaning = calcOilAndPaidPerPlant(planingWorks, 'oilConsumption', area);
+    const oilConsumptionPlaning = calcOilAndPaidPerPlant(
+      planingWorks,
+      'oilConsumption',
+      area
+    );
     const oilPricePlaning = oilConsumptionPlaning * 150;
     const paidPlaning = calcOilAndPaidPerPlant(planingWorks, 'paidPrice', area);
-    const seedPlaning = sowingPlaning ? calcSowing(area, sowingData, products.seed) : 0;
+    const seedPlaning = sowingPlaning
+      ? calcSowing(area, sowingData, products.seed)
+      : 0;
     const fertilizer1Planing = fertilization1Planing
       ? calcFertilization(area, fertilization1Data, products.fertilizer)
       : 0;
@@ -115,19 +137,33 @@ const usePlantCalc = field => {
       : 0;
 
     const fertilizerTotalDone =
-      fertilizer1Done + fertilizer2Done + fertilizer3Done + fertilizer1MidDone + fertilizer2MidDone;
+      fertilizer1Done +
+      fertilizer2Done +
+      fertilizer3Done +
+      fertilizer1MidDone +
+      fertilizer2MidDone;
     const fertilizerTotalPlaning =
       fertilizer1Planing +
       fertilizer2Planing +
       fertilizer3Planing +
       fertilizer1MidPlaning +
       fertilizer2MidPlaning;
-    const sprayerTotalDone = sprayer1Done + sprayer2Done + sprayer3Done + sprayer4Done;
+    const sprayerTotalDone =
+      sprayer1Done + sprayer2Done + sprayer3Done + sprayer4Done;
     const sprayerTotalPlaning =
       sprayer1Planing + sprayer2Planing + sprayer3Planing + sprayer4Planing;
-    const doneTotal = oilPriceDone + paidDone + seedDone + fertilizerTotalDone + sprayerTotalDone;
+    const doneTotal =
+      oilPriceDone +
+      paidDone +
+      seedDone +
+      fertilizerTotalDone +
+      sprayerTotalDone;
     const planingTotal =
-      oilPricePlaning + paidPlaning + seedPlaning + fertilizerTotalPlaning + sprayerTotalPlaning;
+      oilPricePlaning +
+      paidPlaning +
+      seedPlaning +
+      fertilizerTotalPlaning +
+      sprayerTotalPlaning;
 
     const oilConsumptionTotal = oilConsumptionDone + oilConsumptionPlaning;
     const oilPriceTotal = oilPriceDone + oilPricePlaning;
@@ -160,7 +196,7 @@ const usePlantCalc = field => {
       doneTotal,
       planingTotal,
       rented,
-      total,
+      total
     };
   }
 
@@ -186,7 +222,7 @@ const usePlantCalc = field => {
     doneTotal: 0,
     planingTotal: 0,
     rented: 0,
-    total: 0,
+    total: 0
   };
 };
 

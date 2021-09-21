@@ -7,21 +7,24 @@ import { theme } from '../theme';
 
 const { colors, sizes } = theme;
 
-const Button = ({ product, group }) => {
+const Button = ({ product, group, label }) => {
   const navigation = useNavigation();
 
   const handlePress = () => {
     navigation.navigate('ProductInfoScreen', {
       group,
-      product,
+      product
     });
   };
 
   return (
     <Block row center>
-      <TouchableHighlight onPress={() => handlePress(product)} style={styles.button}>
+      <TouchableHighlight
+        onPress={() => handlePress(product)}
+        style={styles.button}
+      >
         <Text white center>
-          Više u proizvodu
+          {label}
         </Text>
       </TouchableHighlight>
     </Block>
@@ -34,8 +37,8 @@ const styles = StyleSheet.create({
     padding: sizes.base / 2,
     elevation: 3,
     backgroundColor: colors.blue,
-    marginTop: sizes.base,
-  },
+    marginTop: sizes.base
+  }
 });
 
 export default Button;

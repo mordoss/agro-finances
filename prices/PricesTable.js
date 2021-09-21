@@ -7,9 +7,11 @@ import { changePrice } from '../redux/actions/basicStateActions';
 import { theme } from '../theme';
 
 const PricesTable = ({ expanded, field, property }) => {
-  const plant = useSelector(state => state[field].plant);
+  const plant = useSelector(state => state.fields[field].plant);
   const products = useSelector(state =>
-    Object.entries(state.products[property]).filter(el => el[1][1] && el[1][1].includes(plant))
+    Object.entries(state.products[property]).filter(
+      el => el[1][1] && el[1][1].includes(plant)
+    )
   );
 
   return (
@@ -32,6 +34,6 @@ export default PricesTable;
 
 const styles = StyleSheet.create({
   input: {
-    marginVertical: theme.sizes.base / 2,
-  },
+    marginVertical: theme.sizes.base / 2
+  }
 });

@@ -1,6 +1,14 @@
 {
   "extends": ["airbnb", "prettier", "prettier/react"],
   "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "semi": true
+        
+      }
+    ],
     "import/no-named-as-default": 0,
     "no-use-before-define": [
       "error",
@@ -11,14 +19,6 @@
       1,
       {
         "extensions": [".js", ".jsx"]
-      }
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 100
       }
     ]
   },

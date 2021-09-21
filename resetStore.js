@@ -1,16 +1,19 @@
-import { changeYield, changeProductPrice } from './redux/actions/basicStateActions';
+import {
+  changeYield,
+  changeProductPrice
+} from './redux/actions/basicStateActions';
 import { changeDone, changePlaning } from './redux/actions/cammonWorkActions';
 import {
   changeSeed,
   changeSeedConsumption,
   changeSprayerActive,
   changeSprayerOrFertilizer,
-  changeMixed,
+  changeMixed
 } from './redux/actions/specialActions';
 import {
   plantToAverageSeedConsumption,
   plantToAverageYieldPerHa,
-  plantToAverageProductPrice,
+  plantToAverageProductPrice
 } from './helperFunctions';
 import { worksPerPlant } from './assets/plants';
 
@@ -24,8 +27,8 @@ const resetStore = (field, plant, dispatch) => {
   dispatch(changeYield({ field }, yieldPerHa));
   dispatch(changeProductPrice({ field }, productPrice));
 
-  dispatch(changeSeedConsumption({ field }, seedConsumption));
   dispatch(changeSeed({ field }, ''));
+  dispatch(changeSeedConsumption({ field }, seedConsumption));
 
   worksPerPlant[plant].forEach(workName => {
     dispatch(changeDone({ field, workName, value: true }));
@@ -38,15 +41,32 @@ const resetStore = (field, plant, dispatch) => {
       dispatch(changeSprayerActive({ field, place: i, turn, value: true }));
       dispatch(
         changeSprayerOrFertilizer(
-          { field, propertyName: `sprayer${i}`, turn, workState: 'sprayingState' },
+          {
+            field,
+            propertyName: `sprayer${i}`,
+            turn,
+            workState: 'sprayingState'
+          },
           ''
         )
       );
       if (turn !== 'fourth' && i !== 3) {
-        dispatch(changeMixed({ field, workState: 'fertilizationState', turn, value: true }));
+        dispatch(
+          changeMixed({
+            field,
+            workState: 'fertilizationState',
+            turn,
+            value: true
+          })
+        );
         dispatch(
           changeSprayerOrFertilizer(
-            { field, propertyName: `fertilizer${i}`, turn, workState: 'fertilizationState' },
+            {
+              field,
+              propertyName: `fertilizer${i}`,
+              turn,
+              workState: 'fertilizationState'
+            },
             ''
           )
         );

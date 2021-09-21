@@ -5,8 +5,8 @@ function productsReducer(state = 0, action) {
       ...state,
       [property]: {
         ...state[property],
-        [product]: [value, ...state[property][product].slice(1)],
-      },
+        [product]: [value, ...state[property][product].slice(1)]
+      }
     };
   }
   return state;
