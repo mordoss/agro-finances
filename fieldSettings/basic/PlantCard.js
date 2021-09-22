@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Badge, Block, Text } from '../../components';
 import { changePlant } from '../../redux/actions/basicStateActions';
-import { plantStringToImage } from '../../helperFunctions';
-import resetStore from '../../resetStore';
+import { plantStringToImage } from '../../utils/helperFunctions';
+import resetStore from '../../utils/resetStore';
 import { theme } from '../../theme';
 
 const { colors, sizes } = theme;

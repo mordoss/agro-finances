@@ -7,7 +7,7 @@ import {
   changeFertilizerConsumption,
   changeFertilizerConsumptionIncrementing
 } from '../../redux/actions/specialActions';
-import { calcFertilizationSegment } from '../../calcFunctions';
+import { calcFertilizationSegment } from '../../utils/calcFunctions';
 import { fertilization, midRowCultivation } from '../../assets/works';
 
 const FertilizationSegment = ({
@@ -41,11 +41,11 @@ const FertilizationSegment = ({
         action={changeSprayerOrFertilizer}
         actionArgumentObject={{
           ...actionArgumentObject,
-          workState: midRow ? "midRowCultivationState" : "fertilizationState",
-          propertyName: `fertilizer${place}`,
+          workState: midRow ? 'midRowCultivationState' : 'fertilizationState',
+          propertyName: `fertilizer${place}`
         }}
       />
-      {fertilizerSelected !== "" && (
+      {fertilizerSelected !== '' && (
         <Button
           product={fertilizerSelected}
           group="fertilizer"
@@ -58,9 +58,9 @@ const FertilizationSegment = ({
         actionIncrementing={changeFertilizerConsumptionIncrementing}
         actionArgumentObject={{
           ...actionArgumentObject,
-          workState: midRow ? "midRowCultivationState" : "fertilizationState",
+          workState: midRow ? 'midRowCultivationState' : 'fertilizationState',
           propertyName: `fertilizerConsumption${place}`,
-          value: String(fertilizationData[`fertilizerConsumption${place}`]),
+          value: String(fertilizationData[`fertilizerConsumption${place}`])
         }}
       />
       <ExtraCount count={bags} extraArea={extraArea} packaging="vreća" />

@@ -7,8 +7,8 @@ import {
   changeSeedConsumption,
   changeSeedConsumptionIncrementing
 } from '../../redux/actions/specialActions';
-import { plantToIncrementerLabel } from '../../helperFunctions';
-import { calcSowingBags } from '../../calcFunctions';
+import { plantToIncrementerLabel } from '../../utils/helperFunctions';
+import { calcSowingBags } from '../../utils/calcFunctions';
 
 const Sowing = ({ sowingData, field, plant }) => {
   const { seed, seedConsumption } = sowingData;

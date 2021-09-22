@@ -4,29 +4,29 @@
 export const plantStringToImage = string => {
   switch (string) {
     case 'Kukuruz':
-      return require('./assets/icons/corn.svg.png');
+      return require('../assets/icons/corn.svg.png');
     case 'Soja':
-      return require('./assets/icons/soya.svg.png');
+      return require('../assets/icons/soya.svg.png');
     case 'Suncokret':
-      return require('./assets/icons/sunflower.svg.png');
+      return require('../assets/icons/sunflower.svg.png');
     case 'Pšenica':
-      return require('./assets/icons/wheat.svg.png');
+      return require('../assets/icons/wheat.svg.png');
     case 'Today':
-      return require('./assets/icons/calendar.svg.png');
+      return require('../assets/icons/calendar.svg.png');
     default:
-      return require('./assets/icons/add.png');
+      return require('../assets/icons/add.png');
   }
 };
 export const productGroupStringToImage = string => {
   switch (string) {
     case 'seed':
-      return require('./assets/products/seed.jpg');
+      return require('../assets/products/seed.jpg');
     case 'fertilizer':
-      return require('./assets/products/fertilizer.jpg');
+      return require('../assets/products/fertilizer.jpg');
     case 'sprayer':
-      return require('./assets/products/sprayer.jpg');
+      return require('../assets/products/sprayer.jpg');
     default:
-      return require('./assets/icons/add.png');
+      return require('../assets/icons/add.png');
   }
 };
 

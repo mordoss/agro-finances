@@ -1,21 +1,21 @@
 import {
   changeYield,
   changeProductPrice
-} from './redux/actions/basicStateActions';
-import { changeDone, changePlaning } from './redux/actions/cammonWorkActions';
+} from '../redux/actions/basicStateActions';
+import { changeDone, changePlaning } from '../redux/actions/cammonWorkActions';
 import {
   changeSeed,
   changeSeedConsumption,
   changeSprayerActive,
   changeSprayerOrFertilizer,
   changeMixed
-} from './redux/actions/specialActions';
+} from '../redux/actions/specialActions';
 import {
   plantToAverageSeedConsumption,
   plantToAverageYieldPerHa,
   plantToAverageProductPrice
 } from './helperFunctions';
-import { worksPerPlant } from './assets/plants';
+import { worksPerPlant } from '../assets/plants';
 
 const turns = ['first', 'second', 'third', 'fourth'];
 

@@ -1,4 +1,4 @@
-import { changeGroundWorksState1 } from '../../helperFunctions';
+import { changeGroundWorksState1 } from '../../utils/helperFunctions';
 import field0 from '../store/field0';
 
 function fieldsReducer(state = [], action) {

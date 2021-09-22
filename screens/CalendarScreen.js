@@ -2,7 +2,11 @@ import React from 'react';
 import { ScrollView, Image, StyleSheet } from 'react-native';
 import { Block, Text, Badge } from '../components';
 import usePlanedWorks from '../hooks/usePlanedWorks';
-import { workNameToNative, plantStringToImage, dateToString } from '../helperFunctions';
+import {
+  workNameToNative,
+  plantStringToImage,
+  dateToString
+} from '../utils/helperFunctions';
 
 import { theme } from '../theme';
 
@@ -16,7 +20,7 @@ const CalendarScreen = () => {
   const allWorks = [...works0, ...works1, ...works2, ...works3]
     .map(work => ({
       ...work,
-      days: Math.round((work[0].date - today) / 86400000),
+      days: Math.round((work[0].date - today) / 86400000)
     }))
     .sort((a, b) => a.days - b.days);
 
@@ -68,16 +72,16 @@ const CalendarScreen = () => {
 const styles = StyleSheet.create({
   container: {
     paddingVertical: theme.sizes.base,
-    backgroundColor: theme.colors.backgorund,
+    backgroundColor: theme.colors.backgorund
   },
   card: {
     alignItems: 'flex-end',
-    paddingHorizontal: theme.sizes.base * 2,
+    paddingHorizontal: theme.sizes.base * 2
   },
   flexItem: {
     flexGrow: 0,
-    flexShrink: 0,
-  },
+    flexShrink: 0
+  }
 });
 
 export default CalendarScreen;

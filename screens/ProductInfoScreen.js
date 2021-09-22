@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Image } from 'react-native';
 import { Block, Text } from '../components';
-import { productGroupStringToImage } from '../helperFunctions';
+import { productGroupStringToImage } from '../utils/helperFunctions';
 import { theme } from '../theme';
 
 const { sizes, colors } = theme;
@@ -16,8 +16,8 @@ const ProductInfoScreen = ({ route }) => {
       <Image source={productGroupStringToImage(group)} style={styles.image} />
       <Block card style={styles.info}>
         <Text gray>
-          Informacije o proizvodu sa fotagrafijom, karakteristikima i preporukom proizvođača za
-          korišćenje.
+          Informacije o proizvodu sa fotagrafijom, karakteristikima i preporukom
+          proizvođača za korišćenje.
         </Text>
       </Block>
     </Block>
@@ -29,11 +29,11 @@ export default ProductInfoScreen;
 const styles = StyleSheet.create({
   container: {
     paddingVertical: sizes.base * 2,
-    backgroundColor: colors.backgorund,
+    backgroundColor: colors.backgorund
   },
   image: { marginVertical: sizes.base * 2, borderRadius: sizes.radius },
   info: {
     marginHorizontal: sizes.base * 2,
-    backgroundColor: colors.white,
-  },
+    backgroundColor: colors.white
+  }
 });

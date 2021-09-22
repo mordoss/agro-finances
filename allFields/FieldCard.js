@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
 import { Badge, Block, Text } from '../components';
-import { plantStringToImage } from '../helperFunctions';
+import { plantStringToImage } from '../utils/helperFunctions';
 import { theme } from '../theme';
 
 const { colors, sizes } = theme;

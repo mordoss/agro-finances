@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Block, Text } from '../../components';
 import { changeDate } from '../../redux/actions/cammonWorkActions';
-import { dateToString } from '../../helperFunctions';
+import { dateToString } from '../../utils/helperFunctions';
 import { theme } from '../../theme';
 
 const Calendar = ({ isActive, actionArgumentObject }) => {

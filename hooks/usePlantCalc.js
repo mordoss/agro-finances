@@ -7,7 +7,7 @@ import {
   calcSpraying,
   calcMidRowCultivation,
   calcFertilization
-} from '../calcFunctions';
+} from '../utils/calcFunctions';
 
 const usePlantCalc = field => {
   const plant = useSelector(state => state.fields[field].plant);

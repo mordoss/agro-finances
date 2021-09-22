@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Block, Button, Picker } from '../../components';
 import ExtraCount from './ExtraCount';
 import { changeSprayerOrFertilizer } from '../../redux/actions/specialActions';
-import { calcSprayerBottles } from '../../calcFunctions';
+import { calcSprayerBottles } from '../../utils/calcFunctions';
 import { theme } from '../../theme';
 
 const SprayingSegment = ({

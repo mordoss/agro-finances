@@ -2,13 +2,13 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import useWorkData from '../../hooks/useWorkData';
 import SubTotalPresentational from './SubTotalPresentational';
-import { workNameToItem } from '../../helperFunctions';
+import { workNameToItem } from '../../utils/helperFunctions';
 import {
   calcSowing,
   calcSpraying,
   calcFertilization,
   calcMidRowCultivation
-} from '../../calcFunctions';
+} from '../../utils/calcFunctions';
 
 const SubTotal = ({ work, field }) => {
   const { products } = useSelector(state => state);
