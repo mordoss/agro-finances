@@ -33,7 +33,10 @@ const FieldsConnected = ({ navigation }) => {
             key={i}
           />
         ))}
-        <Text onPress={handleAddField}>Text</Text>
+        <FieldCard
+          handleChangeField={handleAddField}
+          field={[null, null, null]}
+        />
       </Block>
     </ScrollView>
   );

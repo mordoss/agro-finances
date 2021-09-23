@@ -1,6 +1,6 @@
-import React from 'react'
-import usePlantCalc from '../../hooks/usePlantCalc'
-import StatisticsPresentational from './StatisticsPresentational'
+import React from 'react';
+import usePlantCalc from '../../hooks/usePlantCalc';
+import StatisticsPresentational from './StatisticsPresentational';
 
 const StatisticsConnected = ({ field }) => {
   const {
@@ -26,7 +26,7 @@ const StatisticsConnected = ({ field }) => {
     planingTotal,
     rented,
     total
-  } = usePlantCalc(field)
+  } = usePlantCalc(field);
 
   return (
     <StatisticsPresentational
@@ -59,7 +59,7 @@ const StatisticsConnected = ({ field }) => {
         total
       }}
     />
-  )
-}
+  );
+};
 
-export default StatisticsConnected
+export default StatisticsConnected;

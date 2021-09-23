@@ -14,27 +14,64 @@ const Work = ({ work, name, field, plant }) => {
   return (
     <Block color={theme.colors.white} style={styles.container}>
       <CommonWorkPart field={field} work={work} name={name} workName={workName}>
-        {workName === 'sowing' && <Sowing sowingData={special} field={field} plant={plant} />}
+        {workName === 'sowing' && (
+          <Sowing sowingData={special} field={field} plant={plant} />
+        )}
         {workName === 'spraying1' && (
-          <Spraying sprayingData={special} field={field} turn="first" plant={plant} />
+          <Spraying
+            sprayingData={special}
+            field={field}
+            turn="first"
+            plant={plant}
+          />
         )}
         {workName === 'spraying2' && (
-          <Spraying sprayingData={special} field={field} turn="second" plant={plant} />
+          <Spraying
+            sprayingData={special}
+            field={field}
+            turn="second"
+            plant={plant}
+          />
         )}
         {workName === 'spraying3' && (
-          <Spraying sprayingData={special} field={field} turn="third" plant={plant} />
+          <Spraying
+            sprayingData={special}
+            field={field}
+            turn="third"
+            plant={plant}
+          />
         )}
         {workName === 'spraying4' && (
-          <Spraying sprayingData={special} field={field} turn="fourth" plant={plant} />
+          <Spraying
+            sprayingData={special}
+            field={field}
+            turn="fourth"
+            plant={plant}
+          />
         )}
         {workName === 'fertilization1' && (
-          <Fertilization fertilizationData={special} field={field} turn="first" plant={plant} />
+          <Fertilization
+            fertilizationData={special}
+            field={field}
+            turn="first"
+            plant={plant}
+          />
         )}
         {workName === 'fertilization2' && (
-          <Fertilization fertilizationData={special} field={field} turn="second" plant={plant} />
+          <Fertilization
+            fertilizationData={special}
+            field={field}
+            turn="second"
+            plant={plant}
+          />
         )}
         {workName === 'fertilization3' && (
-          <Fertilization fertilizationData={special} field={field} turn="third" plant={plant} />
+          <Fertilization
+            fertilizationData={special}
+            field={field}
+            turn="third"
+            plant={plant}
+          />
         )}
         {workName === 'midRowCultivation1' && (
           <MidRowCultivation
@@ -65,7 +102,8 @@ const styles = StyleSheet.create({
     borderRadius: theme.sizes.radius,
     marginBottom: theme.sizes.base,
     elevation: 5,
-  },
+    flex: 1
+  }
 });
 
 export default Work;

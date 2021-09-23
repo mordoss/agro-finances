@@ -18,8 +18,8 @@ const WorksContainer = ({ field }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: theme.sizes.base,
-  },
+    marginVertical: theme.sizes.base
+  }
 });
 
 export default WorksContainer;

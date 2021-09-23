@@ -9,7 +9,10 @@ import { theme } from '../theme';
 const AllFieldsScreen = ({ navigation }) => {
   const tabs = [
     { label: 'Sve Njive', image: require('../assets/icons/farm.png') },
-    { label: 'Ukupna Statistika', image: require('../assets/icons/graphic.png') },
+    {
+      label: 'Ukupna Statistika',
+      image: require('../assets/icons/graphic.png')
+    }
   ];
   const [active, changeActive] = useState('Sve Njive');
 
@@ -17,7 +20,9 @@ const AllFieldsScreen = ({ navigation }) => {
     <Block color={theme.colors.backgorund}>
       <KeyboardAvoidingView style={{ flex: 1 }}>
         <ScrollView>
-          {active === 'Sve Njive' && <FieldsConnected navigation={navigation} />}
+          {active === 'Sve Njive' && (
+            <FieldsConnected navigation={navigation} />
+          )}
           {active === 'Ukupna Statistika' && <Statistics />}
         </ScrollView>
       </KeyboardAvoidingView>

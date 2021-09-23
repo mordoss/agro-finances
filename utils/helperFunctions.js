@@ -13,8 +13,10 @@ export const plantStringToImage = string => {
       return require('../assets/icons/wheat.svg.png');
     case 'Today':
       return require('../assets/icons/calendar.svg.png');
-    default:
+    case null:
       return require('../assets/icons/add.png');
+    default:
+      return null;
   }
 };
 export const productGroupStringToImage = string => {

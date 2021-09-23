@@ -10,6 +10,7 @@ const StatisticsConnected = () => {
   const fieldsArr = [...Array(numberOfFields).keys()];
 
   const data = fieldsArr
+    // this isn't classic hook
     .map((f, i) => usePlantCalc(i))
     .reduce(
       (acc, cur) => {

@@ -13,7 +13,7 @@ import { theme } from '../../theme';
 const { colors, sizes } = theme;
 
 const Profit = ({ invested }) => {
-  const field = useSelector(state => `field${state.activeField}`);
+  const field = useSelector(state => state.activeField);
   const { area, yieldPerHa, productPrice } = useSelector(
     state => state.fields[field]
   );

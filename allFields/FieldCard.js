@@ -8,17 +8,18 @@ const { colors, sizes } = theme;
 
 const FieldCard = ({ field, handleChangeField }) => {
   const [plantName, fieldArea, fieldNumber] = field;
+  const isAddField = typeof fieldArea !== 'number';
   return (
     <TouchableOpacity onPress={() => handleChangeField(fieldNumber)}>
       <Block card style={styles.fieldCard} color={colors.white}>
-        <Badge size={60} color={plantName ? colors.accent : colors.gray}>
+        <Badge size={60} color={isAddField ? colors.gray : colors.accent}>
           <Image source={plantStringToImage(plantName)} />
         </Badge>
         <Text title center gray>
           {plantName}
         </Text>
         <Text title center gray>
-          {fieldArea} ara
+          {isAddField ? 'Dodaj njivu' : `${fieldArea} ara`}
         </Text>
       </Block>
     </TouchableOpacity>
