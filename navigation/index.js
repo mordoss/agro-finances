@@ -28,7 +28,7 @@ function App() {
               start={{ x: 0, y: 1 }}
               end={{ x: 0, y: 0 }}
             />
-          ),
+          )
         }}
       >
         <Stack.Screen
@@ -52,7 +52,7 @@ function App() {
                 navigate={navigation.navigate}
                 location="InfoScreen"
               />
-            ),
+            )
           })}
         />
         <Stack.Screen
@@ -68,35 +68,35 @@ function App() {
                 navigate={navigation.navigate}
                 location="PricesScreen"
               />
-            ),
+            )
           })}
         />
         <Stack.Screen
           name="CalendarScreen"
           component={CalendarScreen}
           options={() => ({
-            headerTitle: () => null,
+            headerTitle: () => null
           })}
         />
         <Stack.Screen
           name="InfoScreen"
           component={InfoScreen}
           options={() => ({
-            headerTitle: () => null,
+            headerTitle: () => null
           })}
         />
         <Stack.Screen
           name="PricesScreen"
           component={PricesScreen}
           options={() => ({
-            headerTitle: () => null,
+            headerTitle: () => null
           })}
         />
         <Stack.Screen
           name="ProductInfoScreen"
           component={ProductInfoScreen}
           options={() => ({
-            headerTitle: () => null,
+            headerTitle: () => null
           })}
         />
       </Stack.Navigator>

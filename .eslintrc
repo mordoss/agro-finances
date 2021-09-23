@@ -1,4 +1,7 @@
 {
+   "parserOptions": {
+    "ecmaVersion": 2020
+  },
   "extends": ["airbnb", "prettier", "prettier/react"],
   "rules": {
     "prettier/prettier": [
@@ -6,7 +9,6 @@
       {
         "singleQuote": true,
         "semi": true
-        
       }
     ],
     "import/no-named-as-default": 0,

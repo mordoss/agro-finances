@@ -10,3 +10,5 @@ yarn.lock
 .watchmanconfig
 .vscode
 .VSCodeCounter
+.env
+ 
