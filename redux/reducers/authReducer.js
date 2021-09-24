@@ -1,9 +1,15 @@
-function activeFieldReducer(state = 0, action) {
+function activeFieldReducer(state = {}, action) {
   if (action.type === 'SIGNIN') {
-    return true;
+    return {
+      isSigned: true,
+      email: action.payload
+    };
   }
   if (action.type === 'SIGNOUT') {
-    return false;
+    return {
+      isSigned: false,
+      email: null
+    };
   }
   return state;
 }

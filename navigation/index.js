@@ -18,7 +18,7 @@ import Login from '../screens/Auth';
 const Stack = createStackNavigator();
 
 function App() {
-  const { isSigned } = useSelector(state => state);
+  const { auth } = useSelector(state => state);
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -34,7 +34,7 @@ function App() {
           )
         }}
       >
-        {isSigned ? (
+        {auth.isSigned ? (
           <>
             <Stack.Screen
               name="AllFieldsScreen"

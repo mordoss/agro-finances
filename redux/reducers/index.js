@@ -5,7 +5,7 @@ import productsReducer from './productsReducer';
 import authReducer from './authReducer';
 
 const rootReducer = combineReducers({
-  isSigned: authReducer,
+  auth: authReducer,
   activeField: activeFieldReducer,
   products: productsReducer,
   fields: fieldsReducer

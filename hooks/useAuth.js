@@ -8,7 +8,7 @@ import Firebase from '../config/firebase';
 
 WebBrowser.maybeCompleteAuthSession();
 
-const Login = () => {
+const useAuth = () => {
   const dispatch = useDispatch();
   const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
     clientId: Constants.manifest.extra.webClientId
@@ -21,7 +21,9 @@ const Login = () => {
       const credential = firebase.auth.GoogleAuthProvider.credential(id_token);
       Firebase.auth()
         .signInWithCredential(credential)
-        .then(() => dispatch({ type: 'SIGNIN' }));
+        .then(credentials =>
+          dispatch({ type: 'SIGNIN', payload: credentials.user.email })
+        );
     }
   }, [response]);
 
@@ -34,4 +36,4 @@ const Login = () => {
   return { promptAsync, request, signout };
 };
 
-export default Login;
+export default useAuth;
