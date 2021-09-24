@@ -5,7 +5,7 @@ import { Tabs, Block } from '../components';
 import FieldsConnected from '../allFields/FieldsConnected';
 import Statistics from '../allFields/StatisticsConnected';
 import { theme } from '../theme';
-import { LogoutButton } from './Login';
+import { LogoutButton } from './Auth';
 
 const AllFieldsScreen = ({ navigation }) => {
   const tabs = [

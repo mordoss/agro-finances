@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import * as WebBrowser from 'expo-web-browser';
 import * as Google from 'expo-auth-session/providers/google';
 import Constants from 'expo-constants';
 import firebase from 'firebase';
-import { Button } from 'react-native';
-
 import { useDispatch } from 'react-redux';
 import Firebase from '../config/firebase';
 
@@ -23,41 +21,17 @@ const Login = () => {
       const credential = firebase.auth.GoogleAuthProvider.credential(id_token);
       Firebase.auth()
         .signInWithCredential(credential)
-        .then(credentials => dispatch({ type: 'SIGNIN' }));
+        .then(() => dispatch({ type: 'SIGNIN' }));
     }
   }, [response]);
-
-  return (
-    <>
-      <Button
-        disabled={!request}
-        title="Login"
-        onPress={() => {
-          promptAsync();
-        }}
-      />
-    </>
-  );
-};
-
-const LogoutButton = () => {
-  const dispatch = useDispatch();
 
   const signout = () => {
     Firebase.auth()
       .signOut()
       .then(() => dispatch({ type: 'SIGNOUT' }));
   };
-  return (
-    <Button
-      color="red"
-      title="Logout"
-      onPress={() => {
-        signout();
-      }}
-    />
-  );
+
+  return { promptAsync, request, signout };
 };
 
 export default Login;
-export { LogoutButton };

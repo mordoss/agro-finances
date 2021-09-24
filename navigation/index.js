@@ -13,7 +13,7 @@ import PricesScreen from '../screens/PricesScreen';
 import InfoScreen from '../screens/InfoScreen';
 import ProductInfoScreen from '../screens/ProductInfoScreen';
 import { theme } from '../theme';
-import Login from '../screens/Login';
+import Login from '../screens/Auth';
 
 const Stack = createStackNavigator();
 
