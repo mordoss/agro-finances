@@ -1,6 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Block, Button, Picker, InputWithIncrementer } from '../../components';
+import {
+  Block,
+  ProductInfoButton,
+  Picker,
+  InputWithIncrementer,
+} from "../../components";
 import ExtraCount from './ExtraCount';
 import {
   changeSeed,
@@ -28,7 +33,7 @@ const Sowing = ({ sowingData, field, plant }) => {
         action={changeSeed}
         active={seed}
         actionArgumentObject={{
-          field
+          field,
         }}
       />
       <InputWithIncrementer
@@ -37,11 +42,15 @@ const Sowing = ({ sowingData, field, plant }) => {
         actionIncrementing={changeSeedConsumptionIncrementing}
         actionArgumentObject={{
           field,
-          value: String(seedConsumption)
+          value: String(seedConsumption),
         }}
       />
-      {seed !== '' && (
-        <Button product={seed} group="seed" label="Više u proizvodu" />
+      {seed !== "" && (
+        <ProductInfoButton
+          product={seed}
+          group="seed"
+          label="Više u proizvodu"
+        />
       )}
 
       <ExtraCount count={bags} extraArea={extraArea} packaging="vreća" />

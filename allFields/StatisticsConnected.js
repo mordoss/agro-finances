@@ -2,6 +2,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+import { ScrollView } from 'react-native-gesture-handler';
 import usePlantCalc from '../hooks/usePlantCalc';
 import StatisticsPresentational from '../fieldSettings/statistics/StatisticsPresentational';
 

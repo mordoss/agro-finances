@@ -31,7 +31,8 @@ export default {
       storageBucket: process.env.STORAGE_BUCKET,
       messagingSenderId: process.env.MESSAGING_SENDER_ID,
       appId: process.env.APP_ID,
-      webClientId: process.env.WEB_CLIENT_ID
+      webClientId: process.env.WEB_CLIENT_ID,
+      dbURL: process.env.DATABASE_URL
     }
   }
 };

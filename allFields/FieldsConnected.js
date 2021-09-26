@@ -1,16 +1,17 @@
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { Block, Text } from '../components';
+
+import { Block } from '../components';
 import FieldCard from './FieldCard';
 import { theme } from '../theme';
+import SaveDBButton from '../components/SaveDBButton';
 
 const { sizes } = theme;
 
-//  [state.fields[0].plant, state.fields[0].area, 0],
-
 const FieldsConnected = ({ navigation }) => {
-  const fields = useSelector(state => state.fields);
+  const { fields } = useSelector(state => state);
+  const { uid } = useSelector(state => state.auth);
 
   const dispatch = useDispatch();
 
@@ -23,8 +24,8 @@ const FieldsConnected = ({ navigation }) => {
   };
 
   return (
-    <ScrollView style={styles.container}>
-      <Block row wrap space="between">
+    <>
+      <Block row wrap space="between" style={styles.container}>
         {fields.map((field, i) => (
           <FieldCard
             field={[field.plant, field.area, i]}
@@ -38,14 +39,15 @@ const FieldsConnected = ({ navigation }) => {
           field={[null, null, null]}
         />
       </Block>
-    </ScrollView>
+      <SaveDBButton uid={uid} fields={fields} />
+    </>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     marginVertical: sizes.base,
-    marginHorizontal: sizes.base * 2
+    marginHorizontal: sizes.base
   }
 });
 

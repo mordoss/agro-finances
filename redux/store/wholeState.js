@@ -4,7 +4,7 @@ import products from './products';
 export default {
   auth: {
     isSigned: false,
-    email: null
+    uid: null
   },
   activeField: 0,
   products,

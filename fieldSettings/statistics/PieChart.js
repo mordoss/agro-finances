@@ -12,14 +12,14 @@ const Chart = ({ expanded, seed, paid, sprayer, fertilizer, oil, rented }) => {
     { x: 'Seme', y: seed },
     { x: 'Zaštita', y: sprayer },
     { x: 'Prihrana', y: fertilizer },
-    { x: 'Zakup', y: rented },
+    { x: 'Zakup', y: rented }
   ].filter(item => item.y > 0);
   return (
     <View
       style={{
         height: expanded && data.length ? null : 0,
         overflow: 'hidden',
-        alignItems: 'center',
+        alignItems: 'center'
       }}
     >
       <VictoryPie
@@ -30,7 +30,7 @@ const Chart = ({ expanded, seed, paid, sprayer, fertilizer, oil, rented }) => {
           colors.tertiary,
           '#6c5ce7',
           'cyan',
-          'tomato',
+          'tomato'
         ]}
         padding={{ top: 30, bottom: 35 }}
         cornerRadius={sizes.radius / 3}

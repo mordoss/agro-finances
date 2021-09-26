@@ -9,9 +9,9 @@ export const firebaseConfig = {
   projectId: Constants.manifest.extra.projectId,
   storageBucket: Constants.manifest.extra.storageBucket,
   messagingSenderId: Constants.manifest.extra.messagingSenderId,
-  appId: Constants.manifest.extra.appId
+  appId: Constants.manifest.extra.appId,
+  databaseURL: Constants.manifest.extra.dbURL
 };
-
 let Firebase;
 
 if (firebase.apps.length === 0) {

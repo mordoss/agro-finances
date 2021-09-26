@@ -1,6 +1,6 @@
 import Badge from './Badge';
 import Block from './Block';
-import Button from './Button';
+import ProductInfoButton from './ProductInfoButton';
 import Text from './Text';
 import Input from './Input';
 import Switch from './Switch';
@@ -13,7 +13,7 @@ import HeaderIcon from './HeaderIcon';
 
 export {
   Badge,
-  Button,
+  ProductInfoButton,
   Block,
   Text,
   Avatar,
@@ -23,5 +23,5 @@ export {
   SubCount,
   Picker,
   InputWithIncrementer,
-  Tabs,
+  Tabs
 };

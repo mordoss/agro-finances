@@ -6,13 +6,16 @@ import { theme } from '../../theme';
 const { base, radius } = theme.sizes;
 
 const BarChart = ({ expanded, invested, income }) => {
-  const data = [{ x: 'Uloženo', y: invested }, { x: 'Prihod', y: income }];
+  const data = [
+    { x: 'Uloženo', y: invested },
+    { x: 'Prihod', y: income }
+  ];
   return (
     <View
       style={{
         height: expanded ? null : 0,
         alignItems: 'center',
-        overflow: 'hidden',
+        overflow: 'hidden'
       }}
     >
       <VictoryChart
@@ -22,7 +25,7 @@ const BarChart = ({ expanded, invested, income }) => {
           top: base,
           bottom: base * 2,
           left: base * 5,
-          right: base * 3,
+          right: base * 3
         }}
       >
         <VictoryBar
@@ -32,8 +35,10 @@ const BarChart = ({ expanded, invested, income }) => {
           style={{
             data: {
               fill: ({ datum }) =>
-                datum.x === 'Uloženo' ? theme.colors.primary : theme.colors.secondary,
-            },
+                datum.x === 'Uloženo'
+                  ? theme.colors.primary
+                  : theme.colors.secondary
+            }
           }}
           barWidth={base * 2}
         />

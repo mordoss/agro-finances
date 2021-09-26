@@ -6,7 +6,7 @@ import Navigation from './navigation';
 import { store, persistor } from './redux/store';
 
 const App = () => {
-  persistor.purge();
+  // persistor.purge();
 
   return (
     <Provider store={store}>

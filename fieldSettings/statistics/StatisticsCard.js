@@ -8,7 +8,16 @@ import { theme } from '../../theme';
 const { colors, sizes } = theme;
 
 const StatisticsCard = ({ label, data }) => {
-  const { oilConsumption, oilPrice, paid, seed, fertilizer, sprayer, rented, total } = data;
+  const {
+    oilConsumption,
+    oilPrice,
+    paid,
+    seed,
+    fertilizer,
+    sprayer,
+    rented,
+    total
+  } = data;
   const { expanded, changeLayout } = useAnimatedExpand();
 
   return (
@@ -55,24 +64,24 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: sizes.base,
     marginTop: sizes.base,
-    paddingHorizontal: sizes.base * 2,
+    paddingHorizontal: sizes.base * 2
   },
   title: {
     borderBottomColor: colors.gray,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingBottom: sizes.base,
+    paddingBottom: sizes.base
   },
   columns: {
-    marginVertical: sizes.base,
+    marginVertical: sizes.base
   },
   total: {
     borderTopColor: colors.gray,
     borderTopWidth: StyleSheet.hairlineWidth,
-    paddingTop: sizes.base,
+    paddingTop: sizes.base
   },
   chartSwitch: {
-    alignItems: 'center',
-  },
+    alignItems: 'center'
+  }
 });
 
 export default StatisticsCard;

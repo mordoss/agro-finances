@@ -21,15 +21,7 @@ const Login = () => {
 const LogoutButton = () => {
   const { signout } = useAuth();
 
-  return (
-    <Button
-      color="red"
-      title="Logout"
-      onPress={() => {
-        signout();
-      }}
-    />
-  );
+  return <Button color="red" title="Logout" onPress={signout} />;
 };
 
 export default Login;

@@ -20,7 +20,7 @@ const Block = props => {
     space,
     wrap,
     style,
-    children,
+    children
   } = props;
 
   const blockStyles = [
@@ -40,7 +40,7 @@ const Block = props => {
     wrap && { flexWrap: 'wrap' },
     color && styles[color], // predefined styles colors for backgroundColor
     color && !styles[color] && { backgroundColor: color }, // custom backgroundColor
-    style, // rewrite predefined styles
+    style // rewrite predefined styles
   ];
 
   return <View style={blockStyles}>{children}</View>;
@@ -50,37 +50,37 @@ export default Block;
 
 export const styles = StyleSheet.create({
   block: {
-    flex: 1,
+    flex: 1
   },
   row: {
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   column: {
-    flexDirection: 'column',
+    flexDirection: 'column'
   },
   card: {
     borderRadius: sizes.radius,
     padding: sizes.base,
     marginBottom: sizes.base,
-    elevation: 5,
+    elevation: 20
   },
   center: {
-    alignItems: 'center',
+    alignItems: 'center'
   },
   middle: {
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   left: {
-    justifyContent: 'flex-start',
+    justifyContent: 'flex-start'
   },
   right: {
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   top: {
-    justifyContent: 'flex-start',
+    justifyContent: 'flex-start'
   },
   bottom: {
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
 
   accent: { backgroundColor: colors.accent },
@@ -90,5 +90,5 @@ export const styles = StyleSheet.create({
   black: { backgroundColor: colors.black },
   white: { backgroundColor: colors.white },
   gray: { backgroundColor: colors.gray },
-  gray2: { backgroundColor: colors.gray2 },
+  gray2: { backgroundColor: colors.gray2 }
 });

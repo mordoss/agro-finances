@@ -22,7 +22,7 @@ const useAuth = () => {
       Firebase.auth()
         .signInWithCredential(credential)
         .then(credentials =>
-          dispatch({ type: 'SIGNIN', payload: credentials.user.email })
+          dispatch({ type: 'SIGNIN', payload: credentials.user.uid })
         );
     }
   }, [response]);

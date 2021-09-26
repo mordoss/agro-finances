@@ -32,7 +32,9 @@ const styles = StyleSheet.create({
     width: (width - sizes.base * 6) / 2,
     height: (width - sizes.base * 6) / 2,
     alignItems: 'center',
-    marginTop: sizes.base
+    marginTop: sizes.base,
+    marginHorizontal: sizes.base,
+    shadowColor: 'blue'
   },
   addField: {
     marginTop: sizes.base / 2

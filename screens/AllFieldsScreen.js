@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import React, { useState } from 'react';
-import { ScrollView, KeyboardAvoidingView } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Tabs, Block } from '../components';
 import FieldsConnected from '../allFields/FieldsConnected';
 import Statistics from '../allFields/StatisticsConnected';
@@ -19,15 +19,11 @@ const AllFieldsScreen = ({ navigation }) => {
 
   return (
     <Block color={theme.colors.backgorund}>
-      <KeyboardAvoidingView style={{ flex: 1 }}>
-        <ScrollView>
-          {active === 'Sve Njive' && (
-            <FieldsConnected navigation={navigation} />
-          )}
-          {active === 'Ukupna Statistika' && <Statistics />}
-        </ScrollView>
-        <LogoutButton />
-      </KeyboardAvoidingView>
+      <ScrollView>
+        {active === 'Sve Njive' && <FieldsConnected navigation={navigation} />}
+        {active === 'Ukupna Statistika' && <Statistics />}
+      </ScrollView>
+      <LogoutButton />
       <Tabs tabs={tabs} active={active} changeActive={changeActive} />
     </Block>
   );

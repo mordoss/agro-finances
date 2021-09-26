@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Block, Button, Picker } from '../../components';
+import { Block, ProductInfoButton, Picker } from "../../components";
 import ExtraCount from './ExtraCount';
 import { changeSprayerOrFertilizer } from '../../redux/actions/specialActions';
 import { calcSprayerBottles } from '../../utils/calcFunctions';
@@ -39,12 +39,12 @@ const SprayingSegment = ({
         action={changeSprayerOrFertilizer}
         actionArgumentObject={{
           ...actionArgumentObject,
-          workState: 'sprayingState',
-          propertyName: `sprayer${place}`
+          workState: "sprayingState",
+          propertyName: `sprayer${place}`,
         }}
       />
-      {sprayerSelected !== '' && (
-        <Button
+      {sprayerSelected !== "" && (
+        <ProductInfoButton
           product={sprayerSelected}
           group="sprayer"
           label="Više u proizvodu"

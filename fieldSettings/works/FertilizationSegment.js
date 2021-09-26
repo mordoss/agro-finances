@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Block, Button, Picker, InputWithIncrementer } from '../../components';
+import { Block, ProductInfoButton, Picker, InputWithIncrementer } from '../../components';
 import ExtraCount from './ExtraCount';
 import {
   changeSprayerOrFertilizer,
@@ -41,12 +41,12 @@ const FertilizationSegment = ({
         action={changeSprayerOrFertilizer}
         actionArgumentObject={{
           ...actionArgumentObject,
-          workState: midRow ? 'midRowCultivationState' : 'fertilizationState',
-          propertyName: `fertilizer${place}`
+          workState: midRow ? "midRowCultivationState" : "fertilizationState",
+          propertyName: `fertilizer${place}`,
         }}
       />
-      {fertilizerSelected !== '' && (
-        <Button
+      {fertilizerSelected !== "" && (
+        <ProductInfoButton
           product={fertilizerSelected}
           group="fertilizer"
           label="Više u proizvodu"
@@ -58,9 +58,9 @@ const FertilizationSegment = ({
         actionIncrementing={changeFertilizerConsumptionIncrementing}
         actionArgumentObject={{
           ...actionArgumentObject,
-          workState: midRow ? 'midRowCultivationState' : 'fertilizationState',
+          workState: midRow ? "midRowCultivationState" : "fertilizationState",
           propertyName: `fertilizerConsumption${place}`,
-          value: String(fertilizationData[`fertilizerConsumption${place}`])
+          value: String(fertilizationData[`fertilizerConsumption${place}`]),
         }}
       />
       <ExtraCount count={bags} extraArea={extraArea} packaging="vreća" />
