@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, StyleSheet } from 'react-native';
 import useAnimatedExpand from '../../hooks/useAnimatedExpand';
 import { Block, Text } from '../../components';
-import Chart from './PieChart';
+// import Chart from './PieChart';
 import { theme } from '../../theme';
 
 const { colors, sizes } = theme;
@@ -38,7 +38,7 @@ const StatisticsCard = ({ label, data }) => {
           <Text gray>Zaštita: {sprayer}</Text>
         </Block>
       </Block>
-      <Chart
+      {/*  <Chart
         expanded={expanded}
         seed={seed}
         paid={paid}
@@ -46,7 +46,7 @@ const StatisticsCard = ({ label, data }) => {
         oil={oilPrice}
         fertilizer={fertilizer}
         rented={rented}
-      />
+      /> */}
       <Block row space="around" style={styles.total}>
         <Block row style={styles.chartSwitch}>
           <Switch value={expanded} onValueChange={changeLayout} />

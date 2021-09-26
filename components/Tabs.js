@@ -47,18 +47,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: sizes.base * 2,
     backgroundColor: colors.white,
     elevation: 5,
-    marginHorizontal: -sizes.base * 2,
+    marginHorizontal: -sizes.base * 2
   },
   tab: {
     paddingBottom: sizes.base / 2,
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'center'
   },
   active: {
     borderColor: colors.primary,
     borderBottomWidth: 3,
-    fontWeight: 'bold',
-  },
+    fontWeight: 'bold'
+  }
 });
 
 export default Tabs;

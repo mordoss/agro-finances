@@ -5,15 +5,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { useSelector } from 'react-redux';
-import { HeaderIcon } from '../components';
+import { HeaderIcon, Text } from '../components';
 import AllFieldsScreen from '../screens/AllFieldsScreen';
 import FieldSettingsScreen from '../screens/FieldSettingsScreen';
-import CalendarScreen from '../screens/CalendarScreen';
 import PricesScreen from '../screens/PricesScreen';
 import InfoScreen from '../screens/InfoScreen';
 import ProductInfoScreen from '../screens/ProductInfoScreen';
+import Login from '../screens/AuthScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 import { theme } from '../theme';
-import Login from '../screens/Auth';
 
 const Stack = createStackNavigator();
 
@@ -40,22 +40,14 @@ function App() {
               name="AllFieldsScreen"
               component={AllFieldsScreen}
               options={({ navigation }) => ({
-                headerTitle: () => (
-                  <HeaderIcon
-                    imageSource={require('../assets/icons/calendar.svg.png')}
-                    position="Left"
-                    label="Planer"
-                    navigate={navigation.navigate}
-                    location="CalendarScreen"
-                  />
-                ),
+                headerTitle: () => null,
                 headerRight: () => (
                   <HeaderIcon
-                    imageSource={require('../assets/icons/info.png')}
+                    imageSource={require('../assets/icons/settings.svg.png')}
                     position="Right"
-                    label="Info"
+                    label="Podesavanja"
                     navigate={navigation.navigate}
-                    location="InfoScreen"
+                    location="SettingsScreen"
                   />
                 )
               })}
@@ -63,24 +55,24 @@ function App() {
             <Stack.Screen
               name="FieldSettingsScreen"
               component={FieldSettingsScreen}
-              options={({ navigation }) => ({
+              options={() => ({
                 headerTitle: () => null,
                 headerRight: () => (
                   <HeaderIcon
-                    imageSource={require('../assets/icons/price.png')}
+                    imageSource={require('../assets/icons/settings.svg.png')}
                     position="Right"
-                    label="Cene"
-                    navigate={navigation.navigate}
-                    location="PricesScreen"
+                    label="Podešavanja"
+                    location="SettingsScreen"
                   />
                 )
               })}
             />
+
             <Stack.Screen
-              name="CalendarScreen"
-              component={CalendarScreen}
+              name="SettingsScreen"
+              component={SettingsScreen}
               options={() => ({
-                headerTitle: () => null
+                headerTitle: () => <Text white>Podešavanja</Text>
               })}
             />
             <Stack.Screen
@@ -106,7 +98,17 @@ function App() {
             />
           </>
         ) : (
-          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={() => ({
+              headerTitle: () => (
+                <Text h1 white>
+                  Prijava
+                </Text>
+              )
+            })}
+          />
         )}
       </Stack.Navigator>
     </NavigationContainer>

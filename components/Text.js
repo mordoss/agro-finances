@@ -39,7 +39,7 @@ const Typography = props => {
     gray,
     gray2,
     style,
-    children,
+    children
   } = props;
 
   const textStyles = [
@@ -75,7 +75,7 @@ const Typography = props => {
     white && styles.white,
     gray && styles.gray,
     gray2 && styles.gray2,
-    style, // rewrite predefined styles
+    style // rewrite predefined styles
   ];
 
   return (
@@ -91,23 +91,23 @@ const styles = StyleSheet.create({
   // default style
   text: {
     fontSize: sizes.font,
-    color: colors.black,
+    color: colors.black
   },
   // variations
   regular: {
-    fontWeight: 'normal',
+    fontWeight: 'normal'
   },
   bold: {
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   semibold: {
-    fontWeight: '600',
+    fontWeight: '600'
   },
   medium: {
-    fontWeight: '500',
+    fontWeight: '500'
   },
   light: {
-    fontWeight: '200',
+    fontWeight: '200'
   },
   // position
   center: { textAlign: 'center' },
@@ -128,5 +128,5 @@ const styles = StyleSheet.create({
   title: fonts.title,
   body: fonts.body,
   caption: fonts.caption,
-  small: fonts.small,
+  small: fonts.small
 });

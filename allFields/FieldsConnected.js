@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { Block } from '../components';
@@ -24,8 +24,8 @@ const FieldsConnected = ({ navigation }) => {
   };
 
   return (
-    <>
-      <Block row wrap space="between" style={styles.container}>
+    <Block style={styles.container}>
+      <Block row wrap>
         {fields.map((field, i) => (
           <FieldCard
             field={[field.plant, field.area, i]}
@@ -40,7 +40,7 @@ const FieldsConnected = ({ navigation }) => {
         />
       </Block>
       <SaveDBButton uid={uid} fields={fields} />
-    </>
+    </Block>
   );
 };
 

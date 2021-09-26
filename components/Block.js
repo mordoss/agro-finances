@@ -62,7 +62,7 @@ export const styles = StyleSheet.create({
     borderRadius: sizes.radius,
     padding: sizes.base,
     marginBottom: sizes.base,
-    elevation: 20
+    elevation: 10
   },
   center: {
     alignItems: 'center'

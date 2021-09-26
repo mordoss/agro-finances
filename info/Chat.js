@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, TextInput, TouchableHighlight, Dimensions } from 'react-native';
+import {
+  StyleSheet,
+  TextInput,
+  TouchableHighlight,
+  Dimensions
+} from 'react-native';
 import { Block, Text } from '../components';
 import { theme } from '../theme';
 
@@ -16,12 +21,19 @@ const Chat = () => {
       </Text>
       {isSent && (
         <>
-          <Block flex={false} style={[styles.chatMessage, styles.chatMessageLeft]}>
+          <Block
+            flex={false}
+            style={[styles.chatMessage, styles.chatMessageLeft]}
+          >
             <Text white>{message}</Text>
           </Block>
-          <Block flex={false} style={[styles.chatMessage, styles.chatMessageRight]}>
+          <Block
+            flex={false}
+            style={[styles.chatMessage, styles.chatMessageRight]}
+          >
             <Text white>
-              Čet nije u funkciji u ovoj verziji aplikacije, biće dostupan u sledećem apdejtu.
+              Čet nije u funkciji u ovoj verziji aplikacije, biće dostupan u
+              sledećem apdejtu.
             </Text>
           </Block>
         </>
@@ -36,15 +48,18 @@ const Chat = () => {
               styles.input,
               {
                 borderColor: onFocus ? colors.primary : colors.gray,
-                borderWidth: onFocus ? 2 : StyleSheet.hairlineWidth,
-              },
+                borderWidth: onFocus ? 2 : StyleSheet.hairlineWidth
+              }
             ]}
             autoComplete="off"
             autoCorrect={false}
             multiline
           />
         </Block>
-        <TouchableHighlight style={styles.button} onPress={() => setIsSent(true)}>
+        <TouchableHighlight
+          style={styles.button}
+          onPress={() => setIsSent(true)}
+        >
           <Text white center>
             Pošalji
           </Text>
@@ -59,25 +74,25 @@ const styles = StyleSheet.create({
     margin: sizes.base / 2,
     backgroundColor: colors.white,
     borderRadius: sizes.radius,
-    padding: sizes.base,
+    padding: sizes.base
   },
   chatMessage: {
     borderBottomLeftRadius: sizes.radius,
     borderBottomRightRadius: sizes.radius,
-    elevation: 5,
+    elevation: 20,
     marginVertical: sizes.base / 2,
-    padding: sizes.base,
+    padding: sizes.base
   },
   chatMessageLeft: {
     alignSelf: 'flex-start',
     borderTopRightRadius: sizes.radius,
-    backgroundColor: colors.primary,
+    backgroundColor: colors.primary
   },
   chatMessageRight: {
     alignSelf: 'flex-end',
 
     borderTopLeftRadius: sizes.radius,
-    backgroundColor: colors.blue,
+    backgroundColor: colors.blue
   },
   input: {
     borderWidth: StyleSheet.hairlineWidth,
@@ -88,7 +103,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: sizes.base,
     paddingVertical: sizes.base / 2,
     height: sizes.base * 4,
-    width: Dimensions.get('window').width - sizes.base * 10,
+    width: Dimensions.get('window').width - sizes.base * 10
   },
   button: {
     borderRadius: sizes.radius,
@@ -97,8 +112,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     marginTop: sizes.base / 2,
     height: sizes.base * 4,
-    justifyContent: 'center',
-  },
+    justifyContent: 'center'
+  }
 });
 
 export default Chat;

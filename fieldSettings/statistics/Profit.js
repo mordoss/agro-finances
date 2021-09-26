@@ -7,7 +7,7 @@ import {
   changeProductPrice
 } from '../../redux/actions/basicStateActions';
 import { Block, Text, Input } from '../../components';
-import Chart from './BarChart';
+// import Chart from './BarChart';
 import { theme } from '../../theme';
 
 const { colors, sizes } = theme;
@@ -46,11 +46,11 @@ const Profit = ({ invested }) => {
           Potencijalni prihod: {Math.round(income)} din.
         </Text>
       </Block>
-      <Chart
+      {/*  <Chart
         expanded={expanded}
         income={income || 0}
         invested={invested || 0}
-      />
+      /> */}
       <Block row space="around" style={styles.total}>
         <Block row style={styles.chartSwitch}>
           <Switch value={expanded} onValueChange={changeLayout} />

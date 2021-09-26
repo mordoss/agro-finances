@@ -7,14 +7,17 @@ import { theme } from '../theme';
 const { sizes, colors } = theme;
 
 const PricesScreen = () => {
-  const field = useSelector(state => `field${state.activeField}`);
+  const field = useSelector(state => state.activeField);
 
   const [expandedSeed, setExpandedSeed] = useState(false);
   const [expandedFertilizer, setExpandedFertilizer] = useState(false);
   const [expandedSprayer, setExpandedSprayer] = useState(false);
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={{ flexGrow: 1 }}
+    >
       <PricesCard
         label="Seme"
         expanded={expandedSeed}
@@ -44,8 +47,8 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: sizes.base * 2,
     paddingBottom: sizes.base * 2,
-    backgroundColor: colors.backgorund,
-  },
+    backgroundColor: colors.backgorund
+  }
 });
 
 export default PricesScreen;
