@@ -5,6 +5,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import Navigation from './navigation';
 import { store, persistor } from './redux/store';
 
+// delete field functionality
+
 const App = () => {
   // persistor.purge();
 
