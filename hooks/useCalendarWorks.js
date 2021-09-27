@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { worksPerPlant } from '../assets/plants';
 
-const usePlanedWorks = field => {
+const useCalendarWorks = (field, filterValue) => {
   const plant = useSelector(state => state.fields[field].plant);
   const works = useSelector(state =>
     plant
@@ -10,10 +10,15 @@ const usePlanedWorks = field => {
         )
       : []
   )
-    .filter(work => work.planing)
+    .filter(work => {
+      if (filterValue === 'all') {
+        return work.done || work.planing;
+      }
+      return work[filterValue];
+    })
     .map(work => [work, plant]);
 
   return works;
 };
 
-export default usePlanedWorks;
+export default useCalendarWorks;
