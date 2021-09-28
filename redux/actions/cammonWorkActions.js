@@ -3,7 +3,7 @@ export const changeDone = ({ field, workName, value }) => {
     type: 'DONE_CHANGED',
     value,
     workName,
-    field,
+    field
   };
 };
 
@@ -12,7 +12,7 @@ export const changePlaning = ({ field, workName, value }) => {
     type: 'PLANING_CHANGED',
     value,
     workName,
-    field,
+    field
   };
 };
 
@@ -21,7 +21,7 @@ export const changeDate = ({ field, workName }, value) => {
     type: 'DATE_CHANGED',
     value,
     workName,
-    field,
+    field
   };
 };
 
@@ -30,7 +30,7 @@ export const changePaid = ({ field, workName, value }) => {
     type: 'PAID_CHANGED',
     value,
     workName,
-    field,
+    field
   };
 };
 
@@ -39,7 +39,7 @@ export const changePaidPrice = ({ field, workName }, value) => {
     type: 'PAID_PRICE_CHANGED',
     value,
     workName,
-    field,
+    field
   };
 };
 
@@ -48,6 +48,6 @@ export const changeOilConsumption = ({ field, workName }, value) => {
     type: 'OIL_CONSUMPTION_CHANGED',
     value,
     workName,
-    field,
+    field
   };
 };

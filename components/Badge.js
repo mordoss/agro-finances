@@ -13,13 +13,20 @@ const Badge = props => {
     size && {
       height: size,
       width: size,
-      borderRadius: size,
+      borderRadius: size
     },
-    style,
+    style
   ]);
 
   return (
-    <Block flex={false} middle center color={color} {...props} style={badgeStyles}>
+    <Block
+      flex={false}
+      middle
+      center
+      color={color}
+      {...props}
+      style={badgeStyles}
+    >
       {children}
     </Block>
   );
@@ -31,6 +38,6 @@ const styles = StyleSheet.create({
   badge: {
     height: sizes.base,
     width: sizes.base,
-    borderRadius: sizes.border,
-  },
+    borderRadius: sizes.border
+  }
 });

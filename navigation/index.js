@@ -13,6 +13,7 @@ import InfoScreen from '../screens/InfoScreen';
 import ProductInfoScreen from '../screens/ProductInfoScreen';
 import Login from '../screens/AuthScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 import { theme } from '../theme';
 
 const Stack = createStackNavigator();
@@ -55,13 +56,14 @@ function App() {
             <Stack.Screen
               name="FieldSettingsScreen"
               component={FieldSettingsScreen}
-              options={() => ({
+              options={({ navigation }) => ({
                 headerTitle: () => null,
                 headerRight: () => (
                   <HeaderIcon
                     imageSource={require('../assets/icons/settings.svg.png')}
                     position="Right"
                     label="Podešavanja"
+                    navigate={navigation.navigate}
                     location="SettingsScreen"
                   />
                 )
@@ -72,7 +74,22 @@ function App() {
               name="SettingsScreen"
               component={SettingsScreen}
               options={() => ({
-                headerTitle: () => <Text white>Podešavanja</Text>
+                headerTitle: () => (
+                  <Text white title>
+                    Podešavanja
+                  </Text>
+                )
+              })}
+            />
+            <Stack.Screen
+              name="ProfileScreen"
+              component={ProfileScreen}
+              options={() => ({
+                headerTitle: () => (
+                  <Text white title>
+                    Profil
+                  </Text>
+                )
               })}
             />
             <Stack.Screen

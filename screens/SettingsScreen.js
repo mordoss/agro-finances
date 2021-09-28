@@ -15,6 +15,10 @@ const screens = [
     text: 'Cene'
   },
   {
+    screenName: 'ProfileScreen',
+    text: 'Moj profil'
+  },
+  {
     screenName: 'signout',
     text: 'Odjavi se'
   }
