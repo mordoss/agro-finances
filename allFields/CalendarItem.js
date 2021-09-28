@@ -7,31 +7,29 @@ import { theme } from '../theme';
 import {
   workNameToNative,
   plantStringToImage,
-  dateToString
+  dateToString,
+  calcDaysBetween
 } from '../utils/helperFunctions';
 
 const CalendarItem = ({ work, i }) => {
-  const date = work[0].date && new Date(work[0].date);
-  const { workName } = work[0];
-
+  const { date, workName, plant } = work;
   return (
     <Block
       card
       row
       center
-      space="between"
       style={styles.card}
       color={i % 2 ? theme.colors.white : theme.colors.gray2}
     >
       <Badge size={30} style={[styles.flexItem, { flexBasis: '15%' }]}>
-        <Image source={plantStringToImage(work[1])} />
+        <Image source={plantStringToImage(plant)} />
       </Badge>
 
       <Text gray style={[styles.flexItem, { flexBasis: '30%' }]}>
         {workNameToNative(workName)}
       </Text>
 
-      <Text caption gray style={[styles.flexItem, { flexBasis: '20%' }]}>
+      <Text gray style={[styles.flexItem, { flexBasis: '20%' }]}>
         {date ? dateToString(date) : 'datum nije izabran'}
       </Text>
 
@@ -39,10 +37,9 @@ const CalendarItem = ({ work, i }) => {
         bold
         right
         color={theme.colors.gray}
-        style={[styles.flexItem, { flexBasis: '20%' }]}
+        style={[styles.flexItem, { flexBasis: '35%' }]}
       >
-        {/* {days === 0 && 'Danas'}
-                {date && days !== 0 ? `za ${days} dan` : ''} */}
+        {date && calcDaysBetween(date)}
       </Text>
     </Block>
   );

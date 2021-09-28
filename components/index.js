@@ -10,6 +10,8 @@ import Tabs from './Tabs';
 import SubCount from './SubCount';
 import Avatar from './Avatar';
 import HeaderIcon from './HeaderIcon';
+import RadioButtons from './RadioButtons';
+import Checkbox from './Checkbox';
 
 export {
   Badge,
@@ -23,5 +25,7 @@ export {
   SubCount,
   Picker,
   InputWithIncrementer,
-  Tabs
+  Tabs,
+  RadioButtons,
+  Checkbox
 };

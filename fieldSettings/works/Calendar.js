@@ -44,7 +44,6 @@ const Calendar = ({ isActive, actionArgumentObject }) => {
           mode="date"
           display="default"
           onChange={onChange}
-          minimumDate={today}
         />
       )}
     </Block>

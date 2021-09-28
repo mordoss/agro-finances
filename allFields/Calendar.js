@@ -1,53 +1,72 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 
-import RadioButtons from '../components/RadioButtons';
+import { RadioButtons, Block, Checkbox } from '../components';
 import CalendarItem from './CalendarItem';
 import useCalendarWorks from '../hooks/useCalendarWorks';
 import { theme } from '../theme';
 
-const radioValues = [
+const { sizes, colors } = theme;
+
+const isDoneFilterItems = [
   { value: 'planing', text: 'Planirano' },
   { value: 'done', text: 'Urađeno' },
   { value: 'all', text: 'Sve' }
 ];
 
+const sortingValues = [
+  { value: 'time', text: 'datumu' },
+  { value: 'fields', text: 'njivama' }
+];
+
 const CalendarScreen = () => {
-  const [currentTab, setCurrentTab] = useState('planing');
   const numberOfFields = useSelector(state => state.fields.length);
+  const [currentTab, setCurrentTab] = useState('planing');
+  const [sortingItem, setSortingItem] = useState('fields');
+  const [isDate, setIsDate] = useState(false);
 
-  const fieldsArr = [...Array(numberOfFields).keys()].map(field =>
-    useCalendarWorks(field, currentTab)
-  );
-
-  const filedsArrPlus = fieldsArr
-    .filter(arr => arr.length)
-    .map(work => ({
-      ...work
-    }));
+  const works = [...Array(numberOfFields).keys()]
+    .map(field => useCalendarWorks(field, currentTab, isDate))
+    .flat()
+    .sort((a, b) => {
+      if (sortingItem === 'time') {
+        return new Date(a.date) - new Date(b.date);
+      }
+      return null;
+    });
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <Block style={styles.container} flex={false}>
+      <Checkbox
+        value={isDate}
+        setValue={setIsDate}
+        label="Prikaži samo radove sa datumom"
+      />
       <RadioButtons
-        values={radioValues}
+        title="Prikaži"
+        values={isDoneFilterItems}
         current={currentTab}
         setCurrent={setCurrentTab}
       />
-      {filedsArrPlus.map((field, i) => {
-        const works = Object.values(field);
-        return works.map((work, j) => {
-          return <CalendarItem work={work} i={i} key={`${i}-${j}`} />;
-        });
+      <RadioButtons
+        title="Sortiraj po:"
+        values={sortingValues}
+        current={sortingItem}
+        setCurrent={setSortingItem}
+      />
+      {works.map((work, i) => {
+        // eslint-disable-next-line react/no-array-index-key
+        return <CalendarItem work={work} i={i} key={i} />;
       })}
-    </ScrollView>
+    </Block>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: theme.sizes.base,
-    backgroundColor: theme.colors.backgorund
+    paddingVertical: sizes.base,
+    backgroundColor: colors.backgorund
   }
 });
 

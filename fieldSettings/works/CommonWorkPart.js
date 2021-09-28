@@ -22,10 +22,15 @@ const CommonWorkPart = ({ field, name, work, children }) => {
             planing={planing}
             actionArgumentObject={actionArgumentObject}
           />
-          <Calendar isActive={planing} actionArgumentObject={actionArgumentObject} />
+          <Calendar
+            isActive={planing || done}
+            actionArgumentObject={actionArgumentObject}
+          />
         </Block>
 
-        <Block style={{ height: done || planing ? null : 0, overflow: 'hidden' }}>
+        <Block
+          style={{ height: done || planing ? null : 0, overflow: 'hidden' }}
+        >
           <PaidAndConsumptionSegment
             paid={paid}
             actionArgumentObject={actionArgumentObject}
@@ -42,8 +47,8 @@ const CommonWorkPart = ({ field, name, work, children }) => {
 
 const styles = StyleSheet.create({
   content: {
-    padding: theme.sizes.base,
-  },
+    padding: theme.sizes.base
+  }
 });
 
 export default CommonWorkPart;

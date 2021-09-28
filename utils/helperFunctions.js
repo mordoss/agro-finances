@@ -1,4 +1,5 @@
 /* eslint-disable global-require */
+import moment from 'moment';
 
 // Image component doesn't accept svg
 export const plantStringToImage = string => {
@@ -111,16 +112,41 @@ export const dateToString = date => {
   return null;
 };
 
-export const calcDays = (workDate, todayIndex, months) => {
-  const monthsDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  const days =
-    monthsDays.reduce(
-      (a, b, index) => (index < months.indexOf(workDate[0]) ? a + b : a),
-      workDate[1]
-    ) -
-    todayIndex -
-    1;
-  return days < 0 ? 365 + days : days;
+export const calcDaysBetween = workDate => {
+  const today = moment();
+  const date = moment(workDate);
+  const months = date.diff(today, 'month');
+  today.add(months, 'month');
+  const days = date.diff(today, 'days');
+
+  const monthsLastDigit = Math.abs(months % 10);
+  const daysLastDigit = Math.abs(days % 10);
+  let monthsString = '';
+  if (months !== 0) {
+    if (monthsLastDigit > 4 || monthsLastDigit === 0) {
+      monthsString = `${Math.abs(months)} meseci`;
+    }
+    if (monthsLastDigit === 1) {
+      monthsString = `${Math.abs(months)} mesec`;
+    }
+    if (monthsLastDigit > 1 && monthsLastDigit < 5) {
+      monthsString = `${Math.abs(months)} meseca`;
+    }
+  }
+  let daysString = '';
+  if (days !== 0) {
+    if (daysLastDigit === 1) {
+      daysString = `${Math.abs(days)} dan`;
+    }
+    if (daysLastDigit > 1) {
+      daysString = `${Math.abs(days)} dana`;
+    }
+  }
+
+  if (today.isSame(date, 'day')) {
+    return 'Danas';
+  }
+  return `${date.isAfter(today) ? 'Za' : 'Pre'} ${monthsString} ${daysString}`;
 };
 
 export const plantToIncrementerLabel = plant => {

@@ -19,7 +19,7 @@ const InfoScreen = () => {
           name="Miloš Petrović"
           position="Programer"
           email="milos8petrovic8@gmail.com"
-          img={require('../assets/programer.jpg')}
+          img={require('../assets/programer.jpeg')}
         />
         <Chat />
       </Block>
@@ -30,8 +30,8 @@ const InfoScreen = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.backgorund,
-    padding: theme.sizes.base,
-  },
+    padding: theme.sizes.base
+  }
 });
 
 export default InfoScreen;

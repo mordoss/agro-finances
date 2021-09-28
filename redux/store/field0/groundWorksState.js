@@ -6,7 +6,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
 
   disking: {
@@ -16,7 +16,7 @@ export default {
     date: null,
     oilConsumption: 30,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
 
   horrowing: {
@@ -26,7 +26,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
 
   harvesting: {
@@ -36,7 +36,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
   sowing: {
     workName: 'sowing',
@@ -45,7 +45,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
   fertilization1: {
     workName: 'fertilization1',
@@ -54,7 +54,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
   fertilization2: {
     workName: 'fertilization2',
@@ -63,7 +63,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
   fertilization3: {
     workName: 'fertilization3',
@@ -72,7 +72,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
   spraying1: {
     workName: 'spraying1',
@@ -81,7 +81,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
   spraying2: {
     workName: 'spraying2',
@@ -90,7 +90,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
   spraying3: {
     workName: 'spraying3',
@@ -99,7 +99,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
   spraying4: {
     workName: 'spraying4',
@@ -108,7 +108,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
 
   midRowCultivation1: {
@@ -118,7 +118,7 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
+    paidPrice: 10000
   },
   midRowCultivation2: {
     workName: 'midRowCultivation2',
@@ -127,6 +127,6 @@ export default {
     date: null,
     oilConsumption: 40,
     paid: false,
-    paidPrice: 10000,
-  },
+    paidPrice: 10000
+  }
 };
