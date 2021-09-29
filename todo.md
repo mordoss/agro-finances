@@ -1,0 +1,2 @@
+- delete field from store
+- add popovers and question marks for explanations

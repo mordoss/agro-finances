@@ -4,35 +4,34 @@ import { TouchableHighlight, StyleSheet } from 'react-native';
 import Text from './Text';
 import Block from './Block';
 import { theme } from '../theme';
-import useDB from '../hooks/useDB';
 
 const { colors, sizes } = theme;
 
-const SaveDBButton = ({ uid, fields }) => {
-  const { writeFieldsDB } = useDB();
-
+const DBButton = ({ uid, thunk, dispatch, title, primary }) => {
   return (
     <Block row center>
       <TouchableHighlight
-        onPress={() => writeFieldsDB(uid, fields)}
-        style={styles.button}
+        onPress={() => dispatch(thunk(uid))}
+        style={[
+          styles.button,
+          { backgroundColor: primary ? colors.primary : colors.blue }
+        ]}
       >
         <Text white center>
-          Sacuvaj u bazu
+          {title}
         </Text>
       </TouchableHighlight>
     </Block>
   );
 };
 
-export default SaveDBButton;
+export default DBButton;
 
 const styles = StyleSheet.create({
   button: {
     borderRadius: 5,
     padding: sizes.base / 2,
-    elevation: 3,
-    backgroundColor: colors.primary,
+    elevation: 10,
     marginTop: sizes.base
   }
 });

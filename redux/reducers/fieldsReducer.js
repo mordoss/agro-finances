@@ -6,8 +6,15 @@ function fieldsReducer(state = [], action) {
   const newState = [...state];
 
   switch (action.type) {
+    case 'LOAD_FIELDS_DB':
+      return Object.values(action.payload);
+
     case 'ADD_FIELD':
       return [...state, field0];
+
+    case 'REMOVE_FIELD':
+      newState.splice(field, 1);
+      return newState;
 
     case 'AREA_CHANGED':
       newState[field] = { ...newState[field], area: +action.value };

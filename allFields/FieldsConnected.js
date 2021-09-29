@@ -5,7 +5,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Block } from '../components';
 import FieldCard from './FieldCard';
 import { theme } from '../theme';
-import SaveDBButton from '../components/SaveDBButton';
+import DBButton from '../components/DBButton';
+import {
+  loadFieldsDBThunk,
+  saveFieldsDBThunk
+} from '../redux/actions/firebaseActions';
 
 const { sizes } = theme;
 
@@ -39,7 +43,21 @@ const FieldsConnected = ({ navigation }) => {
           field={[null, null, null]}
         />
       </Block>
-      <SaveDBButton uid={uid} fields={fields} />
+      <Block row>
+        <DBButton
+          uid={uid}
+          thunk={saveFieldsDBThunk}
+          dispatch={dispatch}
+          title="Zapamti u bazu"
+          primary
+        />
+        <DBButton
+          uid={uid}
+          thunk={loadFieldsDBThunk}
+          dispatch={dispatch}
+          title="Povuci iz baze"
+        />
+      </Block>
     </Block>
   );
 };
