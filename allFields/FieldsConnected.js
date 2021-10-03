@@ -2,14 +2,14 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { Block } from '../components';
+import { Block, DBButton, WithQuestion } from '../components';
 import FieldCard from './FieldCard';
-import { theme } from '../theme';
-import DBButton from '../components/DBButton';
 import {
   loadFieldsDBThunk,
   saveFieldsDBThunk
 } from '../redux/actions/firebaseActions';
+
+import { theme } from '../theme';
 
 const { sizes } = theme;
 
@@ -44,19 +44,23 @@ const FieldsConnected = ({ navigation }) => {
         />
       </Block>
       <Block row>
-        <DBButton
-          uid={uid}
-          thunk={saveFieldsDBThunk}
-          dispatch={dispatch}
-          title="Zapamti u bazu"
-          primary
-        />
-        <DBButton
-          uid={uid}
-          thunk={loadFieldsDBThunk}
-          dispatch={dispatch}
-          title="Povuci iz baze"
-        />
+        <WithQuestion>
+          <DBButton
+            uid={uid}
+            thunk={saveFieldsDBThunk}
+            dispatch={dispatch}
+            title="Zapamti u bazu"
+            primary
+          />
+        </WithQuestion>
+        <WithQuestion>
+          <DBButton
+            uid={uid}
+            thunk={loadFieldsDBThunk}
+            dispatch={dispatch}
+            title="Povuci iz baze"
+          />
+        </WithQuestion>
       </Block>
     </Block>
   );

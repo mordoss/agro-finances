@@ -12,6 +12,8 @@ import Avatar from './Avatar';
 import HeaderIcon from './HeaderIcon';
 import RadioButtons from './RadioButtons';
 import Checkbox from './Checkbox';
+import DBButton from './DBButton';
+import WithQuestion from './WithQuestion';
 
 export {
   Badge,
@@ -27,5 +29,7 @@ export {
   InputWithIncrementer,
   Tabs,
   RadioButtons,
-  Checkbox
+  Checkbox,
+  DBButton,
+  WithQuestion
 };
